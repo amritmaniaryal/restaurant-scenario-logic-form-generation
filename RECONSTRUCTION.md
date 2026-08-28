@@ -40,16 +40,16 @@ For any `storyid` listed in [`manifest_roc.json`](manifest_roc.json):
 2. Concatenate `sentence1` .. `sentence5` in order, joined by spaces.
 3. The result is the story text that appears (redacted) in this repository.
 
-Example (row from the official corpus):
+Example (illustrative, fictional — not an actual ROCStories record):
 
 ```text
-storyid:       99d073a9-375a-45ad-a070-0fdfbbf73f69
-storytitle:    Going out for Sushi.
-sentence1:     Today I had a dinner date with my husband.
-sentence2:     We decided to try out a new Sushi place near our home.
-sentence3:     It was very crowded but we had a reservation.
-sentence4:     We ordered spicy tuna rolls and eel and enjoyed some time alone.
-sentence5:     The food great, we both agreed we would go back again.
+storyid:       00000000-0000-0000-0000-000000000000
+storytitle:    A Sample Visit
+sentence1:     Pat walked into the coffee shop at noon.
+sentence2:     Pat ordered a large latte and a pastry.
+sentence3:     The cashier handed over the order quickly.
+sentence4:     Pat drank the latte and ate the pastry.
+sentence5:     Pat left the shop feeling refreshed.
 ```
 
 ## How these records became part of the dataset
