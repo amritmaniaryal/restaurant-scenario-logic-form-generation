@@ -11,7 +11,7 @@ FewShot_ChatGPT_4o_20260207T203508:
   num_batches: 9
   errors: 0
   missing_sids_count: 0
-  result_file: E:\Amrit\MiamiUni\CourseWork\3rdSem\Research\PROJECT\experiments\FewShot\Results\FewShot_10_Random_V3\ChatGPT_4o.json
+  result_file: experiments/FewShot/Results/FewShot_10_Random_V3/ChatGPT_4o.json
 FewShot_FewShot_10_Random_V3_20260207T203508:
   run_id: FewShot_FewShot_10_Random_V3_20260207T203508
   experiment_id: FewShot_10_Random_V3
@@ -37,7 +37,7 @@ FewShot_Gemini_20260207T211604:
   num_batches: 9
   errors: 3
   missing_sids_count: 78
-  result_file: E:\Amrit\MiamiUni\CourseWork\3rdSem\Research\PROJECT\experiments\FewShot\Results\FewShot_10_Random_V3\Gemini.json
+  result_file: experiments/FewShot/Results/FewShot_10_Random_V3/Gemini.json
 FewShot_FewShot_10_Random_V3_20260207T211604:
   run_id: FewShot_FewShot_10_Random_V3_20260207T211604
   experiment_id: FewShot_10_Random_V3
@@ -63,7 +63,7 @@ FewShot_ChatGPT_4o_20260424T210138:
   num_batches: 9
   errors: 18
   missing_sids_count: 90
-  result_file: /Users/maniamrit/Miami/thesis-work/experiments/FewShot/Results/FewShot_10_Random_V1/ChatGPT_4o.json
+  result_file: experiments/FewShot/Results/FewShot_10_Random_V1/ChatGPT_4o.json
 FewShot_Gemini_flash_3.0_20260424T210258:
   run_id: FewShot_Gemini_flash_3.0_20260424T210258
   experiment_id: FewShot_10_Random_V1
@@ -77,7 +77,7 @@ FewShot_Gemini_flash_3.0_20260424T210258:
   num_batches: 9
   errors: 0
   missing_sids_count: 0
-  result_file: /Users/maniamrit/Miami/thesis-work/experiments/FewShot/Results/FewShot_10_Random_V1/Gemini_flash_3.0.json
+  result_file: experiments/FewShot/Results/FewShot_10_Random_V1/Gemini_flash_3.0.json
 FewShot_FewShot_10_Random_V1_20260424T210258:
   run_id: FewShot_FewShot_10_Random_V1_20260424T210258
   experiment_id: FewShot_10_Random_V1
@@ -108,7 +108,7 @@ FewShot_ChatGPT_4o_20260424T210652:
   num_batches: 9
   errors: 18
   missing_sids_count: 90
-  result_file: /Users/maniamrit/Miami/thesis-work/experiments/FewShot/Results/FewShot_10_Random_V1/ChatGPT_4o.json
+  result_file: experiments/FewShot/Results/FewShot_10_Random_V1/ChatGPT_4o.json
 FewShot_FewShot_10_Random_V1_20260424T210652:
   run_id: FewShot_FewShot_10_Random_V1_20260424T210652
   experiment_id: FewShot_10_Random_V1
@@ -134,7 +134,7 @@ FewShot_ChatGPT_4o_20260424T211153:
   num_batches: 9
   errors: 0
   missing_sids_count: 0
-  result_file: /Users/maniamrit/Miami/thesis-work/experiments/FewShot/Results/FewShot_10_Random_V1/ChatGPT_4o.json
+  result_file: experiments/FewShot/Results/FewShot_10_Random_V1/ChatGPT_4o.json
 FewShot_FewShot_10_Random_V1_20260424T211153:
   run_id: FewShot_FewShot_10_Random_V1_20260424T211153
   experiment_id: FewShot_10_Random_V1
@@ -160,7 +160,7 @@ FewShot_Gemini_flash_2.5_20260425T185420:
   num_batches: 9
   errors: 0
   missing_sids_count: 0
-  result_file: /Users/maniamrit/Miami/thesis-work/experiments/FewShot/Results/FewShot_10_Random_V1/Gemini_flash_2.5.json
+  result_file: experiments/FewShot/Results/FewShot_10_Random_V1/Gemini_flash_2.5.json
 FewShot_FewShot_10_Random_V1_20260425T185420:
   run_id: FewShot_FewShot_10_Random_V1_20260425T185420
   experiment_id: FewShot_10_Random_V1
@@ -186,7 +186,7 @@ FewShot_DeepSeek_20260425T200804:
   num_batches: 9
   errors: 0
   missing_sids_count: 0
-  result_file: /Users/maniamrit/Miami/thesis-work/experiments/FewShot/Results/FewShot_10_Random_V4/DeepSeek.json
+  result_file: experiments/FewShot/Results/FewShot_10_Random_V4/DeepSeek.json
 FewShot_FewShot_10_Random_V4_20260425T200804:
   run_id: FewShot_FewShot_10_Random_V4_20260425T200804
   experiment_id: FewShot_10_Random_V4
@@ -212,7 +212,7 @@ FewShot_DeepSeek_20260427T171202:
   num_batches: 1
   errors: 0
   missing_sids_count: 0
-  result_file: /Users/maniamrit/Miami/thesis-work/experiments/FewShot/Results/test_experiment/DeepSeek.json
+  result_file: experiments/FewShot/Results/test_experiment/DeepSeek.json
 FewShot_test_experiment_20260427T171202:
   run_id: FewShot_test_experiment_20260427T171202
   experiment_id: test_experiment
@@ -238,7 +238,7 @@ FewShot_ChatGPT_20260504T011711:
   num_batches: 10
   errors: 20
   missing_sids_count: 100
-  result_file: /Users/maniamrit/Miami/thesis-work/experiments/FewShot/Results/ZeroShot_V1/ChatGPT.json
+  result_file: experiments/FewShot/Results/ZeroShot_V1/ChatGPT.json
 FewShot_Gemini_20260504T012401:
   run_id: FewShot_Gemini_20260504T012401
   experiment_id: ZeroShot_V1
@@ -252,7 +252,7 @@ FewShot_Gemini_20260504T012401:
   num_batches: 10
   errors: 0
   missing_sids_count: 86
-  result_file: /Users/maniamrit/Miami/thesis-work/experiments/FewShot/Results/ZeroShot_V1/Gemini.json
+  result_file: experiments/FewShot/Results/ZeroShot_V1/Gemini.json
 FewShot_DeepSeek_20260504T013834:
   run_id: FewShot_DeepSeek_20260504T013834
   experiment_id: ZeroShot_V1
@@ -266,7 +266,7 @@ FewShot_DeepSeek_20260504T013834:
   num_batches: 10
   errors: 0
   missing_sids_count: 0
-  result_file: /Users/maniamrit/Miami/thesis-work/experiments/FewShot/Results/ZeroShot_V1/DeepSeek.json
+  result_file: experiments/FewShot/Results/ZeroShot_V1/DeepSeek.json
 FewShot_ZeroShot_V1_20260504T013834:
   run_id: FewShot_ZeroShot_V1_20260504T013834
   experiment_id: ZeroShot_V1
@@ -302,7 +302,7 @@ FewShot_Gemini_20260504T044830:
   num_batches: 10
   errors: 0
   missing_sids_count: 0
-  result_file: /Users/maniamrit/Miami/thesis-work/experiments/FewShot/Results/ZeroShot_V1/Gemini.json
+  result_file: experiments/FewShot/Results/ZeroShot_V1/Gemini.json
 FewShot_ZeroShot_V1_20260504T044830:
   run_id: FewShot_ZeroShot_V1_20260504T044830
   experiment_id: ZeroShot_V1
@@ -328,7 +328,7 @@ FewShot_ChatGPT_20260504T164304:
   num_batches: 10
   errors: 0
   missing_sids_count: 0
-  result_file: /Users/maniamrit/Miami/thesis-work/experiments/FewShot/Results/ZeroShot_V1/ChatGPT.json
+  result_file: experiments/FewShot/Results/ZeroShot_V1/ChatGPT.json
 FewShot_ZeroShot_V1_20260504T164304:
   run_id: FewShot_ZeroShot_V1_20260504T164304
   experiment_id: ZeroShot_V1
@@ -354,7 +354,7 @@ FewShot_ChatGPT_20260504T182457:
   num_batches: 9
   errors: 0
   missing_sids_count: 0
-  result_file: /Users/maniamrit/Miami/thesis-work/experiments/FewShot/Results/FewShot_10_Random_V2/ChatGPT.json
+  result_file: experiments/FewShot/Results/FewShot_10_Random_V2/ChatGPT.json
 FewShot_Gemini_20260504T184208:
   run_id: FewShot_Gemini_20260504T184208
   experiment_id: FewShot_10_Random_V2
@@ -368,7 +368,7 @@ FewShot_Gemini_20260504T184208:
   num_batches: 9
   errors: 2
   missing_sids_count: 0
-  result_file: /Users/maniamrit/Miami/thesis-work/experiments/FewShot/Results/FewShot_10_Random_V2/Gemini.json
+  result_file: experiments/FewShot/Results/FewShot_10_Random_V2/Gemini.json
 FewShot_DeepSeek_20260504T190756:
   run_id: FewShot_DeepSeek_20260504T190756
   experiment_id: FewShot_10_Random_V2
@@ -382,7 +382,7 @@ FewShot_DeepSeek_20260504T190756:
   num_batches: 9
   errors: 0
   missing_sids_count: 0
-  result_file: /Users/maniamrit/Miami/thesis-work/experiments/FewShot/Results/FewShot_10_Random_V2/DeepSeek.json
+  result_file: experiments/FewShot/Results/FewShot_10_Random_V2/DeepSeek.json
 FewShot_FewShot_10_Random_V2_20260504T190756:
   run_id: FewShot_FewShot_10_Random_V2_20260504T190756
   experiment_id: FewShot_10_Random_V2
@@ -418,7 +418,7 @@ FewShot_ChatGPT_20260506T204112:
   num_batches: 9
   errors: 0
   missing_sids_count: 0
-  result_file: /Users/maniamrit/Miami/thesis-work/experiments/FewShot/Results/FewShot_10_Random_V1/ChatGPT.json
+  result_file: experiments/FewShot/Results/FewShot_10_Random_V1/ChatGPT.json
 FewShot_Gemini_20260506T205213:
   run_id: FewShot_Gemini_20260506T205213
   experiment_id: FewShot_10_Random_V1
@@ -432,7 +432,7 @@ FewShot_Gemini_20260506T205213:
   num_batches: 9
   errors: 0
   missing_sids_count: 0
-  result_file: /Users/maniamrit/Miami/thesis-work/experiments/FewShot/Results/FewShot_10_Random_V1/Gemini.json
+  result_file: experiments/FewShot/Results/FewShot_10_Random_V1/Gemini.json
 FewShot_FewShot_10_Random_V1_20260506T205213:
   run_id: FewShot_FewShot_10_Random_V1_20260506T205213
   experiment_id: FewShot_10_Random_V1
