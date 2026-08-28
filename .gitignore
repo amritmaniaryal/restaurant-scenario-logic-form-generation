@@ -16,6 +16,9 @@ env/
 # Jupyter
 .ipynb_checkpoints/
 
+# ROCStories corpus (not redistributed — local use only)
+other_data/ROCStories.csv
+
 # Editors
 .vscode/
 .idea/

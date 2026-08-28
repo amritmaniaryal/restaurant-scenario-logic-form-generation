@@ -32,6 +32,11 @@ The release of the corpus used in this work was downloaded in 2025
 (`other_data/ROCStories.csv` in the private repository, 52,665 rows). To reproduce
 the exact records, use the same release.
 
+For local convenience you may place your own copy of the corpus at
+`other_data/ROCStories.csv` in a checkout of this repository. That file is
+gitignored (see `.gitignore`), so it is never committed or published; it only
+makes the reconstruction commands below work without extra arguments.
+
 ## Reconstructing a single story
 
 For any `storyid` listed in [`manifest_roc.json`](manifest_roc.json):
