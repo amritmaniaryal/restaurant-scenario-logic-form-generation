@@ -8,6 +8,11 @@ __pycache__/
 venv/
 env/
 
+# Environment / secrets
+.env
+*.env
+!.env.example
+
 # Jupyter
 .ipynb_checkpoints/
 

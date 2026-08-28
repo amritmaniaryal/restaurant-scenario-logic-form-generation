@@ -23,14 +23,13 @@ forms), model outputs, evaluation scores, and non-ROC data are included in full.
 ```
 code/                          Scripts and notebooks (dataset loading, annotation, evaluation)
 encodedForm/fixed_all_combined.json   The 100-record evaluation dataset (sid 0..99)
-expReadyData/                  Dataset variants ready for experiments
 experiments/FewShot/inputs/    Few-shot experiment inputs
 experiments/FewShot/Results/   Few-shot model outputs
 experiments/Evaluation/        Manual and automated evaluation artifacts
 experiments/StoryGeneration/   LLM-generated stories
 experiments/ZeroShot/          Zero-shot outputs
 experiments/thesis_docs/       Paper / writing sources
-restaurant_data/               Synthetic restaurant-scenario corpus (non-ROC)
+restaurant_data/               Inclezan et al. restaurant narrative corpus (source of sids 0-39)
 manifest_roc.json              storyid mapping for ROCStories-derived records
 RECONSTRUCTION.md              How to obtain/reconstruct ROCStories-derived records
 ```
