@@ -28,7 +28,6 @@ experiments/FewShot/Results/   Few-shot model outputs
 experiments/Evaluation/        Manual and automated evaluation artifacts
 experiments/StoryGeneration/   LLM-generated stories
 experiments/ZeroShot/          Zero-shot outputs
-experiments/thesis_docs/       Paper / writing sources
 restaurant_data/               Inclezan et al. restaurant narrative corpus (source of sids 0-39)
 manifest_roc.json              storyid mapping for ROCStories-derived records
 RECONSTRUCTION.md              How to obtain/reconstruct ROCStories-derived records
@@ -86,5 +85,5 @@ Theory and Practice of Logic Programming, 19(2):273–293, 2019.
 Lucy Vanderwende, Pushmeet Kohli, James Allen. *A Corpus and Evaluation Framework for
 Deeper Understanding of Commonsense Stories*. NAACL-HLT 2016.
 
-If you use this work, please cite the paper (see `experiments/thesis_docs/`) and, where
-applicable, the corpora listed above.
+The accompanying paper will be linked here once published. For any use of this
+repository, please cite the paper where applicable, and the corpora listed above.
