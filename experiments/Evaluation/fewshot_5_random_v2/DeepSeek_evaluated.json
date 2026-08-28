@@ -289,7 +289,8 @@
         "st_hpd(order(we, f, w), true, 1"
       ],
       "pred_predicate_count": 17,
-      "gt_predicate_count": 12
+      "gt_predicate_count": 12,
+      "story": "[REDACTED — original ROCStories text; storyid=99d073a9-375a-45ad-a070-0fdfbbf73f69]"
     },
     {
       "sid": 77,
@@ -324,7 +325,8 @@
         "waiter(w"
       ],
       "pred_predicate_count": 11,
-      "gt_predicate_count": 11
+      "gt_predicate_count": 11,
+      "story": "[REDACTED — original ROCStories text; storyid=44b80dab-a351-4065-86b8-43d519dff470]"
     },
     {
       "sid": 81,
@@ -356,7 +358,8 @@
         "st_hpd(enter(they, \"new Italian restaurant\"), true, 0"
       ],
       "pred_predicate_count": 10,
-      "gt_predicate_count": 9
+      "gt_predicate_count": 9,
+      "story": "[REDACTED — original ROCStories text; storyid=1d235832-c133-4950-ba20-512adb2e3edb]"
     },
     {
       "sid": 94,
@@ -380,7 +383,8 @@
         "st_hpd(enter(\"The couple\", \"new sushi place\"), true, 0"
       ],
       "pred_predicate_count": 6,
-      "gt_predicate_count": 5
+      "gt_predicate_count": 5,
+      "story": "[REDACTED — original ROCStories text; storyid=63dfd3a4-930a-4a27-8ed9-60304b6c32f3]"
     },
     {
       "sid": 96,
@@ -421,7 +425,8 @@
         "st_obs(in(\"Dina\", \"fast food restaurant\"), true, 0"
       ],
       "pred_predicate_count": 15,
-      "gt_predicate_count": 13
+      "gt_predicate_count": 13,
+      "story": "[REDACTED — original ROCStories text; storyid=77710d2a-dbc2-4c99-a892-190b529ad219]"
     },
     {
       "sid": 12,
@@ -520,7 +525,8 @@
         "st_hpd(enter(we, \"Genki Ya\"), true, 0"
       ],
       "pred_predicate_count": 23,
-      "gt_predicate_count": 13
+      "gt_predicate_count": 13,
+      "story": "[REDACTED — original ROCStories text; storyid=d85b7ce5-0d84-4181-afe4-52c64711145a]"
     },
     {
       "sid": 24,
@@ -720,7 +726,8 @@
         "st_hpd(enter(we, \"Allston Diner\"), true, 0"
       ],
       "pred_predicate_count": 15,
-      "gt_predicate_count": 9
+      "gt_predicate_count": 9,
+      "story": "[REDACTED — original ROCStories text; storyid=6ead4a09-8e5f-4fbc-8a32-b706bdbb7a87]"
     },
     {
       "sid": 69,
@@ -821,7 +828,8 @@
         "st_hpd(order(\"Donna\", f, w), true, 1"
       ],
       "pred_predicate_count": 11,
-      "gt_predicate_count": 8
+      "gt_predicate_count": 8,
+      "story": "[REDACTED — original ROCStories text; storyid=0f9b69ff-6fbe-4e94-a37a-8ef3fbf2a876]"
     },
     {
       "sid": 36,
@@ -900,7 +908,8 @@
         "st_hpd(order(\"the couple\", \"milkshakes\", w), true, 1"
       ],
       "pred_predicate_count": 23,
-      "gt_predicate_count": 13
+      "gt_predicate_count": 13,
+      "story": "[REDACTED — original ROCStories text; storyid=2cf524c3-5e49-4ba9-9590-f84429fbdc01]"
     },
     {
       "sid": 99,
@@ -931,7 +940,8 @@
         "st_hpd(order(\"The family\", \"different foods\", w), true, 1"
       ],
       "pred_predicate_count": 11,
-      "gt_predicate_count": 7
+      "gt_predicate_count": 7,
+      "story": "[REDACTED — original ROCStories text; storyid=11cd400e-b2b8-4279-9e2e-925de49fee44]"
     },
     {
       "sid": 39,
@@ -991,7 +1001,8 @@
         "waiter(\"the waiter\""
       ],
       "pred_predicate_count": 8,
-      "gt_predicate_count": 9
+      "gt_predicate_count": 9,
+      "story": "[REDACTED — original ROCStories text; storyid=d25ec012-9f9f-48e6-8274-e6ac4a4b59e4]"
     },
     {
       "sid": 20,
@@ -1106,7 +1117,8 @@
         "waiter(w"
       ],
       "pred_predicate_count": 7,
-      "gt_predicate_count": 8
+      "gt_predicate_count": 8,
+      "story": "[REDACTED — original ROCStories text; storyid=c9e533e3-d8cc-4e9c-a7a0-0369d6cdc537]"
     },
     {
       "sid": 34,
@@ -1255,7 +1267,8 @@
         "st_hpd(enter(we, \"Genki Ya\"), true, 0"
       ],
       "pred_predicate_count": 15,
-      "gt_predicate_count": 9
+      "gt_predicate_count": 9,
+      "story": "[REDACTED — original ROCStories text; storyid=c93ca5db-716f-4572-868e-bd22aa4a9018]"
     },
     {
       "sid": 52,
@@ -1679,7 +1692,8 @@
         "st_hpd(enter(\"My family\", \"a restaurant\"), true, 0"
       ],
       "pred_predicate_count": 17,
-      "gt_predicate_count": 8
+      "gt_predicate_count": 8,
+      "story": "[REDACTED — original ROCStories text; storyid=c4078b0f-e1c3-4c75-a05a-a52c9481fc2a]"
     },
     {
       "sid": 79,
@@ -1706,7 +1720,8 @@
         "st_obs(in(\"the couple\", \"new steakhouse\"), true, 0"
       ],
       "pred_predicate_count": 8,
-      "gt_predicate_count": 7
+      "gt_predicate_count": 7,
+      "story": "[REDACTED — original ROCStories text; storyid=845b62e4-9240-4afe-8d59-ae2bc183967c]"
     },
     {
       "sid": 88,
@@ -1732,7 +1747,8 @@
         "st_hpd(order(\"I\", \"turkey sandwich\", w), true, 1"
       ],
       "pred_predicate_count": 8,
-      "gt_predicate_count": 6
+      "gt_predicate_count": 6,
+      "story": "[REDACTED — original ROCStories text; storyid=3a66621b-9dcf-4e32-b085-e4c0a2e89f8f]"
     },
     {
       "sid": 91,
@@ -1764,7 +1780,8 @@
         "waiter(\"the cashier\""
       ],
       "pred_predicate_count": 10,
-      "gt_predicate_count": 11
+      "gt_predicate_count": 11,
+      "story": "[REDACTED — original ROCStories text; storyid=ac7250f9-d416-41bb-aac7-b1dd788b86fb]"
     },
     {
       "sid": 95,
@@ -1796,7 +1813,8 @@
         "waiter(\"wait staff\""
       ],
       "pred_predicate_count": 10,
-      "gt_predicate_count": 11
+      "gt_predicate_count": 11,
+      "story": "[REDACTED — original ROCStories text; storyid=cd9a0a7b-ef8f-42c0-86ac-fe80542cebd3]"
     },
     {
       "sid": 65,
@@ -2364,7 +2382,8 @@
         "st_hpd(request(\"I\", pick_up(w, \"burnt pizza\", t), w), true, 3)"
       ],
       "pred_predicate_count": 8,
-      "gt_predicate_count": 8
+      "gt_predicate_count": 8,
+      "story": "[REDACTED — original ROCStories text; storyid=9915e783-6bf9-4d92-9150-b031bf778bb7]"
     },
     {
       "sid": 41,
@@ -2500,7 +2519,8 @@
         "st_hpd(stand_up(\"the couple\"), true, 1)"
       ],
       "pred_predicate_count": 8,
-      "gt_predicate_count": 6
+      "gt_predicate_count": 6,
+      "story": "[REDACTED — original ROCStories text; storyid=9c2ccb82-003d-4253-9f19-65b157b9993f]"
     },
     {
       "sid": 87,
@@ -2524,7 +2544,8 @@
         "st_next(2,3)"
       ],
       "pred_predicate_count": 6,
-      "gt_predicate_count": 8
+      "gt_predicate_count": 8,
+      "story": "[REDACTED — original ROCStories text; storyid=7dc0c96f-dd24-4561-9a4f-bd1b6b3ca520]"
     },
     {
       "sid": 2,
@@ -2826,7 +2847,8 @@
         "st_obs(in(\"Samuel\", \"diner\"), true, 0"
       ],
       "pred_predicate_count": 12,
-      "gt_predicate_count": 13
+      "gt_predicate_count": 13,
+      "story": "[REDACTED — original ROCStories text; storyid=541efb12-b331-4525-afe1-5422ff33a1ca]"
     },
     {
       "sid": 5,
@@ -3054,7 +3076,8 @@
         "st_hpd(enter(we, \"Burger King\"), true, 3)"
       ],
       "pred_predicate_count": 11,
-      "gt_predicate_count": 11
+      "gt_predicate_count": 11,
+      "story": "[REDACTED — original ROCStories text; storyid=0b8e4ddd-6ada-42ba-9d6f-508db0bac85a]"
     },
     {
       "sid": 66,
@@ -3108,7 +3131,8 @@
         "st_hpd(order(\"Betsy\", f, \"the waitress\"), true, 0"
       ],
       "pred_predicate_count": 12,
-      "gt_predicate_count": 12
+      "gt_predicate_count": 12,
+      "story": "[REDACTED — original ROCStories text; storyid=02fbf49d-54f4-493d-b4af-609cc1e23a22]"
     },
     {
       "sid": 3,

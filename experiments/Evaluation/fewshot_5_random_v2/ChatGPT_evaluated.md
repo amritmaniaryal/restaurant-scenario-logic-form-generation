@@ -107,7 +107,7 @@ restaurant(veg_r). customer(nicole). person(owner). food(lentil_soup). waiter(wa
 
 ## Story #94 — Partial Match (Similarity: 0.0000)
 
-**Story:** 
+**Story:** [REDACTED — original ROCStories text; storyid=63dfd3a4-930a-4a27-8ed9-60304b6c32f3]
 
 ### Predicted
 ```clingo
@@ -123,7 +123,7 @@ restaurant("new sushi place"). customer("The couple"). food(f). st_hpd(enter("Th
 
 ## Story #95 — Partial Match (Similarity: 0.0000)
 
-**Story:** 
+**Story:** [REDACTED — original ROCStories text; storyid=cd9a0a7b-ef8f-42c0-86ac-fe80542cebd3]
 
 ### Predicted
 ```clingo
@@ -139,7 +139,7 @@ restaurant("a restaurant"). customer("a homeless man"). waiter("wait staff"). pe
 
 ## Story #99 — Partial Match (Similarity: 0.0000)
 
-**Story:** 
+**Story:** [REDACTED — original ROCStories text; storyid=11cd400e-b2b8-4279-9e2e-925de49fee44]
 
 ### Predicted
 ```clingo
@@ -171,7 +171,7 @@ restaurant("the restaurant"). customer(they). person("Penny"). person("her frien
 
 ## Story #82 — Partial Match (Similarity: 0.0417)
 
-**Story:** 
+**Story:** [REDACTED — original ROCStories text; storyid=2cf524c3-5e49-4ba9-9590-f84429fbdc01]
 
 ### Predicted
 ```clingo
@@ -219,7 +219,7 @@ restaurant("pizzeria"). customer("The Jackson family"). food("large pepperoni pi
 
 ## Story #77 — Partial Match (Similarity: 0.0500)
 
-**Story:** 
+**Story:** [REDACTED — original ROCStories text; storyid=44b80dab-a351-4065-86b8-43d519dff470]
 
 ### Predicted
 ```clingo
@@ -251,7 +251,7 @@ restaurant("a fine restaurant"). customer("the villager"). food("one of the item
 
 ## Story #81 — Partial Match (Similarity: 0.0556)
 
-**Story:** 
+**Story:** [REDACTED — original ROCStories text; storyid=1d235832-c133-4950-ba20-512adb2e3edb]
 
 ### Predicted
 ```clingo
@@ -267,7 +267,7 @@ restaurant("new Italian restaurant"). customer(they). person("Kathy"). person("h
 
 ## Story #90 — Partial Match (Similarity: 0.0625)
 
-**Story:** 
+**Story:** [REDACTED — original ROCStories text; storyid=c4078b0f-e1c3-4c75-a05a-a52c9481fc2a]
 
 ### Predicted
 ```clingo
@@ -315,7 +315,7 @@ restaurant(r). customer(they). member("Emanuel"). member("Ingrid"). drink(wine).
 
 ## Story #92 — Partial Match (Similarity: 0.0833)
 
-**Story:** 
+**Story:** [REDACTED — original ROCStories text; storyid=c9e533e3-d8cc-4e9c-a7a0-0369d6cdc537]
 
 ### Predicted
 ```clingo
@@ -363,7 +363,7 @@ restaurant("the restaurant"). customer("group of friends"). waiter(w). story_ste
 
 ## Story #88 — Partial Match (Similarity: 0.0909)
 
-**Story:** 
+**Story:** [REDACTED — original ROCStories text; storyid=3a66621b-9dcf-4e32-b085-e4c0a2e89f8f]
 
 ### Predicted
 ```clingo
@@ -427,7 +427,7 @@ restaurant("vegan restaurant"). customer("Anna"). food("quinoa bowl"). beverage(
 
 ## Story #96 — Partial Match (Similarity: 0.1053)
 
-**Story:** 
+**Story:** [REDACTED — original ROCStories text; storyid=77710d2a-dbc2-4c99-a892-190b529ad219]
 
 ### Predicted
 ```clingo
@@ -459,7 +459,7 @@ restaurant("a famous restaurant"). person("my husband"). person("I"). customer("
 
 ## Story #80 — Partial Match (Similarity: 0.1154)
 
-**Story:** 
+**Story:** [REDACTED — original ROCStories text; storyid=d85b7ce5-0d84-4181-afe4-52c64711145a]
 
 ### Predicted
 ```clingo
@@ -523,7 +523,7 @@ restaurant("quiet cafe"). customer("book club members"). food("pastries"). bever
 
 ## Story #76 — Partial Match (Similarity: 0.1250)
 
-**Story:** 
+**Story:** [REDACTED — original ROCStories text; storyid=6ead4a09-8e5f-4fbc-8a32-b706bdbb7a87]
 
 ### Predicted
 ```clingo
@@ -539,7 +539,7 @@ restaurant("Allston Diner"). customer(we). person("our son"). customer("a friend
 
 ## Story #89 — Partial Match (Similarity: 0.1250)
 
-**Story:** 
+**Story:** [REDACTED — original ROCStories text; storyid=c93ca5db-716f-4572-868e-bd22aa4a9018]
 
 ### Predicted
 ```clingo
@@ -555,7 +555,7 @@ restaurant("Genki Ya"). customer(we). person("my son"). person("me"). member("my
 
 ## Story #97 — Partial Match (Similarity: 0.1250)
 
-**Story:** 
+**Story:** [REDACTED — original ROCStories text; storyid=d25ec012-9f9f-48e6-8274-e6ac4a4b59e4]
 
 ### Predicted
 ```clingo
@@ -619,7 +619,7 @@ restaurant("Italian restaurant"). customer("Lisa"). customer("Mark"). customer(t
 
 ## Story #86 — Partial Match (Similarity: 0.1429)
 
-**Story:** 
+**Story:** [REDACTED — original ROCStories text; storyid=541efb12-b331-4525-afe1-5422ff33a1ca]
 
 ### Predicted
 ```clingo
@@ -683,7 +683,7 @@ restaurant("the bistro"). customer("Michael"). food("daily special"). beverage("
 
 ## Story #79 — Partial Match (Similarity: 0.1818)
 
-**Story:** 
+**Story:** [REDACTED — original ROCStories text; storyid=845b62e4-9240-4afe-8d59-ae2bc183967c]
 
 ### Predicted
 ```clingo
@@ -715,7 +715,7 @@ restaurant("a restaurant"). customer("Gary"). food("steak"). food("cake"). waite
 
 ## Story #91 — Partial Match (Similarity: 0.1875)
 
-**Story:** 
+**Story:** [REDACTED — original ROCStories text; storyid=ac7250f9-d416-41bb-aac7-b1dd788b86fb]
 
 ### Predicted
 ```clingo
@@ -763,7 +763,7 @@ restaurant("Mexican restaurant"). customer("Carlos"). waiter(w). food("tacos"). 
 
 ## Story #83 — Partial Match (Similarity: 0.2000)
 
-**Story:** 
+**Story:** [REDACTED — original ROCStories text; storyid=9c2ccb82-003d-4253-9f19-65b157b9993f]
 
 ### Predicted
 ```clingo
@@ -795,7 +795,7 @@ restaurant("the cafe"). customer("Sarah"). food("chicken sandwich"). beverage("c
 
 ## Story #75 — Partial Match (Similarity: 0.2105)
 
-**Story:** 
+**Story:** [REDACTED — original ROCStories text; storyid=99d073a9-375a-45ad-a070-0fdfbbf73f69]
 
 ### Predicted
 ```clingo
@@ -843,7 +843,7 @@ restaurant("the pancake house"). customer("Susan"). food("blueberry pancakes"). 
 
 ## Story #84 — Partial Match (Similarity: 0.2308)
 
-**Story:** 
+**Story:** [REDACTED — original ROCStories text; storyid=0f9b69ff-6fbe-4e94-a37a-8ef3fbf2a876]
 
 ### Predicted
 ```clingo
@@ -859,7 +859,7 @@ restaurant("diner"). customer("Donna"). food(f). member("cheeseburger", f). memb
 
 ## Story #87 — Partial Match (Similarity: 0.2308)
 
-**Story:** 
+**Story:** [REDACTED — original ROCStories text; storyid=7dc0c96f-dd24-4561-9a4f-bd1b6b3ca520]
 
 ### Predicted
 ```clingo
@@ -923,7 +923,7 @@ restaurant(r). customer("Mark"). food("dessert"). waiter("the waiter"). st_hpd(p
 
 ## Story #85 — Partial Match (Similarity: 0.2500)
 
-**Story:** 
+**Story:** [REDACTED — original ROCStories text; storyid=9915e783-6bf9-4d92-9150-b031bf778bb7]
 
 ### Predicted
 ```clingo

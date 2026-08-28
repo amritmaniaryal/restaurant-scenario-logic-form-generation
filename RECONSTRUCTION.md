@@ -52,6 +52,31 @@ sentence4:     Pat drank the latte and ate the pastry.
 sentence5:     Pat left the shop feeling refreshed.
 ```
 
+## Automated reconstruction and re-masking
+
+Two helper scripts automate the round-trip so the redacted texts can be restored
+for re-running experiments and re-redacted before any commit:
+
+```bash
+# 1) Restore the redacted texts using a locally-obtained official corpus:
+python code/reconstruct_roc_texts.py --csv other_data/ROCStories.csv
+
+# 2) ... run the experiments ...
+
+# 3) Re-mask the ROCStories texts before committing (no CSV needed):
+python code/mask_roc_texts.py
+```
+
+- `reconstruct_roc_texts.py` replaces every `[REDACTED — …storyid=<uuid>]`
+  placeholder with the story text joined from `sentence1..5` for that `storyid`.
+  It refuses to run if any placeholder or manifest `storyid` is missing from the
+  supplied CSV. Add `--check` to validate without modifying files.
+- `mask_roc_texts.py` redacts the story text of every ROCStories-derived record
+  (sids 75–99) back to the placeholder, using `manifest_roc.json`. It only touches
+  dataset-family files (`encodedForm/`, `experiments/FewShot/inputs/`,
+  `experiments/FewShot/Results/`) and the evaluated output files. Add `--check`
+  for a dry run.
+
 ## How these records became part of the dataset
 
 The full pipeline (see `code/load_ROC_strs.py` and the notebooks in `code/`):
