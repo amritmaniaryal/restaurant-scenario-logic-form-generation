@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
-"""Build evaluation_viz.ipynb with analysis function and per-experiment cells."""
+"""Build the ``evaluation_viz.ipynb`` notebook.
+
+Generates ``experiments/Evaluation/evaluation_viz.ipynb`` with the analysis
+function and per-experiment cells that compute pass rates and score
+distributions from ``Manual_evaluation.xlsx`` and save figures to
+``experiments/Evaluation/figures/``.
+"""
 import nbformat as nbf
 
 nb = nbf.v4.new_notebook()

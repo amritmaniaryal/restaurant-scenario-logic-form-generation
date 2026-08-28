@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Check each predicted encoding with clingo and write parsability stats per experiment folder."""
+"""Check the parsability of predicted logic forms.
+
+Runs each model's predicted encoding through clingo and writes
+``parsability_stats.md`` per experiment folder under
+``experiments/Evaluation/``.
+"""
 import json
 import os
 import sys

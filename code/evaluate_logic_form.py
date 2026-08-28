@@ -1,3 +1,10 @@
+"""Evaluate model-predicted logic forms against ground truth.
+
+Compares predicted logic forms (from ``experiments/FewShot/Results/``) with the
+ground-truth annotations in ``encodedForm/fixed_all_combined.json`` using
+semantic similarity, and writes per-model evaluation reports (JSON + Markdown)
+under ``experiments/Evaluation/``.
+"""
 import json
 from pathlib import Path
 from collections import defaultdict

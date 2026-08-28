@@ -1,3 +1,9 @@
+"""Clean the restaurant narrative corpus JSON.
+
+Reads ``restaurant_corpus_initial.json`` (the Inclezan et al. restaurant
+narrative corpus) and writes ``restaurant_corpus_clean.json``, dropping the
+``source`` field and replacing ``logic_form`` with ``"N/A"`` for each record.
+"""
 import json
 import os
 

@@ -1,3 +1,9 @@
+"""Convert the restaurant narrative corpus from XML to JSON.
+
+Reads ``restaurant_data/restaurant_corpus.xml.htm`` and writes
+``restaurant_data/restaurant_corpus_initial.json`` — the 40 Inclezan et al.
+scenarios behind sids 0-39 in ``encodedForm/fixed_all_combined.json``.
+"""
 import xml.etree.ElementTree as ET
 import json
 import re

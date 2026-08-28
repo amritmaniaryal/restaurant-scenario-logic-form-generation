@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Convert evaluated JSON files to Markdown for easy clingo copy-paste."""
+"""Convert evaluated JSON reports to Markdown.
+
+Reads each ``*_evaluated.json`` under ``experiments/Evaluation/`` and writes a
+sibling ``*.md`` containing the predicted/ground-truth clingo blocks for easy
+copy-paste.
+"""
 import json
 from pathlib import Path
 

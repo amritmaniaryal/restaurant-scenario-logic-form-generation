@@ -1,3 +1,12 @@
+"""Load and filter the ROCStories corpus for restaurant-related stories.
+
+Reads the official ROCStories CSV, keeps only stories whose titles match
+restaurant keywords, and writes the filtered subset to JSON together with a
+filtering log.
+
+NOTE: The raw ROCStories corpus is not redistributed in this repository; see
+RECONSTRUCTION.md for how to obtain it.
+"""
 import pandas as pd
 import os
 import json
