@@ -56,14 +56,17 @@ sentence5:     Pat left the shop feeling refreshed.
 
 The full pipeline (see `code/load_ROC_strs.py` and the notebooks in `code/`):
 
-1. **Filter**: `load_ROC_strs.py` reads the corpus CSV and keeps only stories whose
-   title matches restaurant-related keywords.
-2. **Manual selection**: 25 restaurant stories were manually selected from that
+1. **Non-ROC records**: sids `0–39` are taken from the restaurant narrative corpus of
+   Inclezan et al. (Inclezan et al., 2017; Zhang et al., 2019), which provides
+   ground-truth ASP logic forms for these scenarios.
+2. **Filter**: `load_ROC_strs.py` reads the ROCStories corpus CSV and keeps only
+   stories whose title matches restaurant-related keywords.
+3. **Manual selection**: 25 restaurant stories were manually selected from that
    filtered subset for inclusion in the evaluation dataset.
-3. **Annotation**: each selected story was manually encoded into a structured logic
+4. **Annotation**: each selected story was manually encoded into a structured logic
    form (`logic_form`) and assigned a `scenario_type` (`Normal`, `Exception`, or
    `Variation`). These annotations are ours and are included in full.
-4. **SID assignment**: records were combined with non-ROC stories and the combined
+5. **SID assignment**: records were combined with the non-ROC stories and the combined
    list was sorted and re-indexed to continuous `sid` values `0..99`. The 25
    ROCStories-derived records occupy **sids 75–99** (see `manifest_roc.json`).
 
@@ -75,3 +78,12 @@ sids **75, 77, 86, 90, 91, 95**.
 To confirm the placeholder text matches the original, reconstruct the story from the
 corpus as described above and compare it to the `storytitle` / logic-form content in
 this repository. The `storyid` is the authoritative join key.
+
+## References
+
+- Daniela Inclezan, Qinglin Zhang, Marcello Balduccini, and Ankush Israney.
+  *Understanding Restaurant Stories Using an ASP Theory of Intentions*. International
+  Conference on Logic Programming (ICLP), 2017.
+- Qinglin Zhang, Chris Benton, and Daniela Inclezan. *An Application of ASP Theories
+  of Intentions to Understanding Restaurant Scenarios: Insights and Narrative Corpus*.
+  Theory and Practice of Logic Programming, 19(2):273–293, 2019.

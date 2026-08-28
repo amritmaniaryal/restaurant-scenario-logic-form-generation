@@ -42,7 +42,7 @@ The canonical evaluation dataset is `encodedForm/fixed_all_combined.json`, conta
 
 | sid range   | Origin                                   | Included in this repo |
 |-------------|------------------------------------------|-----------------------|
-| 0–39        | Non-ROC restaurant scenarios             | Yes (full text)       |
+| 0–39        | Restaurant narrative corpus of Inclezan et al. | Yes (full text)       |
 | 40–74       | Synthetic / LLM-derived scenarios        | Yes (full text)       |
 | 75–99       | ROCStories (via `storyid`)               | Text redacted, `storyid` kept |
 
@@ -53,6 +53,10 @@ Each record has:
 - `logic_form` — the structured logic-form annotation
 - `scenario_type` — `Normal`, `Exception`, or `Variation`
 - `storyid` / `storytitle` — present only for ROCStories-derived records
+
+The 40 stories with sids `0–39` come from the restaurant narrative corpus of Inclezan
+et al. [1][2], which already provides ground-truth ASP logic forms for these
+scenarios. Their full text is included in this repository.
 
 See [`RECONSTRUCTION.md`](RECONSTRUCTION.md) and [`manifest_roc.json`](manifest_roc.json)
 for how to recover the redacted texts from the official ROCStories corpus.
@@ -69,11 +73,19 @@ for how to recover the redacted texts from the official ROCStories corpus.
 Aggregate results and per-story model outputs are included under
 `experiments/Evaluation/` and `experiments/FewShot/Results/`.
 
-## Citation
+## References
 
-If you use this work, please cite the paper (see `experiments/thesis_docs/`) and, for
-any ROCStories-derived content, cite the ROCStories corpus:
+[1] Daniela Inclezan, Qinglin Zhang, Marcello Balduccini, and Ankush Israney.
+*Understanding Restaurant Stories Using an ASP Theory of Intentions*. International
+Conference on Logic Programming (ICLP), 2017.
 
-> Nasrin Mostafazadeh, Nathanael Chambers, Xiaodong He, Devi Parikh, Dhruv Batra,
-> Lucy Vanderwende, Pushmeet Kohli, James Allen. *A Corpus and Evaluation Framework
-> for Deeper Understanding of Commonsense Stories*. NAACL-HLT 2016.
+[2] Qinglin Zhang, Chris Benton, and Daniela Inclezan. *An Application of ASP Theories
+of Intentions to Understanding Restaurant Scenarios: Insights and Narrative Corpus*.
+Theory and Practice of Logic Programming, 19(2):273–293, 2019.
+
+[3] Nasrin Mostafazadeh, Nathanael Chambers, Xiaodong He, Devi Parikh, Dhruv Batra,
+Lucy Vanderwende, Pushmeet Kohli, James Allen. *A Corpus and Evaluation Framework for
+Deeper Understanding of Commonsense Stories*. NAACL-HLT 2016.
+
+If you use this work, please cite the paper (see `experiments/thesis_docs/`) and, where
+applicable, the corpora listed above.
