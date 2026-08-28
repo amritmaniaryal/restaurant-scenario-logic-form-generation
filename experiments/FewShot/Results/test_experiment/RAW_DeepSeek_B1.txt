@@ -1,0 +1,40 @@
+{
+  "data": [
+    {
+      "sid": 5,
+      "logic_form": [
+        "restaurant(\"the restaurant\"). customer(\"Jane\"). food(\"fish\"). waiter(\"the waiter\"). st_hpd(lead_to(\"the waiter\", \"Jane\", t), true, 0). st_obs(sitting(\"Jane\"), true, 1). st_hpd(order(\"Jane\", \"fish\", \"the waiter\"), true, 2). st_hpd(eat(\"Jane\", \"fish\"), true, 3). st_hpd(put_down(\"the waiter\", b, t), true, 4)."
+      ]
+    },
+    {
+      "sid": 6,
+      "logic_form": [
+        "restaurant(\"the restaurant\"). customer(\"Molly\"). food(\"baked potato\"). food(\"French fries\"). waiter(\"the waiter\"). st_obs(sitting(\"Molly\"), true, 0). st_hpd(order(\"Molly\", \"baked potato\", \"the waiter\"), true, 1). st_hpd(put_down(\"the waiter\", \"French fries\", t), true, 2)."
+      ]
+    },
+    {
+      "sid": 7,
+      "logic_form": [
+        "restaurant(\"the restaurant\"). customer(\"Larry\"). waiter(\"the waiter\"). st_obs(sitting(\"Larry\"), true, 0). st_hpd(put_down(\"the waiter\", m, t), true, 1). st_obs(menu_read(\"Larry\"), true, 2). st_hpd(order(\"Larry\"), false)."
+      ]
+    },
+    {
+      "sid": 8,
+      "logic_form": [
+        "restaurant(\"the restaurant\"). customer(\"Derek\"). food(\"vegetable soup\"). waiter(\"the waiter\"). st_hpd(order(\"Derek\", \"vegetable soup\", \"the waiter\"), true, 0). st_hpd(put_down(\"the waiter\", \"vegetable soup\", t), true, 1). st_hpd(complain(\"Derek\", \"the waiter\"), true, 2). st_hpd(cancel_bill(\"the waiter\"), true, 3)."
+      ]
+    },
+    {
+      "sid": 9,
+      "logic_form": [
+        "restaurant(\"the restaurant\"). customer(\"Pete\"). food(\"chicken\"). waiter(\"the waiter\"). st_obs(sitting(\"Pete\"), true, 0). st_hpd(order(\"Pete\", \"chicken\", \"the waiter\"), true, 1). st_hpd(put_down(\"the waiter\", \"chicken\", t), true, 2). st_hpd(complain(\"Pete\", \"the waiter\"), true, 3). st_hpd(request(\"Pete\", f, \"the waiter\"), true, 4)."
+      ]
+    },
+    {
+      "sid": 10,
+      "logic_form": [
+        "restaurant(\"the restaurant\"). customer(\"Jim\"). food(\"appetizer\"). waiter(\"the waiter\"). st_obs(sitting(\"Jim\"), true, 0). st_hpd(order(\"Jim\", \"appetizer\", \"the waiter\"), true, 1). st_hpd(leave(\"Jim\"), true, 2). st_hpd(put_down(\"the waiter\", \"appetizer\", t), false)."
+      ]
+    }
+  ]
+}

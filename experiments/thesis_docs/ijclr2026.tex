@@ -1,0 +1,776 @@
+% This is samplepaper.tex, a sample chapter demonstrating the
+% LLNCS macro package for Springer Computer Science proceedings;
+% Version 2.21 of 2022/01/12
+%
+\documentclass[runningheads]{llncs}
+%
+\usepackage[T1]{fontenc}
+% T1 fonts will be used to generate the final print and online PDFs,
+% so please use T1 fonts in your manuscript whenever possible.
+% Other font encondings may result in incorrect characters.
+%
+\usepackage{graphicx}
+% Used for displaying a sample figure. If possible, figure files should
+% be included in EPS format.
+%
+% If you use the hyperref package, please uncomment the following two lines
+% to display URLs in blue roman font according to Springer's eBook style:
+%\usepackage{color}
+%\renewcommand\UrlFont{\color{blue}\rmfamily}
+%\urlstyle{rm}
+
+\usepackage{comment}
+\usepackage{xcolor}
+\usepackage{booktabs} 
+\usepackage{amssymb}
+\usepackage[T1]{fontenc}
+\usepackage{CJKutf8}
+
+
+%
+\begin{document}
+% long paper: 15 pages including references
+%
+\title{From Narratives to Reasoning: Can LLMs Generate Reasoning-Ready Logic Forms?}
+%
+\titlerunning{Can LLMs Generate Reasoning-Ready Logic Forms?}
+% If the paper title is too long for the running head, you can set
+% an abbreviated paper title here
+%
+\author{Amritmani Aryal\inst{1} \and 
+Daniela Inclezan\inst{1}\orcidID{0000-0002-4534-9658}
+}
+%
+\authorrunning{A. Aryal and D. Inclezan}
+% First names are abbreviated in the running head.
+% If there are more than two authors, 'et al.' is used.
+%
+\institute{Miami University, Oxford OH 45056, USA\\
+\email{aryala6@miamioh.edu, inclezd@miamioh.edu}}
+%
+\maketitle              % typeset the header of the contribution
+%
+\begin{abstract}
+Large Language Models (LLMs) have demonstrated strong natural language processing capabilities, making them promising candidates for translating narrative text into symbolic representations suitable for automated reasoning. However, recent studies suggest that LLMs struggle with temporal and chronological reasoning, raising questions about their suitability as front ends for symbolic reasoning systems. In this paper, we investigate whether contemporary LLMs can generate reasoning-ready Answer Set Programming (ASP) representations (i.e., logic forms) from narratives describing stereotypical activities.
+We focus on the restaurant domain, a well-established benchmark in knowledge representation and reasoning research. Using a structured prompting framework, we evaluate multiple state-of-the-art LLMs on their ability to transform restaurant narratives into ASP-compatible logic forms. Our evaluation examines semantic fidelity and temporal consistency, with particular attention to the requirements of downstream symbolic reasoning. We further analyze common failure modes and identify recurring structural and temporal errors that limit the usefulness of LLM-generated logic forms.
+Our findings show that contemporary LLMs can generate ASP-compatible logic forms with high accuracy, yet model-specific errors and inconsistencies remain. The results also reveal important model-specific differences and highlight the need for further evaluation of how these representations support symbolic reasoning.
+
+
+\keywords{LLMs \and Story Understanding \and Temporal Reasoning.}
+\end{abstract}
+%
+%
+%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 15 pages including references
+% Deadline for submission: 15th June 2026
+% Example: https://arxiv.org/pdf/2509.22338
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introduction}
+\label{sec:intro}
+
+%\textcolor{red}{TODO: Daniela (about 1 - 1.5 pages)}
+
+Large Language Models (LLMs) have demonstrated impressive capabilities in processing natural language, including identifying entities, extracting events, summarizing narratives, and answering questions. However, it remains unclear whether their outputs are sufficiently precise to support reliable reasoning. This limitation is especially important in domains where errors in temporal ordering or commonsense inference can lead to incorrect conclusions (e.g., legal reasoning \cite{cn25,Zhang_2025}).
+Knowledge Representation and Reasoning (KRR) and Logic Programming offer complementary strengths. In particular, Answer Set Programming (ASP) \cite{gl91,mt99,bet11} provides formal methods for reasoning about actions and change \cite{gl93,gk14}, planning \cite{SonPBS23}, diagnosis \cite{bg03a}, question answering \cite{bal08}, and story understanding \cite{LierlerIG17}. Given a correct symbolic representation of a scenario, ASP systems can derive conclusions using explicitly specified domain knowledge and reasoning rules. The challenge is that ASP-based reasoning systems require narrative-specific logic forms that encode the entities, actions, and states described in a story. Extracting these logic forms accurately and automatically from natural language remains a significant challenge.
+
+This paper investigates whether LLMs can serve as front ends for ASP-based narrative understanding systems. We focus on narratives describing stereotypical activities: everyday activities that follow a typical sequence of actions performed by one or more agents to achieve a goal, such as dining in a restaurant or visiting a doctor \cite{sa77}. Such narratives often omit actions that human readers infer automatically. For example, a restaurant story may mention that a customer ordered food and later paid, while leaving unstated that the customer was seated, served, and ate the meal.
+Prior KRR work on stereotypical activities, including script-based approaches \cite{sa77,mueller04,m07} and later ASP-based models using theories of intentions \cite{bgb15}, has shown that symbolic systems can reason effectively about both normal and exceptional scenarios \cite{Inclezan2017UnderstandingRS,InclezanZBI18}. These systems can infer omitted actions, reason about goals, and answer questions, but they require accurate logic forms as input. LLMs appear well suited to help with this bottleneck because of their natural language processing abilities. However, recent work suggests that LLMs often struggle with temporal and chronological reasoning, especially as event sequences grow longer (e.g., 10-100 events) \cite{am25,wg25}. 
+Such limitations are particularly problematic for narrative understanding tasks that require accurate tracking of events and their temporal relationships over extended contexts \cite{Li2024LongcontextLS}.
+
+The central question of this paper is %therefore not merely whether LLMs can generate syntactically valid ASP code, but 
+whether LLMs can generate \textit{reasoning-ready ASP representations of a story}: logic forms that preserve the entities, events, states, and temporal structure needed for downstream symbolic reasoning. Temporal accuracy is especially important because errors in event ordering may make an otherwise plausible representation unsuitable for ASP-based story understanding.
+We study this question in the restaurant domain, a well-established testbed in the KRR literature involving multiple agents, implicit actions, commonsense knowledge, and temporal dependencies. Our research is guided by the following questions:
+
+\begin{itemize}
+\item To what extent can current LLMs generate reasoning-ready ASP logic forms from narratives describing stereotypical activities?
+
+\item What are the strengths and limitations of LLM-generated logic forms with respect to semantic accuracy, temporal consistency, and suitability for downstream ASP reasoning?
+\end{itemize}
+
+The contributions of this paper are threefold. First, we present a structured pipeline for transforming restaurant narratives into ASP-compatible logic forms using LLMs. Second, we compare multiple LLMs under equivalent prompting conditions. Third, we analyze the structural and temporal deficiencies of LLM-generated representations, with particular attention to errors that affect downstream symbolic reasoning.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Related Work}
+\label{sec:rel_work}
+
+%\textcolor{red}{TODO: Daniela (about 1 page)}
+
+\subsection{Reasoning about Stereotypical Activities}
+
+Early work on reasoning about stereotypical activities relied on \emph{scripts}, fixed sequences of actions representing the normal unfolding of an activity \cite{sa77}. Building on this idea, Mueller \cite{m07} developed a system for understanding restaurant narratives that combined commonsense knowledge represented in Event Calculus with script-based representations. While successful in answering questions about events not explicitly stated in the text, the approach was limited in its ability to handle exceptional scenarios because of the rigidity of scripts.
+To address these limitations, Inclezan and collaborators \cite{Inclezan2017UnderstandingRS,InclezanZBI18} proposed an ASP-based framework grounded in a theory of intentions \cite{bgb15}. Instead of assuming a fixed sequence of actions, the framework models story participants as goal-driven agents and reasons about their actions, goals, and the effects of those actions using ASP. The approach can reason about both normal and exceptional scenarios, provided it receives an appropriate symbolic representation of the narrative.
+A key component of this framework is a \emph{logic form}, a collection of facts describing the entities, actions, and properties of the world explicitly mentioned in a story. The logic form is combined with a background ASP knowledge base encoding domain knowledge and reasoning rules to construct a complete model of the narrative, including actions and state changes that are not explicitly stated. For example, the story \textit{``Nicole went to a vegetarian restaurant. She ordered lentil soup. The waitress set the soup in the middle of the table. Nicole enjoyed the soup. She left the restaurant.''}
+can be represented by the following logic form:
+
+\smallskip
+%\small
+$
+\begin{array} {l}
+customer(``Nicole").\ \ \ 
+restaurant(``vegetarian\  restaurant").\\
+food(``lentil\ soup").\ \ \ \ 
+waiter(``waitress").\\
+st\_hpd(go(``Nicole", ``vegetarian\  restaurant"), true, 0).\\
+st\_hpd(order(``Nicole", ``lentil\  soup", ``waitress", true, 1).\\
+st\_hpd(put\_down(``waitress", ``lentil\ soup", t), true, 2).\\
+st\_hpd(eat(``Nicole", ``lentil\ soup"), true, 3).\\
+st\_hpd(leave(``Nicole", true, 4).
+\end{array}
+$
+%\normalsize
+
+\noindent
+where facts of the form $customer(\cdot)$, $restaurant(\cdot)$, $food(\cdot)$, and $waiter(\cdot)$ identify story entities, and atoms of the form $st\_hpd(a,\mathit{true}/\mathit{false},i)$ record observations stating that action $a$ did or did not occur at narrative time step $i$.
+For successful reasoning, the logic form must use the same vocabulary as the background knowledge base. In previous work, such logic forms were constructed manually, leaving the automatic generation of reasoning-ready ASP representations from natural-language narratives as an important open challenge.
+
+
+\subsection{LLMs and Neuro-Symbolic Reasoning}
+
+Recent work has explored combining LLMs with symbolic reasoning systems in order to leverage the language understanding capabilities of LLMs together with the reliability and interpretability of formal reasoning. Yang et al. \cite{Yang2023CouplingLL} proposed a framework in which LLMs translate natural-language inputs into atomic facts that are subsequently processed by ASP modules for question answering, spatial reasoning, and planning tasks. Similarly, Ishay et al. \cite{Ishay2023LeveragingLL} investigated the generation of ASP programs from natural-language descriptions of logic puzzles, while Yang et al. \cite{Yang2024LLM2LAS} combined LLMs with learning from answer sets to induce commonsense rules from question-answering examples. More recently, Coppolillo et al. \cite{Coppolillo2024LLASP} systematically evaluated LLMs on ASP code generation and proposed a fine-tuned model specialized for ASP, while Alviano et al. \cite{Alviano2025Integrating} explored the use of ASP and LLMs for constructing structured representations of complex knowledge expressed in natural language.
+
+At the same time, a growing body of work has highlighted limitations of LLMs in understanding temporal structure and event sequences. For example, recent studies on procedural and temporal reasoning have shown that model performance degrades as the number of events and temporal dependencies increases \cite{wg25,am25}. Narrative-of-Thought \cite{Wang2024NarrativeOfThought} addresses this challenge by explicitly constructing temporal reasoning structures, demonstrating that temporal consistency remains a significant challenge for contemporary LLMs. Despite the growing interest in LLM--ASP integration, existing work has focused primarily on question answering, planning, knowledge acquisition, or code generation. Comparatively little attention has been paid to evaluating whether LLMs can generate reasoning-ready ASP logic forms from narratives describing stereotypical activities, where successful reasoning depends on correctly identifying entities and events while preserving temporal structure. Our work addresses this gap through a systematic evaluation of multiple LLMs and prompting strategies on the task of translating restaurant narratives into ASP-compatible logic forms.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Methodology}
+\label{sec:methodology}
+
+\subsection{Model Selection}
+\label{sec:model-selection}
+
+Our experiments evaluate three state-of-the-art Large Language Models, selected to
+span three leading commercial AI development ecosystems: OpenAI, Google, and
+DeepSeek.  Table~\ref{tab:models} lists the primary models evaluated via
+programmatic API access (through OpenRouter, an OpenAI-compatible API gateway)
+alongside the newer model versions used in an exploratory web-based trial.
+The API versions were frozen at the time of our primary experiments
+(late 2025), ensuring reproducibility.  The web-based trial was conducted later
+with the then-current model versions, providing an opportunistic assessment of
+whether newer releases had improved on the limitations observed in their
+predecessors.
+
+\begin{table}[t]
+\centering
+\caption{Models evaluated in this study.  Primary API experiments used the
+versions in the ``API Version'' column; an exploratory web-based trial used the
+newer versions in the ``Web Version'' column.}
+\label{tab:models}
+\begin{tabular}{@{}lll@{}}
+\toprule
+\textbf{Model Family} & \textbf{API Version (OpenRouter)} & \textbf{Web Version} \\
+\midrule
+ChatGPT & GPT-5 (Aug~2025)~\cite{openai2025gpt5}
+        & GPT-5.1~\cite{openai2025gpt51} \\
+Gemini  & Gemini 2.5 Pro~\cite{learnlmteam2025evaluatinggeminiarenalearning}
+        & Gemini 3.0 Pro \\
+DeepSeek& DeepSeek V3.1~\cite{deepseek2025v31}
+        & DeepSeek V3.2 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+All API-based experiments used a temperature of 0.0, a deliberate
+choice that merits justification in the context of this task.  A temperature of
+zero forces the model to select the most probable token at each step, producing
+deterministic, reproducible output.  For a formal logic translation
+task where a single missing period or misplaced parenthesis renders the
+entire program unparsable, nondeterministic sampling would introduce
+stochastic variation into the predicate structure, making it impossible to
+attribute differences in output quality to prompting conditions rather than
+sampling noise.  This is consistent with standard practice in
+structured-output prompting, where temperatures at or near zero are used to
+maximize reliability for tasks requiring syntactic precision~\cite{Drozdov2022CompositionalSP,Yang2023CouplingLL}.
+The response format was constrained to JSON objects
+(\texttt{response\_format=\{"type": "json\_object"\}}), and the maximum output
+token limit was set to 32{,}000 tokens per request.
+
+\subsection{Data Sets}
+\label{sec:datasets}
+
+Our dataset consists of 100 narrative texts describing restaurant visits.
+40 stories were drawn from a corpus developed by
+Inclezan et al.~\cite{ZHANG_2019,inclezan2019restkb} for ASP-based narrative
+understanding; 25 were sourced from the ROCStories
+corpus~\cite{mostafazadeh-etal-2016-corpus} and filtered for
+restaurant-related keywords; and the remaining 35 were generated using
+Gemini 2.5 Pro and DeepSeek R1, prompted to produce diverse restaurant-visit
+narratives spanning both routine and exceptional scenarios.  Each story is
+2--5 sentences long, with a few exceptions, 
+and describes a sequence of events involving one or more diners, waitstaff,
+and restaurant-related actions (entering, ordering, eating, paying, etc.).
+Table~\ref{tab:scenario-types} summarizes the distribution across three
+narrative categories.
+
+\begin{table}[t]
+\centering
+\small
+\caption{Distribution of narrative types in the 100-story dataset.}
+\label{tab:scenario-types}
+\begin{tabular}{@{}lp{2.8cm}p{7.5cm}@{}}
+\toprule
+\textbf{Category} & \textbf{Count} & \textbf{Description} \\
+\midrule
+Normal     & 52 & Standard dining scenario (enter, order, eat, pay, leave) \\
+Exception  & 39 & Something goes wrong (wrong dish, complaint,
+                   cancellation, unavailability, etc.) \\
+Variation  &  9 & Non-standard dining (shared food, ordering for others,
+                   first-person perspective, multi-course sequencing) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Normal stories follow the standard restaurant script~\cite{Schank1978ScriptsPG,mueller04}:
+a diner enters, sits, orders, eats, pays, and leaves.  Exception stories
+deviate from this script: a dish is unavailable, the wrong order arrives, a
+customer complains, or a bill is cancelled.  Variation stories capture
+non-anomalous deviations such as shared dining, ordering on behalf of others,
+multi-course sequencing, or first-person narration.  This three-way
+categorization was intentional, as we wanted to test whether LLMs could handle
+not only routine event sequences but also structural variations and
+exceptional scenarios that require different encoding patterns (e.g.,
+\texttt{member/2} for shared items, \texttt{order\_for/4} for proxy ordering,
+or \texttt{st\_next/2} for consecutive time-steps in complaint scenarios).
+
+The 40 stories sourced from the Inclezan corpus already possessed ground-truth
+ASP encodings from prior work~\cite{ZHANG_2019,Inclezan2017UnderstandingRS}.
+The remaining 60 stories were manually encoded by the first author following
+the same RestKB-derived predicate ontology~\cite{inclezan2019restkb} to ensure
+consistency across the full dataset.
+Table~\ref{tab:predicates} provides a summary of the predicate inventory.
+
+\begin{table}[t]
+\centering
+\caption{Core predicate ontology for the narrative-to-ASP translation task.}
+\label{tab:predicates}
+\begin{tabular}{@{}lll@{}}
+\toprule
+\textbf{Category} & \textbf{Predicates} & \textbf{Description} \\
+\midrule
+Entity   & \texttt{restaurant/1, customer/1, person/1,}
+         & Static domain entities \\
+         & \texttt{food/1, waiter/1, beverage/1,}
+         & \\
+         & \texttt{host/1, cook/1, member/2}
+         & \\
+\midrule
+Fluents  & \texttt{st\_obs(Fluent, Bool, I)}
+         & Observable states at time $I$ \\
+($\sim$12) & e.g., \texttt{sitting/1}, \texttt{hungry/1},
+         & \\
+         & \texttt{paid/1}, \texttt{available/2}
+         & \\
+\midrule
+Actions  & \texttt{st\_hpd(Action, true/false, I)}
+         & Events that occur at time $I$ \\
+($\sim$22) & e.g., \texttt{enter/2}, \texttt{order/3},
+         & \\
+         & \texttt{eat/2}, \texttt{pay/2}, \texttt{leave/1}
+         & \\
+\midrule
+Special  & \texttt{st\_next(I1, I2)}
+         & Consecutive time-steps (complaint scenarios) \\
+\bottomrule
+\multicolumn{3}{@{}l@{}}{\footnotesize Constants: \texttt{t} (table), \texttt{b} (bill),
+\texttt{r} (unnamed restaurant), \texttt{w} (unnamed waiter),} \\
+\multicolumn{3}{@{}l@{}}{\footnotesize \texttt{f} (collection order), \texttt{tip} (gratuity).}
+\end{tabular}
+\end{table}
+
+\subsection{Experiment Details}
+\label{sec:experiment-details}
+
+\subsubsection{Common Prompt Architecture}
+
+Every API request across all conditions shared a common prompt framework,
+ensuring that any differences in model output could be attributed to the
+specific experimental variables under investigation. The task-framing text directed the model to analyze the provided reference examples and instructional documents before generating logic forms for the target stories; this language varied only in the number of examples referenced and the documents named, with all other wording held constant across conditions.
+
+\textbf{System persona.} All prompts opened with the system instruction:
+\textit{``You are a precise ASP logic translator. You never skip data.''}
+This established the model's role as a translator of natural language into
+formal logical notation and served as a countermeasure against output
+truncation.
+
+\textbf{Supplementary instructional documents.} Most conditions included two
+supplementary documents embedded in the prompt:
+(1)~\texttt{output\_expectations.md}, which defined the complete predicate
+inventory, all valid constants, and critical formatting rules (double-quoted
+entity names, period-delimited predicates); and
+(2)~\texttt{additional\_info.md}, which provided heuristics for encoding
+edge cases, such as negation formatting, role compression (encoding non-waiter staff
+as \texttt{waiter/1} when they perform waiter duties), handling of
+unspecified food items (using the constant \texttt{f}), and a prohibition
+against inferring actions not explicitly stated in the narrative.  The
+presence or absence of \texttt{additional\_info.md} constituted one of the
+independent variables in our experimental design.
+
+\textbf{Structural constraints.} Every prompt included explicit formatting
+rules: return only valid JSON, represent \texttt{logic\_form} as a list of
+strings, escape internal double quotes, and process every provided story
+without omission.  These rules addressed the most common failures observed
+during pilot testing.
+
+\textbf{Batch processing.}  Generating logic forms for all 90--100 target
+stories in a single API call would exceed the models' output token limits.
+We therefore adopted a batched inference strategy: target stories were divided
+into batches of~10, and each batch's API request contained the full set of
+reference examples (identical across all batches), the system persona, the
+relevant instructional documents, and the batch-specific target stories.
+After all batches completed, outputs were reassembled in the original story
+order.  Each batch was configured with up to two automatic retries on failure,
+and a JSON repair layer using the \texttt{json-repair} library was applied to
+handle common formatting issues such as unescaped quotes within ASP predicate
+strings.
+
+\subsubsection{Experimental Conditions}
+
+We designed six experimental conditions crossing two dimensions: the number
+of few-shot exemplars (0, 5, or 10) and the presence or absence of the
+supplementary encoding guide (\texttt{additional\_info.md}).  An additional
+condition used the web chat interfaces of each model vendor with newer
+model versions.  Table~\ref{tab:conditions} summarizes the configuration of
+each condition.
+
+\begin{table}[t]
+\centering
+\caption{Experimental conditions.  Doc~A = \texttt{output\_expectations.md};
+Doc~B = \texttt{additional\_info.md}.}
+\label{tab:conditions}
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+\textbf{Condition}
+ & \textbf{Shots} & \textbf{Doc~A} & \textbf{Doc~B}
+ & \textbf{Targets} & \textbf{Delivery} \\
+\midrule
+ZeroShot-V1            &  0 & \checkmark & \checkmark & 100 & API \\
+FewShot-5-Random-V1    &  5 & \checkmark &            &  95 & API \\
+FewShot-5-Random-V2    &  5 & \checkmark & \checkmark &  95 & API \\
+FewShot-10-Random-V1   & 10 & \checkmark &            &  90 & API \\
+FewShot-10-Random-V2   & 10 & \checkmark & \checkmark &  90 & API \\
+Manual-Prompting (web) & 10 & \checkmark & \checkmark & 100 & Web \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{ZeroShot-V1} served as the baseline: models received no exemplar
+translations, relying solely on the two instructional documents to infer the
+encoding conventions.
+
+\textbf{FewShot-5-Random-V1} added five randomly selected exemplar
+translations (covering both Normal and Exception scenarios) alongside the
+output expectations document.
+
+\textbf{FewShot-5-Random-V2} retained the same five examples but added the
+supplementary document \texttt{additional\_info.md}, testing whether explicit
+encoding heuristics improved performance over examples alone.
+
+\textbf{FewShot-10-Random-V1} doubled the exemplar count to ten while keeping
+the same documentation as 5-shot V1, assessing whether additional examples
+alone improved generalization.
+
+\textbf{FewShot-10-Random-V2} combined ten exemplars with both instructional
+documents, representing the richest prompting configuration tested.
+
+\textbf{Manual-Prompting} was an exploratory web-based trial using the
+official chat interfaces of each model vendor with newer model versions
+(GPT-5.1, Gemini 3.0 Pro, DeepSeek V3.2).  The prompt, equivalent to
+FewShot-10-Random-V2 in content, was pasted directly into the chat interface
+with a request to translate all 100 stories in a single response.  There was
+no automated batching, no JSON repair layer, and no programmatic retry
+logic; for ChatGPT, the task was split across three conversational chunks
+after the model declined to generate all 100 outputs at once.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Evaluation and Results}
+\label{sec:eval}
+
+\subsection{Evaluation Methodology}
+\label{sec:eval-method}
+
+We employed a two-stage evaluation protocol to assess the syntactic
+validity and the semantic accuracy of the generated ASP encodings.
+
+\paragraph{Syntactic validity (Stage 1).}  Each generated encoding was fed to
+the \texttt{clingo} parser~\cite{gebser2014clingo} via the official Python
+API (\texttt{Control.add()} and \texttt{Control.ground()}).  An encoding was
+classified as syntactically valid if and only if the parser accepted it
+without raising a lexer or syntax error.  This stage was automated and
+exhaustive, covering all generated encodings across every condition (1{,}680
+total predicted outputs, including the web-based trial).
+
+\paragraph{Semantic accuracy (Stage 2).}  For each experimental condition, we
+selected approximately 30 stories to cover outputs of varying quality.  Each selected encoding was manually scored against the ground truth using the rubric defined in Table~\ref{tab:rubric}, primarily by the first author. An encoding was considered a \textit{pass} if it
+received a score of 4 or higher.  The pass rate (proportion of evaluated
+encodings scoring $\ge 4$) is our primary semantic metric.
+
+\begin{table}[t]
+\centering
+\caption{Semantic accuracy scoring rubric.}
+\label{tab:rubric}
+\begin{tabular}{@{}cl@{}}
+\toprule
+\textbf{Score} & \textbf{Criteria} \\
+\midrule
+5   & Exact match to ground truth \\
+4.5 & Better than ground truth (catches annotator omission) \\
+4   & Pass: functionally correct, all key predicates present   \\
+3   & Close: one or more significant errors \\
+2   & Major errors: story content not captured \\
+1   & Mostly unrelated output \\
+0   & Empty, unparsable, or missing \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Syntactic Evaluation Results}
+\label{sec:syntactic-results}
+
+Table~\ref{tab:syntactic} presents the syntactic parsability rates for the
+three primary models across all six conditions.  Two patterns are
+immediately apparent.
+
+\begin{table}[t]
+\centering
+\small
+\caption{Syntactic parsability rates.  Weighted averages are calculated across
+all target stories per model.}
+\label{tab:syntactic}
+\begin{tabular}{@{}p{4.8cm}ccc@{}}
+\toprule
+\textbf{Condition}
+ & \textbf{ChatGPT} & \textbf{Gemini} & \textbf{DeepSeek} \\
+ & \textbf{5.0} & \textbf{2.5 Pro} & \textbf{V3.1} \\
+\midrule
+ZeroShot-V1 (100 targets)    & 80.0\% &  80.0\% & \textbf{99.0}\% \\
+FewShot-5-Random-V1 (95)     & 100\%  & 100\%   &  77.9\% \\
+FewShot-5-Random-V2 (95)     & 100\%  & 100\%   &  84.2\% \\
+FewShot-10-Random-V1 (90)    & 100\%  & 100\%   &  96.7\% \\
+FewShot-10-Random-V2 (90)    & 100\%  & 100\%   &  100\% \\
+Manual-Prompting (90)         & 100\%  & 100\%   &  100\% \\
+\midrule
+Weighted Average              & 96.4\% & 96.4\%  & 92.9\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+First, ChatGPT and Gemini exhibited a sharp binary transition: both models
+failed 20 of 100 encodings in the zero-shot condition, uniformly due to
+missing terminating periods, a format-level error where predicates were
+space-delimited rather than period-terminated, but achieved perfect
+parsability in every few-shot condition.  Five exemplars were sufficient to
+teach both models the ASP syntactic convention.
+
+Second, DeepSeek showed the opposite trajectory.  It achieved the single best
+performance in the zero-shot condition (99.0\%), demonstrating that its
+internal output template already produced syntactically clean ASP.  However,
+its parsability \textit{dropped} when exemplars were introduced: 77.9\% in
+5-shot V1, primarily due to unsafe free variables (the model used \texttt{X}
+as a placeholder for unspecified entities rather than the established constant like 
+\texttt{f}).  The addition of \texttt{additional\_info.md} in the 5-shot V2
+condition introduced a qualitatively different failure mode: the
+Chinese character \begin{CJK}{UTF8}{gbsn}极\end{CJK} appeared randomly in
+predicate names, string literals, and numeric arguments in 12 of 95 outputs,
+suggesting a token-level hallucination triggered by the longer prompt.
+This corruption was absent from both the zero-shot and 5-shot V1 conditions.
+DeepSeek's parsability partially recovered to 96.7\% in 10-shot V1 and
+finally reached 100\% in 10-shot V2, the only condition where all three
+models achieved perfect syntactic validity.
+
+Table~\ref{tab:fail-modes} summarizes the six distinct failure modes observed
+across 79 invalid encodings (5.6\% of 1{,}410 total outputs).
+
+\begin{table}[t]
+\centering
+\caption{Syntactic failure mode taxonomy.  Format-level errors account for
+52\% of failures (exclusive to ChatGPT and Gemini); content-level errors
+account for 48\% (exclusive to DeepSeek).}
+\label{tab:fail-modes}
+\begin{tabular}{@{}llc@{}}
+\toprule
+\textbf{Failure Mode} & \textbf{Affected Models} & \textbf{Occurrences} \\
+\midrule
+Missing terminating periods & ChatGPT, Gemini         & 40 \\
+Unsafe free variables       & DeepSeek                & 22 \\
+Chinese character corruption & DeepSeek               & 12 \\
+Incorrect predicate names   & DeepSeek                &  2 \\
+Stray punctuation           & DeepSeek                &  1 \\
+Missing output              & DeepSeek                &  2 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+
+\subsection{Semantic Evaluation Results}
+\label{sec:semantic-results}
+
+Table~\ref{tab:semantic-consolidated} consolidates the semantic pass rates
+(proportion scoring $\ge$~4) across all three models and all six conditions.
+
+\begin{table}[t]
+\centering
+\small
+\caption{Consolidated semantic pass rates (score $\ge$~4). Bold values
+indicate the best performance for each model.}
+\label{tab:semantic-consolidated}
+\begin{tabular}{@{}p{4.8cm}ccc@{}}
+\toprule
+\textbf{Condition}
+ & \textbf{ChatGPT} & \textbf{Gemini} & \textbf{DeepSeek} \\
+ & \textbf{5.0} & \textbf{2.5 Pro} & \textbf{V3.1} \\
+\midrule
+ZeroShot-V1            & 20.0\%  &  0.0\%  & 20.0\% \\
+FewShot-5-Random-V1    & 63.3\%  & 53.3\%  & 50.0\% \\
+FewShot-5-Random-V2    & 60.0\%  & \textbf{90.0}\% & 43.3\% \\
+FewShot-10-Random-V1   & 75.9\% & 72.4\%  & 37.9\% \\
+FewShot-10-Random-V2   & \textbf{82.8}\% & 79.3\%  & 48.3\% \\
+Manual-Prompting (web) & 30.0\%  & 80.0\%  & \textbf{60.0}\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+
+\subsubsection{ZeroShot-V1}
+
+The zero-shot condition established a low baseline: only 4 of 30 annotations
+(13.3\% overall) received a passing score.  ChatGPT and DeepSeek each passed
+at 20\%, while Gemini failed all 10 evaluated outputs.  Error patterns were
+remarkably consistent across models: redundant entity encoding (using both
+\texttt{person/1} and \texttt{customer/1} for the same individual),
+action--fluent confusion (preferring the fluent \texttt{served/1} over the
+multi-argument action \texttt{put\_down/3}), hallucinated predicate names
+outside the target ontology, and inferred actions not present in the
+narrative.  The instructional documents alone were insufficient to teach the
+models the precise encoding conventions.
+
+\subsubsection{FewShot-5 Variants}
+
+The introduction of five exemplars produced a sharp improvement.  All three
+models exceeded 50\% pass rates in V1.  The addition of
+\texttt{additional\_info.md} in V2 had dramatically model-dependent effects:
+ChatGPT's pass rate was essentially unchanged (63.3\% to 60.0\%), Gemini's
+surged from 53.3\% to \textbf{90.0\%}, the single largest improvement
+observed across any condition (a 37-point jump), while DeepSeek's declined
+modestly from 50.0\% to 43.3\%.  The 4.5 score category (better than ground
+truth) appeared for the first time, with Gemini producing 10 such encodings
+in the V2 condition alone, often because it encoded details the ground truth
+had omitted (e.g., drinks, menu-reading actions, more accurate/reasonable timestep
+assignments).
+
+\subsubsection{FewShot-10 Variants}
+
+Doubling the exemplar count to ten improved ChatGPT and Gemini in the V1
+setting (75.9\% and 72.4\%, respectively) but caused a decline for DeepSeek
+(to 37.9\%).  The richest configuration (10-shot V2) achieved the
+best overall outcomes for ChatGPT (82.8\%) and strong performance for Gemini
+(79.3\%), while DeepSeek partially recovered to 48.3\%.  This configuration
+was the only one where both ChatGPT and Gemini approached or exceeded 80\%
+semantic accuracy with 100\% syntactic parsability.
+
+\subsubsection{Manual-Prompting (Web Interface)}
+
+The web-based trial revealed that the chat interface introduces failure modes
+not present in the stateless API experiments.  ChatGPT 5.1's pass rate
+collapsed to 30.0\%: in the third conversational chunk (SIDs 67--99), it
+completely abandoned the input data and generated encodings for entirely
+fabricated stories unrelated to the target narratives, a catastrophic
+hallucination unique to this model and condition.  Gemini 3.0 Pro maintained
+robust performance at 80.0\%, and DeepSeek V3.2 achieved its best relative
+showing at 60.0\%, with error profiles consistent with its API-based results.
+For deployment scenarios requiring reliable structured output, stateless
+prompting with context re-injection appears preferable to conversational
+interfaces.
+
+\subsubsection{Persistent Error Patterns}
+
+Across all conditions, the most persistent error patterns were: (1)~omission
+of actions not narratively explicit (particularly \texttt{enter});
+(2)~invention of predicates outside the established domain ontology
+(DeepSeek was the most prone, generating predicates such as \texttt{join/2},
+\texttt{invite/2}, \texttt{bring/3}, and \texttt{claim\_reservation/1});
+(3)~confusion between semantically related predicates (\texttt{informed/3}
+vs.\ \texttt{complain/3} or \texttt{cancel\_bill/1}); (4)~incorrect timestep
+assignment; (5)~failure to declare group memberships via \texttt{member/2}
+before using group references; and (6)~missing \texttt{st\_next/2} in
+exceptional complaint scenarios.
+
+\subsection{Discussion}
+\label{sec:discussion}
+
+The results collectively indicate that contemporary LLMs can generate
+reasoning-ready ASP logic forms, but their reliability depends substantially on
+both the model and the prompting strategy. Under the richest configuration
+(10-shot V2), ChatGPT and Gemini achieved 82.8\% and 79.3\% semantic accuracy
+respectively with perfect syntactic parsability. The batched inference strategy
+successfully overcame output token limitations, and the JSON repair layer
+addressed nested-quoting problems. These findings confirm that a pipeline for
+narrative-to-ASP translation is feasible with current technology.
+
+However, no single model dominated across all conditions. ChatGPT was the most
+predictable performer, improving monotonically with richer prompts and reaching
+the highest API-based pass rate (82.8\%). Gemini was the most responsive to
+explicit instructional documentation: adding \texttt{additional\_info.md} in
+the 5-shot condition produced a 37-point improvement to 90.0\%, the single best
+result across all API conditions, surpassing even its own 10-shot performance.
+DeepSeek was the most variable: it achieved strong zero-shot syntactic
+performance (99.0\%) but consistently underperformed in semantic accuracy, with
+its best API result (50.0\%) coming from the simplest few-shot configuration.
+Its performance was not monotonic in prompt richness: more exemplars or longer
+prompts sometimes degraded output quality. These divergent trajectories
+underscore that model selection and prompt design should be treated as a joint
+optimization problem; practitioners should profile their chosen model rather
+than assuming a one-size-fits-all strategy.
+
+The semantic evaluation also revealed persistent error patterns that limit the
+usefulness of LLM-generated logic forms for downstream reasoning. The six
+syntactic failure modes documented in Table~\ref{tab:fail-modes} are largely
+format-level and correctable. The more concerning errors are semantic: action
+omission (particularly \texttt{enter} and \texttt{leave}), predicate invention
+outside the target ontology, confusion between semantically related predicates
+(e.g., \texttt{informed/3} vs.\ \texttt{complain/3}), incorrect timestep
+assignment, failure to declare group memberships via \texttt{member/2}, and
+missing \texttt{st\_next/2} in exceptional complaint scenarios. These last
+three categories (timestep errors, group membership failures, and missing
+\texttt{st\_next}) directly compromise temporal consistency, which is critical
+for ASP-based reasoning about event sequences. The extraction-oriented nature
+of the task demands that models encode only what the text states, but LLMs are
+trained on data that rewards commonsense inference. This tension is unlikely
+to resolve fully through prompting alone.
+
+The web-based trial highlighted additional risks. ChatGPT 5.1's collapse to
+30.0\% in the Manual-Prompting condition, driven by catastrophic hallucination
+of fabricated stories in the final conversational chunk, demonstrates that
+delivery mechanism matters: stateless API prompting with context re-injection
+outperformed conversational interfaces for this task. Gemini 3.0 Pro maintained
+robust performance at 80.0\% across delivery modalities, suggesting that its
+instruction-following mechanism is more resilient to changes in context
+structure.
+
+\noindent\textbf{Practical implications.}  For ChatGPT and Gemini, the 83--90\%
+semantic pass rates under optimal conditions suggest that a human-in-the-loop
+workflow, where LLMs generate initial encodings and domain experts verify and
+correct, could substantially accelerate the development of structured
+knowledge bases for formal reasoning.  The appearance of the 4.5 score
+category (encodings judged better than the ground truth) further supports
+this collaborative vision: in several cases, the models caught omissions in
+the human annotations, revealing potential improvements.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Conclusions and Future Work}
+\label{sec:conclusions}
+
+This study demonstrates that state-of-the-art LLMs can serve as effective
+translators between unstructured natural-language narratives and the
+structured ASP logic forms required by formal reasoning systems.  Under
+carefully designed prompting conditions, ChatGPT and Gemini achieved 83--90\%
+semantic accuracy, and all three models reached 100\% syntactic parsability in
+the richest configuration.  The optimal prompting strategy was found to be
+model-dependent: ChatGPT benefited most from exemplar diversity, Gemini from
+explicit instructional documentation, and DeepSeek exhibited sensitivity to
+prompt complexity.
+
+Several limitations define the scope of these findings.  The study was
+confined to the restaurant dining domain and a single-language (English)
+dataset; generalizability to other narrative domains remains untested.  The
+manual semantic evaluation, while carefully designed, covered only 30 outputs
+per model per condition and relied on a single annotator.  The evaluation also
+stopped at the encoding level; the generated ASP programs were not fed into a
+downstream solver to verify that they enabled correct inference.
+
+Future work should pursue three directions.  First, replicating the
+experimental framework in one or more additional narrative domains (e.g.,
+medical visits, legal case summaries) would test cross-domain generalization.
+Second, closing the loop by feeding LLM-generated encodings into an ASP solver
+would assess whether syntactically valid and semantically accurate encodings
+are sufficient for correct downstream reasoning.  Third, fine-tuning LLMs
+on narrative-to-ASP translation pairs (potentially using the 100-story
+dataset developed here) could yield improvements, particularly for models
+like DeepSeek that showed high sensitivity to prompting conditions.
+
+%
+% ---- Bibliography ----
+%
+% BibTeX users should specify bibliography style 'splncs04'.
+% References will then be sorted and formatted in the correct style.
+%
+\bibliographystyle{splncs04}
+\bibliography{ijclr2026}
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{comment}
+Please note that the first paragraph of a section or subsection is
+not indented. The first paragraph that follows a table, figure,
+equation etc. does not need an indent, either.
+
+Subsequent paragraphs, however, are indented.
+
+\subsubsection{Sample Heading (Third Level)} Only two levels of
+headings should be numbered. Lower level headings remain unnumbered;
+they are formatted as run-in headings.
+
+\paragraph{Sample Heading (Fourth Level)}
+The contribution should contain no more than four levels of
+headings. Table~\ref{tab1} gives a summary of all heading levels.
+
+\begin{table}
+\caption{Table captions should be placed above the
+tables.}\label{tab1}
+\begin{tabular}{|l|l|l|}
+\hline
+Heading level &  Example & Font size and style\\
+\hline
+Title (centered) &  {\Large\bfseries Lecture Notes} & 14 point, bold\\
+1st-level heading &  {\large\bfseries 1 Introduction} & 12 point, bold\\
+2nd-level heading & {\bfseries 2.1 Printing Area} & 10 point, bold\\
+3rd-level heading & {\bfseries Run-in Heading in Bold.} Text follows & 10 point, bold\\
+4th-level heading & {\itshape Lowest Level Heading.} Text follows & 10 point, italic\\
+\hline
+\end{tabular}
+\end{table}
+
+
+\noindent Displayed equations are centered and set on a separate
+line.
+\begin{equation}
+x + y = z
+\end{equation}
+Please try to avoid rasterized images for line-art diagrams and
+schemas. Whenever possible, use vector graphics instead (see
+Fig.~\ref{fig1}).
+
+\begin{figure}
+\includegraphics[width=\textwidth]{fig1.eps}
+\caption{A figure caption is always placed below the illustration.
+Please note that short captions are centered, while long ones are
+justified by the macro package automatically.} \label{fig1}
+\end{figure}
+
+\begin{theorem}
+This is a sample theorem. The run-in heading is set in bold, while
+the following text appears in italics. Definitions, lemmas,
+propositions, and corollaries are styled the same way.
+\end{theorem}
+%
+% the environments 'definition', 'lemma', 'proposition', 'corollary',
+% 'remark', and 'example' are defined in the LLNCS documentclass as well.
+%
+\end{comment}
+
+
+
+

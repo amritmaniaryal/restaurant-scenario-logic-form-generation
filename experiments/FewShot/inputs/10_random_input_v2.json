@@ -1,0 +1,854 @@
+{
+  "data": [
+    {
+      "sid": 0,
+      "text": "Allie enters the restaurant and claims her reservation. The waiter seats her at her table. She orders fruit salad. The waiter brings her fruit salad. After eating, she asks for the bill.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 1,
+      "text": "Abdul is sitting in a vegetarian restaurant. The waiter takes his order, and he orders hummus. The waiter brings the hummus to the table.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 2,
+      "text": "John enters the restaurant. The waiter escorts him to a table. John orders steak. The waiter brings the steak to the table. John asks for the bill, and the waiter brings it to the table. John pays the bill and leaves the restaurant.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 3,
+      "text": "Jill enters the restaurant and is escorted to a table. She orders chicken. The waiter brings the chicken to her table. After eating, Jill asks for the bill.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 4,
+      "text": "Bob is seated at a table in the restaurant. The waiter asks for his order, and he orders a hamburger.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 5,
+      "text": "The waiter shows Jane to her table. Jane is seated at a table in the restaurant. The waiter asks for her order, and she orders fish. After eating, the waiter brings the bill to the table.",
+      "logic_form": [
+        "restaurant(\"the restaurant\"). customer(\"Jane\"). food(\"fish\"). waiter(\"the waiter\"). story_step(0..4). st_hpd(lead_to(\"the waiter\", \"Jane\", t), true, 0). st_obs(sitting(\"Jane\"), true, 1). st_hpd(order(\"Jane\", \"fish\", \"the waiter\"), true, 2). st_hpd(eat(\"Jane\", \"fish\"), true, 3). st_hpd(put_down(\"the waiter\", b, t), true, 4)."
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 6,
+      "text": "Molly is seated at her table when the waiter asks for her order. She orders a baked potato. The waiter brings out French fries.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 7,
+      "text": "Larry is seated at his table in the restaurant. The waiter brings him a menu so he can decide what to order. After reviewing the menu, Larry decides he doesn't want anything at this restaurant.",
+      "logic_form": [
+        "restaurant(\"the restaurant\"). customer(\"Larry\"). waiter(\"the waiter\"). story_step(0..3). st_obs(sitting(\"Larry\"), true, 0). st_hpd(put_down(\"the waiter\", m, t), true, 1). st_obs(menu_read(\"Larry\"), true, 2). st_hpd(order(\"Larry\"), false, 3)."
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 8,
+      "text": "Derek ordered a vegetable soup. The waiter brought out the vegetable soup, but Derek was unsatisfied with the lack of vegetables in it. As an apology, the waiter decided not to charge Derek for the soup.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 9,
+      "text": "Pete is seated at his table in the restaurant. He has ordered and received his chicken, but is unhappy with how undercooked the chicken is. He complains to the waiter, and asks for a better cooked dish.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 10,
+      "text": "Jim is seated at his table in the restaurant. He orders an appetizer. After waiting for 20 minutes and not receiving his food, he decides to leave the restaurant.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 11,
+      "text": "Jake is seated at his table in the restaurant. He orders a medium-rare steak. The waiter brings out his order but it is too rare.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 12,
+      "text": "My husband and I went to a famous restaurant listed in our guidebook. We were seated at a booth and began studying the menu. We ordered escargot, lamb, savory salmon, and a creamy flan dessert.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 13,
+      "text": "Judy looked at the menu. She and her two kids, Alex and Zoe, were seated in a booth in a local restaurant. They ordered fish and chips.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 14,
+      "text": "Samantha was in a five-star restaurant. Samantha started perusing the menu. She ordered the barbecued veal chop with Asian slaw and Thai fried rice.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 15,
+      "text": "The villager entered a fine restaurant and was seated at one of the tables. He looked at the menu. He ordered one of the items on the list. The waiter brought him a large plate of lettuce salad with several black olives on top.",
+      "logic_form": [
+        "restaurant(\"a fine restaurant\"). customer(\"the villager\"). food(\"one of the items on the list\"). food(\"lettuce salad with several black olives on top\"). story_step(0..4). st_hpd(enter(\"the villager\", \"a fine restaurant\"), true, 0). st_obs(sitting(\"the villager\"), true, 1). st_hpd(pick_up(\"the villager\", m, t), true, 2). st_hpd(order(\"the villager\", \"one of the items on the list\", w), true, 3). st_hpd(put_down(w, \"lettuce salad with several black olives on top\", t), true, 4)."
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 16,
+      "text": "The waiter took Gavin and Amandine to a booth. They slid onto brown vinyl seats. Gavin glanced over his menu. Amandine didn't need to look to know what she wanted. She ordered egg drop soup with wonton, lobster Cantonese and shrimp, beef and pork fried rice. Gavin ordered the same.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 17,
+      "text": "The waiter brought his dinner. He was eating something spotted with eggs and livers. He finished but the waiter wouldn't come total the bill.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 18,
+      "text": "Herbie and his father were at a meat restaurant. The waiter brought a sizzling steak that smelled heavenly, and a plate with haddock and creamed spinach. The waiter put Herbie's plate down. Herbieâ€™s father asked the waiter to take the fish away and bring the boy some lamb chops instead.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 19,
+      "text": "Brand sat in a chair. He picked up the menu and ordered a whiskey with Pepsi, but no ice. Pyrogies and sausage cooked in sauerkraut, he told the waiter. The waiter brought Brand his drink. Then, the waiter placed the food on the table. Brand asked the waiter to bring him a large bowl of borscht when he was done with the pyrogies and sausage. The waiter went back into the kitchen. Brand ate the pyrogies and then the sausage and sauerkraut. Then, the waiter brought out Brand's bowl of soup.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Variation"
+    },
+    {
+      "sid": 20,
+      "text": "The waiter brought out escargot for Molly and me. Then the waiter brought out twelve oysters and twelve clams. We shared the clams and oysters. The waiter poured wine for us.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Variation"
+    },
+    {
+      "sid": 21,
+      "text": "The waiter brought the wine to their table. Then, Emanuel studied the menu. He ordered the gypsy shashlik for Ingrid and himself. After the waiter left, they drank the wine. The waiter brought the shashlik to their table.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Variation"
+    },
+    {
+      "sid": 22,
+      "text": "Andrew was sitting in a restaurant. Sebastian entered the restaurant and sat down opposite Andrew. The waiter brought a bottle of wine. Andrew and Sebastian took a drink. The waiter gave the men a menu.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Variation"
+    },
+    {
+      "sid": 23,
+      "text": "I opened the menu and chose the salmon. The waiter poured two glasses of red wine. I sipped the wine. Then our server brought a small plate of hors d'oeuvres. I tried a little bit of everything. Soon, the waiter brought the meal. I tasted the salmon.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Variation"
+    },
+    {
+      "sid": 24,
+      "text": "Jasper invited Frank to a restaurant. Jasper ordered roast beef and coffee. Their conversation was interrupted by the arrival of the coffee and roast beef, which both he and his new friend attacked with vigor. Jasper wanted to invite Frank, but he had forgotten his wallet at home. Frank paid for both.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 25,
+      "text": "I was the first person to appear at the restaurant. I took my seat at the middle of the table. The head-waiter waited on me himself. I had a capital dinner. Then Uncle Chipperton entered. He paid for the whole dinner.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 26,
+      "text": "Nicole went to a vegetarian restaurant. She ordered lentil soup. The waitress set the soup in the middle of the table. Nicole enjoyed the soup. She left the restaurant.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 27,
+      "text": "Nicole and Sam went to a vegetarian restaurant. She ordered a lentil soup. He ordered a miso soup. They both enjoyed their soups.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 28,
+      "text": "One day, Andy felt hungry, and went to the RRGrill restaurant for dinner. The restaurant was open, so he walked into the restaurant where he was greeted by the waiter and was led to the table. Andy ordered soup and he ate it with pleasure. He paid cash and left.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 29,
+      "text": "Nicole went to a vegetarian restaurant. She ordered lentil soup. When the waitress brought her the soup, she told Nicole that it was on the house. Nicole enjoyed the soup and then left.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 30,
+      "text": "Nicole went to a vegetarian restaurant. She ordered lentil soup. The waitress brought her a miso soup instead.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 31,
+      "text": "Nicole went to a vegetarian restaurant. She ordered lentil soup. The waitress brought her a miso soup instead. Nicole decided to eat it anyway.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 32,
+      "text": "Nicole went to a vegetarian restaurant. She ordered a lentil soup. Nicole was in a hurry, so as soon as the waitress laid the dish on the table, Nicole paid for it in cash and said that she didn't need the bill.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 33,
+      "text": "One day, Andy felt hungry and went to the RRGrill restaurant for dinner. The restaurant was open, but there was no table available for Andy.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 34,
+      "text": "One day, Andy felt hungry and went to the RRGrill restaurant for dinner. The restaurant was open, but there was no table available for Andy. Andy decided to wait. A table became available soon after.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 35,
+      "text": "One day, Andy felt hungry and went to the RRGrill restaurant for dinner. The restaurant was open, but there was no table available for Andy. Andy decided to leave.",
+      "logic_form": [
+        "restaurant(\"RRGrill\"). customer(\"Andy\"). story_step(0..3). st_hpd(enter(\"Andy\", \"RRGrill\"), true, 0). st_hpd(lead_to(w, \"Andy\", t), false). stop_activity(\"Andy\", 2). st_hpd(leave(\"Andy\"), true, 3)."
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 36,
+      "text": "One day, Andy felt hungry and went to the RRGrill restaurant for dinner. The restaurant was open and Tom, Andyâ€™s friend, had his birthday party in there. Tom had prepaid for all the food that was offered. The waiter led Andy to Tomâ€™s table. Andy joined the party.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 37,
+      "text": "One day, Andy felt hungry and went to the RRGrill restaurant for dinner. The restaurant was closed that day. He decided to go to Happy Pizza instead.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 38,
+      "text": "One day, Andy felt hungry and went to the RRGrill restaurant for dinner. The restaurant was open and the waiter led Andy to a table. Andy went through the whole menu, but he didn't find any dish that he liked. Andy decided to leave.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 39,
+      "text": "One day, Andy felt hungry and went to the RRGrill restaurant for dinner. The restaurant was open. The waiter led him to a table. As Andy was sitting down before having a chance to order, he received an emergency phone call and had to leave.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 40,
+      "text": "Ken was at a sushi restaurant. He ordered the tuna roll. The waiter brought the tuna roll, but Ken noticed a long hair in it. He complained to the waiter, who apologized and brought a new, hair-free roll.",
+      "logic_form": [
+        "restaurant(\"sushi restaurant\"). customer(\"Ken\"). food(\"tuna roll\"). food(\"new tuna roll\"). waiter(\"the waiter\"). story_step(0..4). st_hpd(order(\"Ken\", \"tuna roll\", \"the waiter\"), true, 0). st_hpd(put_down(\"the waiter\", \"tuna roll\", t), true, 1). st_hpd(complain(\"Ken\", \"the waiter\"), true, 2). st_next(1, 2). st_hpd(put_down(w, \"new tuna roll\", t), true, 3)."
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 41,
+      "text": "Laura was at a cafe. She ordered a coffee and a croissant. The waiter brought the coffee promptly, but after 30 minutes, the croissant still hadn't arrived. Laura gave up, paid for her coffee, and left.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 42,
+      "text": "David and his date, Sarah, went to a fancy restaurant. David ordered for both of them, choosing the duck confit. The waiter served the meal and poured them some wine. They enjoyed their dinner.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Variation"
+    },
+    {
+      "sid": 43,
+      "text": "Megan entered the restaurant and sat at the bar. She ordered a glass of wine from the bartender. She finished her drink, paid the bartender, and left.",
+      "logic_form": [
+        "restaurant(\"the restaurant\"). customer(\"Megan\"). beverage(\"glass of wine\"). waiter(\"the bartender\"). st_hpd(enter(\"Megan\", \"the restaurant\"), true, 0). st_hpd(sit(\"Megan\"), true, 1). st_hpd(order(\"Megan\", \"glass of wine\", \"the bartender\"), true, 2). st_hpd(drink(\"Megan\", \"glass of wine\"), true, 3). st_hpd(pay(\"Megan\", b), true, 4). st_hpd(leave(\"Megan\"), true, 5)."
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 44,
+      "text": "At an Italian restaurant, Chloe ordered lasagna. The waiter brought her spaghetti instead. Chloe informed the waiter of the mistake.",
+      "logic_form": [
+        "restaurant(\"Italian restaurant\"). customer(\"Chloe\"). food(\"lasagna\"). food(\"spaghetti\"). waiter(\"the waiter\"). story_step(0..2). st_hpd(order(\"Chloe\", \"lasagna\", \"the waiter\"), true, 0). st_hpd(put_down(\"the waiter\", \"spaghetti\", t), true, 1). st_hpd(complain(\"Chloe\", \"the waiter\"), true, 2). st_next(1, 2)."
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 45,
+      "text": "The restaurant was very busy. A group of friends was seated, but no waiter came to take their order. After waiting for twenty minutes, they decided to leave and go somewhere else.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 46,
+      "text": "Rita finished her salad. She requested the bill from the waiter. The waiter brought the bill, and Rita paid with her credit card.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 47,
+      "text": "Gary went to a restaurant for his birthday. He ordered a steak. After he finished eating, the waiter surprised him with a small cake, on the house. Gary left a large tip.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Variation"
+    },
+    {
+      "sid": 48,
+      "text": "Olivia sat down at a table. The waiter greeted her and took her drink order: a glass of water. The waiter brought the water.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 49,
+      "text": "The waiter brought the bill to Mark's table. Mark reviewed it and noticed he had been charged for a dessert he didn't order. He called the waiter over to correct the bill.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 50,
+      "text": "Fiona ordered the soup of the day. The waiter returned a minute later to inform her that they had just run out of the soup. Fiona then ordered a sandwich instead.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 51,
+      "text": "Steve and his son entered a pizzeria. The waiter took them to a table by the window. They ordered a large pepperoni pizza to share. After eating, Steve paid the bill.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 52,
+      "text": "David walked into the seafood restaurant and was shown to his table. He browsed the menu and ordered grilled salmon with vegetables. The food arrived quickly. David ate his meal and paid the bill before leaving.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 53,
+      "text": "The Johnson family entered the family restaurant. They were seated in a booth and given menus. Mr. Johnson ordered steak, Mrs. Johnson ordered salad, and their son ordered pizza. The waiter brought all their orders together.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 54,
+      "text": "Sarah visited the cafe for lunch. She sat at a table by the window and ordered a chicken sandwich and coffee. The waitress brought her order. Sarah ate quickly as she was in a hurry.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 55,
+      "text": "Mark and Lisa went to their favorite sushi restaurant. They were seated at the sushi bar. Mark ordered tuna rolls and Lisa ordered salmon nigiri. The chef prepared their order in front of them.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 56,
+      "text": "Anna visited the vegan restaurant downtown. She ordered the quinoa bowl and a green smoothie. The food was fresh and delicious. She left a generous tip for the excellent service.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 57,
+      "text": "Carlos arrived at the Mexican restaurant and was greeted warmly. He ordered tacos and a margarita. The food arrived quickly and was perfectly prepared. Carlos enjoyed his meal thoroughly.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 58,
+      "text": "Ben went to the diner for breakfast. He sat at the counter and ordered pancakes with bacon and coffee. The cook prepared his order right in front of him.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 59,
+      "text": "Lucy visited the health food restaurant. She ordered a kale salad and detox juice. The ingredients were fresh and organic. She felt energized after her meal.",
+      "logic_form": [
+        "restaurant(\"health food restaurant\"). customer(\"Lucy\"). food(\"kale salad\"). beverage(\"detox juice\"). story_step(0..2). st_hpd(enter(\"Lucy\", \"health food restaurant\"), true, 0). st_hpd(order(\"Lucy\", \"kale salad\", \"the waiter\"), true, 1). st_hpd(order(\"Lucy\", \"detox juice\", \"the waiter\"), true, 1). st_hpd(eat(\"Lucy\", \"kale salad\"), true, 2). st_hpd(drink(\"Lucy\", \"detox juice\"), true, 2)."
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 60,
+      "text": "Robert ordered a medium-rare steak but received a well-done one. He called the waiter and complained about the mistake. The waiter apologized and took the steak back to the kitchen.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 61,
+      "text": "The book club members met at the quiet cafe. They ordered various teas and pastries. Everyone enjoyed their selections while discussing the latest novel.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 62,
+      "text": "The waiter at the steakhouse brought a rare steak for Wendy, but she had ordered it well-done. She sent it back to the kitchen to be cooked more.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 63,
+      "text": "At a cafe, Ivan ordered an espresso. The waiter brought it to his table. Ivan drank the espresso, left cash on the table for the bill, and then departed.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 64,
+      "text": "Penny booked a table for two. She and her friend arrived at the restaurant and were seated immediately. They perused the menu, ordered their food, and had a lovely meal.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 65,
+      "text": "Maria entered the Italian restaurant and was greeted by the host. She was seated at a corner table and handed a menu. Maria ordered spaghetti carbonara and a glass of red wine. The waiter brought her order promptly. She enjoyed her meal and asked for the bill.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 66,
+      "text": "Charlie entered a restaurant and was led to a table. He ordered a burger. The waiter brought the burger. Charlie ate it, asked for the bill, paid, and left.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 67,
+      "text": "Maria and Leo entered a quiet Italian restaurant. The waiter seated them at a corner table. They ordered a bottle of red wine. After the waiter brought the wine, they ordered two pasta dishes. They enjoyed their meal, paid the bill, and left.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 68,
+      "text": "Frank sat down at his usual table in the local diner. The waitress brought him a black coffee. Frank looked at the menu and then ordered pancakes. He ate them, left cash on the table for the bill, and left.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 69,
+      "text": "A group of coworkers went to a sandwich shop for lunch. The waiter seated them at a long table, and took their orders. The waiter brought out all the sandwiches. They ate, paid their separate bills, and returned to work.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 70,
+      "text": "The Jackson family went to a pizzeria on Friday night. The waiter led them to a booth. They ordered a large pepperoni pizza and a pitcher of soda. The waiter brought their order to the table. They all loved the pizza.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 71,
+      "text": "Michael entered the bistro and was led to a table by a waitress. He ordered the daily special and a glass of water. The waitress brought his meal promptly. Michael enjoyed his food and asked for the check.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 72,
+      "text": "Susan visited the pancake house for breakfast. She ordered blueberry pancakes and orange juice. The server brought her order quickly. Susan ate her breakfast and paid with her credit card.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 73,
+      "text": "David entered the deli and took a seat at the counter. He ordered a pastrami sandwich and a pickle. The cook prepared his sandwich and the server brought it to him. David ate his lunch quickly.",
+      "logic_form": [
+        "restaurant(\"the deli\"). customer(\"David\"). food(f). member(\"pastrami sandwich\", f). member(\"pickle\", f). st_hpd(enter(\"David\", \"the deli\"), true, 0). st_hpd(sit(\"David\"), true, 1). st_hpd(order(\"David\", f, \"the server\"), true, 2). st_hpd(prepare(\"the cook\", f, \"the server\"), true, 3). st_hpd(put_down(\"the server\", f, t), true, 4). st_hpd(eat(\"David\", f), true, 5)."
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 74,
+      "text": "Lisa and Mark went to the Italian restaurant for their date night. They were seated at a cozy table. Lisa ordered lasagna and Mark ordered chicken parmesan. They shared a bottle of wine with their meal.",
+      "logic_form": [
+        "restaurant(\"Italian restaurant\"). customer(\"Lisa\"). customer(\"Mark\"). customer(they). member(\"Lisa\", they). member(\"Mark\", they). food(\"lasagna\"). food(\"chicken parmesan\"). beverage(\"wine\"). st_hpd(enter(they, \"Italian restaurant\"), true, 0). st_obs(sitting(they), true, 1). st_hpd(order(\"Lisa\", \"lasagna\", \"the waiter\"), true, 2). st_hpd(order(\"Mark\", \"chicken parmesan\", \"the waiter\"), true, 2). st_hpd(eat(\"Lisa\", \"lasagna\"), true, 3). st_hpd(eat(\"Mark\", \"chicken parmesan\"), true, 3). st_hpd(drink(they, \"wine\"), true, 3)."
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 75,
+      "storyid": "99d073a9-375a-45ad-a070-0fdfbbf73f69",
+      "storytitle": "Going out for Sushi.",
+      "text": "[REDACTED — original ROCStories text; storyid=99d073a9-375a-45ad-a070-0fdfbbf73f69]",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 76,
+      "storyid": "6ead4a09-8e5f-4fbc-8a32-b706bdbb7a87",
+      "storytitle": "Allston Diner",
+      "text": "[REDACTED — original ROCStories text; storyid=6ead4a09-8e5f-4fbc-8a32-b706bdbb7a87]",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 77,
+      "storyid": "44b80dab-a351-4065-86b8-43d519dff470",
+      "storytitle": "The New Restaurant",
+      "text": "[REDACTED — original ROCStories text; storyid=44b80dab-a351-4065-86b8-43d519dff470]",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 78,
+      "storyid": "02fbf49d-54f4-493d-b4af-609cc1e23a22",
+      "storytitle": "The Diner",
+      "text": "[REDACTED — original ROCStories text; storyid=02fbf49d-54f4-493d-b4af-609cc1e23a22]",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 79,
+      "storyid": "845b62e4-9240-4afe-8d59-ae2bc183967c",
+      "storytitle": "The Steakhouse",
+      "text": "[REDACTED — original ROCStories text; storyid=845b62e4-9240-4afe-8d59-ae2bc183967c]",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 80,
+      "storyid": "d85b7ce5-0d84-4181-afe4-52c64711145a",
+      "storytitle": "Sushi",
+      "text": "[REDACTED — original ROCStories text; storyid=d85b7ce5-0d84-4181-afe4-52c64711145a]",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 81,
+      "storyid": "1d235832-c133-4950-ba20-512adb2e3edb",
+      "storytitle": "A New Restaurant",
+      "text": "[REDACTED — original ROCStories text; storyid=1d235832-c133-4950-ba20-512adb2e3edb]",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 82,
+      "storyid": "2cf524c3-5e49-4ba9-9590-f84429fbdc01",
+      "storytitle": "A Date at the Diner",
+      "text": "[REDACTED — original ROCStories text; storyid=2cf524c3-5e49-4ba9-9590-f84429fbdc01]",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 83,
+      "storyid": "9c2ccb82-003d-4253-9f19-65b157b9993f",
+      "storytitle": "Diner",
+      "text": "[REDACTED — original ROCStories text; storyid=9c2ccb82-003d-4253-9f19-65b157b9993f]",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 84,
+      "storyid": "0f9b69ff-6fbe-4e94-a37a-8ef3fbf2a876",
+      "storytitle": "Donna Visits the Diner",
+      "text": "[REDACTED — original ROCStories text; storyid=0f9b69ff-6fbe-4e94-a37a-8ef3fbf2a876]",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 85,
+      "storyid": "9915e783-6bf9-4d92-9150-b031bf778bb7",
+      "storytitle": "Returned order",
+      "text": "[REDACTED — original ROCStories text; storyid=9915e783-6bf9-4d92-9150-b031bf778bb7]",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 86,
+      "storyid": "541efb12-b331-4525-afe1-5422ff33a1ca",
+      "storytitle": "The Diner",
+      "text": "[REDACTED — original ROCStories text; storyid=541efb12-b331-4525-afe1-5422ff33a1ca]",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 87,
+      "storyid": "7dc0c96f-dd24-4561-9a4f-bd1b6b3ca520",
+      "storytitle": "Wrong order",
+      "text": "[REDACTED — original ROCStories text; storyid=7dc0c96f-dd24-4561-9a4f-bd1b6b3ca520]",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 88,
+      "storyid": "3a66621b-9dcf-4e32-b085-e4c0a2e89f8f",
+      "storytitle": "The new restaurant",
+      "text": "[REDACTED — original ROCStories text; storyid=3a66621b-9dcf-4e32-b085-e4c0a2e89f8f]",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 89,
+      "storyid": "c93ca5db-716f-4572-868e-bd22aa4a9018",
+      "storytitle": "Sushi",
+      "text": "[REDACTED — original ROCStories text; storyid=c93ca5db-716f-4572-868e-bd22aa4a9018]",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 90,
+      "storyid": "c4078b0f-e1c3-4c75-a05a-a52c9481fc2a",
+      "storytitle": "Fancy Restaurant",
+      "text": "[REDACTED — original ROCStories text; storyid=c4078b0f-e1c3-4c75-a05a-a52c9481fc2a]",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 91,
+      "storyid": "ac7250f9-d416-41bb-aac7-b1dd788b86fb",
+      "storytitle": "The Wrong Order",
+      "text": "[REDACTED — original ROCStories text; storyid=ac7250f9-d416-41bb-aac7-b1dd788b86fb]",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 92,
+      "storyid": "c9e533e3-d8cc-4e9c-a7a0-0369d6cdc537",
+      "storytitle": "Large Order",
+      "text": "[REDACTED — original ROCStories text; storyid=c9e533e3-d8cc-4e9c-a7a0-0369d6cdc537]",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 93,
+      "storyid": "0b8e4ddd-6ada-42ba-9d6f-508db0bac85a",
+      "storytitle": "The Restaurant",
+      "text": "[REDACTED — original ROCStories text; storyid=0b8e4ddd-6ada-42ba-9d6f-508db0bac85a]",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 94,
+      "storyid": "63dfd3a4-930a-4a27-8ed9-60304b6c32f3",
+      "storytitle": "The Sushi",
+      "text": "[REDACTED — original ROCStories text; storyid=63dfd3a4-930a-4a27-8ed9-60304b6c32f3]",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 95,
+      "storyid": "cd9a0a7b-ef8f-42c0-86ac-fe80542cebd3",
+      "storytitle": "Restaurant",
+      "text": "[REDACTED — original ROCStories text; storyid=cd9a0a7b-ef8f-42c0-86ac-fe80542cebd3]",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Variation"
+    },
+    {
+      "sid": 96,
+      "storyid": "77710d2a-dbc2-4c99-a892-190b529ad219",
+      "storytitle": "A Half Order",
+      "text": "[REDACTED — original ROCStories text; storyid=77710d2a-dbc2-4c99-a892-190b529ad219]",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Variation"
+    },
+    {
+      "sid": 97,
+      "storyid": "d25ec012-9f9f-48e6-8274-e6ac4a4b59e4",
+      "storytitle": "Wrong Order",
+      "text": "[REDACTED — original ROCStories text; storyid=d25ec012-9f9f-48e6-8274-e6ac4a4b59e4]",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 98,
+      "storyid": "09a69527-2433-4e12-9943-9dcacbdf9b04",
+      "storytitle": "new restaurant",
+      "text": "[REDACTED — original ROCStories text; storyid=09a69527-2433-4e12-9943-9dcacbdf9b04]",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 99,
+      "storyid": "11cd400e-b2b8-4279-9e2e-925de49fee44",
+      "storytitle": "The Mexican Restaurant",
+      "text": "[REDACTED — original ROCStories text; storyid=11cd400e-b2b8-4279-9e2e-925de49fee44]",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Normal"
+    }
+  ]
+}

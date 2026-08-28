@@ -1,0 +1,142 @@
+project_name: "ASP_Thesis_2025"
+
+project_settings:
+  # These are the default models used if an experiment doesn't specify its own
+  default_models:
+    ChatGPT: "openai/gpt-5"
+    # ChatGPT_4o: "openai/chatgpt-4o-latest"
+    # ChatGPT_4o: "openai/gpt-4o-2024-08-06"
+    Gemini: "google/gemini-2.5-pro"
+    # Gemini_flash_2.5: "google/gemini-2.5-flash"
+    # Gemini_flash_3.0: "google/gemini-3-flash-preview"
+    # DeepSeek: "deepseek/deepseek-chat-v3.1"
+
+experiments:
+  # --- Experiment 1: Baseline ---
+  - experiment_id: "FewShot_5_V1"
+    enabled: False
+    input_data: "../FewShot/inputs/fewshot_5_input.json"
+    prompt_instructions: |
+      Below is a JSON dataset containing 100 natural language stories. 
+      The first 5 stories have a valid 'logic_form'. The rest are marked 'N/A'.
+
+      Your Task:
+      1. Analyze the first 5 stories as examples.
+      2. Generate the ASP logic form for the remaining 95 stories.
+
+  # --- Experiment 2: With Random Input and Output expectations file---
+  - experiment_id: "FewShot_5_Random_V1"
+    enabled: False
+    input_data: "../FewShot/inputs/5_random_input.json"
+    documentation_files:
+      - "../FewShot/docs/output_expectations.md"
+      # - "../FewShot/docs/additional_info.md"
+    prompt_instructions: |
+      Below is a JSON dataset containing 100 natural language stories. 
+      The 5 random stories have a valid 'logic_form'. The rest are marked 'N/A'.
+      
+      Your Task:
+      1. Analyze the 5 random stories as examples.
+      2. Analyze the 'Output Expectations' documentation to understand the desired format.
+      3. Generate the ASP logic form for the remaining 95 stories.
+
+  # --- Experiment 3: Random 5 inputs, output expectation file, and useful prompts file ---
+  - experiment_id: "FewShot_5_Random_V2"
+    enabled: False
+    num_examples: 5
+    input_data: "../FewShot/inputs/5_random_input.json"
+    documentation_files:
+      - "../FewShot/docs/output_expectations.md"
+      - "../FewShot/docs/additional_info.md"
+    prompt_instructions: |
+      Below is a JSON dataset containing 100 natural language stories. 
+      The 5 random stories have a valid 'logic_form'. The rest are marked 'N/A'.
+      
+      Your Task:
+      1. Analyze the 5 random stories as examples.
+      2. Analyze the 'Output Expectations' documentation to understand the desired format.
+      3. Analyze the 'additional_info' documentation for useful tips, especially regarding edge cases.
+      4. Generate the ASP logic form for the remaining 95 stories.
+
+    # --- Experiment 4: Random 10 examples, output expectation file---
+  - experiment_id: "FewShot_10_Random_V1"
+    enabled: False
+    num_examples: 10
+    input_data: "../FewShot/inputs/10_random_input.json"
+    documentation_files:
+      - "../FewShot/docs/output_expectations.md"
+      # - "../FewShot/docs/additional_info.md"
+    prompt_instructions: |
+      Below is a JSON dataset containing 100 natural language stories. 
+      Ten random stories have a valid 'logic_form'. Those are to serve as examples.
+
+      Your Task:
+      1. Analyze the 10 random stories' logic forms as examples.
+      2. Analyze the 'Output Expectations' documentation to understand the desired format.
+      3. Generate the ASP logic form for the remaining 90 stories.
+
+  # --- Experiment 5: Random 10 examples, output expectation file, and useful prompts file ---
+  - experiment_id: "FewShot_10_Random_V2"
+    enabled: False
+    num_examples: 10
+    input_data: "../FewShot/inputs/10_random_input.json"
+    documentation_files:
+      - "../FewShot/docs/output_expectations.md"
+      - "../FewShot/docs/additional_info.md"
+    prompt_instructions: |
+      Below is a JSON dataset containing 100 natural language stories. 
+      Ten random stories have a valid 'logic_form'. Those are to serve as examples.
+
+      Your Task:
+      1. Analyze the 10 random stories' logic forms as examples.
+      2. Analyze the 'Output Expectations' documentation to understand the desired format.
+      3. Analyze the 'additional_info' documentation for useful tips, especially regarding edge cases.
+      4. Generate the ASP logic form for the remaining 90 stories.
+
+  # --- Experiment 6: Random 10 examples, output expectation file, AND 2 examples with st_next()---
+  - experiment_id: "FewShot_10_Random_V4"
+    enabled: False
+    num_examples: 10
+    input_data: "../FewShot/inputs/10_random_input_v2.json"
+    documentation_files:
+      - "../FewShot/docs/output_expectations.md"
+      # - "../FewShot/docs/additional_info.md"
+    prompt_instructions: |
+      Below is a JSON dataset containing 100 natural language stories. 
+      Ten random stories have a valid 'logic_form'. Those are to serve as examples.
+
+      Your Task:
+      1. Analyze the 10 random stories' logic forms as examples.
+      2. Analyze the 'Output Expectations' documentation to understand the desired format.
+      3. Generate the ASP logic form for the remaining 90 stories.
+
+  # --- Experiment 7: Only output expectation file and useful prompts file, no examples ---
+  - experiment_id: "ZeroShot_V1"
+    enabled: False
+    input_data: "../FewShot/inputs/0_input.json"
+    documentation_files:
+      - "../FewShot/docs/output_expectations.md"
+      - "../FewShot/docs/additional_info.md"
+    prompt_instructions: |
+      Below is a JSON dataset containing 100 natural language stories. 
+      All stories are marked 'N/A' for 'logic_form'.
+
+      Your Task:
+      1. Analyze the 'Output Expectations' documentation to understand the desired format.
+      2. Analyze the 'additional_info' documentation for useful tips, especially regarding edge cases.
+      3. Generate the ASP logic form for all 100 stories.
+
+
+  # Random Experiments to check if the code works
+  - experiment_id: "test_experiment"
+    enabled: False
+    num_examples: 5
+    input_data: "../FewShot/inputs/test_input.json"
+    documentation_files:
+      - "../FewShot/docs/output_expectations.md"
+      - "../FewShot/docs/additional_info.md"
+    prompt_instructions: |
+      Using the 'Output Expectations' and 'Additional Info' documents, 
+      provide the ASP logic forms for the following stories. 
+      Ensure the predicates accurately reflect the sequence of events and the actors involved.
+      

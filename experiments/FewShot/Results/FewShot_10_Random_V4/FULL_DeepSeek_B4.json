@@ -1,0 +1,45 @@
+{
+  "id": "gen-1777146632-Cq3WmdUx2VBtkAWl9rpK",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"data\": [\n    {\n      \"sid\": 33,\n      \"logic_form\": [\n        \"restaurant(\\\"RRGrill\\\"). customer(\\\"Andy\\\"). story_step(0..2). st_obs(hungry(\\\"Andy\\\"), true, 0). st_hpd(enter(\\\"Andy\\\", \\\"RRGrill\\\"), true, 1). st_obs(open(\\\"RRGrill\\\"), true, 2). st_hpd(lead_to(w, \\\"Andy\\\", t), false).\"\n      ]\n    },\n    {\n      \"sid\": 34,\n      \"logic_form\": [\n        \"restaurant(\\\"RRGrill\\\"). customer(\\\"Andy\\\"). story_step(0..4). st_obs(hungry(\\\"Andy\\\"), true, 0). st_hpd(enter(\\\"Andy\\\", \\\"RRGrill\\\"), true, 1). st_obs(open(\\\"RRGrill\\\"), true, 2). st_hpd(lead_to(w, \\\"Andy\\\", t), false). st_hpd(wait(\\\"Andy\\\"), true, 3). st_hpd(lead_to(w, \\\"Andy\\\", t), true, 4).\"\n      ]\n    },\n    {\n      \"sid\": 36,\n      \"logic_form\": [\n        \"restaurant(\\\"RRGrill\\\"). customer(\\\"Andy\\\"). customer(\\\"Tom\\\"). waiter(\\\"the waiter\\\"). story_step(0..4). st_obs(hungry(\\\"Andy\\\"), true, 0). st_hpd(enter(\\\"Andy\\\", \\\"RRGrill\\\"), true, 1). st_obs(open(\\\"RRGrill\\\"), true, 2). st_obs(party(\\\"Tom\\\"), true, 2). st_hpd(lead_to(\\\"the waiter\\\", \\\"Andy\\\", t), true, 3). st_hpd(join(\\\"Andy\\\", \\\"Tom\\\"), true, 4).\"\n      ]\n    },\n    {\n      \"sid\": 37,\n      \"logic_form\": [\n        \"restaurant(\\\"RRGrill\\\"). restaurant(\\\"Happy Pizza\\\"). customer(\\\"Andy\\\"). story_step(0..3). st_obs(hungry(\\\"Andy\\\"), true, 0). st_hpd(enter(\\\"Andy\\\", \\\"RRGrill\\\"), true, 1). st_obs(open(\\\"RRGrill\\\"), false, 2). st_hpd(enter(\\\"Andy\\\", \\\"Happy Pizza\\\"), true, 3).\"\n      ]\n    },\n    {\n      \"sid\": 38,\n      \"logic_form\": [\n        \"restaurant(\\\"RRGrill\\\"). customer(\\\"Andy\\\"). waiter(\\\"the waiter\\\"). story_step(0..4). st_obs(hungry(\\\"Andy\\\"), true, 0). st_hpd(enter(\\\"Andy\\\", \\\"RRGrill\\\"), true, 1). st_obs(open(\\\"RRGrill\\\"), true, 2). st_hpd(lead_to(\\\"the waiter\\\", \\\"Andy\\\", t), true, 3). st_hpd(pick_up(\\\"Andy\\\", m, t), true, 4). st_obs(menu_read(\\\"Andy\\\"), true, 4). st_hpd(order(\\\"Andy\\\"), false, 4). st_hpd(leave(\\\"Andy\\\"), true, 4).\"\n      ]\n    },\n    {\n      \"sid\": 39,\n      \"logic_form\": [\n        \"restaurant(\\\"RRGrill\\\"). customer(\\\"Andy\\\"). waiter(\\\"the waiter\\\"). story_step(0..4). st_obs(hungry(\\\"Andy\\\"), true, 0). st_hpd(enter(\\\"Andy\\\", \\\"RRGrill\\\"), true, 1). st_obs(open(\\\"RRGrill\\\"), true, 2). st_hpd(lead_to(\\\"the waiter\\\", \\\"Andy\\\", t), true, 3). st_hpd(sit(\\\"Andy\\\"), true, 4). st_hpd(leave(\\\"Andy\\\"), true, 4).\"\n      ]\n    },\n    {\n      \"sid\": 41,\n      \"logic_form\": [\n        \"restaurant(\\\"cafe\\\"). customer(\\\"Laura\\\"). food(\\\"croissant\\\"). beverage(\\\"coffee\\\"). waiter(\\\"the waiter\\\"). story_step(0..4). st_obs(in(\\\"Laura\\\", \\\"cafe\\\"), true, 0). st_hpd(order(\\\"Laura\\\", \\\"coffee\\\", \\\"the waiter\\\"), true, 1). st_hpd(order(\\\"Laura\\\", \\\"croissant\\\", \\\"the waiter\\\"), true, 1). st_hpd(put_down(\\\"the waiter\\\", \\\"coffee\\\", t), true, 2). st_hpd(put_down(\\\"the waiter\\\", \\\"croissant\\\", t), false). st_hpd(pay(\\\"Laura\\\", b), true, 3). st_hpd(leave(\\\"Laura\\\"), true, 4).\"\n      ]\n    },\n    {\n      \"sid\": 42,\n      \"logic_form\": [\n        \"restaurant(\\\"fancy restaurant\\\"). customer(\\\"David\\\"). customer(\\\"Sarah\\\"). food(\\\"duck confit\\\"). beverage(\\\"wine\\\"). waiter(\\\"the waiter\\\"). story_step(0..3). st_hpd(enter(\\\"David\\\", \\\"fancy restaurant\\\"), true, 0). st_hpd(enter(\\\"Sarah\\\", \\\"fancy restaurant\\\"), true, 0). st_hpd(order_for(\\\"David\\\", \\\"Sarah\\\", \\\"duck confit\\\", \\\"the waiter\\\"), true, 1). st_hpd(put_down(\\\"the waiter\\\", \\\"duck confit\\\", t), true, 2). st_hpd(drink(\\\"David\\\", \\\"wine\\\"), true, 3). st_hpd(drink(\\\"Sarah\\\", \\\"wine\\\"), true, 3). st_hpd(eat(\\\"David\\\", \\\"duck confit\\\"), true, 3). st_hpd(eat(\\\"Sarah\\\", \\\"duck confit\\\"), true, 3).\"\n      ]\n    },\n    {\n      \"sid\": 45,\n      \"logic_form\": [\n        \"restaurant(\\\"the restaurant\\\"). customer(\\\"group of friends\\\"). story_step(0..2). st_obs(open(\\\"the restaurant\\\"), true, 0). st_obs(sitting(\\\"group of friends\\\"), true, 1). st_hpd(order(\\\"group of friends\\\"), false). st_hpd(leave(\\\"group of friends\\\"), true, 2).\"\n      ]\n    },\n    {\n      \"sid\": 46,\n      \"logic_form\": [\n        \"restaurant(\\\"the restaurant\\\"). customer(\\\"Rita\\\"). food(\\\"salad\\\"). waiter(\\\"the waiter\\\"). story_step(0..3). st_hpd(eat(\\\"Rita\\\", \\\"salad\\\"), true, 0). st_hpd(request(\\\"Rita\\\", b, \\\"the waiter\\\"), true, 1). st_hpd(put_down(\\\"the waiter\\\", b, t), true, 2). st_hpd(pay(\\\"Rita\\\", b), true, 3).\"\n      ]\n    }\n  ]\n}",
+        "refusal": null,
+        "role": "assistant",
+        "reasoning": null
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1777146632,
+  "model": "deepseek/deepseek-chat-v3.1",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 1585,
+    "prompt_tokens": 4352,
+    "total_tokens": 5937,
+    "completion_tokens_details": {
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00276004,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00276004,
+      "upstream_inference_prompt_cost": 0.00117504,
+      "upstream_inference_completions_cost": 0.001585
+    }
+  },
+  "provider": "SiliconFlow"
+}

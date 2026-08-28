@@ -1,0 +1,242 @@
+[
+    {
+        "Scenario Number": 1,
+        "Type": "Normal",
+        "Story": "Allie enters the restaurant and claims her reservation. The waiter \nseats her at her table. She orders fruit salad. The waiter brings her \nfruit salad. After eating, she asks for the bill.",
+        "Logic Form": "restaurant(\"the restaurant\").\n\t\t\tcustomer(\"Allie\").\n\t\t\tfood(\"fruit salad\").\n\t\t\twaiter(\"the waiter\").\n\t\t\tstory_step(0..6).\n\t\t\tst_hpd(enter(\"Allie\", \"the restaurant\"), true, 0).\n\t\t\tst_hpd(lead_to(\"the waiter\", \"Allie\", t), true, 1).\n\t\t\tst_hpd(sit(\"Allie\"), true, 2).\n\t\t\tst_hpd(order(\"Allie\", \"fruit salad\", \"the waiter\"), true, 3).\n\t\t\tst_hpd(put_down(\"the waiter\", \"fruit salad\", t), true, 4).\n\t\t\tst_hpd(eat(\"Allie\", \"fruit salad\"), true, 5).\n\t\t\tst_hpd(request(\"Allie\", b, \"the waiter\"), true, 6)."
+    },
+    {
+        "Scenario Number": 2,
+        "Type": "Normal",
+        "Story": "Abdul is sitting in a vegetarian restaurant. The waiter takes his \norder, and he orders hummus. The waiter brings the hummus to the table.",
+        "Logic Form": "restaurant(\"vegetarian restaurant\").\n\t\t\tcustomer(\"Abdul\").\n\t\t\tfood(hummus).\n\t\t\twaiter(\"the waiter\").\n\t\t\tstory_step(0..2).\n\t\t\tst_obs(sitting(\"Abdul\"), true, 0).\n\t\t\tst_hpd(order(\"Abdul\", hummus, \"the waiter\"), true, 1).\n\t\t\tst_hpd(put_down(\"the waiter\", hummus, t), true, 2)."
+    },
+    {
+        "Scenario Number": 3,
+        "Type": "Normal",
+        "Story": "John enters the restaurant. The waiter escorts him to a table. John \norders steak. The waiter brings the steak to the table. John asks for \nthe bill, and the waiter brings it to the table. John pays the bill and \nleaves the restaurant.",
+        "Logic Form": "restaurant(\"the restaurant\").\n\t\t\tcustomer(\"John\").\n\t\t\tfood(steak).\n\t\t\twaiter(\"the waiter\").\n\t\t\tstory_step(0..6).\n\t\t\tst_hpd(enter(\"John\", \"the restaurant\"), true, 0).\n\t\t\tst_hpd(lead_to(\"the waiter\", \"John\", t), true, 1).\n\t\t\tst_hpd(order(\"John\", steak, \"the waiter\"), true, 2).\n\t\t\tst_hpd(request(\"John, b, \"the waiter\"), true, 3).\n\t\t\tst_hpd(put_down(\"the waiter\", b, t), true, 4).\n\t\t\tst_pay(pay(\"John\", b), true, 5).\n\t\t\tst_pay(leave(\"John\"), true, 6)."
+    },
+    {
+        "Scenario Number": 4,
+        "Type": "Normal",
+        "Story": "Jill enters the restaurant and is escorted to a table. She orders \nchicken. The waiter brings the chicken to her table. After eating, Jill \nasks for the bill.",
+        "Logic Form": "restaurant(\"the restaurant\").\n\t\t\tcustomer(\"Jill\").\n\t\t\tfood(chicken).\n\t\t\twaiter(\"the waiter\").\n\t\t\tstory_step(0..5).\n\t\t\tst_hpd(enter(\"Jill\", \"the restaurant\"), true, 0).\n\t\t\tst_hpd(lead_to(\"the waiter\", \"Jill\", t), true, 1).\n\t\t\tst_hpd(order(\"Jill\", chicken, \"the waiter\"), true, 2).\n\t\t\tst_hpd(put_down(\"the waiter\", chicken, t), true, 3).\n\t\t\tst_hpd(eat(\"Jill\", chicken), true, 4).\n\t\t\tst_hpd(request(\"Jill\", b, \"the waiter\"), true, 5)."
+    },
+    {
+        "Scenario Number": 5,
+        "Type": "Normal",
+        "Story": "Bob is seated at a table in the restaurant. The waiter asks for his order, and he orders a hamburger.",
+        "Logic Form": "restaurant(\"the restaurant\").\n\t\t\tcustomer(\"Bob\").\n\t\t\tfood(hamburger).\n\t\t\twaiter(\"the waiter\").\n\t\t\tstory_step(0..1).\n\t\t\tst_obs(sitting(\"Bob\"), true, 0).\n\t\t\tst_hpd(order(\"Bob\", hamburger, \"the waiter\"), true, 1)."
+    },
+    {
+        "Scenario Number": 6,
+        "Type": "Normal",
+        "Story": "The waiter shows Jane to her table. Jane is seated at a table in the \nrestaurant. The waiter asks for her order, and she orders fish. After \neating, the waiter brings the bill to the table.",
+        "Logic Form": "restaurant(\"the restaurant\").\n\t\t\tcustomer(\"Jane\").\n\t\t\tfood(fish).\n\t\t\twaiter(\"the waiter\").\n\t\t\tstory_step(0..4).\n\t\t\tst_hpd(lead_to(\"the waiter\", \"Jane\", t), true, 0).\n\t\t\tst_obs(sitting(\"Jane\"), true, 1).\n\t\t\tst_hpd(order(\"Jane\", fish, \"the waiter\"), true, 2).\n\t\t\tst_hpd(eat(\"Jane\", fish), true, 3).\n\t\t\tst_hpd(put_down(\"the waiter\", b, t), true,  1)."
+    },
+    {
+        "Scenario Number": 7,
+        "Type": "Exception",
+        "Story": "Molly is seated at her table when the waiter asks for her order. She \norders a baked potato. The waiter brings out French fries.",
+        "Logic Form": "restaurant(\"the restaurant\").\n\t\t\tcustomer(\"Molly\").\n\t\t\tfood(\"baked potato\").\n\t\t\tfood(\"French fries\").\n\t\t\twaiter(\"the waiter\").\n\t\t\tstory_step(0..2).\n\t\t\tst_obs(sitting(\"Molly\"), true, 0).\n\t\t\tst_hpd(order(\"Molly\", \"baked potato\", \"the waiter\"), true, 1).\n\t\t\tst_hpd(put_down(\"the waiter\", \"French fries\", t), true, 2)."
+    },
+    {
+        "Scenario Number": 8,
+        "Type": "Exception",
+        "Story": "Larry is seated at his table in the restaurant. The waiter brings him\n a menu so he can decide what to order. After reviewing the menu, Larry \ndecides he doesn't want anything at this restaurant.",
+        "Logic Form": "restaurant(\"the restaurant\").\n\t\t\tcustomer(\"Larry\").\n\t\t\tfood(nothing).\n\t\t\twaiter(\"the waiter\").\n\t\t\tstory_step(0..2).\n\t\t\tst_obs(sitting(\"Larry\"), true, 0).\n\t\t\tst_hpd(put_down(\"Larry\", m, t), true, 1).\n\t\t\tst_stop_activity(\"Larry\", 2).\n\t\t\tnext_st(1, 2)."
+    },
+    {
+        "Scenario Number": 9,
+        "Type": "Exception",
+        "Story": "Derek ordered a vegetable soup. The waiter brought out the vegetable \nsoup, but Derek was unsatisfied with the lack of vegetables in it. As an\n apology, the waiter decided not to charge Derek for the soup.",
+        "Logic Form": "restaurant(\"restaurant\").\n\t\t\tcustomer(\"Derek\").\n\t\t\tfood(\"vegetable soup\").\n\t\t\twaiter(\"the waiter\").\n\t\t\tstory_step(0..2).\n\t\t\tst_hpd(order(\"Derek\", \"vegetable soup\", \"the waiter\"), true, 0).\n\t\t\tst_hpd(put_down(\"the waiter\", \"vegetable soup\", t), true, 1).\n\t\t\tst_hpd(pay(\"the waiter\", b), true, 2). \n\t\t\tst_next(1, 2)."
+    },
+    {
+        "Scenario Number": 10,
+        "Type": "Exception",
+        "Story": "Pete is seated at his table in the restaurant. He has ordered and \nreceived his chicken, but is unhappy with how undercooked the chicken \nis. He complains to the waiter, and asks for a better cooked dish.",
+        "Logic Form": "restaurant(\"the restaurant\").\n\t\t\tcustomer(\"Pete\").\n\t\t\tfood(chicken).\n\t\t\tfood(\"undercooked chicken\").\n\t\t\twaiter(\"the waiter\").\n\t\t\tstory_step(0..3).\n\t\t\tst_obs(sitting(\"Pete\"), true, 0).\n\t\t\tst_hpd(order(\"Pete\", chicken, \"the waiter\"), true, 1).\n\t\t\tst_hpd(put_down(\"the waiter\", \"undercooked_chicken\", t), true, 2).\n\t\t\tst_hpd(complain(\"Pete\", \"the waiter\"), true, 3)."
+    },
+    {
+        "Scenario Number": 11,
+        "Type": "Exception",
+        "Story": "Jim is seated at his table in the restaurant. He orders an appetizer.\n After waiting for 20 minutes and not receiving his food, he decides to \nleave the restaurant.",
+        "Logic Form": "restaurant(\"the restaurant\").\n\t\t\tcustomer(\"Jim\").\n\t\t\tfood(appetizer).\n\t\t\twaiter(\"the waiter\").\n\t\t\tstory_step(0..4).\n\t\t\tst_obs(sitting(\"Jim\"), true, 0).\n\t\t\tst_hpd(order(\"Jim\", appetizer, \"the waiter\"), true, 1).\n\t\t\tst_hpd(put_down(\"the waiter\", \"undercooked_chicken\", t), true, 2).\n\t\t\tst_stop_activity(\"Pete\", 3).\n\t\t\tst_next(3, 4).\n\t\t\tst_hpd(leave(\"Jim\"), true, 4)."
+    },
+    {
+        "Scenario Number": 12,
+        "Type": "Exception",
+        "Story": "Jake is seated at his table in the restaurant. He orders a \nmedium-rare steak. The waiter brings out his order but it is too rare.",
+        "Logic Form": "restaurant(\"the restaurant\").\n\t\t\tcustomer(\"Jake\").\n\t\t\tfood(\"medium-rare steak\").\n\t\t\tfood(\"rare steak\").\n\t\t\twaiter(\"the waiter\").\n\t\t\tstory_step(0..2).\n\t\t\tst_obs(sitting(\"Jake\"), true, 0).\n\t\t\tst_hpd(order(\"Jake\", \"medium-rare steak\", \"the waiter\"), true, 1).\n\t\t\tst_hpd(put_down(\"the waiter\", \"rare steak\", t), true, 2)."
+    },
+    {
+        "Scenario Number": 13,
+        "Type": "Normal",
+        "Story": "My husband and I went to a famous restaurant listed in our guidebook.\n We were seated at a booth and began studying the menu. We ordered \nescargot, lamb, savory salmon, and a creamy flan dessert.",
+        "Logic Form": "restaurant(\"a famous restaurant\").\n\t\t\tperson(\"my husband\").\n\t\t\tperson(\"I\").\n\t\t\tcustomer(\"we\").\n\t\t\tmember(\"my husband\", \"we\").\n\t\t\tmember(\"I\", \"we\").\n\t\t\tfood(f).\n\t\t\tmember(\"escargot\", f).\n\t\t\tmember(\"lamb\", f).\n\t\t\tmember(\"savory salmon\", f).\n\t\t\tmember(\"creamy flan dessert\")\n\t\t\twaiter(\"the waiter\").\n\t\t\tstory_step(0..3).\n\t\t\tst_hpd(enter(\"we\", \"a famous restaurant\"), true, 0).\n\t\t\tst_hpd(sit(\"we\"), true, 1).\n\t\t\tst_hpd(pick_up(\"we\", m, t), true, 2).\n\t\t\tst_hpd(order(\"we\", f, w), true, 3)."
+    },
+    {
+        "Scenario Number": 14,
+        "Type": "Normal",
+        "Story": "Judy looked at the menu. She and her two kids, Alex and Zoe, were \nseated in a booth in a local restaurant. They ordered fish and chips.",
+        "Logic Form": "restaurant(\"a local restaurant\").\n\t\t\tperson(\"Judy\").\n\t\t\tperson(\"Alex\").\n\t\t\tperson(\"Zoe\").\n\t\t\tcustomer(\"they\").\n\t\t\tmember(\"Judy\", \"they\").\n\t\t\tmember(\"Alex\", \"they\").\n\t\t\tmember(\"Zoe\", \"they\").\n\t\t\tfood(\"fish and chips\").\n\t\t\twaiter(w).\n\t\t\tstory_step(0..2).\n\t\t\tst_obs(sitting(\"they\"), true, 0).\n\t\t\tst_hpd(pick_up(\"they\", m, t), true, 1).\n\t\t\tst_hpd(order(\"they\", \"fish and chips\", w), true, 2)."
+    },
+    {
+        "Scenario Number": 15,
+        "Type": "Normal",
+        "Story": "Samantha was in a five-star restaurant. Samantha started perusing the\n menu. She ordered the barbecued veal chop with Asian slaw and Thai \nfried rice.",
+        "Logic Form": "restaurant(\"a five-star restaurant\").\n\t\t\tcustomer(\"Samantha\").\n\t\t\tfood(f).\n\t\t\tmember(\"barbecued veal\", f).\n\t\t\tmember(\"Asian slaw\", f).\n\t\t\tmember(\"Thai fried rice\", f).\n\t\t\twaiter(w).\n\t\t\tstory_step(0..2).\n\t\t\tst_obs(in(\"Samantha\", \"a five-star restaurant\"), true, 0).\n\t\t\tst_hpd(pick_up(\"Samantha\", m, t), true, 1).\n\t\t\tst_hpd(order(\"Samantha\", f, w), true, 2)."
+    },
+    {
+        "Scenario Number": 16,
+        "Type": "Normal",
+        "Story": "The villager entered a fine restaurant and was seated at one of the \ntables. He looked at the menu. He ordered one of the items on the list. \nThe waiter brought him a large plate of lettuce salad with several black\n olives on top.",
+        "Logic Form": "restaurant(\"a fine restaurant\").\n\t\t\tcustomer(\"the villager\").\n\t\t\tfood(f).\n\t\t\tmember(\"lettuce salad\", f).\n\t\t\tmember(\"black olives\", f).\n\t\t\twaiter(w).\n\t\t\tstory_step(0..4).\n\t\t\tst_hpd(enter(\"the villager\", \"a fine restaurant\"), true, 0).\n\t\t\tst_hpd(sit(\"the villager\"), true, 1).\n\t\t\tst_hpd(pick_up(\"the villager\", m, t), true, 2).\n\t\t\tst_hpd(order(\"the villager\", f, w), true, 3).\n\t\t\tst_hpd(put_down(w, f, t), true, 4)."
+    },
+    {
+        "Scenario Number": 17,
+        "Type": "Exception",
+        "Story": "The waiter took Gavin and Amandine to a booth. They slid onto brown \nvinyl seats. Gavin glanced over his menu. Amandine didn't need to look \nto know what she wanted. She ordered egg drop soup with wonton, lobster \nCantonese and shrimp, beef and pork fried rice. Gavin ordered the same.",
+        "Logic Form": "restaurant(r).\n\t\t\tcustomer(\"Gavin\").\n\t\t\tcustomer(\"Amandine\").\n\t\t\tfood(f).\n\t\t\tmember(\"egg drop soup with wonton\", f).\n\t\t\tmember(\"lobster Cantonese\", f).\n\t\t\tmember(\"shrimp, beef and pork fried rice\", f).\n\t\t\twaiter(\"the waiter\").\n\t\t\tstory_step(0..4).\n\t\t\tst_hpd(lead_to(\"the waiter\", \"Gavin\", t), true, 0).\n\t\t\tst_hpd(lead_to(\"the waiter\", \"Amandine\", t), true, 0).\n\t\t\tst_hpd(sit(\"Gavin\"), true, 1).\n\t\t\tst_hpd(sit(\"Amandine\"), true, 1).\n\t\t\tst_hpd(pick_up(\"Gavin\", m, t), true, 2).\n\t\t\tst_hpd(put_down(\"Gavin\", m, t), true, 3).\n\t\t\tst_hpd(order(\"Amandine\", f, \"the waiter\"), true, 3).\n\t\t\tst_hpd(order(\"Amandine\", f, \"the waiter\"), true, 4).\n\t\t\tst_hpd(order(\"Gavin\", f, \"the waiter\"), true, 4).\n\t\t\tst_hpd(pick_up(\"Amandine\", m, t), false)."
+    },
+    {
+        "Scenario Number": 18,
+        "Type": "Exception",
+        "Story": "The waiter brought his dinner. He was eating something spotted with \neggs and livers. He finished but the waiter wouldn't come total the \nbill.",
+        "Logic Form": "restaurant(r).\n\t\t\tcustomer(\"he\").\n\t\t\tfood(\"something spotted with eggs and livers\").\n\t\t\twaiter(\"the waiter\").\n\t\t\tstory_step(0..1).\n\t\t\tst_hpd(put_down(\"the waiter\", \"something spotted with eggs and livers\", t), true, 0).\n\t\t\tst_hpd(eat(\"he\", \"something spotted with eggs and livers\"), true, 1).\n\t\t\tst_hpd(put_down(\"the waiter\", b, t), false)."
+    },
+    {
+        "Scenario Number": 19,
+        "Type": "Exception",
+        "Story": "Herbie and his father were at a meat restaurant. The waiter brought a\n sizzling steak that smelled heavenly, and a plate with haddock and \ncreamed spinach. The waiter put Herbie's plate down. Herbie’s father \nasked the waiter to take the fish away and bring the boy some lamb chops\n instead.",
+        "Logic Form": "restaurant(\"a meat restaurant\").\n\t\t\tcustomer(\"Herbie\").\n\t\t\tcustomer(\"his father\").\n\t\t\tfood(\"a sizzling steak\").\n\t\t\tfood(\"haddock and creamed spinach\").\n\t\t\tfood(\"lamb chops\").\n\t\t\twaiter(\"the waiter\").\n\t\t\tstory_step(0..4).\n\t\t\tst_obs(in(\"Herbie\", \"a meat restaurant\"), true, 0).\n\t\t\tst_obs(in(\"his father\", \"a meat restaurant\"), true, 0).\n\t\t\tst_hpd(put_down(\"the waiter\", \"a sizzling steak\", t), true, 1).\n\t\t\tst_hpd(put_down(\"the waiter\", \"haddock and creamed spinach\", t), true, 2).\n\t\t\tstop_activity(\"Herbie\", 3).\n\t\t\tnext_st(2, 3).\n\t\t\tst_hpd(order_for(\"his father\", \"Herbie\", \"lamb chops\", \"the waiter\", true, 4)."
+    },
+    {
+        "Scenario Number": 20,
+        "Type": "Variation",
+        "Story": "Brand sat in a chair. He picked up the menu and ordered a whiskey with Pepsi, but no ice. \n\t\t\tPyrogies and sausage cooked in sauerkraut, he told the waiter. \n\t\t\tThe waiter brought Brand his drink. Then, the waiter placed the food on the table. \n\t\t\tBrand asked the waiter to bring him a large bowl of borscht when he was done \n\t\t\twith the pyrogies and sausage. The waiter went back into the kitchen. \n\t\t\tBrand ate the pyrogies and then the sausage and sauerkraut. \n\t\t\tThen, the waiter brought out Brand's bowl of soup.",
+        "Logic Form": "restaurant(r).\n\t\t\tcustomer(\"Brand\").\n\t\t\tdrink(\"whiskey with Pepsi, no ice\").\n\t\t\tfood(f).\n\t\t\tmember(pyrogies, f).\n\t\t\tmember(\"sausage in sauerkraut\", f).\n\t\t\tfood(borscht).\n\t\t\twaiter(\"the waiter\").\n\t\t\tstory_step(0..9).\n\t\t\tst_hpd(sit(\"Brand\"), true, 0).\n\t\t\tst_hpd(pick_up(\"Brand\", m, t), true, 1).\n\t\t\tst_hpd(order_drink(\"Brand\", \"whiskey with Pepsi, no ice\", \"the waiter\"), true, 2).\n\t\t\tst_hpd(order(\"Brand\", f, \"the waiter\"), true, 3).\n\t\t\tst_hpd(put_down(\"the waiter\", \"whiskey with Pepsi, no ice\"), t), true, 4).\n\t\t\tst_hpd(put_down(\"the waiter\", f, t), true, 5).\n\t\t\tst_hpd(order(\"Brand\", borscht, \"the waiter\"), true, 6).\n\t\t\tst_hpd(move(\"the waiter\", t, kitchen), true, 7).\n\t\t\tst_hpd(eat(\"Brand\", f), true, 8).\n\t\t\tst_hpd(put_down(\"the waiter\", borscht, t), true, 9)."
+    },
+    {
+        "Scenario Number": 21,
+        "Type": "Variation",
+        "Story": "The waiter brought out escargot for Molly and me. \n\t\t\tThen the waiter brought out twelve oysters and twelve clams. \n\t\t\tWe shared the clams and oysters. The waiter poured wine for us.",
+        "Logic Form": "restaurant(r).\n\t\t\tcustomer(we).\n\t\t\tmember(\"Molly\", we).\n\t\t\tmember(me, we).\n\t\t\tfood(escargot).\n\t\t\tfood(f).\n\t\t\tmember(\"twelve oysters\", f).\n\t\t\tmember(\"twelve clams\", f).\n\t\t\tdrink(wine).\n\t\t\twaiter(\"the waiter\").\n\t\t\tstory_step(0..3).\n\t\t\tst_hpd(put_down(\"the waiter\", escargot, t), true, 0).\n\t\t\tst_hpd(put_down(\"the waiter\", f, t), true, 1).\n\t\t\tst_hpd(eat(we, f), true, 2).\n\t\t\tst_hpd(put_down(\"the waiter\", wine, t), true, 3)."
+    },
+    {
+        "Scenario Number": 22,
+        "Type": "Variation",
+        "Story": "The waiter brought the wine to their table. \n\t\t\tThen, Emanuel studied the menu. \n\t\t\tHe ordered the gypsy shashlik for Ingrid and himself. \n\t\t\tAfter the waiter left, they drank the wine. \n\t\t\tThe waiter brought the shashlik to their table.",
+        "Logic Form": "restaurant(r).\n\t\t\tcustomer(they).\n\t\t\tmember(\"Emanuel\").\n\t\t\tmember(\"Ingrid\").\n\t\t\tdrink(wine).\n\t\t\tfood(\"gypsy shashlik\").\n\t\t\twaiter(\"the waiter\").\n\t\t\tstory_step(0..5).\n\t\t\tst_hpd(put_down(\"the waiter\", wine, t), true, 0).\n\t\t\tst_hpd(pick_up(\"Emanuel\", m, t), true, 1).\n\t\t\tst_hpd(order_for(\"Emanuel\", they, \"gypsy shashlik\", \"the waiter\"), true, 2).\n\t\t\tst_hpd(move(\"the waiter\", t, kitchen), true, 3).\n\t\t\tst_hpd(drink(they, wine), true, 4).\n\t\t\tst_hpd(put_down(\"the waiter\", \"gypsy shashlik\", t), true, 5)."
+    },
+    {
+        "Scenario Number": 23,
+        "Type": "Variation",
+        "Story": "Andrew was sitting in a restaurant. \n\t\t\tSebastian entered the restaurant and sat down opposite Andrew. \n\t\t\tThe waiter brought a bottle of wine.\n\t\t\tAndrew and Sebastian took a drink. The waiter gave the men a menu.",
+        "Logic Form": "restaurant(\"a restaurant\").\n\t\t\tcustomer(\"the men\").\n\t\t\tperson(\"Andrew\").\n\t\t\tperson(\"Sebastian\").\n\t\t\tmember(\"Andrew\", \"the men\").\n\t\t\tmember(\"Sebastian\", \"the men\").\n\t\t\tdrink(wine).\n\t\t\twaiter(\"the waiter\").\n\t\t\tstory_step(0..5).\n\t\t\tst_obs(in(\"Andrew\", \"a restaurant\"), true, 0).\n\t\t\tst_obs(sitting(\"Andrew\"), true, 0).\n\t\t\tst_hpd(enter(\"Sebastian\", \"a restaurant\"), true, 1).\n\t\t\tst_hpd(sit(\"Sebastian\"), true, 2).\n\t\t\tst_hpd(put_down(\"the waiter\", wine, t), true, 3).\n\t\t\tst_hpd(drink(\"the men\", wine), true, 4).\n\t\t\tst_hpd(\"the waiter\", m, t), true, 5)."
+    },
+    {
+        "Scenario Number": 24,
+        "Type": "Variation",
+        "Story": "I opened the menu and chose the salmon. \n\t\t\tThe waiter poured two glasses of red wine. \n\t\t\tI sipped the wine. \n\t\t\tThen our server brought a small plate of hors d'oeuvres. \n\t\t\tI tried a little bit of everything. \n\t\t\tSoon, the waiter brought the meal. I tasted the salmon.",
+        "Logic Form": "restaurant(r).\n\t\t\tcustomer(\"I\").\n\t\t\tfood(salmon).\n\t\t\tdrink(\"red wine\").\n\t\t\tfood(\"hors d'oeuvres\").\n\t\t\twaiter(\"the waiter\").\n\t\t\tstory_step(0..7).\n\t\t\tst_hpd(pick_up(\"I\", m, t), true, 0).\n\t\t\tst_hpd(order(\"I\", salmon, \"the waiter\"), true, 1).\n\t\t\tst_hpd(put_down(\"I\", \"red wine\", t), true, 2).\n\t\t\tst_hpd(drink(\"I\", \"red wine\"), true, 3).\n\t\t\tst_hpd(put_down(\"the waiter\", \"hors d'oeuvres\", t), true, 4).\n\t\t\tst_hpd(eat(\"I\", \"hors d'oeuvres\"), true, 5).\n\t\t\tst_hpd(put_down(\"the waiter\", salmon, t), true, 6).\n\t\t\tst_hpd(eat(\"I\", salmon), true, 7)."
+    },
+    {
+        "Scenario Number": 25,
+        "Type": "Exception",
+        "Story": "Jasper invited Frank to a restaurant. \n\t\t\tJasper ordered roast beef and coffee. \n\t\t\tTheir conversation was interrupted by the arrival of the coffee and roast beef, \n\t\t\twhich both he and his new friend attacked with vigor. \n\t\t\tJasper wanted to invite Frank, but he had forgotten his wallet at home. Frank paid for both.",
+        "Logic Form": "restaurant(\"a restaurant\").\n\t\t\tcustomer(they).\n\t\t\tmember(\"Jasper\", they).\n\t\t\tmember(\"Frank\", they).\n\t\t\tfood(f).\n\t\t\tmember(\"roast beef\", f).\n\t\t\tmember(coffee, f).\n\t\t\twaiter(w).\n\t\t\tstory_step(0..4).\n\t\t\tst_hpd(enter(they, \"a restaurant\"), true, 0).\n\t\t\tst_hpd(order_for(\"Jasper\", they, f, w), true, 1).\n\t\t\tst_hpd(put_down(w, f, t), true, 2).\n\t\t\tst_hpd(eat(they, f), true, 3).\n\t\t\tst_hpd(pay(\"Jasper\", b), false, 4).\n\t\t\tst_hpd(pay(\"Frank\", b), true, 4)."
+    },
+    {
+        "Scenario Number": 26,
+        "Type": "Exception",
+        "Story": "I was the first person to appear at the restaurant. \n\t\t\tI took my seat at the middle of the table. The head-waiter waited on me himself. \n\t\t\tI had a capital dinner. Then Uncle Chipperton entered. He paid for the whole dinner.",
+        "Logic Form": "restaurant(\"the restaurant\").\n\t\t\tcustomer(\"I\").\n\t\t\twaiter(\"head-waiter\")\n\t\t\tfood(\"capital dinner\").\n\t\t\tperson(\"Uncle Chipperton\").\n\t\t\tstory_step(0..5).\n\t\t\tst_hpd(enter(\"I\", \"the restaurant\"), true, 0).\n\t\t\tst_hpd(sit(\"I\"), true, 1).\n\t\t\tst_hpd(put_down(\"head-waiter\", \"capital dinner\", t), true, 2).\n\t\t\tst_hpd(eat(\"I\", \"capital dinner\"), true, 3).\n\t\t\tst_hpd(enter(\"Uncle Chipperton\", \"the restaurant\"), true, 4).\n\t\t\tst_hpd(pay(\"Uncle Chipperton\", b), true, 5)."
+    },
+    {
+        "Scenario Number": 27,
+        "Type": "Normal",
+        "Story": "Nicole went to a vegetarian restaurant. She ordered lentil soup. The \nwaitress set the soup in the middle of the table. Nicole enjoyed the \nsoup. She left the restaurant.",
+        "Logic Form": "restaurant(veg_r).\n\t\t\tcustomer(nicole).\n\t\t\tfood(lentil_soup).\n\t\t\twaiter(waitress).\n\t\t\tstory_step(0..4).\n\t\t\tst_hpd(enter(nicole, veg_r), true, 0).\n\t\t\tst_hpd(order(nicole, lentil_soup, waitress), true, 1).\n\t\t\tst_hpd(put_down(waitress, lentil_soup, t), true, 2).\n\t\t\tst_hpd(eat(nicole, lentil_soup), true, 3).\n\t\t\tst_hpd(leave(nicole), true, 4)."
+    },
+    {
+        "Scenario Number": 28,
+        "Type": "Normal",
+        "Story": "Nicole and Sam went to a vegetarian restaurant. She ordered a lentil \nsoup. He ordered a miso soup. They both enjoyed their soups.",
+        "Logic Form": "restaurant(veg_r).\n\t\t\tcustomer(nicole).\n\t\t\tcustomer(sam).\n\t\t\tfood(lentil_soup).\n\t\t\tfood(miso_soup).\n\t\t\twaiter(w).\n\t\t\tstory_step(0..3).\n\t\t\tst_hpd(enter(nicole, veg_r), true, 0).\n\t\t\tst_hpd(enter(sam, veg_r), true, 0).\n\t\t\tst_hpd(order(nicole, lentil_soup, waitress), true, 1).\n\t\t\tst_hpd(order(sam, miso_soup, waitress), true, 2).\n\t\t\tst_hpd(eat(nicole, lentil_soup), true, 3).\n\t\t\tst_hpd(eat(sam, miso_soup), true, 3)."
+    },
+    {
+        "Scenario Number": 29,
+        "Type": "Normal",
+        "Story": "One day, Andy felt hungry, and went to the RRGrill restaurant for \ndinner. The restaurant was open, so he walked into the restaurant where \nhe was greeted by the waiter and was led to the table. Andy ordered soup\n and he ate it with pleasure. He paid cash and left.",
+        "Logic Form": "restaurant(\"RRGrill\").\n\t\t\tcustomer(andy).\n\t\t\tfood(soup).\n\t\t\twaiter(\"the waiter\").\n\t\t\tstory_step(0..4).\n\t\t\tst_hpd(enter(andy, \"RRGrill\"), true, 0).\n\t\t\tst_hpd(greet(\"the waiter\", andy), true, 1).\n\t\t\tst_hpd(lead_to(\"the waiter\", andy, t), true, 2).\n\t\t\tst_hpd(order(andy, soup, \"the waiter\"), true, 3).\n\t\t\tst_hpd(eat(andy, soup), true, 4).\n\t\t\tst_hpd(pay(andy, b), true, 5).\n\t\t\tst_hpd(leave(andy), true, 6)."
+    },
+    {
+        "Scenario Number": 30,
+        "Type": "Exception",
+        "Story": "Nicole went to a vegetarian restaurant. She ordered lentil soup. When\n the waitress brought her the soup, she told Nicole that it was on the \nhouse. Nicole enjoyed the soup and then left.",
+        "Logic Form": "restaurant(veg_r).\n\t\t\tcustomer(nicole).\n\t\t\tperson(owner).\n\t\t\tfood(lentil_soup).\n\t\t\twaiter(waitress).\n\t\t\tstory_step(0..5).\n\t\t\tst_hpd(enter(nicole, veg_r), true, 0).\n\t\t\tst_hpd(order(nicole, lentil_soup, waitress), true, 1).\n\t\t\tst_hpd(pay(owner, b), true, 2).\n\t\t\tst_hpd(put_down(waitress, lentil_soup, t), true, 3).\n\t\t\tst_hpd(eat(nicole, lentil_soup), true, 4).\n\t\t\tst_hpd(leave(nicole), true, 5)."
+    },
+    {
+        "Scenario Number": 31,
+        "Type": "Exception",
+        "Story": "Nicole went to a vegetarian restaurant. She ordered lentil soup. The waitress brought her a miso soup instead.",
+        "Logic Form": "restaurant(veg_r).\n\t\t\tcustomer(nicole).\n\t\t\tperson(owner).\n\t\t\tfood(lentil_soup).\n\t\t\tfood(miso_soup).\n\t\t\twaiter(waitress).\n\t\t\tstory_step(0..2).\n\t\t\tst_hpd(enter(nicole, veg_r), true, 0).\n\t\t\tst_hpd(order(nicole, lentil_soup, waitress), true, 1).\n\t\t\tst_hpd(put_down(waitress, miso_soup, t), true, 2)."
+    },
+    {
+        "Scenario Number": 32,
+        "Type": "Exception",
+        "Story": "Nicole went to a vegetarian restaurant. She ordered lentil soup. The \nwaitress brought her a miso soup instead. Nicole decided to eat it \nanyway.",
+        "Logic Form": "restaurant(veg_r).\n\t\t\tcustomer(nicole).\n\t\t\tperson(owner).\n\t\t\tfood(lentil_soup).\n\t\t\tfood(miso_soup).\n\t\t\twaiter(waitress).\n\t\t\tstory_step(0..4).\n\t\t\tst_hpd(enter(nicole, veg_r), true, 0).\n\t\t\tst_hpd(order(nicole, lentil_soup, waitress), true, 1).\n\t\t\tst_hpd(put_down(waitress, miso_soup, t), true, 2).\n\t\t\tstop_activity(nicole, 3).\n\t\t\tnext_st(2, 3).\n\t\t\tst_hpd(eat(nicole, miso_soup), true, 4)."
+    },
+    {
+        "Scenario Number": 33,
+        "Type": "Exception",
+        "Story": "Nicole went to a vegetarian restaurant. She ordered a lentil soup. \nNicole was in a hurry, so as soon as the waitress laid the dish on the \ntable, Nicole paid for it in cash and said that she didn't need the \nbill.",
+        "Logic Form": "restaurant(veg_r).\n\t\t\tcustomer(nicole).\n\t\t\tperson(owner).\n\t\t\tfood(lentil_soup).\n\t\t\twaiter(waitress).\n\t\t\tstory_step(0..3).\n\t\t\tst_hpd(enter(nicole, veg_r), true, 0).\n\t\t\tst_hpd(order(nicole, lentil_soup, waitress), true, 1).\n\t\t\tst_hpd(put_down(waitress, miso_soup, t), true, 2).\n\t\t\tst_hpd(pay(nicole, b), true, 3).\n\t\t\tnext_st(2, 3)."
+    },
+    {
+        "Scenario Number": 34,
+        "Type": "Exception",
+        "Story": "One day, Andy felt hungry and went to the RRGrill restaurant for \ndinner. The restaurant was open, but there was no table available for \nAndy.",
+        "Logic Form": "restaurant(\"RRGrill\").\n\t\t\tcustomer(\"Andy\").\n\t\t\tstory_step(0..1).\n\t\t\tst_hpd(enter(\"Andy\", \"RRGrill\"), true, 0).\n\t\t\tst_obs(table_available, false, 1)."
+    },
+    {
+        "Scenario Number": 35,
+        "Type": "Exception",
+        "Story": "One day, Andy felt hungry and went to the RRGrill restaurant for \ndinner. The restaurant was open, but there was no table available for \nAndy. Andy decided to wait. A table became available soon after.",
+        "Logic Form": "restaurant(\"RRGrill\").\n\t\t\tcustomer(\"Andy\").\n\t\t\tstory_step(0..2).\n\t\t\tst_hpd(enter(\"Andy\", \"RRGrill\"), true, 0).\n\t\t\tst_obs(table_available, false, 1).\n\t\t\tst_hpd(wait(\"Andy\"), true, 1).\n\t\t\tst_hpd(free_table, true, 2)."
+    },
+    {
+        "Scenario Number": 36,
+        "Type": "Exception",
+        "Story": "One day, Andy felt hungry and went to the RRGrill restaurant for \ndinner. The restaurant was open, but there was no table available for \nAndy. Andy decided to leave.",
+        "Logic Form": "restaurant(\"RRGrill\").\n\t\t\tcustomer(\"Andy\").\n\t\t\tstory_step(0..2).\n\t\t\tst_hpd(enter(\"Andy\", \"RRGrill\"), true, 0).\n\t\t\tst_obs(table_available, false, 1).\n\t\t\tstop_activity(\"Andy\", 1).\n\t\t\tst_hpd(leave(\"Andy\"), true, 2)."
+    },
+    {
+        "Scenario Number": 37,
+        "Type": "Exception",
+        "Story": "One day, Andy felt hungry and went to the RRGrill restaurant for \ndinner. The restaurant was open and Tom, Andy’s friend, had his birthday\n party in there. Tom had prepaid for all the food that was offered. The \nwaiter led Andy to Tom’s table. Andy joined the party.",
+        "Logic Form": "restaurant(\"RRGrill\").\n\t\t\tcustomer(\"Andy\").\n\t\t\tperson(\"Tom\").\n\t\t\tfood(\"all the food\").\n\t\t\twaiter(\"the waitress\").\n\t\t\tstory_step(0..2).\n\t\t\tst_hpd(enter(\"Andy\", \"RRGrill\"), true, 0).\n\t\t\tst_hpd(lead_to(\"waitress\", \"Andy\", t), true, 1).\n\t\t\tst_obs(informed(\"the waitress\", \"all the food\", \"Andy\"), true, 2).\n\t\t\tst_hpd(pay(\"Tom\", b), 2)."
+    },
+    {
+        "Scenario Number": 38,
+        "Type": "Exception",
+        "Story": "One day, Andy felt hungry and went to the RRGrill restaurant for \ndinner. The restaurant was closed that day. He decided to go to Happy \nPizza instead.",
+        "Logic Form": "restaurant(\"RRGrill\").\n\t\t\trestaurant(\"Happy Pizza\").\n\t\t\tcustomer(\"Andy\").\n\t\t\tstory_step(0..2).\n\t\t\tst_obs(closed(\"RRGrill\"), true, 0).\n\t\t\tstop_activity(\"Andy\", 1).\n\t\t\tst_hpd(move(\"Andy\", \"RRGrill\", \"Happy Pizza\"), true, 2)."
+    },
+    {
+        "Scenario Number": 39,
+        "Type": "Exception",
+        "Story": "One day, Andy felt hungry and went to the RRGrill restaurant for \ndinner. The restaurant was open and the waiter led Andy to a table. Andy\n went through the whole menu, but he didn't find any dish that he liked.\n Andy decided to leave.",
+        "Logic Form": "restaurant(\"RRGrill\").\n\t\t\tcustomer(\"Andy\").\n\t\t\tfood(\"nothing\").\n\t\t\twaiter(\"the waiter\").\n\t\t\tstory_step(0..4).\n\t\t\tst_hpd(enter(\"Andy\", \"RRGrill\"), true, 0).\n\t\t\tst_hpd(lead_to(\"the waiter\", \"Andy\", t), true, 1).\n\t\t\tst_hpd(put_down(\"Andy\", m, t), true, 2).\n\t\t\tst_stop_activity(\"Andy\", 3).\n\t\t\tnext_st(2, 3). \n\t\t\tst_hpd(leave(\"Andy\"), true, 4)."
+    },
+    {
+        "Scenario Number": 40,
+        "Type": "Exception",
+        "Story": "One day, Andy felt hungry and went to the RRGrill restaurant for \ndinner. The restaurant was open. The waiter led him to a table. As Andy \nwas sitting down before having a chance to order, he received an \nemergency phone call and had to leave.",
+        "Logic Form": "restaurant(\"RRGrill\").\n\t\t\tcustomer(\"Andy\").\n\t\t\twaiter(\"the waiter\").\n\t\t\tstory_step(0..3).\n\t\t\tst_hpd(enter(\"Andy\", \"RRGrill\"), true, 0).\n\t\t\tst_hpd(lead_to(\"the waiter\", \"Andy\", t), true, 1).\n\t\t\tst_obs(sitting(\"Andy\"), true, 2).\n\t\t\tst_stop_activity(\"Andy\", 2).\n\t\t\tst_hpd(leave(\"Andy\"), true, 3)."
+    }
+]

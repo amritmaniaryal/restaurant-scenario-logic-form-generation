@@ -1,0 +1,1891 @@
+{
+    "data": [
+        {
+            "sid": 0,
+            "logic_form": [
+                "person(\"Allie\").",
+                "customer(\"Allie\").",
+                "restaurant(r).",
+                "waiter(w).",
+                "food(\"fruit salad\").",
+                "st_obs(hungry(\"Allie\"), true, 0).",
+                "st_hpd(enter(\"Allie\", r), true, 0).",
+                "st_hpd(lead_to(w, \"Allie\", t), true, 1).",
+                "st_hpd(sit(\"Allie\"), true, 2).",
+                "st_hpd(order(\"Allie\", \"fruit salad\", w), true, 3).",
+                "st_hpd(put_down(w, \"fruit salad\", t), true, 4).",
+                "st_hpd(eat(\"Allie\", \"fruit salad\"), true, 5).",
+                "st_hpd(request(\"Allie\", b, w), true, 6)."
+            ]
+        },
+        {
+            "sid": 1,
+            "logic_form": [
+                "person(\"Abdul\").",
+                "customer(\"Abdul\").",
+                "restaurant(r).",
+                "waiter(w).",
+                "food(\"hummus\").",
+                "st_obs(sitting(\"Abdul\"), true, 0).",
+                "st_obs(in(\"Abdul\", r), true, 0).",
+                "st_obs(at_l(\"Abdul\", t), true, 0).",
+                "st_hpd(order(\"Abdul\", \"hummus\", w), true, 0).",
+                "st_hpd(put_down(w, \"hummus\", t), true, 1)."
+            ]
+        },
+        {
+            "sid": 2,
+            "logic_form": [
+                "person(\"John\").",
+                "customer(\"John\").",
+                "restaurant(r).",
+                "waiter(w).",
+                "food(\"steak\").",
+                "st_hpd(enter(\"John\", r), true, 0).",
+                "st_hpd(lead_to(w, \"John\", t), true, 1).",
+                "st_hpd(sit(\"John\"), true, 2).",
+                "st_hpd(order(\"John\", \"steak\", w), true, 3).",
+                "st_hpd(put_down(w, \"steak\", t), true, 4).",
+                "st_hpd(request(\"John\", b, w), true, 5).",
+                "st_hpd(put_down(w, b, t), true, 6).",
+                "st_hpd(pay(\"John\", b), true, 7).",
+                "st_hpd(leave(\"John\"), true, 8)."
+            ]
+        },
+        {
+            "sid": 3,
+            "logic_form": [
+                "person(\"Jill\").",
+                "customer(\"Jill\").",
+                "restaurant(r).",
+                "waiter(w).",
+                "food(\"chicken\").",
+                "st_hpd(enter(\"Jill\", r), true, 0).",
+                "st_hpd(lead_to(w, \"Jill\", t), true, 1).",
+                "st_hpd(sit(\"Jill\"), true, 2).",
+                "st_hpd(order(\"Jill\", \"chicken\", w), true, 3).",
+                "st_hpd(put_down(w, \"chicken\", t), true, 4).",
+                "st_hpd(eat(\"Jill\", \"chicken\"), true, 5).",
+                "st_hpd(request(\"Jill\", b, w), true, 6)."
+            ]
+        },
+        {
+            "sid": 4,
+            "logic_form": [
+                "person(\"Bob\").",
+                "customer(\"Bob\").",
+                "restaurant(r).",
+                "waiter(w).",
+                "food(\"hamburger\").",
+                "st_obs(sitting(\"Bob\"), true, 0).",
+                "st_obs(in(\"Bob\", r), true, 0).",
+                "st_obs(at_l(\"Bob\", t), true, 0).",
+                "st_hpd(request(w, order, \"Bob\"), true, 0).",
+                "st_hpd(order(\"Bob\", \"hamburger\", w), true, 1)."
+            ]
+        },
+        {
+            "sid": 5,
+            "logic_form": [
+                "person(\"Jane\").",
+                "customer(\"Jane\").",
+                "restaurant(r).",
+                "waiter(w).",
+                "food(\"fish\").",
+                "st_hpd(lead_to(w, \"Jane\", t), true, 0).",
+                "st_hpd(sit(\"Jane\"), true, 1).",
+                "st_hpd(request(w, order, \"Jane\"), true, 2).",
+                "st_hpd(order(\"Jane\", \"fish\", w), true, 3).",
+                "st_hpd(put_down(w, \"fish\", t), true, 4).",
+                "st_hpd(eat(\"Jane\", \"fish\"), true, 5).",
+                "st_hpd(put_down(w, b, t), true, 6)."
+            ]
+        },
+        {
+            "sid": 6,
+            "logic_form": [
+                "person(\"Molly\").",
+                "customer(\"Molly\").",
+                "restaurant(r).",
+                "waiter(w).",
+                "food(\"baked potato\").",
+                "food(\"French fries\").",
+                "st_obs(sitting(\"Molly\"), true, 0).",
+                "st_obs(at_l(\"Molly\", t), true, 0).",
+                "st_hpd(request(w, order, \"Molly\"), true, 0).",
+                "st_hpd(order(\"Molly\", \"baked potato\", w), true, 1).",
+                "st_hpd(put_down(w, \"French fries\", t), true, 2)."
+            ]
+        },
+        {
+            "sid": 7,
+            "logic_form": [
+                "person(\"Larry\").",
+                "customer(\"Larry\").",
+                "restaurant(r).",
+                "waiter(w).",
+                "st_obs(sitting(\"Larry\"), true, 0).",
+                "st_obs(in(\"Larry\", r), true, 0).",
+                "st_obs(at_l(\"Larry\", t), true, 0).",
+                "st_hpd(put_down(w, m, t), true, 0).",
+                "st_hpd(read_menu(\"Larry\"), true, 1).",
+                "st_hpd(order(\"Larry\"), false)."
+            ]
+        },
+        {
+            "sid": 8,
+            "logic_form": [
+                "person(\"Derek\").",
+                "customer(\"Derek\").",
+                "restaurant(r).",
+                "waiter(w).",
+                "food(\"vegetable soup\").",
+                "st_hpd(order(\"Derek\", \"vegetable soup\", w), true, 0).",
+                "st_hpd(put_down(w, \"vegetable soup\", t), true, 1).",
+                "st_hpd(complain(\"Derek\", w), true, 2).",
+                "st_next(1, 2).",
+                "st_hpd(cancel_bill(w), true, 3).",
+                "st_obs(paid(b), false, 4)."
+            ]
+        },
+        {
+            "sid": 9,
+            "logic_form": [
+                "person(\"Pete\").",
+                "customer(\"Pete\").",
+                "restaurant(r).",
+                "waiter(w).",
+                "food(\"chicken\").",
+                "food(\"better cooked dish\").",
+                "st_obs(sitting(\"Pete\"), true, 0).",
+                "st_obs(in(\"Pete\", r), true, 0).",
+                "st_obs(at_l(\"Pete\", t), true, 0).",
+                "st_hpd(order(\"Pete\", \"chicken\", w), true, 0).",
+                "st_hpd(put_down(w, \"chicken\", t), true, 1).",
+                "st_hpd(complain(\"Pete\", w), true, 2).",
+                "st_next(1, 2).",
+                "st_hpd(request(\"Pete\", \"better cooked dish\", w), true, 3)."
+            ]
+        },
+        {
+            "sid": 10,
+            "logic_form": [
+                "customer(\"Jim\").",
+                "person(\"Jim\").",
+                "restaurant(r).",
+                "food(\"appetizer\").",
+                "waiter(w).",
+                "st_obs(sitting(\"Jim\"), true, 0).",
+                "st_obs(at_l(\"Jim\", t), true, 0).",
+                "st_obs(in(\"Jim\", r), true, 0).",
+                "st_hpd(order(\"Jim\", \"appetizer\", w), true, 1).",
+                "st_obs(served(\"Jim\"), false, 2).",
+                "st_hpd(leave(\"Jim\"), true, 3)."
+            ]
+        },
+        {
+            "sid": 11,
+            "logic_form": [
+                "customer(\"Jake\").",
+                "person(\"Jake\").",
+                "restaurant(r).",
+                "food(\"medium-rare steak\").",
+                "waiter(w).",
+                "st_obs(sitting(\"Jake\"), true, 0).",
+                "st_obs(at_l(\"Jake\", t), true, 0).",
+                "st_obs(in(\"Jake\", r), true, 0).",
+                "st_hpd(order(\"Jake\", \"medium-rare steak\", w), true, 1).",
+                "st_obs(served(\"Jake\"), true, 2).",
+                "st_hpd(complain(\"Jake\", w), true, 3).",
+                "st_next(2, 3)."
+            ]
+        },
+        {
+            "sid": 12,
+            "logic_form": [
+                "customer(\"I\").",
+                "customer(\"my husband\").",
+                "person(\"I\").",
+                "person(\"my husband\").",
+                "member(\"I\", g1).",
+                "member(\"my husband\", g1).",
+                "restaurant(r).",
+                "waiter(w).",
+                "food(\"escargot\").",
+                "food(\"lamb\").",
+                "food(\"savory salmon\").",
+                "food(\"creamy flan dessert\").",
+                "member(\"escargot\", f).",
+                "member(\"lamb\", f).",
+                "member(\"savory salmon\", f).",
+                "member(\"creamy flan dessert\", f).",
+                "st_hpd(enter(g1, r), true, 0).",
+                "st_obs(sitting(g1), true, 1).",
+                "st_obs(at_l(g1, \"booth\"), true, 1).",
+                "st_hpd(read_menu(g1), true, 2).",
+                "st_hpd(order(g1, f, w), true, 3)."
+            ]
+        },
+        {
+            "sid": 13,
+            "logic_form": [
+                "customer(\"Judy\").",
+                "customer(\"Alex\").",
+                "customer(\"Zoe\").",
+                "person(\"Judy\").",
+                "person(\"Alex\").",
+                "person(\"Zoe\").",
+                "member(\"Judy\", g1).",
+                "member(\"Alex\", g1).",
+                "member(\"Zoe\", g1).",
+                "restaurant(r).",
+                "waiter(w).",
+                "food(\"fish and chips\").",
+                "st_hpd(read_menu(\"Judy\"), true, 0).",
+                "st_obs(sitting(g1), true, 1).",
+                "st_obs(at_l(g1, \"booth\"), true, 1).",
+                "st_obs(in(g1, r), true, 1).",
+                "st_hpd(order(g1, \"fish and chips\", w), true, 2)."
+            ]
+        },
+        {
+            "sid": 14,
+            "logic_form": [
+                "customer(\"Samantha\").",
+                "person(\"Samantha\").",
+                "restaurant(r).",
+                "waiter(w).",
+                "food(\"barbecued veal chop with Asian slaw\").",
+                "food(\"Thai fried rice\").",
+                "member(\"barbecued veal chop with Asian slaw\", f).",
+                "member(\"Thai fried rice\", f).",
+                "st_obs(in(\"Samantha\", r), true, 0).",
+                "st_hpd(read_menu(\"Samantha\"), true, 1).",
+                "st_hpd(order(\"Samantha\", f, w), true, 2)."
+            ]
+        },
+        {
+            "sid": 15,
+            "logic_form": [
+                "customer(\"villager\").",
+                "person(\"villager\").",
+                "restaurant(r).",
+                "waiter(w).",
+                "food(\"lettuce salad with several black olives on top\").",
+                "st_hpd(enter(\"villager\", r), true, 0).",
+                "st_obs(sitting(\"villager\"), true, 1).",
+                "st_obs(at_l(\"villager\", t), true, 1).",
+                "st_hpd(read_menu(\"villager\"), true, 2).",
+                "st_hpd(order(\"villager\", \"lettuce salad with several black olives on top\", w), true, 3).",
+                "st_obs(served(\"villager\"), true, 4)."
+            ]
+        },
+        {
+            "sid": 16,
+            "logic_form": [
+                "customer(\"Gavin\").",
+                "customer(\"Amandine\").",
+                "person(\"Gavin\").",
+                "person(\"Amandine\").",
+                "member(\"Gavin\", g1).",
+                "member(\"Amandine\", g1).",
+                "waiter(w).",
+                "restaurant(r).",
+                "food(\"egg drop soup with wonton\").",
+                "food(\"lobster Cantonese and shrimp\").",
+                "food(\"beef and pork fried rice\").",
+                "member(\"egg drop soup with wonton\", f).",
+                "member(\"lobster Cantonese and shrimp\", f).",
+                "member(\"beef and pork fried rice\", f).",
+                "st_hpd(lead_to(w, g1, \"booth\"), true, 0).",
+                "st_hpd(sit(g1), true, 1).",
+                "st_obs(at_l(g1, \"booth\"), true, 1).",
+                "st_obs(sitting(g1), true, 1).",
+                "st_hpd(read_menu(\"Gavin\"), true, 2).",
+                "st_hpd(read_menu(\"Amandine\"), false).",
+                "st_hpd(order(\"Amandine\", f, w), true, 3).",
+                "st_hpd(order(\"Gavin\", f, w), true, 4)."
+            ]
+        },
+        {
+            "sid": 17,
+            "logic_form": [
+                "customer(c1).",
+                "person(c1).",
+                "waiter(w).",
+                "restaurant(r).",
+                "food(\"something spotted with eggs and livers\").",
+                "bill(b).",
+                "st_obs(served(c1), true, 0).",
+                "st_hpd(eat(c1, \"something spotted with eggs and livers\"), true, 1).",
+                "st_obs(hungry(c1), false, 2).",
+                "st_obs(bill_generated(c1, b), false, 3)."
+            ]
+        },
+        {
+            "sid": 18,
+            "logic_form": [
+                "customer(\"Herbie\").",
+                "customer(\"Herbie's father\").",
+                "person(\"Herbie\").",
+                "person(\"Herbie's father\").",
+                "member(\"Herbie\", g1).",
+                "member(\"Herbie's father\", g1).",
+                "restaurant(r).",
+                "waiter(w).",
+                "food(\"sizzling steak\").",
+                "food(\"haddock and creamed spinach\").",
+                "food(\"lamb chops\").",
+                "st_obs(in(g1, r), true, 0).",
+                "st_obs(served(g1), true, 1).",
+                "st_hpd(complain(\"Herbie's father\", w), true, 2).",
+                "st_next(1, 2).",
+                "st_hpd(order_for(\"Herbie's father\", \"Herbie\", \"lamb chops\", w), true, 3)."
+            ]
+        },
+        {
+            "sid": 19,
+            "logic_form": [
+                "customer(\"Brand\").",
+                "person(\"Brand\").",
+                "restaurant(r).",
+                "waiter(w).",
+                "beverage(\"whiskey with Pepsi, but no ice\").",
+                "food(\"Pyrogies\").",
+                "food(\"sausage cooked in sauerkraut\").",
+                "food(\"large bowl of borscht\").",
+                "member(\"Pyrogies\", f1).",
+                "member(\"sausage cooked in sauerkraut\", f1).",
+                "st_obs(sitting(\"Brand\"), true, 0).",
+                "st_obs(at_l(\"Brand\", t), true, 0).",
+                "st_hpd(pick_up(\"Brand\", \"menu\", t), true, 1).",
+                "st_hpd(order(\"Brand\", \"whiskey with Pepsi, but no ice\", w), true, 2).",
+                "st_hpd(order(\"Brand\", f1, w), true, 3).",
+                "st_obs(at_l(\"whiskey with Pepsi, but no ice\", t), true, 4).",
+                "st_obs(at_l(f1, t), true, 5).",
+                "st_hpd(order(\"Brand\", \"large bowl of borscht\", w), true, 6).",
+                "st_hpd(move(w, t, \"kitchen\"), true, 7).",
+                "st_hpd(eat(\"Brand\", \"Pyrogies\"), true, 8).",
+                "st_hpd(eat(\"Brand\", \"sausage cooked in sauerkraut\"), true, 9).",
+                "st_obs(at_l(\"large bowl of borscht\", t), true, 10)."
+            ]
+        },
+        {
+            "sid": 20,
+            "logic_form": [
+                "waiter(w)",
+                "customer(\"Molly\")",
+                "customer(\"me\")",
+                "food(\"escargot\")",
+                "food(\"twelve oysters\")",
+                "food(\"twelve clams\")",
+                "beverage(\"wine\")",
+                "member(\"Molly\", g)",
+                "member(\"me\", g)",
+                "member(\"twelve oysters\", f)",
+                "member(\"twelve clams\", f)",
+                "st_hpd(prepare(cook, \"escargot\", w), true, 0)",
+                "st_hpd(eat(\"Molly\", \"escargot\"), true, 1)",
+                "st_hpd(eat(\"me\", \"escargot\"), true, 1)",
+                "st_hpd(prepare(cook, f, w), true, 2)",
+                "st_hpd(eat(g, f), true, 3)",
+                "st_hpd(drink(g, \"wine\"), true, 4)"
+            ]
+        },
+        {
+            "sid": 21,
+            "logic_form": [
+                "waiter(w)",
+                "customer(\"Emanuel\")",
+                "customer(\"Ingrid\")",
+                "beverage(\"wine\")",
+                "food(\"gypsy shashlik\")",
+                "member(\"Emanuel\", g)",
+                "member(\"Ingrid\", g)",
+                "st_hpd(put_down(w, \"wine\", t), true, 0)",
+                "st_hpd(read_menu(\"Emanuel\"), true, 1)",
+                "st_hpd(order(\"Emanuel\", \"gypsy shashlik\", w), true, 2)",
+                "st_hpd(order_for(\"Emanuel\", \"Ingrid\", \"gypsy shashlik\", w), true, 2)",
+                "st_hpd(drink(g, \"wine\"), true, 3)",
+                "st_hpd(prepare(cook, \"gypsy shashlik\", w), true, 4)",
+                "st_hpd(put_down(w, \"gypsy shashlik\", t), true, 5)"
+            ]
+        },
+        {
+            "sid": 22,
+            "logic_form": [
+                "customer(\"Andrew\")",
+                "customer(\"Sebastian\")",
+                "waiter(w)",
+                "restaurant(r)",
+                "beverage(\"bottle of wine\")",
+                "member(\"Andrew\", g)",
+                "member(\"Sebastian\", g)",
+                "st_obs(in(\"Andrew\", r), true, 0)",
+                "st_obs(sitting(\"Andrew\"), true, 0)",
+                "st_hpd(enter(\"Sebastian\", r), true, 1)",
+                "st_hpd(sit(\"Sebastian\"), true, 2)",
+                "st_hpd(put_down(w, \"bottle of wine\", t), true, 3)",
+                "st_hpd(drink(g, \"bottle of wine\"), true, 4)",
+                "st_hpd(put_down(w, menu, t), true, 5)"
+            ]
+        },
+        {
+            "sid": 23,
+            "logic_form": [
+                "customer(\"me\")",
+                "waiter(w)",
+                "food(\"salmon\")",
+                "beverage(\"red wine\")",
+                "food(\"small plate of hors d'oeuvres\")",
+                "st_hpd(read_menu(\"me\"), true, 0)",
+                "st_hpd(order(\"me\", \"salmon\", w), true, 1)",
+                "st_hpd(drink(\"me\", \"red wine\"), true, 2)",
+                "st_hpd(prepare(cook, \"small plate of hors d'oeuvres\", w), true, 3)",
+                "st_hpd(eat(\"me\", \"small plate of hors d'oeuvres\"), true, 4)",
+                "st_hpd(prepare(cook, \"salmon\", w), true, 5)",
+                "st_hpd(eat(\"me\", \"salmon\"), true, 6)"
+            ]
+        },
+        {
+            "sid": 24,
+            "logic_form": [
+                "customer(\"Jasper\")",
+                "customer(\"Frank\")",
+                "restaurant(r)",
+                "waiter(w)",
+                "food(\"roast beef\")",
+                "beverage(\"coffee\")",
+                "bill(b)",
+                "member(\"Jasper\", g)",
+                "member(\"Frank\", g)",
+                "st_hpd(enter(g, r), true, 0)",
+                "st_hpd(order(\"Jasper\", \"roast beef\", w), true, 1)",
+                "st_hpd(order(\"Jasper\", \"coffee\", w), true, 1)",
+                "st_hpd(prepare(cook, \"roast beef\", w), true, 2)",
+                "st_hpd(prepare(cook, \"coffee\", w), true, 2)",
+                "st_hpd(eat(g, \"roast beef\"), true, 3)",
+                "st_hpd(drink(g, \"coffee\"), true, 3)",
+                "st_obs(bill_generated(g, b), true, 4)",
+                "st_hpd(pay(\"Jasper\", b), false)",
+                "st_hpd(pay(\"Frank\", b), true, 5)"
+            ]
+        },
+        {
+            "sid": 25,
+            "logic_form": [
+                "customer(\"me\")",
+                "customer(\"Uncle Chipperton\")",
+                "restaurant(r)",
+                "waiter(\"head-waiter\")",
+                "food(\"capital dinner\")",
+                "bill(b)",
+                "st_hpd(enter(\"me\", r), true, 0)",
+                "st_hpd(sit(\"me\"), true, 1)",
+                "st_hpd(order(\"me\", \"capital dinner\", \"head-waiter\"), true, 2)",
+                "st_hpd(prepare(cook, \"capital dinner\", \"head-waiter\"), true, 3)",
+                "st_hpd(eat(\"me\", \"capital dinner\"), true, 4)",
+                "st_hpd(enter(\"Uncle Chipperton\", r), true, 5)",
+                "st_obs(bill_generated(\"me\", b), true, 6)",
+                "st_hpd(pay(\"Uncle Chipperton\", b), true, 7)"
+            ]
+        },
+        {
+            "sid": 26,
+            "logic_form": [
+                "customer(\"Nicole\")",
+                "restaurant(\"vegetarian restaurant\")",
+                "food(\"lentil soup\")",
+                "waiter(\"waitress\")",
+                "st_hpd(enter(\"Nicole\", \"vegetarian restaurant\"), true, 0)",
+                "st_hpd(order(\"Nicole\", \"lentil soup\", \"waitress\"), true, 1)",
+                "st_hpd(prepare(cook, \"lentil soup\", \"waitress\"), true, 2)",
+                "st_hpd(put_down(\"waitress\", \"lentil soup\", t), true, 3)",
+                "st_hpd(eat(\"Nicole\", \"lentil soup\"), true, 4)",
+                "st_hpd(leave(\"Nicole\"), true, 5)"
+            ]
+        },
+        {
+            "sid": 27,
+            "logic_form": [
+                "customer(\"Nicole\")",
+                "customer(\"Sam\")",
+                "restaurant(\"vegetarian restaurant\")",
+                "food(\"lentil soup\")",
+                "food(\"miso soup\")",
+                "waiter(w)",
+                "member(\"Nicole\", g)",
+                "member(\"Sam\", g)",
+                "st_hpd(enter(g, \"vegetarian restaurant\"), true, 0)",
+                "st_hpd(order(\"Nicole\", \"lentil soup\", w), true, 1)",
+                "st_hpd(order(\"Sam\", \"miso soup\", w), true, 2)",
+                "st_hpd(prepare(cook, \"lentil soup\", w), true, 3)",
+                "st_hpd(prepare(cook, \"miso soup\", w), true, 3)",
+                "st_hpd(eat(\"Nicole\", \"lentil soup\"), true, 4)",
+                "st_hpd(eat(\"Sam\", \"miso soup\"), true, 4)"
+            ]
+        },
+        {
+            "sid": 28,
+            "logic_form": [
+                "customer(\"Andy\")",
+                "restaurant(\"RRGrill restaurant\")",
+                "waiter(w)",
+                "food(\"soup\")",
+                "bill(b)",
+                "st_obs(hungry(\"Andy\"), true, 0)",
+                "st_obs(open(\"RRGrill restaurant\"), true, 1)",
+                "st_hpd(enter(\"Andy\", \"RRGrill restaurant\"), true, 2)",
+                "st_hpd(greet(w, \"Andy\"), true, 3)",
+                "st_hpd(lead_to(w, \"Andy\", t), true, 4)",
+                "st_hpd(order(\"Andy\", \"soup\", w), true, 5)",
+                "st_hpd(prepare(cook, \"soup\", w), true, 6)",
+                "st_hpd(eat(\"Andy\", \"soup\"), true, 7)",
+                "st_obs(bill_generated(\"Andy\", b), true, 8)",
+                "st_hpd(pay(\"Andy\", b), true, 9)",
+                "st_hpd(leave(\"Andy\"), true, 10)"
+            ]
+        },
+        {
+            "sid": 29,
+            "logic_form": [
+                "customer(\"Nicole\")",
+                "restaurant(\"vegetarian restaurant\")",
+                "food(\"lentil soup\")",
+                "waiter(\"waitress\")",
+                "bill(b)",
+                "st_hpd(enter(\"Nicole\", \"vegetarian restaurant\"), true, 0)",
+                "st_hpd(order(\"Nicole\", \"lentil soup\", \"waitress\"), true, 1)",
+                "st_hpd(prepare(cook, \"lentil soup\", \"waitress\"), true, 2)",
+                "st_obs(bill_generated(\"Nicole\", b), true, 3)",
+                "st_hpd(cancel_bill(\"waitress\"), true, 4)",
+                "st_hpd(eat(\"Nicole\", \"lentil soup\"), true, 5)",
+                "st_hpd(leave(\"Nicole\"), true, 6)"
+            ]
+        },
+        {
+            "sid": 30,
+            "logic_form": [
+                "customer(\"Nicole\").",
+                "restaurant(r).",
+                "waiter(w).",
+                "food(\"lentil soup\").",
+                "food(\"miso soup\").",
+                "st_hpd(enter(\"Nicole\", r), true, 0).",
+                "st_hpd(order(\"Nicole\", \"lentil soup\", w), true, 1).",
+                "st_hpd(interference, true, 1).",
+                "st_hpd(put_down(w, \"miso soup\", t), true, 2)."
+            ]
+        },
+        {
+            "sid": 31,
+            "logic_form": [
+                "customer(\"Nicole\").",
+                "restaurant(r).",
+                "waiter(w).",
+                "food(\"lentil soup\").",
+                "food(\"miso soup\").",
+                "st_hpd(enter(\"Nicole\", r), true, 0).",
+                "st_hpd(order(\"Nicole\", \"lentil soup\", w), true, 1).",
+                "st_hpd(interference, true, 1).",
+                "st_hpd(put_down(w, \"miso soup\", t), true, 2).",
+                "st_hpd(eat(\"Nicole\", \"miso soup\"), true, 3)."
+            ]
+        },
+        {
+            "sid": 32,
+            "logic_form": [
+                "customer(\"Nicole\").",
+                "restaurant(r).",
+                "waiter(w).",
+                "food(\"lentil soup\").",
+                "st_hpd(enter(\"Nicole\", r), true, 0).",
+                "st_hpd(order(\"Nicole\", \"lentil soup\", w), true, 1).",
+                "st_hpd(put_down(w, \"lentil soup\", t), true, 2).",
+                "st_hpd(pay(\"Nicole\", b), true, 3).",
+                "st_hpd(read_bill(\"Nicole\"), false).",
+                "st_obs(bill_generated(\"Nicole\", b), false, 3)."
+            ]
+        },
+        {
+            "sid": 33,
+            "logic_form": [
+                "customer(\"Andy\").",
+                "restaurant(\"RRGrill\").",
+                "st_obs(hungry(\"Andy\"), true, 0).",
+                "st_obs(open(\"RRGrill\"), true, 0).",
+                "st_hpd(enter(\"Andy\", \"RRGrill\"), true, 0).",
+                "st_hpd(lead_to(w, \"Andy\", t), false).",
+                "st_hpd(sit(\"Andy\"), false)."
+            ]
+        },
+        {
+            "sid": 34,
+            "logic_form": [
+                "customer(\"Andy\").",
+                "restaurant(\"RRGrill\").",
+                "st_obs(hungry(\"Andy\"), true, 0).",
+                "st_obs(open(\"RRGrill\"), true, 0).",
+                "st_hpd(enter(\"Andy\", \"RRGrill\"), true, 0).",
+                "st_hpd(lead_to(w, \"Andy\", t), false).",
+                "st_hpd(leave(\"Andy\"), false)."
+            ]
+        },
+        {
+            "sid": 35,
+            "logic_form": [
+                "customer(\"Andy\").",
+                "restaurant(\"RRGrill\").",
+                "st_obs(hungry(\"Andy\"), true, 0).",
+                "st_obs(open(\"RRGrill\"), true, 0).",
+                "st_hpd(enter(\"Andy\", \"RRGrill\"), true, 0).",
+                "st_hpd(lead_to(w, \"Andy\", t), false).",
+                "st_hpd(leave(\"Andy\"), true, 1)."
+            ]
+        },
+        {
+            "sid": 36,
+            "logic_form": [
+                "customer(\"Andy\").",
+                "person(\"Tom\").",
+                "restaurant(\"RRGrill\").",
+                "waiter(w).",
+                "st_obs(hungry(\"Andy\"), true, 0).",
+                "st_obs(open(\"RRGrill\"), true, 0).",
+                "st_obs(paid(b), true, 0).",
+                "st_hpd(enter(\"Andy\", \"RRGrill\"), true, 0).",
+                "st_hpd(lead_to(w, \"Andy\", t), true, 1).",
+                "st_hpd(sit(\"Andy\"), true, 2).",
+                "member(\"Andy\", \"party\").",
+                "member(\"Tom\", \"party\")."
+            ]
+        },
+        {
+            "sid": 37,
+            "logic_form": [
+                "customer(\"Andy\").",
+                "restaurant(\"RRGrill\").",
+                "restaurant(\"Happy Pizza\").",
+                "st_obs(hungry(\"Andy\"), true, 0).",
+                "st_obs(open(\"RRGrill\"), false, 0).",
+                "st_hpd(enter(\"Andy\", \"RRGrill\"), false).",
+                "st_hpd(move(\"Andy\", \"unknown\", \"RRGrill\"), true, 0).",
+                "st_hpd(move(\"Andy\", \"RRGrill\", \"Happy Pizza\"), true, 1)."
+            ]
+        },
+        {
+            "sid": 38,
+            "logic_form": [
+                "customer(\"Andy\").",
+                "restaurant(\"RRGrill\").",
+                "waiter(w).",
+                "st_obs(hungry(\"Andy\"), true, 0).",
+                "st_obs(open(\"RRGrill\"), true, 0).",
+                "st_hpd(enter(\"Andy\", \"RRGrill\"), true, 0).",
+                "st_hpd(lead_to(w, \"Andy\", t), true, 1).",
+                "st_hpd(sit(\"Andy\"), true, 2).",
+                "st_hpd(read_menu(\"Andy\"), true, 3).",
+                "st_hpd(order(\"Andy\"), false).",
+                "st_hpd(stand_up(\"Andy\"), true, 4).",
+                "st_hpd(leave(\"Andy\"), true, 5)."
+            ]
+        },
+        {
+            "sid": 39,
+            "logic_form": [
+                "customer(\"Andy\").",
+                "restaurant(\"RRGrill\").",
+                "waiter(w).",
+                "st_obs(hungry(\"Andy\"), true, 0).",
+                "st_obs(open(\"RRGrill\"), true, 0).",
+                "st_hpd(enter(\"Andy\", \"RRGrill\"), true, 0).",
+                "st_hpd(lead_to(w, \"Andy\", t), true, 1).",
+                "st_hpd(sit(\"Andy\"), true, 2).",
+                "st_hpd(order(\"Andy\"), false).",
+                "st_hpd(stand_up(\"Andy\"), true, 3).",
+                "st_hpd(leave(\"Andy\"), true, 4)."
+            ]
+        },
+        {
+            "sid": 40,
+            "logic_form": [
+                "customer(\"Ken\").",
+                "person(\"Ken\").",
+                "restaurant(\"sushi restaurant\").",
+                "food(\"tuna roll\").",
+                "food(\"new, hair-free roll\").",
+                "waiter(w).",
+                "person(w).",
+                "cook(ck).",
+                "person(ck).",
+                "st_obs(in(\"Ken\", \"sushi restaurant\"), true, 0).",
+                "st_obs(hungry(\"Ken\"), true, 0).",
+                "st_hpd(order(\"Ken\", \"tuna roll\", w), true, 1).",
+                "st_hpd(prepare(ck, \"tuna roll\", w), true, 2).",
+                "st_obs(food_prepared(ck, \"tuna roll\", w), true, 2).",
+                "st_obs(served(\"Ken\"), true, 3).",
+                "st_hpd(complain(\"Ken\", w), true, 4).",
+                "st_next(3, 4).",
+                "st_hpd(prepare(ck, \"new, hair-free roll\", w), true, 5).",
+                "st_obs(food_prepared(ck, \"new, hair-free roll\", w), true, 5).",
+                "st_obs(served(\"Ken\"), true, 6)."
+            ]
+        },
+        {
+            "sid": 41,
+            "logic_form": [
+                "customer(\"Laura\").",
+                "person(\"Laura\").",
+                "restaurant(\"cafe\").",
+                "beverage(\"coffee\").",
+                "food(\"croissant\").",
+                "waiter(w).",
+                "person(w).",
+                "cook(ck).",
+                "person(ck).",
+                "bill(b).",
+                "st_obs(in(\"Laura\", \"cafe\"), true, 0).",
+                "st_obs(hungry(\"Laura\"), true, 0).",
+                "st_hpd(order(\"Laura\", \"coffee\", w), true, 1).",
+                "st_hpd(order(\"Laura\", \"croissant\", w), true, 1).",
+                "st_obs(at_l(\"coffee\", t), true, 2).",
+                "st_obs(bill_generated(\"Laura\", b), true, 3).",
+                "st_hpd(pay(\"Laura\", b), true, 4).",
+                "st_obs(paid(b), true, 4).",
+                "st_hpd(leave(\"Laura\"), true, 5).",
+                "st_hpd(prepare(ck, \"croissant\", w), false).",
+                "st_hpd(eat(\"Laura\", \"croissant\"), false)."
+            ]
+        },
+        {
+            "sid": 42,
+            "logic_form": [
+                "customer(\"David\").",
+                "person(\"David\").",
+                "customer(\"Sarah\").",
+                "person(\"Sarah\").",
+                "group(g1).",
+                "member(\"David\", g1).",
+                "member(\"Sarah\", g1).",
+                "restaurant(\"fancy restaurant\").",
+                "food(\"duck confit\").",
+                "beverage(\"wine\").",
+                "waiter(w).",
+                "person(w).",
+                "cook(ck).",
+                "person(ck).",
+                "st_hpd(enter(g1, \"fancy restaurant\"), true, 0).",
+                "st_obs(in(g1, \"fancy restaurant\"), true, 0).",
+                "st_obs(hungry(g1), true, 0).",
+                "st_hpd(order(\"David\", \"duck confit\", w), true, 1).",
+                "st_hpd(order_for(\"David\", \"Sarah\", \"duck confit\", w), true, 1).",
+                "st_hpd(order(g1, \"wine\", w), true, 1).",
+                "st_hpd(prepare(ck, \"duck confit\", w), true, 2).",
+                "st_obs(food_prepared(ck, \"duck confit\", w), true, 2).",
+                "st_obs(served(g1), true, 3).",
+                "st_hpd(eat(\"David\", \"duck confit\"), true, 4).",
+                "st_hpd(eat(\"Sarah\", \"duck confit\"), true, 4).",
+                "st_hpd(drink(\"David\", \"wine\"), true, 4).",
+                "st_hpd(drink(\"Sarah\", \"wine\"), true, 4)."
+            ]
+        },
+        {
+            "sid": 43,
+            "logic_form": [
+                "customer(\"Megan\").",
+                "person(\"Megan\").",
+                "restaurant(r).",
+                "beverage(\"wine\").",
+                "waiter(\"bartender\").",
+                "person(\"bartender\").",
+                "bill(b).",
+                "st_hpd(enter(\"Megan\", r), true, 0).",
+                "st_obs(in(\"Megan\", r), true, 0).",
+                "st_hpd(sit(\"Megan\"), true, 1).",
+                "st_obs(sitting(\"Megan\"), true, 1).",
+                "st_obs(at_l(\"Megan\", bar), true, 1).",
+                "st_hpd(order(\"Megan\", \"wine\", \"bartender\"), true, 2).",
+                "st_obs(served(\"Megan\"), true, 3).",
+                "st_hpd(drink(\"Megan\", \"wine\"), true, 4).",
+                "st_obs(bill_generated(\"Megan\", b), true, 5).",
+                "st_hpd(pay(\"Megan\", b), true, 5).",
+                "st_obs(paid(b), true, 5).",
+                "st_hpd(leave(\"Megan\"), true, 6)."
+            ]
+        },
+        {
+            "sid": 44,
+            "logic_form": [
+                "customer(\"Chloe\").",
+                "person(\"Chloe\").",
+                "restaurant(\"Italian restaurant\").",
+                "food(\"lasagna\").",
+                "food(\"spaghetti\").",
+                "waiter(w).",
+                "person(w).",
+                "cook(ck).",
+                "person(ck).",
+                "st_obs(in(\"Chloe\", \"Italian restaurant\"), true, 0).",
+                "st_obs(hungry(\"Chloe\"), true, 0).",
+                "st_hpd(order(\"Chloe\", \"lasagna\", w), true, 1).",
+                "st_hpd(prepare(ck, \"spaghetti\", w), true, 2).",
+                "st_obs(food_prepared(ck, \"spaghetti\", w), true, 2).",
+                "st_obs(served(\"Chloe\"), true, 3).",
+                "st_obs(at_l(\"spaghetti\", t), true, 3).",
+                "st_obs(at_l(\"lasagna\", t), false, 3).",
+                "st_obs(informed(\"Chloe\", \"the mistake\", w), true, 4).",
+                "st_next(3, 4)."
+            ]
+        },
+        {
+            "sid": 45,
+            "logic_form": [
+                "group(g1).",
+                "customer(g1).",
+                "restaurant(r).",
+                "waiter(w).",
+                "person(w).",
+                "st_obs(in(g1, r), true, 0).",
+                "st_obs(sitting(g1), true, 0).",
+                "st_obs(hungry(g1), true, 0).",
+                "st_hpd(leave(g1), true, 1).",
+                "st_hpd(order(g1), false)."
+            ]
+        },
+        {
+            "sid": 46,
+            "logic_form": [
+                "customer(\"Rita\").",
+                "person(\"Rita\").",
+                "food(\"salad\").",
+                "waiter(w).",
+                "person(w).",
+                "bill(b).",
+                "restaurant(r).",
+                "st_obs(in(\"Rita\", r), true, 0).",
+                "st_hpd(eat(\"Rita\", \"salad\"), true, 1).",
+                "st_hpd(request(\"Rita\", b, w), true, 2).",
+                "st_obs(bill_generated(\"Rita\", b), true, 3).",
+                "st_hpd(pay(\"Rita\", b), true, 4).",
+                "st_obs(paid(b), true, 4)."
+            ]
+        },
+        {
+            "sid": 47,
+            "logic_form": [
+                "customer(\"Gary\").",
+                "person(\"Gary\").",
+                "restaurant(r).",
+                "food(\"steak\").",
+                "food(\"small cake\").",
+                "waiter(w).",
+                "person(w).",
+                "cook(ck).",
+                "person(ck).",
+                "tip(tip).",
+                "st_hpd(enter(\"Gary\", r), true, 0).",
+                "st_obs(in(\"Gary\", r), true, 0).",
+                "st_obs(hungry(\"Gary\"), true, 0).",
+                "st_hpd(order(\"Gary\", \"steak\", w), true, 1).",
+                "st_hpd(prepare(ck, \"steak\", w), true, 2).",
+                "st_obs(food_prepared(ck, \"steak\", w), true, 2).",
+                "st_obs(served(\"Gary\"), true, 3).",
+                "st_hpd(eat(\"Gary\", \"steak\"), true, 4).",
+                "st_obs(at_l(\"small cake\", t), true, 5).",
+                "st_hpd(pay(\"Gary\", tip), true, 6)."
+            ]
+        },
+        {
+            "sid": 48,
+            "logic_form": [
+                "customer(\"Olivia\").",
+                "person(\"Olivia\").",
+                "waiter(w).",
+                "person(w).",
+                "beverage(\"water\").",
+                "restaurant(r).",
+                "st_obs(in(\"Olivia\", r), true, 0).",
+                "st_hpd(sit(\"Olivia\"), true, 0).",
+                "st_obs(sitting(\"Olivia\"), true, 0).",
+                "st_hpd(greet(w, \"Olivia\"), true, 1).",
+                "st_obs(welcomed(\"Olivia\"), true, 1).",
+                "st_hpd(order(\"Olivia\", \"water\", w), true, 2).",
+                "st_obs(served(\"Olivia\"), true, 3).",
+                "st_obs(at_l(\"water\", t), true, 3)."
+            ]
+        },
+        {
+            "sid": 49,
+            "logic_form": [
+                "customer(\"Mark\").",
+                "person(\"Mark\").",
+                "waiter(w).",
+                "person(w).",
+                "bill(b).",
+                "food(\"dessert\").",
+                "restaurant(r).",
+                "st_obs(in(\"Mark\", r), true, 0).",
+                "st_obs(bill_generated(\"Mark\", b), true, 0).",
+                "st_obs(at_l(b, t), true, 0).",
+                "st_hpd(read_bill(\"Mark\"), true, 1).",
+                "st_hpd(request(\"Mark\", \"correct the bill\", w), true, 2).",
+                "st_next(1, 2).",
+                "st_hpd(order(\"Mark\", \"dessert\", w), false)."
+            ]
+        },
+        {
+            "sid": 50,
+            "logic_form": [
+                "customer(\"Fiona\").",
+                "person(\"Fiona\").",
+                "waiter(w).",
+                "person(w).",
+                "food(\"soup of the day\").",
+                "food(\"sandwich\").",
+                "restaurant(r).",
+                "st_obs(available(\"soup of the day\", r), true, 0).",
+                "st_hpd(order(\"Fiona\", \"soup of the day\", w), true, 0).",
+                "st_next(0, 1).",
+                "st_hpd(make_unavailable(\"soup of the day\", r), true, 1).",
+                "st_obs(available(\"soup of the day\", r), false, 1).",
+                "st_hpd(inform(w, \"soup unavailable\", \"Fiona\"), true, 1).",
+                "st_hpd(order(\"Fiona\", \"sandwich\", w), true, 2)."
+            ]
+        },
+        {
+            "sid": 51,
+            "logic_form": [
+                "customer(\"Steve\").",
+                "person(\"Steve\").",
+                "customer(\"son\").",
+                "person(\"son\").",
+                "group(g1).",
+                "member(\"Steve\", g1).",
+                "member(\"son\", g1).",
+                "restaurant(\"pizzeria\").",
+                "waiter(w).",
+                "person(w).",
+                "food(\"large pepperoni pizza\").",
+                "bill(b).",
+                "location(t).",
+                "st_hpd(enter(g1, \"pizzeria\"), true, 0).",
+                "st_hpd(lead_to(w, g1, t), true, 1).",
+                "st_hpd(order(g1, \"large pepperoni pizza\", w), true, 2).",
+                "st_hpd(eat(g1, \"large pepperoni pizza\"), true, 3).",
+                "st_hpd(pay(\"Steve\", b), true, 4)."
+            ]
+        },
+        {
+            "sid": 52,
+            "logic_form": [
+                "customer(\"David\").",
+                "person(\"David\").",
+                "restaurant(\"seafood restaurant\").",
+                "waiter(w).",
+                "person(w).",
+                "location(t).",
+                "food(\"grilled salmon with vegetables\").",
+                "bill(b).",
+                "st_hpd(enter(\"David\", \"seafood restaurant\"), true, 0).",
+                "st_hpd(lead_to(w, \"David\", t), true, 1).",
+                "st_hpd(read_menu(\"David\"), true, 2).",
+                "st_hpd(order(\"David\", \"grilled salmon with vegetables\", w), true, 3).",
+                "st_obs(served(\"David\"), true, 4).",
+                "st_hpd(eat(\"David\", \"grilled salmon with vegetables\"), true, 5).",
+                "st_hpd(pay(\"David\", b), true, 6).",
+                "st_hpd(leave(\"David\"), true, 7)."
+            ]
+        },
+        {
+            "sid": 53,
+            "logic_form": [
+                "customer(\"Mr. Johnson\").",
+                "person(\"Mr. Johnson\").",
+                "customer(\"Mrs. Johnson\").",
+                "person(\"Mrs. Johnson\").",
+                "customer(\"son\").",
+                "person(\"son\").",
+                "group(g1).",
+                "member(\"Mr. Johnson\", g1).",
+                "member(\"Mrs. Johnson\", g1).",
+                "member(\"son\", g1).",
+                "restaurant(\"family restaurant\").",
+                "waiter(w).",
+                "person(w).",
+                "location(\"booth\").",
+                "food(\"steak\").",
+                "food(\"salad\").",
+                "food(\"pizza\").",
+                "group(f).",
+                "member(\"steak\", f).",
+                "member(\"salad\", f).",
+                "member(\"pizza\", f).",
+                "st_hpd(enter(g1, \"family restaurant\"), true, 0).",
+                "st_hpd(lead_to(w, g1, \"booth\"), true, 1).",
+                "st_hpd(read_menu(g1), true, 2).",
+                "st_hpd(order(\"Mr. Johnson\", \"steak\", w), true, 3).",
+                "st_hpd(order(\"Mrs. Johnson\", \"salad\", w), true, 3).",
+                "st_hpd(order(\"son\", \"pizza\", w), true, 3).",
+                "st_obs(served(g1), true, 4)."
+            ]
+        },
+        {
+            "sid": 54,
+            "logic_form": [
+                "customer(\"Sarah\").",
+                "person(\"Sarah\").",
+                "restaurant(\"cafe\").",
+                "waiter(\"waitress\").",
+                "person(\"waitress\").",
+                "location(t).",
+                "food(\"chicken sandwich\").",
+                "beverage(\"coffee\").",
+                "st_hpd(enter(\"Sarah\", \"cafe\"), true, 0).",
+                "st_hpd(sit(\"Sarah\"), true, 0).",
+                "st_hpd(order(\"Sarah\", \"chicken sandwich\", \"waitress\"), true, 1).",
+                "st_hpd(order(\"Sarah\", \"coffee\", \"waitress\"), true, 1).",
+                "st_obs(served(\"Sarah\"), true, 2).",
+                "st_hpd(eat(\"Sarah\", \"chicken sandwich\"), true, 3).",
+                "st_hpd(drink(\"Sarah\", \"coffee\"), true, 3)."
+            ]
+        },
+        {
+            "sid": 55,
+            "logic_form": [
+                "customer(\"Mark\").",
+                "person(\"Mark\").",
+                "customer(\"Lisa\").",
+                "person(\"Lisa\").",
+                "group(g1).",
+                "member(\"Mark\", g1).",
+                "member(\"Lisa\", g1).",
+                "restaurant(\"sushi restaurant\").",
+                "waiter(w).",
+                "person(w).",
+                "cook(\"chef\").",
+                "person(\"chef\").",
+                "location(\"sushi bar\").",
+                "food(\"tuna rolls\").",
+                "food(\"salmon nigiri\").",
+                "st_hpd(enter(g1, \"sushi restaurant\"), true, 0).",
+                "st_hpd(lead_to(w, g1, \"sushi bar\"), true, 1).",
+                "st_hpd(order(\"Mark\", \"tuna rolls\", w), true, 2).",
+                "st_hpd(order(\"Lisa\", \"salmon nigiri\", w), true, 2).",
+                "st_hpd(prepare(\"chef\", \"tuna rolls\", w), true, 3).",
+                "st_hpd(prepare(\"chef\", \"salmon nigiri\", w), true, 3)."
+            ]
+        },
+        {
+            "sid": 56,
+            "logic_form": [
+                "customer(\"Anna\").",
+                "person(\"Anna\").",
+                "restaurant(\"vegan restaurant\").",
+                "waiter(w).",
+                "person(w).",
+                "food(\"quinoa bowl\").",
+                "beverage(\"green smoothie\").",
+                "tip(tip).",
+                "st_hpd(enter(\"Anna\", \"vegan restaurant\"), true, 0).",
+                "st_hpd(order(\"Anna\", \"quinoa bowl\", w), true, 1).",
+                "st_hpd(order(\"Anna\", \"green smoothie\", w), true, 1).",
+                "st_hpd(eat(\"Anna\", \"quinoa bowl\"), true, 2).",
+                "st_hpd(drink(\"Anna\", \"green smoothie\"), true, 2).",
+                "st_hpd(pay(\"Anna\", tip), true, 3)."
+            ]
+        },
+        {
+            "sid": 57,
+            "logic_form": [
+                "customer(\"Carlos\").",
+                "person(\"Carlos\").",
+                "restaurant(\"Mexican restaurant\").",
+                "waiter(w).",
+                "person(w).",
+                "food(\"tacos\").",
+                "beverage(\"margarita\").",
+                "st_hpd(enter(\"Carlos\", \"Mexican restaurant\"), true, 0).",
+                "st_hpd(greet(w, \"Carlos\"), true, 1).",
+                "st_hpd(order(\"Carlos\", \"tacos\", w), true, 2).",
+                "st_hpd(order(\"Carlos\", \"margarita\", w), true, 2).",
+                "st_obs(served(\"Carlos\"), true, 3).",
+                "st_hpd(eat(\"Carlos\", \"tacos\"), true, 4).",
+                "st_hpd(drink(\"Carlos\", \"margarita\"), true, 4)."
+            ]
+        },
+        {
+            "sid": 58,
+            "logic_form": [
+                "customer(\"Ben\").",
+                "person(\"Ben\").",
+                "restaurant(\"diner\").",
+                "waiter(w).",
+                "person(w).",
+                "cook(\"cook\").",
+                "person(\"cook\").",
+                "location(\"counter\").",
+                "food(\"pancakes with bacon\").",
+                "beverage(\"coffee\").",
+                "st_hpd(enter(\"Ben\", \"diner\"), true, 0).",
+                "st_obs(at_l(\"Ben\", \"counter\"), true, 0).",
+                "st_hpd(sit(\"Ben\"), true, 0).",
+                "st_hpd(order(\"Ben\", \"pancakes with bacon\", w), true, 1).",
+                "st_hpd(order(\"Ben\", \"coffee\", w), true, 1).",
+                "st_hpd(prepare(\"cook\", \"pancakes with bacon\", w), true, 2).",
+                "st_hpd(prepare(\"cook\", \"coffee\", w), true, 2)."
+            ]
+        },
+        {
+            "sid": 59,
+            "logic_form": [
+                "customer(\"Lucy\").",
+                "person(\"Lucy\").",
+                "restaurant(\"health food restaurant\").",
+                "waiter(w).",
+                "person(w).",
+                "food(\"kale salad\").",
+                "beverage(\"detox juice\").",
+                "st_hpd(enter(\"Lucy\", \"health food restaurant\"), true, 0).",
+                "st_hpd(order(\"Lucy\", \"kale salad\", w), true, 1).",
+                "st_hpd(order(\"Lucy\", \"detox juice\", w), true, 1).",
+                "st_hpd(eat(\"Lucy\", \"kale salad\"), true, 2).",
+                "st_hpd(drink(\"Lucy\", \"detox juice\"), true, 2)."
+            ]
+        },
+        {
+            "sid": 60,
+            "logic_form": [
+                "person(\"Robert\").",
+                "customer(\"Robert\").",
+                "waiter(w).",
+                "food(\"medium-rare steak\").",
+                "food(\"well-done steak\").",
+                "st_obs(hungry(\"Robert\"), true, 0).",
+                "st_hpd(order(\"Robert\", \"medium-rare steak\", w), true, 0).",
+                "st_obs(at_l(\"well-done steak\", t), true, 1).",
+                "st_hpd(complain(\"Robert\", w), true, 2).",
+                "st_next(1, 2).",
+                "st_hpd(move(w, t, \"kitchen\"), true, 3)."
+            ]
+        },
+        {
+            "sid": 61,
+            "logic_form": [
+                "person(p).",
+                "customer(g).",
+                "member(p, g).",
+                "restaurant(\"quiet cafe\").",
+                "beverage(\"teas\").",
+                "food(\"pastries\").",
+                "waiter(w).",
+                "st_obs(hungry(g), true, 0).",
+                "st_hpd(enter(g, \"quiet cafe\"), true, 0).",
+                "st_hpd(order(g, \"teas\", w), true, 1).",
+                "st_hpd(order(g, \"pastries\", w), true, 2).",
+                "st_hpd(drink(g, \"teas\"), true, 3).",
+                "st_hpd(eat(g, \"pastries\"), true, 4)."
+            ]
+        },
+        {
+            "sid": 62,
+            "logic_form": [
+                "person(\"Wendy\").",
+                "customer(\"Wendy\").",
+                "waiter(w).",
+                "restaurant(\"steakhouse\").",
+                "food(\"rare steak\").",
+                "food(\"well-done steak\").",
+                "st_obs(hungry(\"Wendy\"), true, 0).",
+                "st_hpd(order(\"Wendy\", \"well-done steak\", w), true, 0).",
+                "st_obs(at_l(\"rare steak\", t), true, 1).",
+                "st_hpd(complain(\"Wendy\", w), true, 2).",
+                "st_next(1, 2).",
+                "st_hpd(move(w, t, \"kitchen\"), true, 3)."
+            ]
+        },
+        {
+            "sid": 63,
+            "logic_form": [
+                "person(\"Ivan\").",
+                "customer(\"Ivan\").",
+                "restaurant(\"cafe\").",
+                "waiter(w).",
+                "beverage(\"espresso\").",
+                "st_obs(hungry(\"Ivan\"), true, 0).",
+                "st_hpd(enter(\"Ivan\", \"cafe\"), true, 0).",
+                "st_hpd(sit(\"Ivan\"), true, 1).",
+                "st_hpd(order(\"Ivan\", \"espresso\", w), true, 2).",
+                "st_hpd(move(w, \"kitchen\", t), true, 3).",
+                "st_hpd(drink(\"Ivan\", \"espresso\"), true, 4).",
+                "st_hpd(pay(\"Ivan\", b), true, 5).",
+                "st_hpd(leave(\"Ivan\"), true, 6)."
+            ]
+        },
+        {
+            "sid": 64,
+            "logic_form": [
+                "person(\"Penny\").",
+                "person(\"friend\").",
+                "customer(g).",
+                "member(\"Penny\", g).",
+                "member(\"friend\", g).",
+                "restaurant(r).",
+                "waiter(w).",
+                "st_obs(hungry(g), true, 0).",
+                "st_hpd(enter(g, r), true, 0).",
+                "st_hpd(lead_to(w, g, t), true, 1).",
+                "st_hpd(sit(g), true, 2).",
+                "st_hpd(read_menu(g), true, 3).",
+                "st_hpd(order(g, f, w), true, 4).",
+                "st_hpd(eat(g, f), true, 5)."
+            ]
+        },
+        {
+            "sid": 65,
+            "logic_form": [
+                "person(\"Maria\").",
+                "customer(\"Maria\").",
+                "restaurant(\"Italian restaurant\").",
+                "host(h).",
+                "waiter(w).",
+                "food(\"spaghetti carbonara\").",
+                "beverage(\"glass of red wine\").",
+                "st_obs(hungry(\"Maria\"), true, 0).",
+                "st_hpd(enter(\"Maria\", \"Italian restaurant\"), true, 0).",
+                "st_hpd(greet(h, \"Maria\"), true, 1).",
+                "st_hpd(lead_to(h, \"Maria\", t), true, 2).",
+                "st_hpd(sit(\"Maria\"), true, 3).",
+                "st_obs(holding(\"Maria\", \"menu\"), true, 4).",
+                "st_hpd(order(\"Maria\", \"spaghetti carbonara\", w), true, 5).",
+                "st_hpd(order(\"Maria\", \"glass of red wine\", w), true, 6).",
+                "st_hpd(move(w, \"kitchen\", t), true, 7).",
+                "st_hpd(eat(\"Maria\", \"spaghetti carbonara\"), true, 8).",
+                "st_hpd(drink(\"Maria\", \"glass of red wine\"), true, 9).",
+                "st_hpd(request(\"Maria\", b, w), true, 10)."
+            ]
+        },
+        {
+            "sid": 66,
+            "logic_form": [
+                "person(\"Charlie\").",
+                "customer(\"Charlie\").",
+                "restaurant(r).",
+                "waiter(w).",
+                "food(\"burger\").",
+                "st_obs(hungry(\"Charlie\"), true, 0).",
+                "st_hpd(enter(\"Charlie\", r), true, 0).",
+                "st_hpd(lead_to(w, \"Charlie\", t), true, 1).",
+                "st_hpd(sit(\"Charlie\"), true, 2).",
+                "st_hpd(order(\"Charlie\", \"burger\", w), true, 3).",
+                "st_hpd(move(w, \"kitchen\", t), true, 4).",
+                "st_hpd(eat(\"Charlie\", \"burger\"), true, 5).",
+                "st_hpd(request(\"Charlie\", b, w), true, 6).",
+                "st_hpd(pay(\"Charlie\", b), true, 7).",
+                "st_hpd(leave(\"Charlie\"), true, 8)."
+            ]
+        },
+        {
+            "sid": 67,
+            "logic_form": [
+                "person(\"Maria\").",
+                "person(\"Leo\").",
+                "customer(g).",
+                "member(\"Maria\", g).",
+                "member(\"Leo\", g).",
+                "restaurant(\"quiet Italian restaurant\").",
+                "waiter(w).",
+                "beverage(\"bottle of red wine\").",
+                "food(\"two pasta dishes\").",
+                "st_obs(hungry(g), true, 0).",
+                "st_hpd(enter(g, \"quiet Italian restaurant\"), true, 0).",
+                "st_hpd(lead_to(w, g, t), true, 1).",
+                "st_hpd(sit(g), true, 2).",
+                "st_hpd(order(g, \"bottle of red wine\", w), true, 3).",
+                "st_hpd(move(w, \"kitchen\", t), true, 4).",
+                "st_hpd(order(g, \"two pasta dishes\", w), true, 5).",
+                "st_hpd(drink(g, \"bottle of red wine\"), true, 6).",
+                "st_hpd(eat(g, \"two pasta dishes\"), true, 7).",
+                "st_hpd(pay(g, b), true, 8).",
+                "st_hpd(leave(g), true, 9)."
+            ]
+        },
+        {
+            "sid": 68,
+            "logic_form": [
+                "person(\"Frank\").",
+                "customer(\"Frank\").",
+                "restaurant(\"local diner\").",
+                "waiter(\"waitress\").",
+                "beverage(\"black coffee\").",
+                "food(\"pancakes\").",
+                "st_obs(hungry(\"Frank\"), true, 0).",
+                "st_hpd(enter(\"Frank\", \"local diner\"), true, 0).",
+                "st_hpd(sit(\"Frank\"), true, 1).",
+                "st_hpd(move(\"waitress\", \"kitchen\", t), true, 2).",
+                "st_hpd(read_menu(\"Frank\"), true, 3).",
+                "st_hpd(order(\"Frank\", \"pancakes\", \"waitress\"), true, 4).",
+                "st_hpd(eat(\"Frank\", \"pancakes\"), true, 5).",
+                "st_hpd(drink(\"Frank\", \"black coffee\"), true, 6).",
+                "st_hpd(pay(\"Frank\", b), true, 7).",
+                "st_hpd(leave(\"Frank\"), true, 8)."
+            ]
+        },
+        {
+            "sid": 69,
+            "logic_form": [
+                "person(p).",
+                "customer(g).",
+                "member(p, g).",
+                "restaurant(\"sandwich shop\").",
+                "waiter(w).",
+                "food(\"sandwiches\").",
+                "st_obs(hungry(g), true, 0).",
+                "st_hpd(enter(g, \"sandwich shop\"), true, 0).",
+                "st_hpd(lead_to(w, g, t), true, 1).",
+                "st_hpd(sit(g), true, 2).",
+                "st_hpd(order(g, \"sandwiches\", w), true, 3).",
+                "st_hpd(move(w, \"kitchen\", t), true, 4).",
+                "st_hpd(eat(g, \"sandwiches\"), true, 5).",
+                "st_hpd(pay(g, b), true, 6).",
+                "st_hpd(leave(g), true, 7)."
+            ]
+        },
+        {
+            "sid": 70,
+            "logic_form": [
+                "customer(\"jackson_family\")",
+                "restaurant(\"pizzeria\")",
+                "waiter(w)",
+                "food(\"large pepperoni pizza\")",
+                "beverage(\"pitcher of soda\")",
+                "st_hpd(enter(\"jackson_family\", \"pizzeria\"), true, 0)",
+                "st_hpd(lead_to(w, \"jackson_family\", t), true, 1)",
+                "st_hpd(order(\"jackson_family\", \"large pepperoni pizza\", w), true, 2)",
+                "st_hpd(order(\"jackson_family\", \"pitcher of soda\", w), true, 2)",
+                "st_obs(served(\"jackson_family\"), true, 3)",
+                "st_hpd(eat(\"jackson_family\", \"large pepperoni pizza\"), true, 4)",
+                "st_hpd(drink(\"jackson_family\", \"pitcher of soda\"), true, 4)"
+            ]
+        },
+        {
+            "sid": 71,
+            "logic_form": [
+                "customer(\"Michael\")",
+                "restaurant(\"bistro\")",
+                "waiter(w)",
+                "food(\"daily special\")",
+                "beverage(\"glass of water\")",
+                "st_hpd(enter(\"Michael\", \"bistro\"), true, 0)",
+                "st_hpd(lead_to(w, \"Michael\", t), true, 1)",
+                "st_hpd(order(\"Michael\", \"daily special\", w), true, 2)",
+                "st_hpd(order(\"Michael\", \"glass of water\", w), true, 2)",
+                "st_obs(served(\"Michael\"), true, 3)",
+                "st_hpd(eat(\"Michael\", \"daily special\"), true, 4)",
+                "st_hpd(drink(\"Michael\", \"glass of water\"), true, 4)",
+                "st_hpd(request(\"Michael\", b, w), true, 5)"
+            ]
+        },
+        {
+            "sid": 72,
+            "logic_form": [
+                "customer(\"Susan\")",
+                "restaurant(\"pancake house\")",
+                "waiter(w)",
+                "food(\"blueberry pancakes\")",
+                "beverage(\"orange juice\")",
+                "st_hpd(enter(\"Susan\", \"pancake house\"), true, 0)",
+                "st_hpd(order(\"Susan\", \"blueberry pancakes\", w), true, 1)",
+                "st_hpd(order(\"Susan\", \"orange juice\", w), true, 1)",
+                "st_obs(served(\"Susan\"), true, 2)",
+                "st_hpd(eat(\"Susan\", \"blueberry pancakes\"), true, 3)",
+                "st_hpd(drink(\"Susan\", \"orange juice\"), true, 3)",
+                "st_hpd(pay(\"Susan\", b), true, 4)"
+            ]
+        },
+        {
+            "sid": 73,
+            "logic_form": [
+                "customer(\"David\")",
+                "restaurant(\"deli\")",
+                "cook(ck)",
+                "waiter(w)",
+                "food(\"pastrami sandwich\")",
+                "food(\"pickle\")",
+                "st_hpd(enter(\"David\", \"deli\"), true, 0)",
+                "st_hpd(sit(\"David\"), true, 1)",
+                "st_obs(at_l(\"David\", t), true, 1)",
+                "st_hpd(order(\"David\", \"pastrami sandwich\", w), true, 2)",
+                "st_hpd(order(\"David\", \"pickle\", w), true, 2)",
+                "st_hpd(prepare(ck, \"pastrami sandwich\", w), true, 3)",
+                "st_obs(served(\"David\"), true, 4)",
+                "st_hpd(eat(\"David\", \"pastrami sandwich\"), true, 5)",
+                "st_hpd(eat(\"David\", \"pickle\"), true, 5)"
+            ]
+        },
+        {
+            "sid": 74,
+            "logic_form": [
+                "customer(\"Lisa\")",
+                "customer(\"Mark\")",
+                "restaurant(\"Italian restaurant\")",
+                "waiter(w)",
+                "food(\"lasagna\")",
+                "food(\"chicken parmesan\")",
+                "beverage(\"bottle of wine\")",
+                "st_hpd(enter(\"Lisa\", \"Italian restaurant\"), true, 0)",
+                "st_hpd(enter(\"Mark\", \"Italian restaurant\"), true, 0)",
+                "st_hpd(sit(\"Lisa\"), true, 1)",
+                "st_hpd(sit(\"Mark\"), true, 1)",
+                "st_hpd(order(\"Lisa\", \"lasagna\", w), true, 2)",
+                "st_hpd(order(\"Mark\", \"chicken parmesan\", w), true, 2)",
+                "st_hpd(order(\"Lisa\", \"bottle of wine\", w), true, 2)",
+                "st_hpd(eat(\"Lisa\", \"lasagna\"), true, 3)",
+                "st_hpd(eat(\"Mark\", \"chicken parmesan\"), true, 3)",
+                "st_hpd(drink(\"Lisa\", \"bottle of wine\"), true, 3)",
+                "st_hpd(drink(\"Mark\", \"bottle of wine\"), true, 3)"
+            ]
+        },
+        {
+            "sid": 75,
+            "logic_form": [
+                "customer(\"I\")",
+                "customer(\"husband\")",
+                "restaurant(\"Sushi place\")",
+                "waiter(w)",
+                "food(\"spicy tuna rolls\")",
+                "food(\"eel\")",
+                "st_hpd(enter(\"I\", \"Sushi place\"), true, 0)",
+                "st_hpd(enter(\"husband\", \"Sushi place\"), true, 0)",
+                "st_hpd(order(\"I\", \"spicy tuna rolls\", w), true, 1)",
+                "st_hpd(order(\"I\", \"eel\", w), true, 1)",
+                "st_hpd(eat(\"I\", \"spicy tuna rolls\"), true, 2)",
+                "st_hpd(eat(\"husband\", \"spicy tuna rolls\"), true, 2)",
+                "st_hpd(eat(\"I\", \"eel\"), true, 2)",
+                "st_hpd(eat(\"husband\", \"eel\"), true, 2)"
+            ]
+        },
+        {
+            "sid": 76,
+            "logic_form": [
+                "customer(\"we\")",
+                "customer(\"son\")",
+                "customer(\"friend\")",
+                "restaurant(\"Allston Diner\")",
+                "food(\"breakfast meals\")",
+                "waiter(w)",
+                "st_hpd(enter(\"we\", \"Allston Diner\"), true, 0)",
+                "st_hpd(enter(\"son\", \"Allston Diner\"), true, 0)",
+                "st_hpd(enter(\"friend\", \"Allston Diner\"), true, 1)",
+                "st_hpd(order(\"we\", \"breakfast meals\", w), true, 2)",
+                "st_hpd(order(\"son\", \"breakfast meals\", w), true, 2)",
+                "st_hpd(order(\"friend\", \"breakfast meals\", w), true, 2)",
+                "st_hpd(eat(\"we\", \"breakfast meals\"), true, 3)",
+                "st_hpd(eat(\"son\", \"breakfast meals\"), true, 3)",
+                "st_hpd(eat(\"friend\", \"breakfast meals\"), true, 3)"
+            ]
+        },
+        {
+            "sid": 77,
+            "logic_form": [
+                "customer(\"Karl\")",
+                "customer(\"wife\")",
+                "restaurant(r)",
+                "waiter(w)",
+                "st_hpd(enter(\"Karl\", r), true, 0)",
+                "st_hpd(enter(\"wife\", r), true, 0)",
+                "st_hpd(sit(\"Karl\"), true, 1)",
+                "st_hpd(sit(\"wife\"), true, 1)",
+                "st_hpd(leave(\"Karl\"), true, 2)",
+                "st_hpd(leave(\"wife\"), true, 2)",
+                "st_hpd(order(\"Karl\"), false)",
+                "st_hpd(order(\"wife\"), false)",
+                "st_obs(served(\"Karl\"), false, 1)",
+                "st_obs(served(\"wife\"), false, 1)"
+            ]
+        },
+        {
+            "sid": 78,
+            "logic_form": [
+                "customer(\"Betsy\")",
+                "restaurant(\"diner\")",
+                "waiter(w)",
+                "food(\"pancakes\")",
+                "food(\"bacon\")",
+                "beverage(\"coffee\")",
+                "st_obs(hungry(\"Betsy\"), true, 0)",
+                "st_hpd(enter(\"Betsy\", \"diner\"), true, 1)",
+                "st_hpd(order(\"Betsy\", \"pancakes\", w), true, 2)",
+                "st_hpd(order(\"Betsy\", \"bacon\", w), true, 2)",
+                "st_hpd(order(\"Betsy\", \"coffee\", w), true, 2)",
+                "st_hpd(eat(\"Betsy\", \"pancakes\"), true, 3)",
+                "st_hpd(eat(\"Betsy\", \"bacon\"), true, 3)",
+                "st_hpd(drink(\"Betsy\", \"coffee\"), true, 3)",
+                "st_hpd(pay(\"Betsy\", tip), true, 4)"
+            ]
+        },
+        {
+            "sid": 79,
+            "logic_form": [
+                "customer(\"couple\")",
+                "restaurant(\"steakhouse\")",
+                "waiter(w)",
+                "food(\"steak\")",
+                "st_hpd(enter(\"couple\", \"steakhouse\"), true, 0)",
+                "st_hpd(order(\"couple\", \"steak\", w), true, 1)",
+                "st_obs(served(\"couple\"), true, 2)",
+                "st_hpd(eat(\"couple\", \"steak\"), true, 3)",
+                "st_obs(bill_generated(\"couple\", b), true, 4)",
+                "st_hpd(read_bill(\"couple\"), true, 4)"
+            ]
+        },
+        {
+            "sid": 80,
+            "logic_form": [
+                "customer(\"i\").",
+                "customer(\"my son\").",
+                "member(\"i\", g).",
+                "member(\"my son\", g).",
+                "restaurant(\"Genki Ya\").",
+                "beverage(\"Japanese beers\").",
+                "food(\"fish roe\").",
+                "food(\"combo sashimi-sushi dishes\").",
+                "waiter(w).",
+                "st_hpd(enter(g, \"Genki Ya\"), true, 0).",
+                "st_hpd(order(g, \"Japanese beers\", w), true, 1).",
+                "st_hpd(order(g, \"fish roe\", w), true, 2).",
+                "st_hpd(order(g, \"combo sashimi-sushi dishes\", w), true, 3).",
+                "st_hpd(drink(g, \"Japanese beers\"), true, 4).",
+                "st_hpd(eat(g, \"fish roe\"), true, 5).",
+                "st_hpd(eat(g, \"combo sashimi-sushi dishes\"), true, 6).",
+                "st_hpd(leave(g), true, 7)."
+            ]
+        },
+        {
+            "sid": 81,
+            "logic_form": [
+                "customer(\"Kathy\").",
+                "customer(\"her friend\").",
+                "member(\"Kathy\", g).",
+                "member(\"her friend\", g).",
+                "restaurant(r).",
+                "food(\"dinner\").",
+                "waiter(w).",
+                "st_obs(open(r), true, 0).",
+                "st_hpd(enter(g, r), true, 1).",
+                "st_hpd(order(g, \"dinner\", w), true, 2).",
+                "st_hpd(eat(g, \"dinner\"), true, 3).",
+                "st_hpd(leave(g), true, 4)."
+            ]
+        },
+        {
+            "sid": 82,
+            "logic_form": [
+                "customer(\"Elmer\").",
+                "customer(\"Emma\").",
+                "member(\"Elmer\", g).",
+                "member(\"Emma\", g).",
+                "restaurant(r).",
+                "food(\"burgers\").",
+                "beverage(\"milkshakes\").",
+                "food(\"fries\").",
+                "waiter(w).",
+                "st_hpd(enter(g, r), true, 0).",
+                "st_hpd(order(g, \"burgers\", w), true, 1).",
+                "st_hpd(order(g, \"milkshakes\", w), true, 2).",
+                "st_hpd(order(\"Elmer\", \"fries\", w), true, 3).",
+                "st_hpd(eat(g, \"burgers\"), true, 4).",
+                "st_hpd(drink(g, \"milkshakes\"), true, 5).",
+                "st_hpd(eat(g, \"fries\"), true, 6).",
+                "st_hpd(leave(g), true, 7)."
+            ]
+        },
+        {
+            "sid": 83,
+            "logic_form": [
+                "customer(c).",
+                "restaurant(r).",
+                "waiter(\"the waitress\").",
+                "table(t).",
+                "st_hpd(sit(c), true, 0).",
+                "st_obs(sitting(c), true, 0).",
+                "st_obs(welcomed(c), false, 0).",
+                "st_obs(served(c), false, 0).",
+                "st_hpd(stand_up(c), true, 1).",
+                "st_obs(sitting(c), false, 1).",
+                "st_hpd(move(\"the waitress\", l, t), true, 2).",
+                "st_hpd(request(\"the waitress\", \"order\", c), true, 3)."
+            ]
+        },
+        {
+            "sid": 84,
+            "logic_form": [
+                "customer(\"Donna\").",
+                "restaurant(r).",
+                "food(\"cheeseburger\").",
+                "food(\"onion rings\").",
+                "waiter(w).",
+                "st_hpd(enter(\"Donna\", r), true, 0).",
+                "st_hpd(order(\"Donna\", \"cheeseburger\", w), true, 1).",
+                "st_hpd(order(\"Donna\", \"onion rings\", w), true, 2).",
+                "st_hpd(eat(\"Donna\", \"cheeseburger\"), true, 3).",
+                "st_hpd(eat(\"Donna\", \"onion rings\"), true, 4).",
+                "st_hpd(leave(\"Donna\"), true, 5)."
+            ]
+        },
+        {
+            "sid": 85,
+            "logic_form": [
+                "customer(\"i\").",
+                "restaurant(r).",
+                "food(\"pizza\").",
+                "waiter(w).",
+                "st_hpd(enter(\"i\", r), true, 0).",
+                "st_hpd(order(\"i\", \"pizza\", w), true, 1).",
+                "st_obs(served(\"i\"), true, 2).",
+                "st_hpd(complain(\"i\", w), true, 3).",
+                "st_next(2, 3).",
+                "st_hpd(leave(\"i\"), true, 4).",
+                "st_hpd(eat(\"i\", \"pizza\"), false)."
+            ]
+        },
+        {
+            "sid": 86,
+            "logic_form": [
+                "customer(\"Samuel\").",
+                "customer(\"John\").",
+                "member(\"Samuel\", g).",
+                "member(\"John\", g).",
+                "restaurant(r).",
+                "waiter(w).",
+                "food(\"hamburger without onions\").",
+                "food(\"hotdog\").",
+                "st_obs(in(g, r), true, 0).",
+                "st_hpd(order(\"Samuel\", \"hamburger without onions\", w), true, 1).",
+                "st_obs(served(\"Samuel\"), true, 2).",
+                "st_hpd(complain(\"Samuel\", w), true, 3).",
+                "st_next(2, 3).",
+                "st_obs(served(\"Samuel\"), true, 4).",
+                "st_hpd(eat(\"Samuel\", \"hamburger without onions\"), true, 5).",
+                "st_hpd(eat(\"Samuel\", \"hotdog\"), false)."
+            ]
+        },
+        {
+            "sid": 87,
+            "logic_form": [
+                "customer(\"i\").",
+                "restaurant(r).",
+                "waiter(w).",
+                "food(f).",
+                "st_hpd(enter(\"i\", r), true, 0).",
+                "st_hpd(order(\"i\", f, w), true, 1).",
+                "st_obs(served(\"i\"), true, 2).",
+                "st_hpd(complain(\"i\", w), true, 3).",
+                "st_next(2, 3).",
+                "st_hpd(leave(\"i\"), true, 4)."
+            ]
+        },
+        {
+            "sid": 88,
+            "logic_form": [
+                "customer(\"i\").",
+                "restaurant(r).",
+                "food(\"turkey sandwich\").",
+                "waiter(w).",
+                "st_obs(hungry(\"i\"), true, 0).",
+                "st_hpd(enter(\"i\", r), true, 1).",
+                "st_hpd(order(\"i\", \"turkey sandwich\", w), true, 2).",
+                "st_hpd(eat(\"i\", \"turkey sandwich\"), true, 3).",
+                "st_hpd(leave(\"i\"), true, 4)."
+            ]
+        },
+        {
+            "sid": 89,
+            "logic_form": [
+                "customer(\"i\").",
+                "customer(\"my son\").",
+                "person(\"my wife\").",
+                "member(\"i\", g).",
+                "member(\"my son\", g).",
+                "restaurant(\"Genki Ya\").",
+                "food(\"sashimi\").",
+                "waiter(w).",
+                "st_hpd(enter(g, \"Genki Ya\"), true, 0).",
+                "st_hpd(order(g, \"sashimi\", w), true, 1).",
+                "st_hpd(eat(g, \"sashimi\"), true, 2).",
+                "st_hpd(leave(g), true, 3)."
+            ]
+        },
+        {
+            "sid": 90,
+            "logic_form": [
+                "person(i).",
+                "customer(i).",
+                "customer(g1).",
+                "member(i, g1).",
+                "restaurant(r).",
+                "food(\"bread\").",
+                "food(\"salmon\").",
+                "food(\"asparagus\").",
+                "st_hpd(enter(g1, r), true, 0).",
+                "st_hpd(eat(g1, \"bread\"), true, 1).",
+                "st_hpd(eat(i, \"salmon\"), true, 2).",
+                "st_hpd(eat(i, \"asparagus\"), true, 2)."
+            ]
+        },
+        {
+            "sid": 91,
+            "logic_form": [
+                "person(\"Emily\").",
+                "customer(\"Emily\").",
+                "restaurant(r).",
+                "food(\"fries\").",
+                "food(\"burger\").",
+                "waiter(\"the cashier\").",
+                "cook(ck).",
+                "st_obs(in(\"Emily\", r), true, 0).",
+                "st_hpd(order(\"Emily\", \"fries\", \"the cashier\"), true, 1).",
+                "st_hpd(order(\"Emily\", \"burger\", \"the cashier\"), true, 1).",
+                "st_hpd(prepare(ck, \"burger\", \"the cashier\"), true, 2).",
+                "st_obs(food_prepared(ck, \"fries\", \"the cashier\"), false, 2).",
+                "st_hpd(complain(\"Emily\", \"the cashier\"), true, 3).",
+                "st_next(2, 3)."
+            ]
+        },
+        {
+            "sid": 92,
+            "logic_form": [
+                "person(i).",
+                "customer(i).",
+                "restaurant(r).",
+                "food(\"large salad\").",
+                "waiter(w).",
+                "st_obs(in(i, r), true, 0).",
+                "st_hpd(order(i, \"large salad\", w), true, 1).",
+                "st_obs(open(r), false, 2)."
+            ]
+        },
+        {
+            "sid": 93,
+            "logic_form": [
+                "person(i).",
+                "customer(i).",
+                "person(p1).",
+                "customer(p1).",
+                "member(i, g1).",
+                "member(p1, g1).",
+                "restaurant(r).",
+                "restaurant(\"Burger King\").",
+                "food(\"steak\").",
+                "waiter(w).",
+                "st_hpd(enter(g1, r), true, 0).",
+                "st_hpd(sit(i), true, 1).",
+                "st_hpd(sit(p1), true, 1).",
+                "st_hpd(order(i, \"steak\", w), true, 2).",
+                "st_obs(informed(w, \"steak unavailable\", i), true, 2).",
+                "st_obs(available(\"steak\", r), false, 2).",
+                "st_hpd(leave(g1), true, 3).",
+                "st_hpd(enter(g1, \"Burger King\"), true, 4)."
+            ]
+        },
+        {
+            "sid": 94,
+            "logic_form": [
+                "person(p1).",
+                "person(p2).",
+                "customer(p1).",
+                "customer(p2).",
+                "member(p1, g1).",
+                "member(p2, g1).",
+                "customer(g1).",
+                "restaurant(r).",
+                "food(\"new foods\").",
+                "st_hpd(enter(g1, r), true, 0).",
+                "st_hpd(eat(g1, \"new foods\"), true, 1)."
+            ]
+        },
+        {
+            "sid": 95,
+            "logic_form": [
+                "person(\"Austin\").",
+                "waiter(\"Austin\").",
+                "person(\"homeless man\").",
+                "customer(\"homeless man\").",
+                "waiter(w).",
+                "restaurant(r).",
+                "food(\"full meal\").",
+                "cook(ck).",
+                "st_hpd(enter(\"homeless man\", r), true, 0).",
+                "st_hpd(request(\"homeless man\", \"full meal\", \"Austin\"), true, 1).",
+                "st_hpd(lead_to(\"Austin\", \"homeless man\", t), true, 2).",
+                "st_hpd(sit(\"homeless man\"), true, 2).",
+                "st_hpd(prepare(ck, \"full meal\", w), true, 3).",
+                "st_obs(served(\"homeless man\"), true, 4).",
+                "st_hpd(cancel_bill(\"Austin\"), true, 5)."
+            ]
+        },
+        {
+            "sid": 96,
+            "logic_form": [
+                "person(\"Dina\").",
+                "customer(\"Dina\").",
+                "person(p1).",
+                "customer(p1).",
+                "member(\"Dina\", g1).",
+                "member(p1, g1).",
+                "customer(g1).",
+                "restaurant(r).",
+                "food(\"fries\").",
+                "waiter(w).",
+                "st_obs(in(g1, r), true, 0).",
+                "st_obs(hungry(\"Dina\"), false, 0).",
+                "st_hpd(order(g1, \"fries\", w), true, 1).",
+                "st_hpd(eat(\"Dina\", \"fries\"), true, 2).",
+                "st_hpd(pay(g1, b), true, 3)."
+            ]
+        },
+        {
+            "sid": 97,
+            "logic_form": [
+                "person(\"Tim\").",
+                "customer(\"Tim\").",
+                "restaurant(r).",
+                "food(\"wrong food\").",
+                "waiter(w).",
+                "st_obs(in(\"Tim\", r), true, 0).",
+                "st_hpd(order(\"Tim\", \"wrong food\", w), false).",
+                "st_obs(served(\"Tim\"), true, 1).",
+                "st_hpd(complain(\"Tim\", w), true, 2).",
+                "st_next(1, 2)."
+            ]
+        },
+        {
+            "sid": 98,
+            "logic_form": [
+                "person(\"Joe\").",
+                "customer(\"Joe\").",
+                "restaurant(r).",
+                "food(\"meal\").",
+                "waiter(w).",
+                "st_obs(hungry(\"Joe\"), true, 0).",
+                "st_hpd(enter(\"Joe\", r), true, 1).",
+                "st_hpd(order(\"Joe\", \"meal\", w), true, 2).",
+                "st_hpd(eat(\"Joe\", \"meal\"), true, 3).",
+                "st_obs(hungry(\"Joe\"), false, 4)."
+            ]
+        },
+        {
+            "sid": 99,
+            "logic_form": [
+                "customer(g1).",
+                "restaurant(r).",
+                "food(\"tacos\").",
+                "food(\"chicken tacos\").",
+                "food(f).",
+                "st_hpd(enter(g1, r), true, 0).",
+                "st_obs(available(\"tacos\", r), true, 0).",
+                "st_hpd(eat(g1, f), true, 1).",
+                "st_hpd(eat(g1, \"chicken tacos\"), true, 1)."
+            ]
+        }
+    ]
+}

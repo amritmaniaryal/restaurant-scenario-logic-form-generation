@@ -1,0 +1,45 @@
+{
+  "id": "gen-1777309911-K45Gx4LO6Mv3ehlzANiB",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"data\": [\n    {\n      \"sid\": 5,\n      \"logic_form\": [\n        \"restaurant(\\\"the restaurant\\\"). customer(\\\"Jane\\\"). food(\\\"fish\\\"). waiter(\\\"the waiter\\\"). st_hpd(lead_to(\\\"the waiter\\\", \\\"Jane\\\", t), true, 0). st_obs(sitting(\\\"Jane\\\"), true, 1). st_hpd(order(\\\"Jane\\\", \\\"fish\\\", \\\"the waiter\\\"), true, 2). st_hpd(eat(\\\"Jane\\\", \\\"fish\\\"), true, 3). st_hpd(put_down(\\\"the waiter\\\", b, t), true, 4).\"\n      ]\n    },\n    {\n      \"sid\": 6,\n      \"logic_form\": [\n        \"restaurant(\\\"the restaurant\\\"). customer(\\\"Molly\\\"). food(\\\"baked potato\\\"). food(\\\"French fries\\\"). waiter(\\\"the waiter\\\"). st_obs(sitting(\\\"Molly\\\"), true, 0). st_hpd(order(\\\"Molly\\\", \\\"baked potato\\\", \\\"the waiter\\\"), true, 1). st_hpd(put_down(\\\"the waiter\\\", \\\"French fries\\\", t), true, 2).\"\n      ]\n    },\n    {\n      \"sid\": 7,\n      \"logic_form\": [\n        \"restaurant(\\\"the restaurant\\\"). customer(\\\"Larry\\\"). waiter(\\\"the waiter\\\"). st_obs(sitting(\\\"Larry\\\"), true, 0). st_hpd(put_down(\\\"the waiter\\\", m, t), true, 1). st_obs(menu_read(\\\"Larry\\\"), true, 2). st_hpd(order(\\\"Larry\\\"), false).\"\n      ]\n    },\n    {\n      \"sid\": 8,\n      \"logic_form\": [\n        \"restaurant(\\\"the restaurant\\\"). customer(\\\"Derek\\\"). food(\\\"vegetable soup\\\"). waiter(\\\"the waiter\\\"). st_hpd(order(\\\"Derek\\\", \\\"vegetable soup\\\", \\\"the waiter\\\"), true, 0). st_hpd(put_down(\\\"the waiter\\\", \\\"vegetable soup\\\", t), true, 1). st_hpd(complain(\\\"Derek\\\", \\\"the waiter\\\"), true, 2). st_hpd(cancel_bill(\\\"the waiter\\\"), true, 3).\"\n      ]\n    },\n    {\n      \"sid\": 9,\n      \"logic_form\": [\n        \"restaurant(\\\"the restaurant\\\"). customer(\\\"Pete\\\"). food(\\\"chicken\\\"). waiter(\\\"the waiter\\\"). st_obs(sitting(\\\"Pete\\\"), true, 0). st_hpd(order(\\\"Pete\\\", \\\"chicken\\\", \\\"the waiter\\\"), true, 1). st_hpd(put_down(\\\"the waiter\\\", \\\"chicken\\\", t), true, 2). st_hpd(complain(\\\"Pete\\\", \\\"the waiter\\\"), true, 3). st_hpd(request(\\\"Pete\\\", f, \\\"the waiter\\\"), true, 4).\"\n      ]\n    },\n    {\n      \"sid\": 10,\n      \"logic_form\": [\n        \"restaurant(\\\"the restaurant\\\"). customer(\\\"Jim\\\"). food(\\\"appetizer\\\"). waiter(\\\"the waiter\\\"). st_obs(sitting(\\\"Jim\\\"), true, 0). st_hpd(order(\\\"Jim\\\", \\\"appetizer\\\", \\\"the waiter\\\"), true, 1). st_hpd(leave(\\\"Jim\\\"), true, 2). st_hpd(put_down(\\\"the waiter\\\", \\\"appetizer\\\", t), false).\"\n      ]\n    }\n  ]\n}",
+        "refusal": null,
+        "role": "assistant",
+        "reasoning": null
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1777309911,
+  "model": "deepseek/deepseek-chat-v3.1",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 801,
+    "prompt_tokens": 3585,
+    "total_tokens": 4386,
+    "completion_tokens_details": {
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.0032934,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.0032934,
+      "upstream_inference_prompt_cost": 0.00197175,
+      "upstream_inference_completions_cost": 0.00132165
+    }
+  },
+  "provider": "WandB"
+}

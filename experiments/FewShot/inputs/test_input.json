@@ -1,0 +1,92 @@
+{
+  "data": [
+    {
+      "sid": 0,
+      "text": "Allie enters the restaurant and claims her reservation. The waiter seats her at her table. She orders fruit salad. The waiter brings her fruit salad. After eating, she asks for the bill.",
+      "logic_form": [
+        "restaurant(\"the restaurant\"). customer(\"Allie\"). food(\"fruit salad\"). waiter(\"the waiter\"). story_step(0..6). st_hpd(enter(\"Allie\", \"the restaurant\"), true, 0). st_hpd(lead_to(\"the waiter\", \"Allie\", t), true, 1). st_hpd(sit(\"Allie\"), true, 2). st_hpd(order(\"Allie\", \"fruit salad\", \"the waiter\"), true, 3). st_hpd(put_down(\"the waiter\", \"fruit salad\", t), true, 4). st_hpd(eat(\"Allie\", \"fruit salad\"), true, 5). st_hpd(request(\"Allie\", b, \"the waiter\"), true, 6)."
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 1,
+      "text": "Abdul is sitting in a vegetarian restaurant. The waiter takes his order, and he orders hummus. The waiter brings the hummus to the table.",
+      "logic_form": [
+        "restaurant(\"vegetarian restaurant\"). customer(\"Abdul\"). food(\"hummus\"). waiter(\"the waiter\"). story_step(0..2). st_obs(sitting(\"Abdul\"), true, 0). st_hpd(order(\"Abdul\", \"hummus\", \"the waiter\"), true, 1). st_hpd(put_down(\"the waiter\", \"hummus\", t), true, 2)."
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 2,
+      "text": "John enters the restaurant. The waiter escorts him to a table. John orders steak. The waiter brings the steak to the table. John asks for the bill, and the waiter brings it to the table. John pays the bill and leaves the restaurant.",
+      "logic_form": [
+        "restaurant(\"the restaurant\"). customer(\"John\"). food(\"steak\"). waiter(\"the waiter\"). story_step(0..6). st_hpd(enter(\"John\", \"the restaurant\"), true, 0). st_hpd(lead_to(\"the waiter\", \"John\", t), true, 1). st_hpd(order(\"John\", \"steak\", \"the waiter\"), true, 2). st_hpd(request(\"John\", b, \"the waiter\"), true, 3). st_hpd(put_down(\"the waiter\", b, t), true, 4). st_pay(pay(\"John\", b), true, 5). st_pay(leave(\"John\"), true, 6)."
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 3,
+      "text": "Jill enters the restaurant and is escorted to a table. She orders chicken. The waiter brings the chicken to her table. After eating, Jill asks for the bill.",
+      "logic_form": [
+        "restaurant(\"the restaurant\"). customer(\"Jill\"). food(\"chicken\"). waiter(\"the waiter\"). story_step(0..5). st_hpd(enter(\"Jill\", \"the restaurant\"), true, 0). st_hpd(lead_to(\"the waiter\", \"Jill\", t), true, 1). st_hpd(order(\"Jill\", \"chicken\", \"the waiter\"), true, 2). st_hpd(put_down(\"the waiter\", \"chicken\", t), true, 3). st_hpd(eat(\"Jill\", \"chicken\"), true, 4). st_hpd(request(\"Jill\", b, \"the waiter\"), true, 5)."
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 4,
+      "text": "Bob is seated at a table in the restaurant. The waiter asks for his order, and he orders a hamburger.",
+      "logic_form": [
+        "restaurant(\"the restaurant\"). customer(\"Bob\"). food(\"hamburger\"). waiter(\"the waiter\"). story_step(0..1). st_obs(sitting(\"Bob\"), true, 0). st_hpd(order(\"Bob\", \"hamburger\", \"the waiter\"), true, 1)."
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 5,
+      "text": "The waiter shows Jane to her table. Jane is seated at a table in the restaurant. The waiter asks for her order, and she orders fish. After eating, the waiter brings the bill to the table.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 6,
+      "text": "Molly is seated at her table when the waiter asks for her order. She orders a baked potato. The waiter brings out French fries.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 7,
+      "text": "Larry is seated at his table in the restaurant. The waiter brings him a menu so he can decide what to order. After reviewing the menu, Larry decides he doesn't want anything at this restaurant.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 8,
+      "text": "Derek ordered a vegetable soup. The waiter brought out the vegetable soup, but Derek was unsatisfied with the lack of vegetables in it. As an apology, the waiter decided not to charge Derek for the soup.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 9,
+      "text": "Pete is seated at his table in the restaurant. He has ordered and received his chicken, but is unhappy with how undercooked the chicken is. He complains to the waiter, and asks for a better cooked dish.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 10,
+      "text": "Jim is seated at his table in the restaurant. He orders an appetizer. After waiting for 20 minutes and not receiving his food, he decides to leave the restaurant.",
+      "logic_form": [
+        "N/A"
+      ],
+      "scenario_type": "Exception"
+    }
+    ]
+}

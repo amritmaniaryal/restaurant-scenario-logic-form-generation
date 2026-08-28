@@ -1,0 +1,1033 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="st1.xslt" ?>
+<stories>
+	<story>
+	    <sid>1</sid>
+		<text>
+			Allie enters the restaurant and claims her reservation. The waiter seats her at her table. She orders fruit salad. The waiter brings her fruit salad. After eating, she asks for the bill.
+		</text>
+		<source>
+			https://www.youtube.com/watch?v=SH0sqL4d09U
+		</source>
+		<logic_form>
+		    restaurant("the restaurant").
+			customer("Allie").
+			food("fruit salad").
+			waiter("the waiter").
+			story_step(0..6).
+			st_hpd(enter("Allie", "the restaurant"), true, 0).
+			st_hpd(lead_to("the waiter", "Allie", t), true, 1).
+			st_hpd(sit("Allie"), true, 2).
+			st_hpd(order("Allie", "fruit salad", "the waiter"), true, 3).
+			st_hpd(put_down("the waiter", "fruit salad", t), true, 4).
+			st_hpd(eat("Allie", "fruit salad"), true, 5).
+			st_hpd(request("Allie", b, "the waiter"), true, 6).
+		</logic_form>
+		<scenario_type>
+			Normal
+		</scenario_type>
+	</story>
+	<story>
+	    <sid>2</sid>
+		<text>
+			Abdul is sitting in a vegetarian restaurant. The waiter takes his order, and he orders hummus. The waiter brings the hummus to the table.
+		</text>
+		<source>
+			https://www.youtube.com/watch?v=0Q3IvgfzeMM
+		</source>
+		<logic_form>
+		    restaurant("vegetarian restaurant").
+			customer("Abdul").
+			food("hummus").
+			waiter("the waiter").
+			story_step(0..2).
+			st_obs(sitting("Abdul"), true, 0).
+			st_hpd(order("Abdul", "hummus", "the waiter"), true, 1).
+			st_hpd(put_down("the waiter", "hummus", t), true, 2).
+		</logic_form>
+		<scenario_type>
+			Normal
+		</scenario_type>
+	</story>
+	<story>
+	    <sid>3</sid>
+		<text>
+			John enters the restaurant. The waiter escorts him to a table. John orders steak. The waiter brings the steak to the table. John asks for the bill, and the waiter brings it to the table. John pays the bill and leaves the restaurant.
+		</text>
+		<source>
+			https://www.youtube.com/watch?v=GLACfxlmfT4
+		</source>
+		<logic_form>
+		    restaurant("the restaurant").
+			customer("John").
+			food("steak").
+			waiter("the waiter").
+			story_step(0..6).
+			st_hpd(enter("John", "the restaurant"), true, 0).
+			st_hpd(lead_to("the waiter", "John", t), true, 1).
+			st_hpd(order("John", "steak", "the waiter"), true, 2).
+			st_hpd(request("John", b, "the waiter"), true, 3).
+			st_hpd(put_down("the waiter", b, t), true, 4).
+			st_pay(pay("John", b), true, 5).
+			st_pay(leave("John"), true, 6).
+		</logic_form>
+		<scenario_type>
+			Normal
+		</scenario_type>
+	</story>
+	<story>
+	    <sid>4</sid>
+		<text>
+			Jill enters the restaurant and is escorted to a table. She orders chicken. The waiter brings the chicken to her table. After eating, Jill asks for the bill.
+		</text>
+		<source>
+			https://www.youtube.com/watch?v=9CcYEoAyArE
+		</source>
+		<logic_form>
+		    restaurant("the restaurant").
+			customer("Jill").
+			food("chicken").
+			waiter("the waiter").
+			story_step(0..5).
+			st_hpd(enter("Jill", "the restaurant"), true, 0).
+			st_hpd(lead_to("the waiter", "Jill", t), true, 1).
+			st_hpd(order("Jill", "chicken", "the waiter"), true, 2).
+			st_hpd(put_down("the waiter", "chicken", t), true, 3).
+			st_hpd(eat("Jill", "chicken"), true, 4).
+			st_hpd(request("Jill", b, "the waiter"), true, 5).
+		</logic_form>
+		<scenario_type>
+			Normal
+		</scenario_type>
+	</story>
+	<story>
+	    <sid>5</sid>
+		<text>
+			Bob is seated at a table in the restaurant. The waiter asks for his order, and he orders a hamburger.
+		</text>
+		<source>
+			https://www.youtube.com/watch?v=yvkDuJ45ivw
+		</source>
+		<logic_form>
+		    restaurant("the restaurant").
+			customer("Bob").
+			food("hamburger").
+			waiter("the waiter").
+			story_step(0..1).
+			st_obs(sitting("Bob"), true, 0).
+			st_hpd(order("Bob", "hamburger", "the waiter"), true, 1).
+		</logic_form>
+		<scenario_type>
+			Normal
+		</scenario_type>
+	</story>
+	<story>
+	    <sid>6</sid>
+		<text>
+			The waiter shows Jane to her table. Jane is seated at a table in the restaurant. The waiter asks for her order, and she orders fish. After eating, the waiter brings the bill to the table.
+		</text>
+		<source>
+			https://www.youtube.com/watch?v=yq1oTDqRmPY
+		</source>
+		<logic_form>
+		    restaurant("the restaurant").
+			customer("Jane").
+			food("fish").
+			waiter("the waiter").
+			story_step(0..4).
+			st_hpd(lead_to("the waiter", "Jane", t), true, 0).
+			st_obs(sitting("Jane"), true, 1).
+			st_hpd(order("Jane", "fish", "the waiter"), true, 2).
+			st_hpd(eat("Jane", "fish"), true, 3).
+			st_hpd(put_down("the waiter", b, t), true,  4).
+		</logic_form>
+		<scenario_type>
+			Normal
+		</scenario_type>
+	</story>
+	<story>
+	    <sid>7</sid>
+		<text>
+			Molly is seated at her table when the waiter asks for her order. She orders a baked potato. The waiter brings out French fries.
+		</text>
+		<source>
+			https://www.youtube.com/watch?v=KNVS3oqfbPQ
+		</source>
+		<logic_form>
+		    restaurant("the restaurant").
+			customer("Molly").
+			food("baked potato").
+			food("French fries").
+			waiter("the waiter").
+			story_step(0..2).
+			st_obs(sitting("Molly"), true, 0).
+			st_hpd(order("Molly", "baked potato", "the waiter"), true, 1).
+			st_hpd(put_down("the waiter", "French fries", t), true, 2).
+		</logic_form>
+		<scenario_type>
+			Exception
+		</scenario_type>
+	</story>
+	<story>
+	    <sid>8</sid>
+		<text>
+			Larry is seated at his table in the restaurant. The waiter brings him a menu so he can decide what to order. After reviewing the menu, Larry decides he doesn't want anything at this restaurant.
+		</text>
+		<source>
+			https://www.youtube.com/watch?v=Lpkjfj7G73Y
+		</source>
+		<logic_form>
+		    restaurant("the restaurant").
+			customer("Larry").
+			waiter("the waiter").
+			story_step(0..3).
+			st_obs(sitting("Larry"), true, 0).
+			st_hpd(put_down("the waiter", m, t), true, 1).
+			st_obs(menu_read("Larry"), true, 2).
+			st_hpd(order("Larry"), false, 3).
+		</logic_form>
+		<scenario_type>
+			Exception
+		</scenario_type>
+	</story>
+	<story>
+	    <sid>9</sid>
+		<text>
+			Derek ordered a vegetable soup. The waiter brought out the vegetable soup, but Derek was unsatisfied with the lack of vegetables in it. As an apology, the waiter decided not to charge Derek for the soup.
+		</text>
+		<source>
+			https://www.youtube.com/watch?v=Lpkjfj7G73Y
+		</source>
+		<logic_form>
+		    restaurant("restaurant").
+			customer("Derek").
+			food("vegetable soup").
+			waiter("the waiter").
+			story_step(0..3).
+			st_hpd(order("Derek", "vegetable soup", "the waiter"), true, 0).
+			st_hpd(put_down("the waiter", "vegetable soup", t), true, 1).
+			st_hpd(complain("Derek", "the waiter"), true, 2).
+			st_next(1, 2).
+			st_hpd(pay("the waiter", b), true, 3). 
+		</logic_form>
+		<scenario_type>
+			Exception
+		</scenario_type>
+	</story>
+	<story>
+	    <sid>10</sid>
+		<text>
+			Pete is seated at his table in the restaurant. He has ordered and received his chicken, but is unhappy with how undercooked the chicken is. He complains to the waiter, and asks for a better cooked dish.
+		</text>
+		<source>
+			https://www.youtube.com/watch?v=Lpkjfj7G73Y
+		</source>
+		<logic_form>
+		    restaurant("the restaurant").
+			customer("Pete").
+			food("chicken").
+			food("undercooked chicken").
+			food("better cooked chicken").
+			waiter("the waiter").
+			story_step(0..4).
+			st_obs(sitting("Pete"), true, 0).
+			st_hpd(order("Pete", "chicken", "the waiter"), true, 1).
+			st_hpd(put_down("the waiter", "undercooked_chicken", t), true, 2).
+			st_hpd(complain("Pete", "the waiter"), true, 3).
+			st_next(2, 3).
+			st_hpd(order("Pete", "better cooked chicken", "the waiter"), true, 4).
+		</logic_form>
+		<scenario_type>
+			Exception
+		</scenario_type>
+	</story>
+	<story>
+	    <sid>11</sid>
+		<text>
+			Jim is seated at his table in the restaurant. He orders an appetizer. After waiting for 20 minutes and not receiving his food, he decides to leave the restaurant.
+		</text>
+		<source>
+			https://www.youtube.com/watch?v=Lpkjfj7G73Y
+		</source>
+		<logic_form>
+		    restaurant("the restaurant").
+			customer("Jim").
+			food("appetizer").
+			waiter("the waiter").
+			story_step(0..3).
+			st_obs(sitting("Jim"), true, 0).
+			st_hpd(order("Jim", "appetizer", "the waiter"), true, 1).
+			st_obs(served("Pete"), false, 2).
+			st_hpd(leave("Jim"), true, 3).
+		</logic_form>
+		<scenario_type>
+			Exception
+		</scenario_type>
+	</story>
+	<story>
+	    <sid>12</sid>
+		<text>
+			Jake is seated at his table in the restaurant. He orders a medium-rare steak. The waiter brings out his order but it is too rare. 
+		</text>
+		<source>
+			https://www.youtube.com/watch?v=s2PZIn_G7-g
+		</source>
+		<logic_form>
+		    restaurant("the restaurant").
+			customer("Jake").
+			food("medium-rare steak").
+			food("too rare steak").
+			waiter("the waiter").
+			story_step(0..2).
+			st_obs(sitting("Jake"), true, 0).
+			st_hpd(order("Jake", "medium-rare steak", "the waiter"), true, 1).
+			st_hpd(put_down("the waiter", "too rare steak", t), true, 2).
+		</logic_form>
+		<scenario_type>
+			Exception
+		</scenario_type>
+	</story>
+	<story>
+	    <sid>13</sid>
+		<text>
+			My husband and I went to a famous restaurant listed in our guidebook. We were seated at a booth and began studying the menu. We ordered escargot, lamb, savory salmon, and a creamy flan dessert.
+		</text>
+		<source>
+			Google Books: "Thank You, Good-Bye!: Modern Adventures in an Ancient World" by Aloha Williams. iUniverse (2010)
+		</source>
+		<logic_form>
+		    restaurant("a famous restaurant").
+			person("my husband").
+			person("I").
+			customer("we").
+			member("my husband", "we").
+			member("I", "we").
+			member("escargot", f).
+			member("lamb", f).
+			member("savory salmon", f).
+			member("creamy flan dessert", f)
+			story_step(0..3).
+			st_hpd(enter("we", "a famous restaurant"), true, 0).
+			st_obs(sitting("we"), true, 1).
+			st_hpd(pick_up("we", m, t), true, 2).
+			st_hpd(order("we", f, w), true, 3).
+		</logic_form>
+		<scenario_type>
+			Normal
+		</scenario_type>
+	</story>
+	<story>
+	    <sid>14</sid>
+		<text>
+			Judy looked at the menu. She and her two kids, Alex and Zoe, were seated in a booth in a local restaurant. They ordered fish and chips.
+		</text>
+		<source>
+			Google Books: "Happiness Economics" by Shari Lapeña. Brindle and Glass (2011)
+		</source>
+		<logic_form>
+		    restaurant("a local restaurant").
+			person("Judy").
+			person("Alex").
+			person("Zoe").
+			customer("they").
+			member("Judy", "they").
+			member("Alex", "they").
+			member("Zoe", "they").
+			food("fish and chips").
+			story_step(0..1).
+			st_obs(sitting("they"), true, 0).
+			st_hpd(order("they", "fish and chips", w), true, 1).
+		</logic_form>
+		<scenario_type>
+			Normal
+		</scenario_type>
+	</story>
+	<story>
+	    <sid>15</sid>
+		<text>
+			Samantha was in a five-star restaurant. Samantha started perusing the menu. She ordered the barbecued veal chop with Asian slaw and Thai fried rice.
+		</text>
+		<source>
+			Google Books: "Green's Way" by Juli Bunting. eBookIt.com (2012)
+		</source>
+		<logic_form>
+		    restaurant("a five-star restaurant").
+			customer("Samantha").
+			food("barbecued veal chop with Asian slaw and Thai fried rice").
+			story_step(0..2).
+			st_obs(in("Samantha", "a five-star restaurant"), true, 0).
+			st_hpd(pick_up("Samantha", m, t), true, 1).
+			st_hpd(order("Samantha", "barbecued veal chop with Asian slaw and Thai fried rice", w), true, 2).
+		</logic_form>
+		<scenario_type>
+			Normal
+		</scenario_type>
+	</story>
+	<story>
+	    <sid>16</sid>
+		<text>
+			The villager entered a fine restaurant and was seated at one of the tables. He looked at the menu. He ordered one of the items on the list. The waiter brought him a large plate of lettuce salad with several black olives on top.
+		</text>
+		<source>
+			Google Books: "More Tales Alive in Turkey" by Warren S. Walker, Ahmet Edip Uysal. Texas Tech University Press (1992)
+		</source>
+		<logic_form>
+		    restaurant("a fine restaurant").
+			customer("the villager").
+			food("one of the items on the list").
+			food("lettuce salad with several black olives on top").
+			story_step(0..4).
+			st_hpd(enter("the villager", "a fine restaurant"), true, 0).
+			st_obs(sitting("the villager"), true, 1).
+			st_hpd(pick_up("the villager", m, t), true, 2).
+			st_hpd(order("the villager", "one of the items on the list", w), true, 3).
+			st_hpd(put_down(w, "lettuce salad with several black olives on top", t), true, 4).
+		</logic_form>
+		<scenario_type>
+			Normal
+		</scenario_type>
+	</story>
+	<story>
+	    <sid>17</sid>
+		<text>
+			The waiter took Gavin and Amandine to a booth. They slid onto brown vinyl seats. Gavin glanced over his menu. Amandine didn't need to look to know what she wanted. She ordered egg drop soup with wonton, lobster Cantonese and shrimp, beef and pork fried rice. Gavin ordered the same. 
+		</text>
+		<source>
+			Google Books: "Seduced by the Billionaire: The Complete Collection" by Nadia Lee. Four Isles Press (2016)
+		</source>
+		<logic_form>
+			waiter("the waiter").
+			customer("Gavin").
+			customer("Amandine").
+			food(f).
+			member("egg drop soup with wonton", f).
+			member("lobster Cantonese", f).
+			member("shrimp, beef and pork fried rice", f).
+			story_step(0..4).
+			st_hpd(lead_to("the waiter", "Gavin", t), true, 0).
+			st_hpd(lead_to("the waiter", "Amandine", t), true, 0).
+			st_hpd(sit("Gavin"), true, 1).
+			st_hpd(sit("Amandine"), true, 1).
+			st_hpd(pick_up("Gavin", m, t), true, 2).
+			st_hpd(put_down("Gavin", m, t), true, 3).
+			st_hpd(order("Amandine", f, "the waiter"), true, 3).
+			st_hpd(order("Gavin", f, "the waiter"), true, 4).
+			st_hpd(pick_up("Amandine", m, t), false).
+		</logic_form>
+		<scenario_type>
+			Exception
+		</scenario_type>
+	</story>
+	<story>
+	    <sid>18</sid>
+		<text>
+			The waiter brought his dinner. He was eating something spotted with eggs and livers. He finished but the waiter wouldn't come total the bill. 
+		</text>
+		<source>
+			Google Books: "Wise Blood" by Flannery O'Connor. MacMillan (1962)
+		</source>
+		<logic_form>
+			customer("he").
+			food("something spotted with eggs and livers").
+			waiter("the waiter").
+			story_step(0..1).
+			st_hpd(put_down("the waiter", "something spotted with eggs and livers", t), true, 0).
+			st_hpd(eat("he", "something spotted with eggs and livers"), true, 1).
+			st_hpd(put_down("the waiter", b, t), false).
+		</logic_form>
+		<scenario_type>
+			Exception
+		</scenario_type>
+	</story>
+	<story>
+	    <sid>19</sid>
+		<text>
+			Herbie and his father were at a meat restaurant. The waiter brought a sizzling steak that smelled heavenly, and a plate with haddock and creamed spinach. The waiter put Herbie's plate down. Herbie’s father asked the waiter to take the fish away and bring the boy some lamb chops instead.
+		</text>
+		<source>
+			Google Books: "City Boy" by Herman Wouk. Little, Brown (2009)
+		</source>
+		<logic_form>
+		    restaurant("a meat restaurant").
+			customer("Herbie").
+			customer("his father").
+			food("a sizzling steak").
+			food("haddock and creamed spinach").
+			food("lamb chops").
+			waiter("the waiter").
+			story_step(0..4).
+			st_obs(in("Herbie", "a meat restaurant"), true, 0).
+			st_obs(in("his father", "a meat restaurant"), true, 0).
+			st_hpd(put_down("the waiter", "a sizzling steak", t), true, 1).
+			st_hpd(put_down("the waiter", "haddock and creamed spinach", t), true, 2).
+			st_hpd(request("his father", pick_up("the waiter", "haddock and creamed spinach", t), "the waiter"), true, 3).
+			st_hpd(order_for("his father", "Herbie", "lamb chops", "the waiter"), true, 4).
+		</logic_form>
+		<scenario_type>
+			Exception
+		</scenario_type>
+	</story>
+	<story>
+	    <sid>20</sid>
+		<text>
+			Brand sat in a chair. He picked up the menu and ordered a whiskey with Pepsi, but no ice. 
+			Pyrogies and sausage cooked in sauerkraut, he told the waiter. 
+			The waiter brought Brand his drink. Then, the waiter placed the food on the table. 
+			Brand asked the waiter to bring him a large bowl of borscht when he was done 
+			with the pyrogies and sausage. The waiter went back into the kitchen. 
+			Brand ate the pyrogies and then the sausage and sauerkraut. 
+			Then, the waiter brought out Brand's bowl of soup.
+		</text>
+		<source>
+			Google Books: "Going Silent" by Richard Cozicar. FriesenPress (2015)
+		</source>
+		<logic_form>
+		    restaurant(r).
+			customer("Brand").
+			drink("whiskey with Pepsi, no ice").
+			food(f).
+			member(pyrogies, f).
+			member("sausage in sauerkraut", f).
+			food(borscht).
+			waiter("the waiter").
+			story_step(0..9).
+			st_hpd(sit("Brand"), true, 0).
+			st_hpd(pick_up("Brand", m, t), true, 1).
+			st_hpd(order_drink("Brand", "whiskey with Pepsi, no ice", "the waiter"), true, 2).
+			st_hpd(order("Brand", f, "the waiter"), true, 3).
+			st_hpd(put_down("the waiter", "whiskey with Pepsi, no ice"), t), true, 4).
+			st_hpd(put_down("the waiter", f, t), true, 5).
+			st_hpd(order("Brand", borscht, "the waiter"), true, 6).
+			st_hpd(move("the waiter", t, kitchen), true, 7).
+			st_hpd(eat("Brand", f), true, 8).
+			st_hpd(put_down("the waiter", borscht, t), true, 9).
+		</logic_form>
+		<scenario_type>
+			Variation
+		</scenario_type>
+	</story>
+	<story>
+	    <sid>21</sid>
+		<text>
+			The waiter brought out escargot for Molly and me. 
+			Then the waiter brought out twelve oysters and twelve clams. 
+			We shared the clams and oysters. The waiter poured wine for us.
+		</text>
+		<source>
+			Google Books: "Presidential Disease" by Robert Hrib. Balboa Press (2017)
+		</source>
+		<logic_form>
+		    restaurant(r).
+			customer(we).
+			member("Molly", we).
+			member(me, we).
+			food(escargot).
+			food(f).
+			member("twelve oysters", f).
+			member("twelve clams", f).
+			drink(wine).
+			waiter("the waiter").
+			story_step(0..3).
+			st_hpd(put_down("the waiter", escargot, t), true, 0).
+			st_hpd(put_down("the waiter", f, t), true, 1).
+			st_hpd(eat(we, f), true, 2).
+			st_hpd(put_down("the waiter", wine, t), true, 3).
+		</logic_form>
+		<scenario_type>
+			Variation
+		</scenario_type>
+	</story>
+	<story>
+	    <sid>22</sid>
+		<text>
+			The waiter brought the wine to their table. 
+			Then, Emanuel studied the menu. 
+			He ordered the gypsy shashlik for Ingrid and himself. 
+			After the waiter left, they drank the wine. 
+			The waiter brought the shashlik to their table.
+		</text>
+		<source>
+			Google Books: "Destiny" by Larysa Plawan Levycky. Trafford Publishing (2016)
+		</source>
+		<logic_form>
+		    restaurant(r).
+			customer(they).
+			member("Emanuel").
+			member("Ingrid").
+			drink(wine).
+			food("gypsy shashlik").
+			waiter("the waiter").
+			story_step(0..5).
+			st_hpd(put_down("the waiter", wine, t), true, 0).
+			st_hpd(pick_up("Emanuel", m, t), true, 1).
+			st_hpd(order_for("Emanuel", they, "gypsy shashlik", "the waiter"), true, 2).
+			st_hpd(move("the waiter", t, kitchen), true, 3).
+			st_hpd(drink(they, wine), true, 4).
+			st_hpd(put_down("the waiter", "gypsy shashlik", t), true, 5).
+		</logic_form>
+		<scenario_type>
+			Variation
+		</scenario_type>
+	</story>
+	<story>
+	    <sid>23</sid>
+		<text>
+			Andrew was sitting in a restaurant. 
+			Sebastian entered the restaurant and sat down opposite Andrew. 
+			The waiter brought a bottle of wine.
+			Andrew and Sebastian took a drink. The waiter gave the men a menu. 
+		</text>
+		<source>
+			Google Books: "The Boys of St. Jude's" by H.E. Balinovsky. AuthorHouse (2014)
+		</source>
+		<logic_form>
+		    restaurant("a restaurant").
+			customer("the men").
+			person("Andrew").
+			person("Sebastian").
+			member("Andrew", "the men").
+			member("Sebastian", "the men").
+			drink(wine).
+			waiter("the waiter").
+			story_step(0..5).
+			st_obs(in("Andrew", "a restaurant"), true, 0).
+			st_obs(sitting("Andrew"), true, 0).
+			st_hpd(enter("Sebastian", "a restaurant"), true, 1).
+			st_hpd(sit("Sebastian"), true, 2).
+			st_hpd(put_down("the waiter", wine, t), true, 3).
+			st_hpd(drink("the men", wine), true, 4).
+			st_hpd("the waiter", m, t), true, 5).
+		</logic_form>
+		<scenario_type>
+			Variation
+		</scenario_type>
+	</story>
+	<story>
+	    <sid>24</sid>
+		<text>
+			I opened the menu and chose the salmon. 
+			The waiter poured two glasses of red wine. 
+			I sipped the wine. 
+			Then our server brought a small plate of hors d'oeuvres. 
+			I tried a little bit of everything. 
+			Soon, the waiter brought the meal. I tasted the salmon.
+		</text>
+		<source>
+			Google Books: "Rocker: Part One" by Victoria Foxxe. Northern Sky Press (2017)
+		</source>
+		<logic_form>
+		    restaurant(r).
+			customer("I").
+			food(salmon).
+			drink("red wine").
+			food("hors d'oeuvres").
+			waiter("the waiter").
+			story_step(0..7).
+			st_hpd(pick_up("I", m, t), true, 0).
+			st_hpd(order("I", salmon, "the waiter"), true, 1).
+			st_hpd(put_down("I", "red wine", t), true, 2).
+			st_hpd(drink("I", "red wine"), true, 3).
+			st_hpd(put_down("the waiter", "hors d'oeuvres", t), true, 4).
+			st_hpd(eat("I", "hors d'oeuvres"), true, 5).
+			st_hpd(put_down("the waiter", salmon, t), true, 6).
+			st_hpd(eat("I", salmon), true, 7).
+		</logic_form>
+		<scenario_type>
+			Variation
+		</scenario_type>
+	</story>
+	<story>
+	    <sid>25</sid>
+		<text>
+			Jasper invited Frank to a restaurant. 
+			Jasper ordered roast beef and coffee. 
+			Their conversation was interrupted by the arrival of the coffee and roast beef, 
+			which both he and his new friend attacked with vigor. 
+			Jasper wanted to invite Frank, but he had forgotten his wallet at home. Frank paid for both.
+		</text>
+		<source>
+			Project Gutenberg: "The Cash Boy" by Horatio Alger Jr.
+		</source>
+		<logic_form>
+		    restaurant("a restaurant").
+			customer(they).
+			member("Jasper", they).
+			member("Frank", they).
+			food(f).
+			member("roast beef", f).
+			member(coffee, f).
+			waiter(w).
+			story_step(0..4).
+			st_hpd(enter(they, "a restaurant"), true, 0).
+			st_hpd(order_for("Jasper", they, f, w), true, 1).
+			st_hpd(put_down(w, f, t), true, 2).
+			st_hpd(eat(they, f), true, 3).
+			st_hpd(pay("Jasper", b), false, 4).
+			st_hpd(pay("Frank", b), true, 4).
+		</logic_form>
+		<scenario_type>
+			Exception
+		</scenario_type>
+	</story>
+	<story>
+	    <sid>26</sid>
+		<text>
+			I was the first person to appear at the restaurant. 
+			I took my seat at the middle of the table. The head-waiter waited on me himself. 
+			I had a capital dinner. Then Uncle Chipperton entered. He paid for the whole dinner.
+		</text>
+		<source>
+			Project Gutenberg: "A Jolly Fellowship" by Frank Richard Stockton.
+		</source>
+		<logic_form>
+		    restaurant("the restaurant").
+			customer("I").
+			waiter("head-waiter")
+			food("capital dinner").
+			person("Uncle Chipperton").
+			story_step(0..5).
+			st_hpd(enter("I", "the restaurant"), true, 0).
+			st_hpd(sit("I"), true, 1).
+			st_hpd(put_down("head-waiter", "capital dinner", t), true, 2).
+			st_hpd(eat("I", "capital dinner"), true, 3).
+			st_hpd(enter("Uncle Chipperton", "the restaurant"), true, 4).
+			st_hpd(pay("Uncle Chipperton", b), true, 5).
+		</logic_form>
+		<scenario_type>
+			Exception
+		</scenario_type>
+	</story>
+	<story>
+	    <sid>27</sid>
+		<text>
+			Nicole went to a vegetarian restaurant. She ordered lentil soup. The waitress set the soup in the middle of the table. Nicole enjoyed the soup. She left the restaurant.
+		</text>
+		<source>
+			Mueller, E.T. 2007. Modelling space and time in narratives about restaurants. Literary and Linguistic Computing 22, 1, 67--84.
+		</source>
+		<logic_form>
+		    restaurant(veg_r).
+			customer(nicole).
+			food(lentil_soup).
+			waiter(waitress).
+			story_step(0..4).
+			st_hpd(enter(nicole, veg_r), true, 0).
+			st_hpd(order(nicole, lentil_soup, waitress), true, 1).
+			st_hpd(put_down(waitress, lentil_soup, t), true, 2).
+			st_hpd(eat(nicole, lentil_soup), true, 3).
+			st_hpd(leave(nicole), true, 4).
+		</logic_form>
+		<scenario_type>
+			Normal
+		</scenario_type>
+	</story>
+	<story>
+	    <sid>28</sid>
+		<text>
+			Nicole and Sam went to a vegetarian restaurant. She ordered a lentil soup. He ordered a miso soup. They both enjoyed their soups.
+		</text>
+		<source>
+			Hand-crafted
+		</source>
+		<logic_form>
+		    restaurant(veg_r).
+			customer(nicole).
+			customer(sam).
+			food(lentil_soup).
+			food(miso_soup).
+			waiter(w).
+			story_step(0..3).
+			st_hpd(enter(nicole, veg_r), true, 0).
+			st_hpd(enter(sam, veg_r), true, 0).
+			st_hpd(order(nicole, lentil_soup, waitress), true, 1).
+			st_hpd(order(sam, miso_soup, waitress), true, 2).
+			st_hpd(eat(nicole, lentil_soup), true, 3).
+			st_hpd(eat(sam, miso_soup), true, 3).
+		</logic_form>
+		<scenario_type>
+			Normal
+		</scenario_type>
+	</story>
+	<story>
+	    <sid>29</sid>
+		<text>
+			One day, Andy felt hungry, and went to the RRGrill restaurant for dinner. The restaurant was open, so he walked into the restaurant where he was greeted by the waiter and was led to the table. Andy ordered soup and he ate it with pleasure. He paid cash and left.
+		</text>
+		<source>
+			Hand-crafted
+		</source>
+		<logic_form>
+		    restaurant("RRGrill").
+			customer(andy).
+			food(soup).
+			waiter("the waiter").
+			story_step(0..4).
+			st_hpd(enter(andy, "RRGrill"), true, 0).
+			st_hpd(greet("the waiter", andy), true, 1).
+			st_hpd(lead_to("the waiter", andy, t), true, 2).
+			st_hpd(order(andy, soup, "the waiter"), true, 3).
+			st_hpd(eat(andy, soup), true, 4).
+			st_hpd(pay(andy, b), true, 5).
+			st_hpd(leave(andy), true, 6).
+		</logic_form>
+		<scenario_type>
+			Normal
+		</scenario_type>
+	</story>	
+	<story>
+	    <sid>30</sid>
+		<text>
+			Nicole went to a vegetarian restaurant. She ordered lentil soup. When the waitress brought her the soup, she told Nicole that it was on the house. Nicole enjoyed the soup and then left.
+		</text>
+		<source>
+			Hand-crafted
+		</source>
+		<logic_form>
+		    restaurant(veg_r).
+			customer(nicole).
+			person(owner).
+			food(lentil_soup).
+			waiter(waitress).
+			story_step(0..5).
+			st_hpd(enter(nicole, veg_r), true, 0).
+			st_hpd(order(nicole, lentil_soup, waitress), true, 1).
+			st_hpd(pay(owner, b), true, 2).
+			st_hpd(put_down(waitress, lentil_soup, t), true, 3).
+			st_hpd(eat(nicole, lentil_soup), true, 4).
+			st_hpd(leave(nicole), true, 5).
+		</logic_form>
+		<scenario_type>
+			Exception
+		</scenario_type>
+	</story>
+	<story>
+	    <sid>31</sid>
+		<text>
+			Nicole went to a vegetarian restaurant. She ordered lentil soup. The waitress brought her a miso soup instead.
+		</text>
+		<source>
+			Hand-crafted
+		</source>
+		<logic_form>
+		    restaurant(veg_r).
+			customer(nicole).
+			person(owner).
+			food(lentil_soup).
+			food(miso_soup).
+			waiter(waitress).
+			story_step(0..2).
+			st_hpd(enter(nicole, veg_r), true, 0).
+			st_hpd(order(nicole, lentil_soup, waitress), true, 1).
+			st_hpd(put_down(waitress, miso_soup, t), true, 2).
+		</logic_form>
+		<scenario_type>
+			Exception
+		</scenario_type>
+	</story>
+	<story>
+	    <sid>32</sid>
+		<text>
+			Nicole went to a vegetarian restaurant. She ordered lentil soup. The waitress brought her a miso soup instead. Nicole decided to eat it anyway. 
+		</text>
+		<source>
+			Hand-crafted
+		</source>
+		<logic_form>
+		    restaurant(veg_r).
+			customer(nicole).
+			person(owner).
+			food(lentil_soup).
+			food(miso_soup).
+			waiter(waitress).
+			story_step(0..4).
+			st_hpd(enter(nicole, veg_r), true, 0).
+			st_hpd(order(nicole, lentil_soup, waitress), true, 1).
+			st_hpd(put_down(waitress, miso_soup, t), true, 2).
+			stop_activity(nicole, 3).
+			next_st(2, 3).
+			st_hpd(eat(nicole, miso_soup), true, 4).
+		</logic_form>
+		<scenario_type>
+			Exception
+		</scenario_type>
+	</story>
+	<story>
+	    <sid>33</sid>
+		<text>
+			Nicole went to a vegetarian restaurant. She ordered a lentil soup. Nicole was in a hurry, so as soon as the waitress laid the dish on the table, Nicole paid for it in cash and said that she didn't need the bill. 
+		</text>
+		<source>
+			Hand-crafted
+		</source>
+		<logic_form>
+		    restaurant(veg_r).
+			customer(nicole).
+			person(owner).
+			food(lentil_soup).
+			waiter(waitress).
+			story_step(0..3).
+			st_hpd(enter(nicole, veg_r), true, 0).
+			st_hpd(order(nicole, lentil_soup, waitress), true, 1).
+			st_hpd(put_down(waitress, miso_soup, t), true, 2).
+			st_hpd(pay(nicole, b), true, 3).
+			next_st(2, 3).
+		</logic_form>
+		<scenario_type>
+			Exception
+		</scenario_type>
+	</story>
+	<story>
+	    <sid>34</sid>
+		<text>
+			One day, Andy felt hungry and went to the RRGrill restaurant for dinner. The restaurant was open, but there was no table available for Andy. 
+		</text>
+		<source>
+			Hand-crafted
+		</source>
+		<logic_form>
+		    restaurant("RRGrill").
+			customer("Andy").
+			story_step(0..1).
+			st_hpd(enter("Andy", "RRGrill"), true, 0).
+			st_obs(table_available, false, 1).
+		</logic_form>
+		<scenario_type>
+			Exception
+		</scenario_type>
+	</story>
+	<story>
+	    <sid>35</sid>
+		<text>
+			One day, Andy felt hungry and went to the RRGrill restaurant for dinner. The restaurant was open, but there was no table available for Andy. Andy decided to wait. A table became available soon after.
+		</text>
+		<source>
+			Hand-crafted
+		</source>
+		<logic_form>
+		    restaurant("RRGrill").
+			customer("Andy").
+			story_step(0..2).
+			st_hpd(enter("Andy", "RRGrill"), true, 0).
+			st_obs(table_available, false, 1).
+			st_hpd(wait("Andy"), true, 1).
+			st_hpd(free_table, true, 2).
+		</logic_form>
+		<scenario_type>
+			Exception
+		</scenario_type>
+	</story>
+	<story>
+	    <sid>36</sid>
+		<text>
+			One day, Andy felt hungry and went to the RRGrill restaurant for dinner. The restaurant was open, but there was no table available for Andy. Andy decided to leave.
+		</text>
+		<source>
+			Hand-crafted
+		</source>
+		<logic_form>
+		    restaurant("RRGrill").
+			customer("Andy").
+			story_step(0..2).
+			st_hpd(enter("Andy", "RRGrill"), true, 0).
+			st_obs(table_available, false, 1).
+			stop_activity("Andy", 1).
+			st_hpd(leave("Andy"), true, 2).
+		</logic_form>
+		<scenario_type>
+			Exception
+		</scenario_type>
+	</story>
+	<story>
+	    <sid>37</sid>
+		<text>
+			One day, Andy felt hungry and went to the RRGrill restaurant for dinner. The restaurant was open and Tom, Andy’s friend, had his birthday party in there. Tom had prepaid for all the food that was offered. The waiter led Andy to Tom’s table. Andy joined the party. 
+		</text>
+		<source>
+			Hand-crafted
+		</source>
+		<logic_form>
+		    restaurant("RRGrill").
+			customer("Andy").
+			person("Tom").
+			food("all the food").
+			waiter("the waitress").
+			story_step(0..2).
+			st_hpd(enter("Andy", "RRGrill"), true, 0).
+			st_hpd(lead_to("waitress", "Andy", t), true, 1).
+			st_obs(informed("the waitress", "all the food", "Andy"), true, 2).
+			st_hpd(pay("Tom", b), 2).			
+		</logic_form>
+		<scenario_type>
+			Exception
+		</scenario_type>
+	</story>
+	<story>
+	    <sid>38</sid>
+		<text>
+			One day, Andy felt hungry and went to the RRGrill restaurant for dinner. The restaurant was closed that day. He decided to go to Happy Pizza instead. 
+		</text>
+		<source>
+			Hand-crafted
+		</source>
+		<logic_form>
+		    restaurant("RRGrill").
+			restaurant("Happy Pizza").
+			customer("Andy").
+			story_step(0..2).
+			st_obs(closed("RRGrill"), true, 0).
+			stop_activity("Andy", 1).
+			st_hpd(move("Andy", "RRGrill", "Happy Pizza"), true, 2).
+		</logic_form>
+		<scenario_type>
+			Exception
+		</scenario_type>
+	</story>
+	<story>
+	    <sid>39</sid>
+		<text>
+			One day, Andy felt hungry and went to the RRGrill restaurant for dinner. The restaurant was open and the waiter led Andy to a table. Andy went through the whole menu, but he didn't find any dish that he liked. Andy decided to leave.
+		</text>
+		<source>
+			Hand-crafted
+		</source>
+		<logic_form>
+		    restaurant("RRGrill").
+			customer("Andy").
+			food("nothing").
+			waiter("the waiter").
+			story_step(0..4).
+			st_hpd(enter("Andy", "RRGrill"), true, 0).
+			st_hpd(lead_to("the waiter", "Andy", t), true, 1).
+			st_hpd(put_down("Andy", m, t), true, 2).
+			st_stop_activity("Andy", 3).
+			next_st(2, 3). 
+			st_hpd(leave("Andy"), true, 4).
+		</logic_form>
+		<scenario_type>
+			Exception
+		</scenario_type>
+	</story>
+	<story>
+	    <sid>40</sid>
+		<text>
+			One day, Andy felt hungry and went to the RRGrill restaurant for dinner. The restaurant was open. The waiter led him to a table. As Andy was sitting down before having a chance to order, he received an emergency phone call and had to leave.
+		</text>
+		<source>
+			Hand-crafted
+		</source>
+		<logic_form>
+		    restaurant("RRGrill").
+			customer("Andy").
+			waiter("the waiter").
+			story_step(0..3).
+			st_hpd(enter("Andy", "RRGrill"), true, 0).
+			st_hpd(lead_to("the waiter", "Andy", t), true, 1).
+			st_obs(sitting("Andy"), true, 2).
+			st_stop_activity("Andy", 2).
+			st_hpd(leave("Andy"), true, 3).
+		</logic_form>
+		<scenario_type>
+			Exception
+		</scenario_type>
+	</story>
+</stories>

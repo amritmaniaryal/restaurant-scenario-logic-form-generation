@@ -1,0 +1,737 @@
+{
+  "metadata": {
+    "model": "Deepseek R1",
+    "date": "2025-10-19",
+    "prompt": {
+      "100": "I am working on an ASP encoding problem for a Knowledge Representation research. For this task, I need around 100 natural language stories of stereotypical human activities.",
+      "101": "For activity, we are working on stories about a restaurant visiting scenarios exclusively, i.e., other similar scenarios such as take outs and similar will not be considered for this research.",
+      "102": "For your reference, I will share 40 such stories that we've prepared already, so that you know what kinds, length of stories we are looking at and you can thus give us similar 60 more stories.",
+      "103": "That json file will also include the logic_form of each of those stories.",
+      "104": "I will also share a document titled 'Output expectations' that talks about how the encoding should be done on those stories so that you can also follow those instructions when encoding the stories that you yourselves generate.",
+      "105": "Keep the json structure as in the example. Put all that into 'data' field, above that, include a metadata field that includes, 'model' as your LLM name/version, date, and , 'prompt' field, which further divides into '100', '101', .. and so on for each sentences written in this very prompt.",
+      "106": "No need to keep the 40 examples in your json file."
+    }
+  },
+  "data": [
+    {
+      "sid": 41,
+      "text": "Maria entered the Italian restaurant and was greeted by the host. She was seated at a corner table and handed a menu. Maria ordered spaghetti carbonara and a glass of red wine. The waiter brought her order promptly. She enjoyed her meal and asked for the bill.",
+      "logic_form": [
+        "restaurant(\"Italian restaurant\"). customer(\"Maria\"). food(\"spaghetti carbonara\"). drink(\"red wine\"). waiter(\"the waiter\"). story_step(0..5). st_hpd(enter(\"Maria\", \"Italian restaurant\"), true, 0). st_hpd(greet(\"the host\", \"Maria\"), true, 1). st_hpd(lead_to(\"the host\", \"Maria\", t), true, 2). st_hpd(order(\"Maria\", \"spaghetti carbonara\", \"the waiter\"), true, 3). st_hpd(put_down(\"the waiter\", \"spaghetti carbonara\", t), true, 4). st_hpd(request(\"Maria\", b, \"the waiter\"), true, 5)."
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 42,
+      "text": "David walked into the seafood restaurant and was shown to his table. He browsed the menu and ordered grilled salmon with vegetables. The food arrived quickly. David ate his meal and paid the bill before leaving.",
+      "logic_form": [
+        "restaurant(\"seafood restaurant\"). customer(\"David\"). food(\"grilled salmon with vegetables\"). waiter(\"the waiter\"). story_step(0..5). st_hpd(enter(\"David\", \"seafood restaurant\"), true, 0). st_hpd(lead_to(\"the waiter\", \"David\", t), true, 1). st_hpd(order(\"David\", \"grilled salmon with vegetables\", \"the waiter\"), true, 2). st_hpd(put_down(\"the waiter\", \"grilled salmon with vegetables\", t), true, 3). st_hpd(eat(\"David\", \"grilled salmon with vegetables\"), true, 4). st_hpd(pay(\"David\", b), true, 5)."
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 43,
+      "text": "The Johnson family entered the family restaurant. They were seated in a booth and given menus. Mr. Johnson ordered steak, Mrs. Johnson ordered salad, and their son ordered pizza. The waiter brought all their orders together.",
+      "logic_form": [
+        "restaurant(\"family restaurant\"). person(\"Mr. Johnson\"). person(\"Mrs. Johnson\"). person(\"son\"). customer(\"Johnson family\"). member(\"Mr. Johnson\", \"Johnson family\"). member(\"Mrs. Johnson\", \"Johnson family\"). member(\"son\", \"Johnson family\"). food(\"steak\"). food(\"salad\"). food(\"pizza\"). waiter(\"the waiter\"). story_step(0..4). st_hpd(enter(\"Johnson family\", \"family restaurant\"), true, 0). st_obs(sitting(\"Johnson family\"), true, 1). st_hpd(order(\"Mr. Johnson\", \"steak\", \"the waiter\"), true, 2). st_hpd(order(\"Mrs. Johnson\", \"salad\", \"the waiter\"), true, 2). st_hpd(order(\"son\", \"pizza\", \"the waiter\"), true, 2). st_hpd(put_down(\"the waiter\", \"steak\", t), true, 3). st_hpd(put_down(\"the waiter\", \"salad\", t), true, 3). st_hpd(put_down(\"the waiter\", \"pizza\", t), true, 3)."
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 44,
+      "text": "Sarah visited the cafe for lunch. She sat at a table by the window and ordered a chicken sandwich and coffee. The waitress brought her order. Sarah ate quickly as she was in a hurry.",
+      "logic_form": [
+        "restaurant(\"the cafe\"). customer(\"Sarah\"). food(\"chicken sandwich\"). drink(\"coffee\"). waiter(\"the waitress\"). story_step(0..4). st_hpd(enter(\"Sarah\", \"the cafe\"), true, 0). st_hpd(sit(\"Sarah\"), true, 1). st_hpd(order(\"Sarah\", \"chicken sandwich\", \"the waitress\"), true, 2). st_hpd(put_down(\"the waitress\", \"chicken sandwich\", t), true, 3). st_hpd(eat(\"Sarah\", \"chicken sandwich\"), true, 4)."
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 45,
+      "text": "Tom entered the burger joint and went straight to the counter. He ordered a cheeseburger and fries. The cashier took his order and gave him a number. Tom found a table and waited for his food.",
+      "logic_form": [
+        "restaurant(\"burger joint\"). customer(\"Tom\"). food(\"cheeseburger\"). food(\"fries\"). story_step(0..4). st_hpd(enter(\"Tom\", \"burger joint\"), true, 0). st_hpd(order(\"Tom\", \"cheeseburger\", \"the cashier\"), true, 1). st_hpd(order(\"Tom\", \"fries\", \"the cashier\"), true, 1). st_hpd(sit(\"Tom\"), true, 2). st_obs(holding(\"Tom\", \"number\"), true, 3)."
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 46,
+      "text": "Emily made a reservation at the fancy French restaurant. When she arrived, the maitre d' escorted her to her table. She ordered duck confit and a glass of champagne. The food was excellent and she enjoyed every bite.",
+      "logic_form": [
+        "restaurant(\"fancy French restaurant\"). customer(\"Emily\"). food(\"duck confit\"). drink(\"champagne\"). story_step(0..4). st_hpd(enter(\"Emily\", \"fancy French restaurant\"), true, 0). st_hpd(lead_to(\"maitre d'\", \"Emily\", t), true, 1). st_hpd(order(\"Emily\", \"duck confit\", \"the waiter\"), true, 2). st_hpd(put_down(\"the waiter\", \"duck confit\", t), true, 3). st_hpd(eat(\"Emily\", \"duck confit\"), true, 4)."
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 47,
+      "text": "Mark and Lisa went to their favorite sushi restaurant. They were seated at the sushi bar. Mark ordered tuna rolls and Lisa ordered salmon nigiri. The chef prepared their order in front of them.",
+      "logic_form": [
+        "restaurant(\"sushi restaurant\"). customer(\"Mark\"). customer(\"Lisa\"). food(\"tuna rolls\"). food(\"salmon nigiri\"). story_step(0..4). st_hpd(enter(\"Mark\", \"sushi restaurant\"), true, 0). st_hpd(enter(\"Lisa\", \"sushi restaurant\"), true, 0). st_obs(sitting(\"Mark\"), true, 1). st_obs(sitting(\"Lisa\"), true, 1). st_hpd(order(\"Mark\", \"tuna rolls\", \"the chef\"), true, 2). st_hpd(order(\"Lisa\", \"salmon nigiri\", \"the chef\"), true, 2). st_hpd(prepare(\"the chef\", \"tuna rolls\", \"Mark\"), true, 3). st_hpd(prepare(\"the chef\", \"salmon nigiri\", \"Lisa\"), true, 3)."
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 48,
+      "text": "The business team entered the steakhouse for a working dinner. They were seated at a large table. Everyone ordered different cuts of steak. The waiter took their orders efficiently.",
+      "logic_form": [
+        "restaurant(\"steakhouse\"). customer(\"business team\"). story_step(0..3). st_hpd(enter(\"business team\", \"steakhouse\"), true, 0). st_obs(sitting(\"business team\"), true, 1). st_hpd(order(\"business team\", \"different cuts of steak\", \"the waiter\"), true, 2)."
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 49,
+      "text": "Anna visited the vegan restaurant downtown. She ordered the quinoa bowl and a green smoothie. The food was fresh and delicious. She left a generous tip for the excellent service.",
+      "logic_form": [
+        "restaurant(\"vegan restaurant\"). customer(\"Anna\"). food(\"quinoa bowl\"). drink(\"green smoothie\"). waiter(\"the waiter\"). story_step(0..4). st_hpd(enter(\"Anna\", \"vegan restaurant\"), true, 0). st_hpd(order(\"Anna\", \"quinoa bowl\", \"the waiter\"), true, 1). st_hpd(put_down(\"the waiter\", \"quinoa bowl\", t), true, 2). st_hpd(eat(\"Anna\", \"quinoa bowl\"), true, 3). st_hpd(pay(\"Anna\", b), true, 4)."
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 50,
+      "text": "Carlos arrived at the Mexican restaurant and was greeted warmly. He ordered tacos and a margarita. The food arrived quickly and was perfectly prepared. Carlos enjoyed his meal thoroughly.",
+      "logic_form": [
+        "restaurant(\"Mexican restaurant\"). customer(\"Carlos\"). food(\"tacos\"). drink(\"margarita\"). waiter(\"the waiter\"). story_step(0..4). st_hpd(enter(\"Carlos\", \"Mexican restaurant\"), true, 0). st_hpd(greet(\"the waiter\", \"Carlos\"), true, 1). st_hpd(order(\"Carlos\", \"tacos\", \"the waiter\"), true, 2). st_hpd(put_down(\"the waiter\", \"tacos\", t), true, 3). st_hpd(eat(\"Carlos\", \"tacos\"), true, 4)."
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 51,
+      "text": "The couple entered the romantic restaurant with a view. They were seated at a table by the window. Both ordered the chef's tasting menu with wine pairing. The meal lasted over two hours.",
+      "logic_form": [
+        "restaurant(\"romantic restaurant\"). customer(\"the couple\"). story_step(0..3). st_hpd(enter(\"the couple\", \"romantic restaurant\"), true, 0). st_obs(sitting(\"the couple\"), true, 1). st_hpd(order(\"the couple\", \"chef's tasting menu\", \"the waiter\"), true, 2)."
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 52,
+      "text": "Ben went to the diner for breakfast. He sat at the counter and ordered pancakes with bacon and coffee. The cook prepared his order right in front of him.",
+      "logic_form": [
+        "restaurant(\"the diner\"). customer(\"Ben\"). food(\"pancakes with bacon\"). drink(\"coffee\"). story_step(0..3). st_hpd(enter(\"Ben\", \"the diner\"), true, 0). st_hpd(sit(\"Ben\"), true, 1). st_hpd(order(\"Ben\", \"pancakes with bacon\", \"the cook\"), true, 2). st_hpd(prepare(\"the cook\", \"pancakes with bacon\", \"Ben\"), true, 3)."
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 53,
+      "text": "The book club members met at the quiet cafe. They ordered various teas and pastries. Everyone enjoyed their selections while discussing the latest novel.",
+      "logic_form": [
+        "restaurant(\"quiet cafe\"). customer(\"book club members\"). story_step(0..2). st_hpd(enter(\"book club members\", \"quiet cafe\"), true, 0). st_hpd(order(\"book club members\", \"teas and pastries\", \"the waiter\"), true, 1)."
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 54,
+      "text": "Mike entered the pub for lunch. He ordered fish and chips and a pint of beer. The food was hot and crispy. Mike ate quickly and returned to work.",
+      "logic_form": [
+        "restaurant(\"the pub\"). customer(\"Mike\"). food(\"fish and chips\"). drink(\"beer\"). waiter(\"the bartender\"). story_step(0..4). st_hpd(enter(\"Mike\", \"the pub\"), true, 0). st_hpd(order(\"Mike\", \"fish and chips\", \"the bartender\"), true, 1). st_hpd(put_down(\"the bartender\", \"fish and chips\", t), true, 2). st_hpd(eat(\"Mike\", \"fish and chips\"), true, 3). st_hpd(pay(\"Mike\", b), true, 4)."
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 55,
+      "text": "Lucy visited the health food restaurant. She ordered a kale salad and detox juice. The ingredients were fresh and organic. She felt energized after her meal.",
+      "logic_form": [
+        "restaurant(\"health food restaurant\"). customer(\"Lucy\"). food(\"kale salad\"). drink(\"detox juice\"). waiter(\"the waiter\"). story_step(0..4). st_hpd(enter(\"Lucy\", \"health food restaurant\"), true, 0). st_hpd(order(\"Lucy\", \"kale salad\", \"the waiter\"), true, 1). st_hpd(put_down(\"the waiter\", \"kale salad\", t), true, 2). st_hpd(eat(\"Lucy\", \"kale salad\"), true, 3). st_hpd(pay(\"Lucy\", b), true, 4)."
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 56,
+      "text": "Robert ordered a medium-rare steak but received a well-done one. He called the waiter and complained about the mistake. The waiter apologized and took the steak back to the kitchen.",
+      "logic_form": [
+        "restaurant(\"the restaurant\"). customer(\"Robert\"). food(\"medium-rare steak\"). food(\"well-done steak\"). waiter(\"the waiter\"). story_step(0..4). st_obs(sitting(\"Robert\"), true, 0). st_hpd(order(\"Robert\", \"medium-rare steak\", \"the waiter\"), true, 1). st_hpd(put_down(\"the waiter\", \"well-done steak\", t), true, 2). st_hpd(complain(\"Robert\", \"the waiter\"), true, 3). st_next(2, 3). st_hpd(request(\"Robert\", \"take back the steak\", \"the waiter\"), true, 4)."
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 57,
+      "text": "Susan found a hair in her soup. She immediately called the manager and showed him the problem. The manager apologized profusely and offered her a complimentary dessert.",
+      "logic_form": [
+        "restaurant(\"the restaurant\"). customer(\"Susan\"). food(\"soup\"). story_step(0..3). st_hpd(put_down(\"the waiter\", \"soup\", t), true, 0). st_obs(holding(\"Susan\", \"hair\"), true, 1). st_hpd(complain(\"Susan\", \"the manager\"), true, 2). st_next(1, 2). st_hpd(informed(\"the manager\", \"complimentary dessert\", \"Susan\"), true, 3)."
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 58,
+      "text": "The restaurant was out of the lobster that James had ordered. The waiter informed him and suggested the crab cakes instead. James agreed to try the alternative dish.",
+      "logic_form": [
+        "restaurant(\"the restaurant\"). customer(\"James\"). food(\"lobster\"). food(\"crab cakes\"). waiter(\"the waiter\"). story_step(0..3). st_hpd(order(\"James\", \"lobster\", \"the waiter\"), true, 0). st_obs(available(\"lobster\", \"the restaurant\"), false, 1). st_hpd(informed(\"the waiter\", \"crab cakes\", \"James\"), true, 2). st_hpd(order(\"James\", \"crab cakes\", \"the waiter\"), true, 3)."
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 59,
+      "text": "Emily's food took over 45 minutes to arrive. She complained to the waiter about the delay. The waiter explained there was a problem in the kitchen and offered her a free drink.",
+      "logic_form": [
+        "restaurant(\"the restaurant\"). customer(\"Emily\"). waiter(\"the waiter\"). story_step(0..3). st_hpd(order(\"Emily\", \"food\", \"the waiter\"), true, 0). st_obs(served(\"Emily\"), false, 1). st_hpd(complain(\"Emily\", \"the waiter\"), true, 2). st_next(1, 2). st_hpd(informed(\"the waiter\", \"free drink\", \"Emily\"), true, 3)."
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 60,
+      "text": "Mark received the wrong order - he had ordered pasta but got a salad instead. He pointed out the mistake to the waiter, who quickly brought the correct dish.",
+      "logic_form": [
+        "restaurant(\"the restaurant\"). customer(\"Mark\"). food(\"pasta\"). food(\"salad\"). waiter(\"the waiter\"). story_step(0..4). st_hpd(order(\"Mark\", \"pasta\", \"the waiter\"), true, 0). st_hpd(put_down(\"the waiter\", \"salad\", t), true, 1). st_hpd(complain(\"Mark\", \"the waiter\"), true, 2). st_next(1, 2). st_hpd(put_down(\"the waiter\", \"pasta\", t), true, 3)."
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 61,
+      "text": "The credit card machine was broken, so Lisa couldn't pay with her card. She had to go to an ATM to get cash to pay her bill.",
+      "logic_form": [
+        "restaurant(\"the restaurant\"). customer(\"Lisa\"). story_step(0..3). st_hpd(request(\"Lisa\", b, \"the waiter\"), true, 0). st_obs(paid(b), false, 1). st_hpd(move(\"Lisa\", \"the restaurant\", \"ATM\"), true, 2). st_hpd(pay(\"Lisa\", b), true, 3)."
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 62,
+      "text": "A large party arrived just before Tom, taking the last available table. Tom had to wait 30 minutes for a table to become free.",
+      "logic_form": [
+        "restaurant(\"the restaurant\"). customer(\"Tom\"). story_step(0..2). st_hpd(enter(\"Tom\", \"the restaurant\"), true, 0). st_obs(table_available, false, 1). st_hpd(wait(\"Tom\"), true, 2)."
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 63,
+      "text": "Sarah ordered the special of the day but was allergic to one ingredient. After one bite, she had an allergic reaction and had to leave for the hospital.",
+      "logic_form": [
+        "restaurant(\"the restaurant\"). customer(\"Sarah\"). food(\"special of the day\"). story_step(0..4). st_hpd(order(\"Sarah\", \"special of the day\", \"the waiter\"), true, 0). st_hpd(put_down(\"the waiter\", \"special of the day\", t), true, 1). st_hpd(eat(\"Sarah\", \"special of the day\"), true, 2). st_stop_activity(\"Sarah\", 3). st_hpd(leave(\"Sarah\"), true, 4)."
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 64,
+      "text": "The fire alarm went off in the middle of David's meal. Everyone had to evacuate the restaurant immediately without finishing their food.",
+      "logic_form": [
+        "restaurant(\"the restaurant\"). customer(\"David\"). story_step(0..3). st_hpd(eat(\"David\", \"food\"), true, 0). st_hpd(interference, true, 1). st_stop_activity(\"David\", 2). st_hpd(leave(\"David\"), true, 3)."
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 65,
+      "text": "Maria's soup was cold when it arrived. She sent it back to the kitchen to be reheated.",
+      "logic_form": [
+        "restaurant(\"the restaurant\"). customer(\"Maria\"). food(\"soup\"). waiter(\"the waiter\"). story_step(0..3). st_hpd(put_down(\"the waiter\", \"soup\", t), true, 0). st_obs(cold(\"soup\"), true, 1). st_hpd(complain(\"Maria\", \"the waiter\"), true, 2). st_next(1, 2). st_hpd(request(\"Maria\", \"reheat the soup\", \"the waiter\"), true, 3)."
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 66,
+      "text": "The restaurant was so noisy that Tom couldn't hear his dining companion. They asked to be moved to a quieter table.",
+      "logic_form": [
+        "restaurant(\"the restaurant\"). customer(\"Tom\"). story_step(0..3). st_obs(sitting(\"Tom\"), true, 0). st_obs(noisy(\"the restaurant\"), true, 1). st_hpd(complain(\"Tom\", \"the waiter\"), true, 2). st_hpd(move(\"Tom\", t, \"quieter table\"), true, 3)."
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 67,
+      "text": "Lisa ordered wine but discovered it was corked. The sommelier confirmed the issue and brought a new bottle.",
+      "logic_form": [
+        "restaurant(\"the restaurant\"). customer(\"Lisa\"). drink(\"wine\"). story_step(0..4). st_hpd(order(\"Lisa\", \"wine\", \"the waiter\"), true, 0). st_hpd(put_down(\"the waiter\", \"wine\", t), true, 1). st_obs(corked(\"wine\"), true, 2). st_hpd(complain(\"Lisa\", \"the sommelier\"), true, 3). st_hpd(put_down(\"the sommelier\", \"new wine\", t), true, 4)."
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 68,
+      "text": "The couple celebrated their anniversary at the restaurant. The staff surprised them with a complimentary dessert with 'Happy Anniversary' written in chocolate.",
+      "logic_form": [
+        "restaurant(\"the restaurant\"). customer(\"the couple\"). food(\"complimentary dessert\"). story_step(0..3). st_hpd(enter(\"the couple\", \"the restaurant\"), true, 0). st_hpd(eat(\"the couple\", \"meal\"), true, 1). st_hpd(put_down(\"the staff\", \"complimentary dessert\", t), true, 2). st_hpd(informed(\"the staff\", \"Happy Anniversary\", \"the couple\"), true, 3)."
+      ],
+      "scenario_type": "Variation"
+    },
+    {
+      "sid": 69,
+      "text": "The restaurant had a live jazz band playing. Customers enjoyed their meals while listening to the music throughout the evening.",
+      "logic_form": [
+        "restaurant(\"the restaurant\"). story_step(0..2). st_obs(live_music, true, 0). st_hpd(eat(customers, food), true, 1)."
+      ],
+      "scenario_type": "Variation"
+    },
+    {
+      "sid": 70,
+      "text": "The chef came out to personally check on a regular customer's meal. They discussed the ingredients and preparation method.",
+      "logic_form": [
+        "restaurant(\"the restaurant\"). customer(\"regular customer\"). story_step(0..2). st_hpd(eat(\"regular customer\", \"meal\"), true, 0). st_hpd(move(\"the chef\", kitchen, t), true, 1). st_hpd(informed(\"the chef\", \"ingredients and preparation\", \"regular customer\"), true, 2)."
+      ],
+      "scenario_type": "Variation"
+    },
+    {
+      "sid": 71,
+      "text": "The restaurant offered a cooking class before dinner. Participants learned to make pasta, then enjoyed their creations for their meal.",
+      "logic_form": [
+        "restaurant(\"the restaurant\"). customer(\"participants\"). food(\"pasta\"). story_step(0..4). st_hpd(enter(\"participants\", \"the restaurant\"), true, 0). st_hpd(prepare(\"participants\", \"pasta\", \"the chef\"), true, 1). st_hpd(cook_class, true, 2). st_hpd(eat(\"participants\", \"pasta\"), true, 3)."
+      ],
+      "scenario_type": "Variation"
+    },
+    {
+      "sid": 72,
+      "text": "Customers had to choose their own lobster from the tank before it was cooked. The chef prepared it according to their preference.",
+      "logic_form": [
+        "restaurant(\"the restaurant\"). customer(\"customers\"). food(\"lobster\"). story_step(0..3). st_hpd(pick_up(\"customers\", \"lobster\", \"tank\"), true, 0). st_hpd(informed(\"customers\", \"preparation preference\", \"the chef\"), true, 1). st_hpd(prepare(\"the chef\", \"lobster\", \"customers\"), true, 2). st_hpd(put_down(\"the waiter\", \"lobster\", t), true, 3)."
+      ],
+      "scenario_type": "Variation"
+    },
+    {
+      "sid": 73,
+      "text": "The restaurant had a special tasting menu with wine pairings for each course. The sommelier explained each wine selection.",
+      "logic_form": [
+        "restaurant(\"the restaurant\"). customer(\"customers\"). story_step(0..3). st_hpd(order(\"customers\", \"tasting menu\", \"the waiter\"), true, 0). st_hpd(put_down(\"the waiter\", \"course\", t), true, 1). st_hpd(put_down(\"the sommelier\", \"wine\", t), true, 2). st_hpd(informed(\"the sommelier\", \"wine selection\", \"customers\"), true, 3)."
+      ],
+      "scenario_type": "Variation"
+    },
+    {
+      "sid": 74,
+      "text": "The restaurant had an open kitchen where customers could watch the chefs at work. Many diners enjoyed the culinary spectacle.",
+      "logic_form": [
+        "restaurant(\"the restaurant\"). story_step(0..2). st_obs(open_kitchen, true, 0). st_hpd(eat(customers, food), true, 1). st_obs(watching(customers, chefs), true, 2)."
+      ],
+      "scenario_type": "Variation"
+    },
+    {
+      "sid": 75,
+      "text": "The restaurant offered a unique dining experience in complete darkness. Servers guided blindfolded customers to their tables and described the food.",
+      "logic_form": [
+        "restaurant(\"the restaurant\"). customer(\"customers\"). story_step(0..4). st_hpd(enter(\"customers\", \"the restaurant\"), true, 0). st_obs(dark(\"the restaurant\"), true, 1). st_hpd(lead_to(\"servers\", \"customers\", t), true, 2). st_hpd(put_down(\"servers\", \"food\", t), true, 3). st_hpd(informed(\"servers\", \"food description\", \"customers\"), true, 4)."
+      ],
+      "scenario_type": "Variation"
+    },
+    {
+      "sid": 76,
+      "text": "The restaurant had a rooftop garden where they grew their own herbs and vegetables. The waiter explained the farm-to-table concept to interested customers.",
+      "logic_form": [
+        "restaurant(\"the restaurant\"). story_step(0..2). st_obs(rooftop_garden, true, 0). st_hpd(informed(\"the waiter\", \"farm-to-table concept\", \"customers\"), true, 1)."
+      ],
+      "scenario_type": "Variation"
+    },
+    {
+      "sid": 77,
+      "text": "Customers could interact with the chef through a tablet at their table, asking questions about the menu and preparation methods.",
+      "logic_form": [
+        "restaurant(\"the restaurant\"). customer(\"customers\"). story_step(0..2). st_obs(holding(\"customers\", \"tablet\"), true, 0). st_hpd(informed(\"customers\", \"menu questions\", \"the chef\"), true, 1). st_hpd(informed(\"the chef\", \"preparation methods\", \"customers\"), true, 2)."
+      ],
+      "scenario_type": "Variation"
+    },
+    {
+      "sid": 78,
+      "text": "The restaurant had a special theme night with medieval decor and staff in costume. Customers ate with their hands as was tradition.",
+      "logic_form": [
+        "restaurant(\"the restaurant\"). story_step(0..2). st_obs(medieval_theme, true, 0). st_hpd(eat(customers, food), true, 1). st_obs(eating_with_hands(customers), true, 2)."
+      ],
+      "scenario_type": "Variation"
+    },
+    {
+      "sid": 79,
+      "text": "A food critic visited the restaurant anonymously. The staff didn't know they were being reviewed during the meal.",
+      "logic_form": [
+        "restaurant(\"the restaurant\"). customer(\"food critic\"). story_step(0..3). st_hpd(enter(\"food critic\", \"the restaurant\"), true, 0). st_hpd(order(\"food critic\", \"food\", \"the waiter\"), true, 1). st_hpd(eat(\"food critic\", \"food\"), true, 2). st_obs(anonymous(\"food critic\"), true, 3)."
+      ],
+      "scenario_type": "Variation"
+    },
+    {
+      "sid": 80,
+      "text": "The restaurant offered a 'chef's table' experience where a small group dined in the kitchen, watching the preparation of all dishes.",
+      "logic_form": [
+        "restaurant(\"the restaurant\"). customer(\"small group\"). story_step(0..3). st_hpd(enter(\"small group\", \"the restaurant\"), true, 0). st_obs(in(\"small group\", kitchen), true, 1). st_hpd(eat(\"small group\", \"food\"), true, 2). st_obs(watching(\"small group\", preparation), true, 3)."
+      ],
+      "scenario_type": "Variation"
+    },
+    {
+      "sid": 81,
+      "text": "A celebrity chef made a surprise appearance at the restaurant and cooked special dishes for selected customers.",
+      "logic_form": [
+        "restaurant(\"the restaurant\"). customer(\"selected customers\"). story_step(0..3). st_hpd(enter(\"celebrity chef\", \"the restaurant\"), true, 0). st_hpd(prepare(\"celebrity chef\", \"special dishes\", \"selected customers\"), true, 1). st_hpd(put_down(\"the waiter\", \"special dishes\", t), true, 2). st_hpd(eat(\"selected customers\", \"special dishes\"), true, 3)."
+      ],
+      "scenario_type": "Variation"
+    },
+    {
+      "sid": 82,
+      "text": "The restaurant had a special partnership with local artists. Customers could view and purchase artwork while dining.",
+      "logic_form": [
+        "restaurant(\"the restaurant\"). story_step(0..2). st_obs(artwork_display, true, 0). st_hpd(eat(customers, food), true, 1). st_obs(viewing_art(customers), true, 2)."
+      ],
+      "scenario_type": "Variation"
+    },
+    {
+      "sid": 83,
+      "text": "Customers received a small complimentary appetizer from the chef before their ordered meals arrived.",
+      "logic_form": [
+        "restaurant(\"the restaurant\"). customer(\"customers\"). food(\"complimentary appetizer\"). story_step(0..2). st_obs(sitting(\"customers\"), true, 0). st_hpd(put_down(\"the waiter\", \"complimentary appetizer\", t), true, 1). st_hpd(eat(\"customers\", \"complimentary appetizer\"), true, 2)."
+      ],
+      "scenario_type": "Variation"
+    },
+    {
+      "sid": 84,
+      "text": "The restaurant had a unique payment system where customers paid by the minute for their table time, with food and drinks included.",
+      "logic_form": [
+        "restaurant(\"the restaurant\"). customer(\"customers\"). story_step(0..3). st_hpd(enter(\"customers\", \"the restaurant\"), true, 0). st_hpd(eat(\"customers\", \"food\"), true, 1). st_hpd(drink(\"customers\", \"drinks\"), true, 2). st_hpd(pay_by_minute(\"customers\", b), true, 3)."
+      ],
+      "scenario_type": "Variation"
+    },
+    {
+      "sid": 85,
+      "text": "A marriage proposal happened at the restaurant. The man got down on one knee after dessert arrived, and she said yes.",
+      "logic_form": [
+        "restaurant(\"the restaurant\"). customer(\"the man\"). customer(\"the woman\"). story_step(0..4). st_hpd(eat(\"the man\", \"meal\"), true, 0). st_hpd(eat(\"the woman\", \"meal\"), true, 0). st_hpd(put_down(\"the waiter\", \"dessert\", t), true, 1). st_hpd(propose(\"the man\", \"the woman\"), true, 2). st_hpd(accept(\"the woman\"), true, 3)."
+      ],
+      "scenario_type": "Variation"
+    },
+    {
+      "sid": 86,
+      "text": "The restaurant had a secret menu only known to regular customers. New customers had to be initiated by existing ones to access it.",
+      "logic_form": [
+        "restaurant(\"the restaurant\"). customer(\"regular customers\"). customer(\"new customers\"). story_step(0..3). st_obs(has_secret_menu(\"regular customers\"), true, 0). st_hpd(informed(\"regular customers\", \"secret menu\", \"new customers\"), true, 1). st_hpd(order(\"new customers\", \"secret menu item\", \"the waiter\"), true, 2)."
+      ],
+      "scenario_type": "Variation"
+    },
+    {
+      "sid": 87,
+      "text": "A cooking competition was held at the restaurant where amateur chefs prepared dishes for judges and customers.",
+      "logic_form": [
+        "restaurant(\"the restaurant\"). customer(\"judges\"). customer(\"customers\"). story_step(0..4). st_hpd(enter(\"amateur chefs\", \"the restaurant\"), true, 0). st_hpd(prepare(\"amateur chefs\", \"dishes\", \"judges\"), true, 1). st_hpd(put_down(\"amateur chefs\", \"dishes\", t), true, 2). st_hpd(eat(\"judges\", \"dishes\"), true, 3). st_hpd(eat(\"customers\", \"dishes\"), true, 4)."
+      ],
+      "scenario_type": "Variation"
+    },
+    {
+      "sid": 88,
+      "text": "The restaurant had a unique concept where customers cooked their own food on hot stones at the table.",
+      "logic_form": [
+        "restaurant(\"the restaurant\"). customer(\"customers\"). story_step(0..3). st_obs(has_hot_stones(t), true, 0). st_hpd(put_down(\"the waiter\", \"raw food\", t), true, 1). st_hpd(prepare(\"customers\", \"food\", \"hot stones\"), true, 2). st_hpd(eat(\"customers\", \"food\"), true, 3)."
+      ],
+      "scenario_type": "Variation"
+    },
+    {
+      "sid": 89,
+      "text": "The restaurant offered a 'digital detox' experience where customers had to surrender their phones at the door to enjoy uninterrupted dining.",
+      "logic_form": [
+        "restaurant(\"the restaurant\"). customer(\"customers\"). story_step(0..3). st_hpd(enter(\"customers\", \"the restaurant\"), true, 0). st_hpd(put_down(\"customers\", \"phones\", \"reception\"), true, 1). st_hpd(eat(\"customers\", \"food\"), true, 2)."
+      ],
+      "scenario_type": "Variation"
+    },
+    {
+      "sid": 90,
+      "text": "A famous food blogger visited the restaurant and posted live updates and photos throughout the meal.",
+      "logic_form": [
+        "restaurant(\"the restaurant\"). customer(\"food blogger\"). story_step(0..4). st_hpd(enter(\"food blogger\", \"the restaurant\"), true, 0). st_hpd(order(\"food blogger\", \"food\", \"the waiter\"), true, 1). st_hpd(put_down(\"the waiter\", \"food\", t), true, 2). st_hpd(eat(\"food blogger\", \"food\"), true, 3). st_obs(posting_updates(\"food blogger\"), true, 4)."
+      ],
+      "scenario_type": "Variation"
+    },
+    {
+      "sid": 91,
+      "text": "The restaurant had a unique reservation system where customers had to solve a puzzle to book a table.",
+      "logic_form": [
+        "restaurant(\"the restaurant\"). customer(\"customers\"). story_step(0..2). st_obs(solved_puzzle(\"customers\"), true, 0). st_hpd(enter(\"customers\", \"the restaurant\"), true, 1). st_obs(sitting(\"customers\"), true, 2)."
+      ],
+      "scenario_type": "Variation"
+    },
+    {
+      "sid": 92,
+      "text": "A power outage occurred during the dinner rush. The restaurant continued service by candlelight until power was restored.",
+      "logic_form": [
+        "restaurant(\"the restaurant\"). story_step(0..3). st_obs(power_outage, true, 0). st_obs(candlelight, true, 1). st_hpd(serve(\"the staff\", customers), true, 2). st_obs(power_restored, true, 3)."
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 93,
+      "text": "A customer had a medical emergency during their meal. Staff called an ambulance and administered first aid while waiting for paramedics.",
+      "logic_form": [
+        "restaurant(\"the restaurant\"). customer(\"the customer\"). story_step(0..4). st_hpd(eat(\"the customer\", \"food\"), true, 0). st_obs(medical_emergency(\"the customer\"), true, 1). st_hpd(call_ambulance(\"the staff\"), true, 2). st_hpd(administer_first_aid(\"the staff\", \"the customer\"), true, 3). st_hpd(leave(\"the customer\"), true, 4)."
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 94,
+      "text": "The health inspector arrived unexpectedly during lunch service. The restaurant passed with flying colors.",
+      "logic_form": [
+        "restaurant(\"the restaurant\"). story_step(0..2). st_hpd(enter(\"health inspector\", \"the restaurant\"), true, 0). st_obs(inspection, true, 1). st_obs(passed_inspection, true, 2)."
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 95,
+      "text": "A customer left their wallet at the restaurant. Staff found it and contacted the customer to return it.",
+      "logic_form": [
+        "restaurant(\"the restaurant\"). customer(\"the customer\"). story_step(0..3). st_hpd(leave(\"the customer\"), true, 0). st_obs(holding(\"the staff\", \"wallet\"), true, 1). st_hpd(informed(\"the staff\", \"found wallet\", \"the customer\"), true, 2). st_hpd(return(\"the staff\", \"wallet\", \"the customer\"), true, 3)."
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 96,
+      "text": "The restaurant's delivery of fresh fish was delayed, so they had to remove seafood dishes from the menu for the day.",
+      "logic_form": [
+        "restaurant(\"the restaurant\"). story_step(0..2). st_obs(available(\"seafood dishes\", \"the restaurant\"), true, 0). st_obs(delayed_delivery, true, 1). st_hpd(make_unavailable(\"seafood dishes\", \"the restaurant\"), true, 2)."
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 97,
+      "text": "A customer proposed to their server during the meal. The server was surprised but politely declined.",
+      "logic_form": [
+        "restaurant(\"the restaurant\"). customer(\"the customer\"). waiter(\"the server\"). story_step(0..3). st_hpd(eat(\"the customer\", \"food\"), true, 0). st_hpd(propose(\"the customer\", \"the server\"), true, 1). st_hpd(decline(\"the server\"), true, 2)."
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 98,
+      "text": "The restaurant's signature dish was so popular they ran out before the dinner service ended.",
+      "logic_form": [
+        "restaurant(\"the restaurant\"). food(\"signature dish\"). story_step(0..2). st_obs(available(\"signature dish\", \"the restaurant\"), true, 0). st_obs(sold_out(\"signature dish\"), true, 1). st_hpd(make_unavailable(\"signature dish\", \"the restaurant\"), true, 2)."
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 99,
+      "text": "A customer tried to dine and dash without paying. Staff noticed and stopped them before they could leave.",
+      "logic_form": [
+        "restaurant(\"the restaurant\"). customer(\"the customer\"). story_step(0..3). st_hpd(eat(\"the customer\", \"food\"), true, 0). st_hpd(leave(\"the customer\"), true, 1). st_obs(paid(b), false, 2). st_hpd(stop(\"the staff\", \"the customer\"), true, 3)."
+      ],
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 100,
+      "text": "The restaurant celebrated its 50th anniversary with a special menu featuring dishes from its opening year.",
+      "logic_form": [
+        "restaurant(\"the restaurant\"). story_step(0..2). st_obs(anniversary, true, 0). st_obs(special_menu, true, 1). st_hpd(order(customers, \"special dishes\", \"the waiter\"), true, 2)."
+      ],
+      "scenario_type": "Variation"
+    },
+    {
+      "sid": 101,
+      "text": "Michael entered the bistro and was seated by the host. He ordered the daily special and a glass of water. The waitress brought his meal promptly. Michael enjoyed his food and asked for the check.",
+      "logic_form": [
+        "restaurant(\"the bistro\"). customer(\"Michael\"). food(\"daily special\"). drink(\"water\"). waiter(\"the waitress\"). story_step(0..5). st_hpd(enter(\"Michael\", \"the bistro\"), true, 0). st_hpd(lead_to(\"the host\", \"Michael\", t), true, 1). st_hpd(order(\"Michael\", \"daily special\", \"the waitress\"), true, 2). st_hpd(put_down(\"the waitress\", \"daily special\", t), true, 3). st_hpd(eat(\"Michael\", \"daily special\"), true, 4). st_hpd(request(\"Michael\", b, \"the waitress\"), true, 5)."
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 102,
+      "text": "Susan visited the pancake house for breakfast. She ordered blueberry pancakes and orange juice. The server brought her order quickly. Susan ate her breakfast and paid with her credit card.",
+      "logic_form": [
+        "restaurant(\"the pancake house\"). customer(\"Susan\"). food(\"blueberry pancakes\"). drink(\"orange juice\"). waiter(\"the server\"). story_step(0..5). st_hpd(enter(\"Susan\", \"the pancake house\"), true, 0). st_hpd(order(\"Susan\", \"blueberry pancakes\", \"the server\"), true, 1). st_hpd(put_down(\"the server\", \"blueberry pancakes\", t), true, 2). st_hpd(eat(\"Susan\", \"blueberry pancakes\"), true, 3). st_hpd(request(\"Susan\", b, \"the server\"), true, 4). st_hpd(pay(\"Susan\", b), true, 5)."
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 103,
+      "text": "The Thompson family went to the buffet restaurant. They were seated at a large table. Each family member went to the buffet to get their own food. They all enjoyed their meals.",
+      "logic_form": [
+        "restaurant(\"buffet restaurant\"). customer(\"Thompson family\"). story_step(0..3). st_hpd(enter(\"Thompson family\", \"buffet restaurant\"), true, 0). st_obs(sitting(\"Thompson family\"), true, 1). st_hpd(eat(\"Thompson family\", \"food\"), true, 2)."
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 104,
+      "text": "David entered the deli and took a seat at the counter. He ordered a pastrami sandwich and a pickle. The cook prepared his sandwich and the server brought it to him. David ate his lunch quickly.",
+      "logic_form": [
+        "restaurant(\"the deli\"). customer(\"David\"). food(\"pastrami sandwich\"). food(\"pickle\"). story_step(0..4). st_hpd(enter(\"David\", \"the deli\"), true, 0). st_hpd(sit(\"David\"), true, 1). st_hpd(order(\"David\", \"pastrami sandwich\", \"the server\"), true, 2). st_hpd(put_down(\"the server\", \"pastrami sandwich\", t), true, 3). st_hpd(eat(\"David\", \"pastrami sandwich\"), true, 4)."
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 105,
+      "text": "Lisa and Mark went to the Italian restaurant for their date night. They were seated at a cozy table. Lisa ordered lasagna and Mark ordered chicken parmesan. They shared a bottle of wine with their meal.",
+      "logic_form": [
+        "restaurant(\"Italian restaurant\"). customer(\"Lisa\"). customer(\"Mark\"). food(\"lasagna\"). food(\"chicken parmesan\"). drink(\"wine\"). story_step(0..4). st_hpd(enter(\"Lisa\", \"Italian restaurant\"), true, 0). st_hpd(enter(\"Mark\", \"Italian restaurant\"), true, 0). st_obs(sitting(\"Lisa\"), true, 1). st_obs(sitting(\"Mark\"), true, 1). st_hpd(order(\"Lisa\", \"lasagna\", \"the waiter\"), true, 2). st_hpd(order(\"Mark\", \"chicken parmesan\", \"the waiter\"), true, 2). st_hpd(eat(\"Lisa\", \"lasagna\"), true, 3). st_hpd(eat(\"Mark\", \"chicken parmesan\"), true, 3)."
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 106,
+      "text": "Robert visited the steakhouse for dinner. He was seated promptly and given a menu. Robert ordered a ribeye steak cooked medium with baked potato. The meal was excellent and he left satisfied.",
+      "logic_form": [
+        "restaurant(\"the steakhouse\"). customer(\"Robert\"). food(\"ribeye steak\"). food(\"baked potato\"). story_step(0..5). st_hpd(enter(\"Robert\", \"the steakhouse\"), true, 0). st_obs(sitting(\"Robert\"), true, 1). st_hpd(order(\"Robert\", \"ribeye steak\", \"the waiter\"), true, 2). st_hpd(put_down(\"the waiter\", \"ribeye steak\", t), true, 3). st_hpd(eat(\"Robert\", \"ribeye steak\"), true, 4). st_hpd(request(\"Robert\", b, \"the waiter\"), true, 5)."
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 107,
+      "text": "The office team went to the Chinese restaurant for lunch. They were seated at a round table. Everyone ordered different dishes and shared family-style. The food was delicious and service was efficient.",
+      "logic_form": [
+        "restaurant(\"Chinese restaurant\"). customer(\"office team\"). story_step(0..3). st_hpd(enter(\"office team\", \"Chinese restaurant\"), true, 0). st_obs(sitting(\"office team\"), true, 1). st_hpd(order(\"office team\", \"dishes\", \"the waiter\"), true, 2). st_hpd(eat(\"office team\", \"dishes\"), true, 3)."
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 108,
+      "text": "Jennifer entered the cafe and found an empty table. She ordered a croissant and cappuccino. The barista brought her order to the table. Jennifer enjoyed her light breakfast while reading the newspaper.",
+      "logic_form": [
+        "restaurant(\"the cafe\"). customer(\"Jennifer\"). food(\"croissant\"). drink(\"cappuccino\"). waiter(\"the barista\"). story_step(0..4). st_hpd(enter(\"Jennifer\", \"the cafe\"), true, 0). st_hpd(sit(\"Jennifer\"), true, 1). st_hpd(order(\"Jennifer\", \"croissant\", \"the barista\"), true, 2). st_hpd(put_down(\"the barista\", \"croissant\", t), true, 3). st_hpd(eat(\"Jennifer\", \"croissant\"), true, 4)."
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 109,
+      "text": "Tom and his daughter went to the ice cream parlor. They sat at a small table. Tom ordered a chocolate sundae and his daughter ordered a vanilla cone. They enjoyed their treats together.",
+      "logic_form": [
+        "restaurant(\"ice cream parlor\"). customer(\"Tom\"). customer(\"daughter\"). food(\"chocolate sundae\"). food(\"vanilla cone\"). story_step(0..4). st_hpd(enter(\"Tom\", \"ice cream parlor\"), true, 0). st_hpd(enter(\"daughter\", \"ice cream parlor\"), true, 0). st_obs(sitting(\"Tom\"), true, 1). st_obs(sitting(\"daughter\"), true, 1). st_hpd(order(\"Tom\", \"chocolate sundae\", \"the server\"), true, 2). st_hpd(order(\"daughter\", \"vanilla cone\", \"the server\"), true, 2). st_hpd(eat(\"Tom\", \"chocolate sundae\"), true, 3). st_hpd(eat(\"daughter\", \"vanilla cone\"), true, 3)."
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 110,
+      "text": "Mr. Wilson visited his regular diner for lunch. He sat at his usual booth and ordered the meatloaf special. The waitress knew his order by heart. He ate his meal and left his customary tip.",
+      "logic_form": [
+        "restaurant(\"diner\"). customer(\"Mr. Wilson\"). food(\"meatloaf special\"). waiter(\"the waitress\"). story_step(0..4). st_hpd(enter(\"Mr. Wilson\", \"diner\"), true, 0). st_obs(sitting(\"Mr. Wilson\"), true, 1). st_hpd(order(\"Mr. Wilson\", \"meatloaf special\", \"the waitress\"), true, 2). st_hpd(put_down(\"the waitress\", \"meatloaf special\", t), true, 3). st_hpd(eat(\"Mr. Wilson\", \"meatloaf special\"), true, 4)."
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 111,
+      "text": "The conference attendees went to the hotel restaurant for dinner. They were seated at a long table. Each person ordered from the menu. The service was professional and efficient.",
+      "logic_form": [
+        "restaurant(\"hotel restaurant\"). customer(\"conference attendees\"). story_step(0..3). st_hpd(enter(\"conference attendees\", \"hotel restaurant\"), true, 0). st_obs(sitting(\"conference attendees\"), true, 1). st_hpd(order(\"conference attendees\", \"food\", \"the waiter\"), true, 2). st_hpd(eat(\"conference attendees\", \"food\"), true, 3)."
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 112,
+      "text": "Sarah entered the sandwich shop during her lunch break. She ordered a turkey club and chips. The cashier took her order and prepared it quickly. Sarah took her food to a table and ate.",
+      "logic_form": [
+        "restaurant(\"sandwich shop\"). customer(\"Sarah\"). food(\"turkey club\"). food(\"chips\"). story_step(0..4). st_hpd(enter(\"Sarah\", \"sandwich shop\"), true, 0). st_hpd(order(\"Sarah\", \"turkey club\", \"the cashier\"), true, 1). st_hpd(put_down(\"the cashier\", \"turkey club\", t), true, 2). st_hpd(sit(\"Sarah\"), true, 3). st_hpd(eat(\"Sarah\", \"turkey club\"), true, 4)."
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 113,
+      "text": "The Miller family celebrated a birthday at the pizza restaurant. They ordered two large pizzas with different toppings. The pizzas arrived hot and delicious. Everyone enjoyed the meal.",
+      "logic_form": [
+        "restaurant(\"pizza restaurant\"). customer(\"Miller family\"). food(\"pizzas\"). story_step(0..3). st_hpd(enter(\"Miller family\", \"pizza restaurant\"), true, 0). st_hpd(order(\"Miller family\", \"pizzas\", \"the waiter\"), true, 1). st_hpd(put_down(\"the waiter\", \"pizzas\", t), true, 2). st_hpd(eat(\"Miller family\", \"pizzas\"), true, 3)."
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 114,
+      "text": "Dr. Evans went to the health food restaurant after her workout. She ordered a protein bowl and green tea. The food was fresh and nutritious. She felt energized after her meal.",
+      "logic_form": [
+        "restaurant(\"health food restaurant\"). customer(\"Dr. Evans\"). food(\"protein bowl\"). drink(\"green tea\"). story_step(0..4). st_hpd(enter(\"Dr. Evans\", \"health food restaurant\"), true, 0). st_hpd(order(\"Dr. Evans\", \"protein bowl\", \"the waiter\"), true, 1). st_hpd(put_down(\"the waiter\", \"protein bowl\", t), true, 2). st_hpd(eat(\"Dr. Evans\", \"protein bowl\"), true, 3). st_hpd(request(\"Dr. Evans\", b, \"the waiter\"), true, 4)."
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 115,
+      "text": "The tourists found a local seafood restaurant near the beach. They were seated with a view of the ocean. They ordered fresh fish and local specialties. The meal was memorable.",
+      "logic_form": [
+        "restaurant(\"seafood restaurant\"). customer(\"tourists\"). story_step(0..3). st_hpd(enter(\"tourists\", \"seafood restaurant\"), true, 0). st_obs(sitting(\"tourists\"), true, 1). st_hpd(order(\"tourists\", \"fresh fish\", \"the waiter\"), true, 2). st_hpd(eat(\"tourists\", \"fresh fish\"), true, 3)."
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 116,
+      "text": "Mr. Johnson visited the barbecue joint for dinner. He ordered ribs and coleslaw. The food was smoky and flavorful. He cleaned his plate and asked for a to-go box for leftovers.",
+      "logic_form": [
+        "restaurant(\"barbecue joint\"). customer(\"Mr. Johnson\"). food(\"ribs\"). food(\"coleslaw\"). story_step(0..4). st_hpd(enter(\"Mr. Johnson\", \"barbecue joint\"), true, 0). st_hpd(order(\"Mr. Johnson\", \"ribs\", \"the server\"), true, 1). st_hpd(put_down(\"the server\", \"ribs\", t), true, 2). st_hpd(eat(\"Mr. Johnson\", \"ribs\"), true, 3). st_hpd(request(\"Mr. Johnson\", \"to-go box\", \"the server\"), true, 4)."
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 117,
+      "text": "The book club members met at the quiet tea room. They ordered various teas and scones. They discussed their latest book while enjoying their refreshments.",
+      "logic_form": [
+        "restaurant(\"tea room\"). customer(\"book club members\"). drink(\"teas\"). food(\"scones\"). story_step(0..2). st_hpd(enter(\"book club members\", \"tea room\"), true, 0). st_hpd(order(\"book club members\", \"teas and scones\", \"the server\"), true, 1). st_hpd(eat(\"book club members\", \"scones\"), true, 2)."
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 118,
+      "text": "Carlos entered the Mexican cantina and was seated at a colorful table. He ordered enchiladas and a margarita. The food was authentic and delicious. He enjoyed every bite.",
+      "logic_form": [
+        "restaurant(\"Mexican cantina\"). customer(\"Carlos\"). food(\"enchiladas\"). drink(\"margarita\"). story_step(0..4). st_hpd(enter(\"Carlos\", \"Mexican cantina\"), true, 0). st_obs(sitting(\"Carlos\"), true, 1). st_hpd(order(\"Carlos\", \"enchiladas\", \"the waiter\"), true, 2). st_hpd(put_down(\"the waiter\", \"enchiladas\", t), true, 3). st_hpd(eat(\"Carlos\", \"enchiladas\"), true, 4)."
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 119,
+      "text": "The elderly couple visited their favorite neighborhood restaurant. They were greeted by name and seated at their usual table. They ordered the same dishes they always did. The meal was comfortable and familiar.",
+      "logic_form": [
+        "restaurant(\"neighborhood restaurant\"). customer(\"elderly couple\"). story_step(0..3). st_hpd(enter(\"elderly couple\", \"neighborhood restaurant\"), true, 0). st_hpd(greet(\"the host\", \"elderly couple\"), true, 1). st_obs(sitting(\"elderly couple\"), true, 2). st_hpd(order(\"elderly couple\", \"usual dishes\", \"the waiter\"), true, 3)."
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 120,
+      "text": "The students went to the budget-friendly cafe near campus. They ordered burgers and fries. The food was affordable and satisfying. They lingered at the table studying between classes.",
+      "logic_form": [
+        "restaurant(\"cafe\"). customer(\"students\"). food(\"burgers\"). food(\"fries\"). story_step(0..3). st_hpd(enter(\"students\", \"cafe\"), true, 0). st_hpd(order(\"students\", \"burgers and fries\", \"the server\"), true, 1). st_hpd(put_down(\"the server\", \"burgers and fries\", t), true, 2). st_hpd(eat(\"students\", \"burgers and fries\"), true, 3)."
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 121,
+      "text": "Mrs. Patterson took her grandchildren to the family restaurant. The children ordered from the kids menu. She ordered a salad. Everyone was happy with their choices.",
+      "logic_form": [
+        "restaurant(\"family restaurant\"). customer(\"Mrs. Patterson\"). customer(\"grandchildren\"). story_step(0..3). st_hpd(enter(\"Mrs. Patterson\", \"family restaurant\"), true, 0). st_hpd(enter(\"grandchildren\", \"family restaurant\"), true, 0). st_hpd(order(\"grandchildren\", \"kids menu items\", \"the waiter\"), true, 1). st_hpd(order(\"Mrs. Patterson\", \"salad\", \"the waiter\"), true, 2). st_hpd(eat(\"grandchildren\", \"kids menu items\"), true, 3). st_hpd(eat(\"Mrs. Patterson\", \"salad\"), true, 3)."
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 122,
+      "text": "The business partners met at the upscale restaurant for lunch. They discussed their deal over steak and wine. The atmosphere was perfect for their conversation.",
+      "logic_form": [
+        "restaurant(\"upscale restaurant\"). customer(\"business partners\"). food(\"steak\"). drink(\"wine\"). story_step(0..3). st_hpd(enter(\"business partners\", \"upscale restaurant\"), true, 0). st_obs(sitting(\"business partners\"), true, 1). st_hpd(order(\"business partners\", \"steak and wine\", \"the waiter\"), true, 2). st_hpd(eat(\"business partners\", \"steak\"), true, 3)."
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 123,
+      "text": "The newlyweds went to the romantic restaurant with a view. They were seated at a table with candlelight. They ordered the chef's special and champagne. It was a perfect evening.",
+      "logic_form": [
+        "restaurant(\"romantic restaurant\"). customer(\"newlyweds\"). story_step(0..3). st_hpd(enter(\"newlyweds\", \"romantic restaurant\"), true, 0). st_obs(sitting(\"newlyweds\"), true, 1). st_hpd(order(\"newlyweds\", \"chef's special\", \"the waiter\"), true, 2). st_hpd(eat(\"newlyweds\", \"chef's special\"), true, 3)."
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 124,
+      "text": "The football team went to the sports bar after their game. They ordered wings and burgers. They watched other games on the big screens while eating.",
+      "logic_form": [
+        "restaurant(\"sports bar\"). customer(\"football team\"). food(\"wings\"). food(\"burgers\"). story_step(0..3). st_hpd(enter(\"football team\", \"sports bar\"), true, 0). st_obs(sitting(\"football team\"), true, 1). st_hpd(order(\"football team\", \"wings and burgers\", \"the server\"), true, 2). st_hpd(eat(\"football team\", \"wings and burgers\"), true, 3)."
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 125,
+      "text": "The professor went to the quiet cafe to grade papers. She ordered coffee and a muffin. She worked at a corner table for several hours.",
+      "logic_form": [
+        "restaurant(\"quiet cafe\"). customer(\"professor\"). drink(\"coffee\"). food(\"muffin\"). story_step(0..3). st_hpd(enter(\"professor\", \"quiet cafe\"), true, 0). st_hpd(sit(\"professor\"), true, 1). st_hpd(order(\"professor\", \"coffee and muffin\", \"the barista\"), true, 2). st_hpd(eat(\"professor\", \"muffin\"), true, 3)."
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 126,
+      "text": "The construction workers visited the diner for their lunch break. They ordered hearty meals and coffee. The service was fast so they could return to work on time.",
+      "logic_form": [
+        "restaurant(\"diner\"). customer(\"construction workers\"). story_step(0..3). st_hpd(enter(\"construction workers\", \"diner\"), true, 0). st_hpd(order(\"construction workers\", \"hearty meals\", \"the waitress\"), true, 1). st_hpd(put_down(\"the waitress\", \"hearty meals\", t), true, 2). st_hpd(eat(\"construction workers\", \"hearty meals\"), true, 3)."
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 127,
+      "text": "The yoga group went to the juice bar after their class. They ordered smoothies and acai bowls. They discussed wellness topics while enjoying their healthy snacks.",
+      "logic_form": [
+        "restaurant(\"juice bar\"). customer(\"yoga group\"). drink(\"smoothies\"). food(\"acai bowls\"). story_step(0..3). st_hpd(enter(\"yoga group\", \"juice bar\"), true, 0). st_hpd(order(\"yoga group\", \"smoothies and acai bowls\", \"the server\"), true, 1). st_hpd(eat(\"yoga group\", \"acai bowls\"), true, 2). st_hpd(drink(\"yoga group\", \"smoothies\"), true, 2)."
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 128,
+      "text": "The theater patrons went to the elegant restaurant before the show. They ordered pre-theater dinners. The service was timed perfectly so they could make their curtain.",
+      "logic_form": [
+        "restaurant(\"elegant restaurant\"). customer(\"theater patrons\"). story_step(0..3). st_hpd(enter(\"theater patrons\", \"elegant restaurant\"), true, 0). st_hpd(order(\"theater patrons\", \"pre-theater dinners\", \"the waiter\"), true, 1). st_hpd(put_down(\"the waiter\", \"pre-theater dinners\", t), true, 2). st_hpd(eat(\"theater patrons\", \"pre-theater dinners\"), true, 3)."
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 129,
+      "text": "The fishermen visited the dockside restaurant after their early morning trip. They ordered the catch of the day. The fish was fresh and perfectly cooked.",
+      "logic_form": [
+        "restaurant(\"dockside restaurant\"). customer(\"fishermen\"). food(\"catch of the day\"). story_step(0..3). st_hpd(enter(\"fishermen\", \"dockside restaurant\"), true, 0). st_hpd(order(\"fishermen\", \"catch of the day\", \"the waiter\"), true, 1). st_hpd(put_down(\"the waiter\", \"catch of the day\", t), true, 2). st_hpd(eat(\"fishermen\", \"catch of the day\"), true, 3)."
+      ],
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 130,
+      "text": "The book author visited the historic inn's restaurant. She ordered the local specialty. She made notes about the atmosphere for her next novel.",
+      "logic_form": [
+        "restaurant(\"historic inn's restaurant\"). customer(\"book author\"). food(\"local specialty\"). story_step(0..3). st_hpd(enter(\"book author\", \"historic inn's restaurant\"), true, 0). st_hpd(order(\"book author\", \"local specialty\", \"the waiter\"), true, 1). st_hpd(put_down(\"the waiter\", \"local specialty\", t), true, 2). st_hpd(eat(\"book author\", \"local specialty\"), true, 3)."
+      ],
+      "scenario_type": "Normal"
+    }
+  ]
+}

@@ -1,0 +1,602 @@
+[
+  {
+    "sid": 1,
+    "text": "Allie enters the restaurant and claims her reservation. The waiter  seats her at her table. She orders fruit salad. The waiter brings her  fruit salad. After eating, she asks for the bill.",
+    "logic_form": "N/A",
+    "scenario_type": "Normal"
+  },
+  {
+    "sid": 2,
+    "text": "Abdul is sitting in a vegetarian restaurant. The waiter takes his  order, and he orders hummus. The waiter brings the hummus to the table.",
+    "logic_form": "N/A",
+    "scenario_type": "Normal"
+  },
+  {
+    "sid": 3,
+    "text": "John enters the restaurant. The waiter escorts him to a table. John  orders steak. The waiter brings the steak to the table. John asks for  the bill, and the waiter brings it to the table. John pays the bill and  leaves the restaurant.",
+    "logic_form": "N/A",
+    "scenario_type": "Normal"
+  },
+  {
+    "sid": 4,
+    "text": "Jill enters the restaurant and is escorted to a table. She orders  chicken. The waiter brings the chicken to her table. After eating, Jill  asks for the bill.",
+    "logic_form": "N/A",
+    "scenario_type": "Normal"
+  },
+  {
+    "sid": 5,
+    "text": "Bob is seated at a table in the restaurant. The waiter asks for his order, and he orders a hamburger.",
+    "logic_form": "N/A",
+    "scenario_type": "Normal"
+  },
+  {
+    "sid": 6,
+    "text": "The waiter shows Jane to her table. Jane is seated at a table in the  restaurant. The waiter asks for her order, and she orders fish. After  eating, the waiter brings the bill to the table.",
+    "logic_form": "N/A",
+    "scenario_type": "Normal"
+  },
+  {
+    "sid": 7,
+    "text": "Molly is seated at her table when the waiter asks for her order. She  orders a baked potato. The waiter brings out French fries.",
+    "logic_form": "N/A",
+    "scenario_type": "Exception"
+  },
+  {
+    "sid": 8,
+    "text": "Larry is seated at his table in the restaurant. The waiter brings him  a menu so he can decide what to order. After reviewing the menu, Larry  decides he doesn't want anything at this restaurant.",
+    "logic_form": "N/A",
+    "scenario_type": "Exception"
+  },
+  {
+    "sid": 9,
+    "text": "Derek ordered a vegetable soup. The waiter brought out the vegetable  soup, but Derek was unsatisfied with the lack of vegetables in it. As an  apology, the waiter decided not to charge Derek for the soup.",
+    "logic_form": "N/A",
+    "scenario_type": "Exception"
+  },
+  {
+    "sid": 10,
+    "text": "Pete is seated at his table in the restaurant. He has ordered and  received his chicken, but is unhappy with how undercooked the chicken  is. He complains to the waiter, and asks for a better cooked dish.",
+    "logic_form": "N/A",
+    "scenario_type": "Exception"
+  },
+  {
+    "sid": 11,
+    "text": "Jim is seated at his table in the restaurant. He orders an appetizer.  After waiting for 20 minutes and not receiving his food, he decides to  leave the restaurant.",
+    "logic_form": "N/A",
+    "scenario_type": "Exception"
+  },
+  {
+    "sid": 12,
+    "text": "Jake is seated at his table in the restaurant. He orders a  medium-rare steak. The waiter brings out his order but it is too rare.",
+    "logic_form": "N/A",
+    "scenario_type": "Exception"
+  },
+  {
+    "sid": 13,
+    "text": "My husband and I went to a famous restaurant listed in our guidebook.  We were seated at a booth and began studying the menu. We ordered  escargot, lamb, savory salmon, and a creamy flan dessert.",
+    "logic_form": "N/A",
+    "scenario_type": "Normal"
+  },
+  {
+    "sid": 14,
+    "text": "Judy looked at the menu. She and her two kids, Alex and Zoe, were  seated in a booth in a local restaurant. They ordered fish and chips.",
+    "logic_form": "N/A",
+    "scenario_type": "Normal"
+  },
+  {
+    "sid": 15,
+    "text": "Samantha was in a five-star restaurant. Samantha started perusing the  menu. She ordered the barbecued veal chop with Asian slaw and Thai  fried rice.",
+    "logic_form": "N/A",
+    "scenario_type": "Normal"
+  },
+  {
+    "sid": 16,
+    "text": "The villager entered a fine restaurant and was seated at one of the  tables. He looked at the menu. He ordered one of the items on the list.  The waiter brought him a large plate of lettuce salad with several black  olives on top.",
+    "logic_form": "N/A",
+    "scenario_type": "Normal"
+  },
+  {
+    "sid": 17,
+    "text": "The waiter took Gavin and Amandine to a booth. They slid onto brown  vinyl seats. Gavin glanced over his menu. Amandine didn't need to look  to know what she wanted. She ordered egg drop soup with wonton, lobster  Cantonese and shrimp, beef and pork fried rice. Gavin ordered the same.",
+    "logic_form": "N/A",
+    "scenario_type": "Exception"
+  },
+  {
+    "sid": 18,
+    "text": "The waiter brought his dinner. He was eating something spotted with  eggs and livers. He finished but the waiter wouldn't come total the  bill.",
+    "logic_form": "N/A",
+    "scenario_type": "Exception"
+  },
+  {
+    "sid": 19,
+    "text": "Herbie and his father were at a meat restaurant. The waiter brought a  sizzling steak that smelled heavenly, and a plate with haddock and  creamed spinach. The waiter put Herbie's plate down. Herbie’s father  asked the waiter to take the fish away and bring the boy some lamb chops  instead.",
+    "logic_form": "N/A",
+    "scenario_type": "Exception"
+  },
+  {
+    "sid": 20,
+    "text": "Brand sat in a chair. He picked up the menu and ordered a whiskey with Pepsi, but no ice.  \t\t\tPyrogies and sausage cooked in sauerkraut, he told the waiter.  \t\t\tThe waiter brought Brand his drink. Then, the waiter placed the food on the table.  \t\t\tBrand asked the waiter to bring him a large bowl of borscht when he was done  \t\t\twith the pyrogies and sausage. The waiter went back into the kitchen.  \t\t\tBrand ate the pyrogies and then the sausage and sauerkraut.  \t\t\tThen, the waiter brought out Brand's bowl of soup.",
+    "logic_form": "N/A",
+    "scenario_type": "Variation"
+  },
+  {
+    "sid": 21,
+    "text": "The waiter brought out escargot for Molly and me.  \t\t\tThen the waiter brought out twelve oysters and twelve clams.  \t\t\tWe shared the clams and oysters. The waiter poured wine for us.",
+    "logic_form": "N/A",
+    "scenario_type": "Variation"
+  },
+  {
+    "sid": 22,
+    "text": "The waiter brought the wine to their table.  \t\t\tThen, Emanuel studied the menu.  \t\t\tHe ordered the gypsy shashlik for Ingrid and himself.  \t\t\tAfter the waiter left, they drank the wine.  \t\t\tThe waiter brought the shashlik to their table.",
+    "logic_form": "N/A",
+    "scenario_type": "Variation"
+  },
+  {
+    "sid": 23,
+    "text": "Andrew was sitting in a restaurant.  \t\t\tSebastian entered the restaurant and sat down opposite Andrew.  \t\t\tThe waiter brought a bottle of wine. \t\t\tAndrew and Sebastian took a drink. The waiter gave the men a menu.",
+    "logic_form": "N/A",
+    "scenario_type": "Variation"
+  },
+  {
+    "sid": 24,
+    "text": "I opened the menu and chose the salmon.  \t\t\tThe waiter poured two glasses of red wine.  \t\t\tI sipped the wine.  \t\t\tThen our server brought a small plate of hors d'oeuvres.  \t\t\tI tried a little bit of everything.  \t\t\tSoon, the waiter brought the meal. I tasted the salmon.",
+    "logic_form": "N/A",
+    "scenario_type": "Variation"
+  },
+  {
+    "sid": 25,
+    "text": "Jasper invited Frank to a restaurant.  \t\t\tJasper ordered roast beef and coffee.  \t\t\tTheir conversation was interrupted by the arrival of the coffee and roast beef,  \t\t\twhich both he and his new friend attacked with vigor.  \t\t\tJasper wanted to invite Frank, but he had forgotten his wallet at home. Frank paid for both.",
+    "logic_form": "N/A",
+    "scenario_type": "Exception"
+  },
+  {
+    "sid": 26,
+    "text": "I was the first person to appear at the restaurant.  \t\t\tI took my seat at the middle of the table. The head-waiter waited on me himself.  \t\t\tI had a capital dinner. Then Uncle Chipperton entered. He paid for the whole dinner.",
+    "logic_form": "N/A",
+    "scenario_type": "Exception"
+  },
+  {
+    "sid": 27,
+    "text": "Nicole went to a vegetarian restaurant. She ordered lentil soup. The  waitress set the soup in the middle of the table. Nicole enjoyed the  soup. She left the restaurant.",
+    "logic_form": "N/A",
+    "scenario_type": "Normal"
+  },
+  {
+    "sid": 28,
+    "text": "Nicole and Sam went to a vegetarian restaurant. She ordered a lentil  soup. He ordered a miso soup. They both enjoyed their soups.",
+    "logic_form": "N/A",
+    "scenario_type": "Normal"
+  },
+  {
+    "sid": 29,
+    "text": "One day, Andy felt hungry, and went to the RRGrill restaurant for  dinner. The restaurant was open, so he walked into the restaurant where  he was greeted by the waiter and was led to the table. Andy ordered soup  and he ate it with pleasure. He paid cash and left.",
+    "logic_form": "N/A",
+    "scenario_type": "Normal"
+  },
+  {
+    "sid": 30,
+    "text": "Nicole went to a vegetarian restaurant. She ordered lentil soup. When  the waitress brought her the soup, she told Nicole that it was on the  house. Nicole enjoyed the soup and then left.",
+    "logic_form": "N/A",
+    "scenario_type": "Exception"
+  },
+  {
+    "sid": 31,
+    "text": "Nicole went to a vegetarian restaurant. She ordered lentil soup. The waitress brought her a miso soup instead.",
+    "logic_form": "N/A",
+    "scenario_type": "Exception"
+  },
+  {
+    "sid": 32,
+    "text": "Nicole went to a vegetarian restaurant. She ordered lentil soup. The  waitress brought her a miso soup instead. Nicole decided to eat it  anyway.",
+    "logic_form": "N/A",
+    "scenario_type": "Exception"
+  },
+  {
+    "sid": 33,
+    "text": "Nicole went to a vegetarian restaurant. She ordered a lentil soup.  Nicole was in a hurry, so as soon as the waitress laid the dish on the  table, Nicole paid for it in cash and said that she didn't need the  bill.",
+    "logic_form": "N/A",
+    "scenario_type": "Exception"
+  },
+  {
+    "sid": 34,
+    "text": "One day, Andy felt hungry and went to the RRGrill restaurant for  dinner. The restaurant was open, but there was no table available for  Andy.",
+    "logic_form": "N/A",
+    "scenario_type": "Exception"
+  },
+  {
+    "sid": 35,
+    "text": "One day, Andy felt hungry and went to the RRGrill restaurant for  dinner. The restaurant was open, but there was no table available for  Andy. Andy decided to wait. A table became available soon after.",
+    "logic_form": "N/A",
+    "scenario_type": "Exception"
+  },
+  {
+    "sid": 36,
+    "text": "One day, Andy felt hungry and went to the RRGrill restaurant for  dinner. The restaurant was open, but there was no table available for  Andy. Andy decided to leave.",
+    "logic_form": "N/A",
+    "scenario_type": "Exception"
+  },
+  {
+    "sid": 37,
+    "text": "One day, Andy felt hungry and went to the RRGrill restaurant for  dinner. The restaurant was open and Tom, Andy’s friend, had his birthday  party in there. Tom had prepaid for all the food that was offered. The  waiter led Andy to Tom’s table. Andy joined the party.",
+    "logic_form": "N/A",
+    "scenario_type": "Exception"
+  },
+  {
+    "sid": 38,
+    "text": "One day, Andy felt hungry and went to the RRGrill restaurant for  dinner. The restaurant was closed that day. He decided to go to Happy  Pizza instead.",
+    "logic_form": "N/A",
+    "scenario_type": "Exception"
+  },
+  {
+    "sid": 39,
+    "text": "One day, Andy felt hungry and went to the RRGrill restaurant for  dinner. The restaurant was open and the waiter led Andy to a table. Andy  went through the whole menu, but he didn't find any dish that he liked.  Andy decided to leave.",
+    "logic_form": "N/A",
+    "scenario_type": "Exception"
+  },
+  {
+    "sid": 40,
+    "text": "One day, Andy felt hungry and went to the RRGrill restaurant for  dinner. The restaurant was open. The waiter led him to a table. As Andy  was sitting down before having a chance to order, he received an  emergency phone call and had to leave.",
+    "logic_form": "N/A",
+    "scenario_type": "Exception"
+  },
+  {
+    "sid": 41,
+    "text": "The Chen family, two adults and two children, were shown to a large booth. The waiter brought coloring pages for the kids. They ordered two adult meals and two items from the kids' menu. The food arrived, and everyone ate. They paid the bill and left.",
+    "logic_form": "N/A",
+    "scenario_type": "Normal"
+  },
+  {
+    "sid": 42,
+    "text": "Sarah decided she wanted the salmon. She told the waiter her order. A few minutes later, the waiter returned from the kitchen and apologized, explaining that they had just run out of salmon for the night. He asked if she would like to order something else.",
+    "logic_form": "N/A",
+    "scenario_type": "Exception"
+  },
+  {
+    "sid": 43,
+    "text": "Leo went into a fast-food burger joint. He stood in line and ordered his meal from the cashier at the counter. He paid, received his food on a tray, and found an empty table to sit at and eat.",
+    "logic_form": "N/A",
+    "scenario_type": "Variation"
+  },
+  {
+    "sid": 44,
+    "text": "After finishing their meal, Tom asked for the bill. The waiter brought it over. Tom reviewed the items and noticed he had been charged for a bottle of wine that they did not order. He called the waiter over to correct the mistake.",
+    "logic_form": "N/A",
+    "scenario_type": "Exception"
+  },
+  {
+    "sid": 45,
+    "text": "Chris met his client for a business lunch. They were seated promptly. They both ordered the lunch special. They discussed business while they ate. Chris paid for the meal with the company credit card.",
+    "logic_form": "N/A",
+    "scenario_type": "Normal"
+  },
+  {
+    "sid": 46,
+    "text": "Maria ordered a salad with dressing on the side. The waiter brought the salad, but it was already tossed with dressing. Maria politely sent it back and asked for a new one as she had originally requested.",
+    "logic_form": "N/A",
+    "scenario_type": "Exception"
+  },
+  {
+    "sid": 47,
+    "text": "It was a teppanyaki restaurant. The guests sat around a large flat grill. The chef came out and cooked their orders of steak and shrimp right in front of them, putting on a show with his cooking utensils.",
+    "logic_form": "N/A",
+    "scenario_type": "Variation"
+  },
+  {
+    "sid": 48,
+    "text": "A group of friends went out for dinner. They ordered several appetizers and main courses to share. The waiter brought all the food out on large platters for the table. After eating, they asked to split the bill evenly among the four of them.",
+    "logic_form": "N/A",
+    "scenario_type": "Normal"
+  },
+  {
+    "sid": 49,
+    "text": "Greg ordered the soup of the day. When he took his first spoonful, he found it to be completely cold. He flagged down the waiter and asked if the soup could be heated up.",
+    "logic_form": "N/A",
+    "scenario_type": "Exception"
+  },
+  {
+    "sid": 50,
+    "text": "A family was seated at a table near a window. A few minutes into their meal, the restaurant's power went out, leaving them in the dark. The manager came around with flashlights and apologized for the inconvenience.",
+    "logic_form": "N/A",
+    "scenario_type": "Exception"
+  },
+  {
+    "sid": 51,
+    "text": "Olivia went to a cafe. She sat at a small table and ordered a cappuccino and a croissant from the waitress. She enjoyed her light breakfast while reading a book. She paid at the counter before she left.",
+    "logic_form": "N/A",
+    "scenario_type": "Normal"
+  },
+  {
+    "sid": 52,
+    "text": "Ken went to a buffet-style restaurant. He paid at the entrance. The host showed him to a table and gave him a plate. Ken went up to the buffet line, selected his food, and returned to his table to eat. He went back for a second plate later.",
+    "logic_form": "N/A",
+    "scenario_type": "Variation"
+  },
+  {
+    "sid": 53,
+    "text": "The waiter brought food for a couple on a date. As he was setting down a glass of water, his hand slipped and he spilled the entire glass on one of the customers. The waiter apologized profusely and brought towels to help clean up.",
+    "logic_form": "N/A",
+    "scenario_type": "Exception"
+  },
+  {
+    "sid": 54,
+    "text": "A man entered the restaurant alone and asked for a seat at the bar. He ordered a beer and a plate of wings from the bartender. He ate his food while watching the sports game on the TV above the bar.",
+    "logic_form": "N/A",
+    "scenario_type": "Normal"
+  },
+  {
+    "sid": 55,
+    "text": "After being seated, a family waited for fifteen minutes but no waiter came to their table to take their order. The father finally got up and found the host to complain about the lack of service.",
+    "logic_form": "N/A",
+    "scenario_type": "Exception"
+  },
+  {
+    "sid": 56,
+    "text": "Rebecca used a mobile app to order a sandwich for pickup. She drove to the restaurant, went to the designated takeout counter, gave her name, and received her food in a bag. She took the food home to eat.",
+    "logic_form": "N/A",
+    "scenario_type": "Variation"
+  },
+  {
+    "sid": 57,
+    "text": "Frank ordered a pasta dish described on the menu as 'mild'. When he tasted it, it was extremely spicy, much more than he could handle. He told the waiter that the food was too hot and he couldn't eat it.",
+    "logic_form": "N/A",
+    "scenario_type": "Exception"
+  },
+  {
+    "sid": 58,
+    "text": "A group of friends was celebrating a birthday. After their main course, the waiter brought out a small cake with a candle in it, and the restaurant staff sang 'Happy Birthday'. The cake was a surprise from one of the friends.",
+    "logic_form": "N/A",
+    "scenario_type": "Normal"
+  },
+  {
+    "sid": 59,
+    "text": "Julie, who has a severe peanut allergy, ordered a dish and informed the waiter of her allergy. When the food arrived, she could see crushed peanuts sprinkled on top. She immediately sent it back, explaining the danger.",
+    "logic_form": "N/A",
+    "scenario_type": "Exception"
+  },
+  {
+    "sid": 60,
+    "text": "The restaurant offered a prix-fixe tasting menu. The diners did not choose individual dishes. The waiter simply brought out a sequence of five small courses chosen by the chef, explaining each one as it was served.",
+    "logic_form": "N/A",
+    "scenario_type": "Variation"
+  },
+  {
+    "sid": 61,
+    "text": "A customer finished his meal and gave the waiter his credit card to pay the bill. The waiter returned a minute later and informed him that his card had been declined. The customer had to use a different card.",
+    "logic_form": "N/A",
+    "scenario_type": "Exception"
+  },
+  {
+    "sid": 62,
+    "text": "Two friends sat down for lunch. One ordered a soup and the other ordered a salad. The waiter brought both items at the same time. They ate, talked, and paid their separate bills before leaving.",
+    "logic_form": "N/A",
+    "scenario_type": "Normal"
+  },
+  {
+    "sid": 63,
+    "text": "A woman found a long hair in her lasagna after taking a few bites. She quietly called the waiter over and showed him. The manager came to apologize and offered to replace her meal and not charge her for it.",
+    "logic_form": "N/A",
+    "scenario_type": "Exception"
+  },
+  {
+    "sid": 64,
+    "text": "A group went to a dim sum restaurant. Carts with different small dishes were pushed around the dining room. The diners pointed to the dishes they wanted from the carts, and the server would place them on their table and mark a card.",
+    "logic_form": "N/A",
+    "scenario_type": "Variation"
+  },
+  {
+    "sid": 65,
+    "text": "George entered a diner and sat at the counter. The waitress poured him a cup of coffee and took his order for bacon and eggs. His food was cooked on the grill behind the counter and served to him quickly.",
+    "logic_form": "N/A",
+    "scenario_type": "Normal"
+  },
+  {
+    "sid": 66,
+    "text": "A group was seated at a table that was wobbly. Every time someone leaned on it, the drinks would slosh in their glasses. They asked the waiter if he could fix it, and he folded a napkin to place under one of the table legs.",
+    "logic_form": "N/A",
+    "scenario_type": "Exception"
+  },
+  {
+    "sid": 67,
+    "text": "A couple on a date was seated at a quiet table. They ordered a bottle of wine. The waiter presented the bottle, opened it, and poured a small amount for one of them to taste and approve before pouring full glasses.",
+    "logic_form": "N/A",
+    "scenario_type": "Normal"
+  },
+  {
+    "sid": 68,
+    "text": "Sam ordered a burger and fries. His burger arrived, but the waiter forgot his fries. Sam ate half of his burger before he could get the waiter's attention to ask about the missing side dish.",
+    "logic_form": "N/A",
+    "scenario_type": "Exception"
+  },
+  {
+    "sid": 69,
+    "text": "Ben was at a restaurant with a self-order kiosk. He used the touchscreen to select his meal, paid with his card at the machine, and was given a number. He sat down and waited for his number to be called to pick up his food.",
+    "logic_form": "N/A",
+    "scenario_type": "Variation"
+  },
+  {
+    "sid": 70,
+    "text": "A restaurant was very busy and loud. An elderly couple was having trouble hearing each other speak. They asked the host if it would be possible to move to a quieter table in the corner, and the host was able to accommodate them.",
+    "logic_form": "N/A",
+    "scenario_type": "Exception"
+  },
+  {
+    "sid": 71,
+    "text": "A young woman went to a sushi restaurant. She sat at the sushi bar and ordered several pieces of nigiri directly from the sushi chef. The chef prepared her order in front of her and placed it on the counter for her to eat.",
+    "logic_form": "N/A",
+    "scenario_type": "Normal"
+  },
+  {
+    "sid": 72,
+    "text": "A customer ordered a well-done steak. When the steak arrived and he cut into it, the inside was still very pink and bloody. He had to send it back to the kitchen to be cooked for longer.",
+    "logic_form": "N/A",
+    "scenario_type": "Exception"
+  },
+  {
+    "sid": 73,
+    "text": "A man finished his meal and the waiter brought the bill. The man placed enough cash on the table to cover the bill and a generous tip. The waiter came back, collected the money, and thanked him. The man then left.",
+    "logic_form": "N/A",
+    "scenario_type": "Normal"
+  },
+  {
+    "sid": 74,
+    "text": "A family with a baby was seated. The baby started crying loudly and would not stop. After a few minutes of trying to calm the baby down, the parents, feeling embarrassed, asked for their food to go and left.",
+    "logic_form": "N/A",
+    "scenario_type": "Exception"
+  },
+  {
+    "sid": 75,
+    "text": "A group of friends went to a Korean BBQ restaurant. Raw meats and vegetables they ordered were brought to the table. They cooked the food themselves on a grill built into the center of the table.",
+    "logic_form": "N/A",
+    "scenario_type": "Variation"
+  },
+  {
+    "sid": 76,
+    "text": "A student went to a small pizzeria and ordered a single slice of cheese pizza. The server heated the slice in the oven and brought it to her on a paper plate. She ate it quickly, paid the cashier, and left.",
+    "logic_form": "N/A",
+    "scenario_type": "Normal"
+  },
+  {
+    "sid": 77,
+    "text": "Paul ordered the fish and chips. The menu said it came with tartar sauce. When the dish arrived, there was no sauce. He had to ask the waiter to bring him some.",
+    "logic_form": "N/A",
+    "scenario_type": "Exception"
+  },
+  {
+    "sid": 78,
+    "text": "A group of coworkers went to a restaurant for happy hour. They sat at a large table and ordered several rounds of drinks and some appetizers like nachos and wings. They enjoyed the discounted prices.",
+    "logic_form": "N/A",
+    "scenario_type": "Normal"
+  },
+  {
+    "sid": 79,
+    "text": "The waiter brought a basket of bread to the table before the meal. When a customer took a piece, she realized it was stale and hard as a rock. She informed the waiter, who apologized and brought a fresh basket.",
+    "logic_form": "N/A",
+    "scenario_type": "Exception"
+  },
+  {
+    "sid": 80,
+    "text": "A couple visited a fondue restaurant. They ordered a cheese fondue appetizer, followed by a main course where they cooked pieces of meat in a pot of hot oil. For dessert, they had chocolate fondue with fruit.",
+    "logic_form": "N/A",
+    "scenario_type": "Variation"
+  },
+  {
+    "sid": 81,
+    "text": "A man asked for the bill and the waiter brought the check from the neighboring table by mistake. The man noticed the bill was far too high and called the waiter back to point out the error.",
+    "logic_form": "N/A",
+    "scenario_type": "Exception"
+  },
+  {
+    "sid": 82,
+    "text": "A woman with a reservation arrived at the restaurant. She gave her name to the host, who checked the reservation list and immediately led her to a prepared table.",
+    "logic_form": "N/A",
+    "scenario_type": "Normal"
+  },
+  {
+    "sid": 83,
+    "text": "While eating, a customer suddenly felt unwell. He told his friend he needed to leave immediately. His friend stayed behind to pay for both meals while he rushed out of the restaurant.",
+    "logic_form": "N/A",
+    "scenario_type": "Exception"
+  },
+  {
+    "sid": 84,
+    "text": "A family went to a restaurant that had outdoor seating. They asked the host for a table on the patio. The waiter took their order and they enjoyed their meal in the pleasant weather.",
+    "logic_form": "N/A",
+    "scenario_type": "Normal"
+  },
+  {
+    "sid": 85,
+    "text": "Emily was at a food truck park. She walked up to the window of a taco truck, placed her order with the person inside, and paid. She waited off to the side until they called her name, then took her tacos to a nearby picnic table.",
+    "logic_form": "N/A",
+    "scenario_type": "Variation"
+  },
+  {
+    "sid": 86,
+    "text": "A customer ordered a soda. When the waiter brought it, the glass was dirty with lipstick marks on the rim. The customer was disgusted and asked for a new drink in a clean glass.",
+    "logic_form": "N/A",
+    "scenario_type": "Exception"
+  },
+  {
+    "sid": 87,
+    "text": "Mike was seated at a table. He ordered an appetizer first. After he finished the appetizer, the waiter cleared the plate and then took his order for the main course. The main course was served after a short wait.",
+    "logic_form": "N/A",
+    "scenario_type": "Normal"
+  },
+  {
+    "sid": 88,
+    "text": "A restaurant had a policy of not seating incomplete parties. Two friends arrived for their reservation for four, but their other two friends were running late. The host told them they had to wait until the entire party was present to be seated.",
+    "logic_form": "N/A",
+    "scenario_type": "Exception"
+  },
+  {
+    "sid": 89,
+    "text": "A woman entered a bakery cafe, chose a muffin from the display case, and ordered a latte. The cashier took her payment, and she waited at the end of the counter for the barista to make her drink. She took her food and drink and sat down.",
+    "logic_form": "N/A",
+    "scenario_type": "Normal"
+  },
+  {
+    "sid": 90,
+    "text": "A group ordered dessert. One person ordered the apple pie, which the menu said was served with vanilla ice cream. The waiter brought the pie but explained the restaurant was out of vanilla, and asked if chocolate ice cream would be an acceptable substitute.",
+    "logic_form": "N/A",
+    "scenario_type": "Exception"
+  },
+  {
+    "sid": 91,
+    "text": "A group attended a dinner theater. They were served a three-course meal at their tables while a live play was performed on a stage in the middle of the room. The waiters moved quietly to avoid disrupting the show.",
+    "logic_form": "N/A",
+    "scenario_type": "Variation"
+  },
+  {
+    "sid": 92,
+    "text": "Tim ordered a steak. When he was halfway through eating it, he found that the center was completely raw and cold. He complained to the manager, who agreed to remove the item from his bill.",
+    "logic_form": "N/A",
+    "scenario_type": "Exception"
+  },
+  {
+    "sid": 93,
+    "text": "A couple entered a restaurant and were told there would be a 30-minute wait for a table. They put their name on the list and sat in the waiting area. The host called their name when their table was ready.",
+    "logic_form": "N/A",
+    "scenario_type": "Normal"
+  },
+  {
+    "sid": 94,
+    "text": "A child in a restaurant accidentally knocked over a full glass of milk, which spilled all over the table and floor. The parents apologized, and a waiter quickly came over with a mop and cloths to clean up the mess.",
+    "logic_form": "N/A",
+    "scenario_type": "Exception"
+  },
+  {
+    "sid": 95,
+    "text": "A woman ordered a salad for her main course. The waiter asked if she would like to add grilled chicken or salmon for an extra charge. She chose to add chicken. The salad was brought to her table, and she ate it.",
+    "logic_form": "N/A",
+    "scenario_type": "Normal"
+  },
+  {
+    "sid": 96,
+    "text": "At an omakase restaurant, the diners sat at a counter. There was no menu. The chef decided what to serve, preparing and presenting one piece of sushi at a time directly to the customer, explaining the type of fish.",
+    "logic_form": "N/A",
+    "scenario_type": "Variation"
+  },
+  {
+    "sid": 97,
+    "text": "A diner's soup was served in a bowl that had a chip on the rim. He worried it was unhygienic and asked the waiter if he could have it served in a different bowl.",
+    "logic_form": "N/A",
+    "scenario_type": "Exception"
+  },
+  {
+    "sid": 98,
+    "text": "A tourist, unfamiliar with the local cuisine, asked the waiter for a recommendation. The waiter described a few popular dishes. The tourist chose one of the suggestions and was very pleased with the meal.",
+    "logic_form": "N/A",
+    "scenario_type": "Normal"
+  },
+  {
+    "sid": 99,
+    "text": "A man finished his coffee and wanted a refill. He tried to get the waiter's attention for several minutes, but the waiter was busy with other tables and did not see him. He eventually had to stand up and walk over to the service station to ask.",
+    "logic_form": "N/A",
+    "scenario_type": "Exception"
+  },
+  {
+    "sid": 100,
+    "text": "After a satisfying dinner, the waiter asked a couple if they were interested in dessert. They looked at the dessert menu and ordered a slice of chocolate cake to share. The waiter brought the cake with two forks.",
+    "logic_form": "N/A",
+    "scenario_type": "Normal"
+  }
+]

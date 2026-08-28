@@ -1,0 +1,64 @@
+{
+  "data": [
+    {
+      "sid": 33,
+      "logic_form": [
+        "restaurant(\"RRGrill\"). customer(\"Andy\"). story_step(0..2). st_obs(hungry(\"Andy\"), true, 0). st_hpd(enter(\"Andy\", \"RRGrill\"), true, 1). st_obs(open(\"RRGrill\"), true, 2). st_hpd(lead_to(w, \"Andy\", t), false)."
+      ]
+    },
+    {
+      "sid": 34,
+      "logic_form": [
+        "restaurant(\"RRGrill\"). customer(\"Andy\"). story_step(0..4). st_obs(hungry(\"Andy\"), true, 0). st_hpd(enter(\"Andy\", \"RRGrill\"), true, 1). st_obs(open(\"RRGrill\"), true, 2). st_hpd(lead_to(w, \"Andy\", t), false). st_hpd(wait(\"Andy\"), true, 3). st_hpd(lead_to(w, \"Andy\", t), true, 4)."
+      ]
+    },
+    {
+      "sid": 36,
+      "logic_form": [
+        "restaurant(\"RRGrill\"). customer(\"Andy\"). customer(\"Tom\"). waiter(\"the waiter\"). story_step(0..4). st_obs(hungry(\"Andy\"), true, 0). st_hpd(enter(\"Andy\", \"RRGrill\"), true, 1). st_obs(open(\"RRGrill\"), true, 2). st_obs(party(\"Tom\"), true, 2). st_hpd(lead_to(\"the waiter\", \"Andy\", t), true, 3). st_hpd(join(\"Andy\", \"Tom\"), true, 4)."
+      ]
+    },
+    {
+      "sid": 37,
+      "logic_form": [
+        "restaurant(\"RRGrill\"). restaurant(\"Happy Pizza\"). customer(\"Andy\"). story_step(0..3). st_obs(hungry(\"Andy\"), true, 0). st_hpd(enter(\"Andy\", \"RRGrill\"), true, 1). st_obs(open(\"RRGrill\"), false, 2). st_hpd(enter(\"Andy\", \"Happy Pizza\"), true, 3)."
+      ]
+    },
+    {
+      "sid": 38,
+      "logic_form": [
+        "restaurant(\"RRGrill\"). customer(\"Andy\"). waiter(\"the waiter\"). story_step(0..4). st_obs(hungry(\"Andy\"), true, 0). st_hpd(enter(\"Andy\", \"RRGrill\"), true, 1). st_obs(open(\"RRGrill\"), true, 2). st_hpd(lead_to(\"the waiter\", \"Andy\", t), true, 3). st_hpd(pick_up(\"Andy\", m, t), true, 4). st_obs(menu_read(\"Andy\"), true, 4). st_hpd(order(\"Andy\"), false, 4). st_hpd(leave(\"Andy\"), true, 4)."
+      ]
+    },
+    {
+      "sid": 39,
+      "logic_form": [
+        "restaurant(\"RRGrill\"). customer(\"Andy\"). waiter(\"the waiter\"). story_step(0..4). st_obs(hungry(\"Andy\"), true, 0). st_hpd(enter(\"Andy\", \"RRGrill\"), true, 1). st_obs(open(\"RRGrill\"), true, 2). st_hpd(lead_to(\"the waiter\", \"Andy\", t), true, 3). st_hpd(sit(\"Andy\"), true, 4). st_hpd(leave(\"Andy\"), true, 4)."
+      ]
+    },
+    {
+      "sid": 41,
+      "logic_form": [
+        "restaurant(\"cafe\"). customer(\"Laura\"). food(\"croissant\"). beverage(\"coffee\"). waiter(\"the waiter\"). story_step(0..4). st_obs(in(\"Laura\", \"cafe\"), true, 0). st_hpd(order(\"Laura\", \"coffee\", \"the waiter\"), true, 1). st_hpd(order(\"Laura\", \"croissant\", \"the waiter\"), true, 1). st_hpd(put_down(\"the waiter\", \"coffee\", t), true, 2). st_hpd(put_down(\"the waiter\", \"croissant\", t), false). st_hpd(pay(\"Laura\", b), true, 3). st_hpd(leave(\"Laura\"), true, 4)."
+      ]
+    },
+    {
+      "sid": 42,
+      "logic_form": [
+        "restaurant(\"fancy restaurant\"). customer(\"David\"). customer(\"Sarah\"). food(\"duck confit\"). beverage(\"wine\"). waiter(\"the waiter\"). story_step(0..3). st_hpd(enter(\"David\", \"fancy restaurant\"), true, 0). st_hpd(enter(\"Sarah\", \"fancy restaurant\"), true, 0). st_hpd(order_for(\"David\", \"Sarah\", \"duck confit\", \"the waiter\"), true, 1). st_hpd(put_down(\"the waiter\", \"duck confit\", t), true, 2). st_hpd(drink(\"David\", \"wine\"), true, 3). st_hpd(drink(\"Sarah\", \"wine\"), true, 3). st_hpd(eat(\"David\", \"duck confit\"), true, 3). st_hpd(eat(\"Sarah\", \"duck confit\"), true, 3)."
+      ]
+    },
+    {
+      "sid": 45,
+      "logic_form": [
+        "restaurant(\"the restaurant\"). customer(\"group of friends\"). story_step(0..2). st_obs(open(\"the restaurant\"), true, 0). st_obs(sitting(\"group of friends\"), true, 1). st_hpd(order(\"group of friends\"), false). st_hpd(leave(\"group of friends\"), true, 2)."
+      ]
+    },
+    {
+      "sid": 46,
+      "logic_form": [
+        "restaurant(\"the restaurant\"). customer(\"Rita\"). food(\"salad\"). waiter(\"the waiter\"). story_step(0..3). st_hpd(eat(\"Rita\", \"salad\"), true, 0). st_hpd(request(\"Rita\", b, \"the waiter\"), true, 1). st_hpd(put_down(\"the waiter\", b, t), true, 2). st_hpd(pay(\"Rita\", b), true, 3)."
+      ]
+    }
+  ]
+}

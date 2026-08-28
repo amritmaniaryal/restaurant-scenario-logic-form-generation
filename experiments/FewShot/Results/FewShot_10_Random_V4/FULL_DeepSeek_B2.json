@@ -1,0 +1,45 @@
+{
+  "id": "gen-1777146137-6AiyQNvRlEA7WXMd6EkD",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"data\": [\n    {\n      \"sid\": 12,\n      \"logic_form\": [\n        \"restaurant(\\\"a famous restaurant\\\"). customer(\\\"My husband\\\"). customer(\\\"I\\\"). customer(we). member(\\\"My husband\\\", we). member(\\\"I\\\", we). food(\\\"escargot\\\"). food(\\\"lamb\\\"). food(\\\"savory salmon\\\"). food(\\\"creamy flan dessert\\\"). story_step(0..3). st_hpd(enter(we, \\\"a famous restaurant\\\"), true, 0). st_obs(sitting(we), true, 1). st_hpd(pick_up(we, m, t), true, 2). st_hpd(order(we, \\\"escargot\\\", w), true, 3). st_hpd(order(we, \\\"lamb\\\", w), true, 3). st_hpd(order(we, \\\"savory salmon\\\", w), true, 3). st_hpd(order(we, \\\"creamy flan dessert\\\", w), true, 3).\"\n      ]\n    },\n    {\n      \"sid\": 13,\n      \"logic_form\": [\n        \"restaurant(\\\"a local restaurant\\\"). customer(\\\"Judy\\\"). customer(\\\"Alex\\\"). customer(\\\"Zoe\\\"). customer(they). member(\\\"Judy\\\", they). member(\\\"Alex\\\", they). member(\\\"Zoe\\\", they). food(\\\"fish and chips\\\"). story_step(0..2). st_hpd(pick_up(\\\"Judy\\\", m, t), true, 0). st_obs(sitting(they), true, 1). st_hpd(order(they, \\\"fish and chips\\\", w), true, 2).\"\n      ]\n    },\n    {\n      \"sid\": 14,\n      \"logic_form\": [\n        \"restaurant(\\\"five-star restaurant\\\"). customer(\\\"Samantha\\\"). food(\\\"barbecued veal chop with Asian slaw and Thai fried rice\\\"). story_step(0..2). st_obs(in(\\\"Samantha\\\", \\\"five-star restaurant\\\"), true, 0). st_hpd(pick_up(\\\"Samantha\\\", m, t), true, 1). st_hpd(order(\\\"Samantha\\\", \\\"barbecued veal chop with Asian slaw and Thai fried rice\\\", w), true, 2).\"\n      ]\n    },\n    {\n      \"sid\": 16,\n      \"logic_form\": [\n        \"restaurant(r). customer(\\\"Gavin\\\"). customer(\\\"Amandine\\\"). customer(they). member(\\\"Gavin\\\", they). member(\\\"Amandine\\\", they). food(\\\"egg drop soup with wonton\\\"). food(\\\"lobster Cantonese and shrimp\\\"). food(\\\"beef and pork fried rice\\\"). waiter(\\\"the waiter\\\"). story_step(0..4). st_hpd(lead_to(\\\"the waiter\\\", they, b), true, 0). st_hpd(sit(they), true, 1). st_hpd(pick_up(\\\"Gavin\\\", m, t), true, 2). st_hpd(order(\\\"Amandine\\\", \\\"egg drop soup with wonton\\\", \\\"the waiter\\\"), true, 3). st_hpd(order(\\\"Amandine\\\", \\\"lobster Cantonese and shrimp\\\", \\\"the waiter\\\"), true, 3). st_hpd(order(\\\"Amandine\\\", \\\"beef and pork fried rice\\\", \\\"the waiter\\\"), true, 3). st_hpd(order(\\\"Gavin\\\", \\\"egg drop soup with wonton\\\", \\\"the waiter\\\"), true, 3). st_hpd(order(\\\"Gavin\\\", \\\"lobster Cantonese and shrimp\\\", \\\"the waiter\\\"), true, 3). st_hpd(order(\\\"Gavin\\\", \\\"beef and pork fried rice\\\", \\\"the waiter\\\"), true, 3).\"\n      ]\n    },\n    {\n      \"sid\": 17,\n      \"logic_form\": [\n        \"restaurant(r). customer(\\\"He\\\"). waiter(\\\"the waiter\\\"). story_step(0..2). st_hpd(put_down(\\\"the waiter\\\", d, t), true, 0). st_hpd(eat(\\\"He\\\", f), true, 1). st_hpd(request(\\\"He\\\", b, \\\"the waiter\\\"), false, 2).\"\n      ]\n    },\n    {\n      \"sid\": 18,\n      \"logic_form\": [\n        \"restaurant(\\\"meat restaurant\\\"). customer(\\\"Herbie\\\"). customer(\\\"Herbie's father\\\"). waiter(\\\"the waiter\\\"). food(\\\"sizzling steak\\\"). food(\\\"haddock\\\"). food(\\\"creamed spinach\\\"). food(\\\"lamb chops\\\"). story_step(0..4). st_obs(in(\\\"Herbie\\\", \\\"meat restaurant\\\"), true, 0). st_obs(in(\\\"Herbie's father\\\", \\\"meat restaurant\\\"), true, 0). st_hpd(put_down(\\\"the waiter\\\", \\\"sizzling steak\\\", t), true, 1). st_hpd(put_down(\\\"the waiter\\\", \\\"haddock and creamed spinach\\\", t), true, 1). st_hpd(put_down(\\\"the waiter\\\", \\\"Herbie's plate\\\", t), true, 2). st_hpd(request(\\\"Herbie's father\\\", \\\"take the fish away\\\", \\\"the waiter\\\"), true, 3). st_hpd(request(\\\"Herbie's father\\\", \\\"bring the boy some lamb chops\\\", \\\"the waiter\\\"), true, 3).\"\n      ]\n    },\n    {\n      \"sid\": 19,\n      \"logic_form\": [\n        \"restaurant(r). customer(\\\"Brand\\\"). waiter(\\\"the waiter\\\"). beverage(\\\"whiskey with Pepsi\\\"). food(\\\"pyrogies\\\"). food(\\\"sausage cooked in sauerkraut\\\"). food(\\\"large bowl of borscht\\\"). story_step(0..8). st_hpd(sit(\\\"Brand\\\"), true, 0). st_hpd(pick_up(\\\"Brand\\\", m, t), true, 1). st_hpd(order(\\\"Brand\\\", \\\"whiskey with Pepsi\\\", \\\"the waiter\\\"), true, 2). st_hpd(order(\\\"Brand\\\", \\\"pyrogies\\\", \\\"the waiter\\\"), true, 2). st_hpd(order(\\\"Brand\\\", \\\"sausage cooked in sauerkraut\\\", \\\"the waiter\\\"), true, 2). st_hpd(put_down(\\\"the waiter\\\", \\\"whiskey with Pepsi\\\", t), true, 3). st_hpd(put_down(\\\"the waiter\\\", \\\"pyrogies and sausage cooked in sauerkraut\\\", t), true, 4). st_hpd(request(\\\"Brand\\\", \\\"large bowl of borscht\\\", \\\"the waiter\\\"), true, 5). st_hpd(eat(\\\"Brand\\\", \\\"pyrogies\\\"), true, 6). st_hpd(eat(\\\"Brand\\\", \\\"sausage cooked in sauerkraut\\\"), true, 7). st_hpd(put_down(\\\"the waiter\\\", \\\"large bowl of borscht\\\", t), true, 8).\"\n      ]\n    },\n    {\n      \"sid\": 20,\n      \"logic_form\": [\n        \"restaurant(r). customer(\\\"Molly\\\"). customer(\\\"me\\\"). customer(we). member(\\\"Molly\\\", we). member(\\\"me\\\", we). food(\\\"escargot\\\"). food(\\\"twelve oysters\\\"). food(\\\"twelve clams\\\"). beverage(\\\"wine\\\"). waiter(\\\"the waiter\\\"). story_step(0..4). st_hpd(put_down(\\\"the waiter\\\", \\\"escargot\\\", t), true, 0). st_hpd(put_down(\\\"the waiter\\\", \\\"twelve oysters\\\", t), true, 1). st_hpd(put_down(\\\"the waiter\\\", \\\"twelve clams\\\", t), true, 1). st_hpd(eat(we, \\\"twelve clams\\\"), true, 2). st_hpd(eat(we, \\\"twelve oysters\\\"), true, 2). st_hpd(put_down(\\\"the waiter\\\", \\\"wine\\\", t), true, 3).\"\n      ]\n    },\n    {\n      \"sid\": 21,\n      \"logic_form\": [\n        \"restaurant(r). customer(\\\"Emanuel\\\"). customer(\\\"Ingrid\\\"). customer(they). member(\\\"Emanuel\\\", they). member(\\\"Ingrid\\\", they). food(\\\"gypsy shashlik\\\"). beverage(\\\"wine\\\"). waiter(\\\"the waiter\\\"). story_step(0..4). st_hpd(put_down(\\\"the waiter\\\", \\\"wine\\\", t), true, 0). st_hpd(pick_up(\\\"Emanuel\\\", m, t), true, 1). st_hpd(order(\\\"Emanuel\\\", \\\"gypsy shashlik\\\", \\\"the waiter\\\"), true, 2). st_hpd(drink(they, \\\"wine\\\"), true, 3). st_hpd(put_down(\\\"the waiter\\\", \\\"gypsy shashlik\\\", t), true, 4).\"\n      ]\n    },\n    {\n      \"sid\": 22,\n      \"logic_form\": [\n        \"restaurant(\\\"the restaurant\\\"). customer(\\\"Andrew\\\"). customer(\\\"Sebastian\\\"). beverage(\\\"wine\\\"). waiter(\\\"the waiter\\\"). story_step(0..4). st_obs(sitting(\\\"Andrew\\\"), true, 0). st_hpd(enter(\\\"Sebastian\\\", \\\"the restaurant\\\"), true, 1). st_hpd(sit(\\\"Sebastian\\\"), true, 2). st_hpd(put_down(\\\"the waiter\\\", \\\"wine\\\", t), true, 3). st_hpd(drink(\\\"Andrew\\\", \\\"wine\\\"), true, 4). st_hpd(drink(\\\"Sebastian\\\", \\\"wine\\\"), true, 4). st_hpd(put_down(\\\"the waiter\\\", m, t), true, 4).\"\n      ]\n    }\n  ]\n}",
+        "refusal": null,
+        "role": "assistant",
+        "reasoning": null
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1777146137,
+  "model": "deepseek/deepseek-chat-v3.1",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 2223,
+    "prompt_tokens": 4434,
+    "total_tokens": 6657,
+    "completion_tokens_details": {
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 3708,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00239067,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00239067,
+      "upstream_inference_prompt_cost": 0.0006345,
+      "upstream_inference_completions_cost": 0.00175617
+    }
+  },
+  "provider": "DeepInfra"
+}

@@ -1,0 +1,64 @@
+{
+  "data": [
+    {
+      "sid": 47,
+      "logic_form": [
+        "restaurant(\"a restaurant\"). customer(\"Gary\"). food(\"steak\"). food(\"small cake\"). waiter(\"the waiter\"). story_step(0..4). st_hpd(enter(\"Gary\", \"a restaurant\"), true, 0). st_hpd(order(\"Gary\", \"steak\", \"the waiter\"), true, 1). st_hpd(eat(\"Gary\", \"steak\"), true, 2). st_hpd(put_down(\"the waiter\", \"small cake\", t), true, 3). st_hpd(pay(\"Gary\", tip), true, 4)."
+      ]
+    },
+    {
+      "sid": 48,
+      "logic_form": [
+        "customer(\"Olivia\"). beverage(\"glass of water\"). waiter(\"the waiter\"). story_step(0..3). st_obs(sitting(\"Olivia\"), true, 0). st_hpd(greet(\"the waiter\", \"Olivia\"), true, 1). st_hpd(order(\"Olivia\", \"glass of water\", \"the waiter\"), true, 1). st_hpd(put_down(\"the waiter\", \"glass of water\", t), true, 2)."
+      ]
+    },
+    {
+      "sid": 49,
+      "logic_form": [
+        "customer(\"Mark\"). food(\"dessert\"). waiter(\"the waiter\"). story_step(0..3). st_hpd(put_down(\"the waiter\", b, t), true, 0). st_obs(menu_read(\"Mark\"), true, 1). st_hpd(complain(\"Mark\", \"the waiter\"), true, 2). st_next(1, 2)."
+      ]
+    },
+    {
+      "sid": 50,
+      "logic_form": [
+        "customer(\"Fiona\"). food(\"soup of the day\"). food(\"sandwich\"). waiter(\"the waiter\"). story_step(0..3). st_hpd(order(\"Fiona\", \"soup of the day\", \"the waiter\"), true, 0). st_hpd(informed(\"the waiter\", \"run out\", \"Fiona\"), true, 1). st_hpd(order(\"Fiona\", \"sandwich\", \"the waiter\"), true, 2)."
+      ]
+    },
+    {
+      "sid": 51,
+      "logic_form": [
+        "restaurant(\"pizzeria\"). customer(\"Steve\"). customer(\"his son\"). customer(they). member(\"Steve\", they). member(\"his son\", they). food(\"large pepperoni pizza\"). waiter(\"the waiter\"). story_step(0..4). st_hpd(enter(they, \"pizzeria\"), true, 0). st_hpd(lead_to(\"the waiter\", they, t), true, 1). st_hpd(order(they, \"large pepperoni pizza\", \"the waiter\"), true, 2). st_hpd(eat(they, \"large pepperoni pizza\"), true, 3). st_hpd(pay(\"Steve\", b), true, 4)."
+      ]
+    },
+    {
+      "sid": 52,
+      "logic_form": [
+        "restaurant(\"seafood restaurant\"). customer(\"David\"). food(\"grilled salmon with vegetables\"). waiter(\"the waiter\"). story_step(0..5). st_hpd(enter(\"David\", \"seafood restaurant\"), true, 0). st_hpd(lead_to(\"the waiter\", \"David\", t), true, 1). st_hpd(pick_up(\"David\", m, t), true, 2). st_hpd(order(\"David\", \"grilled salmon with vegetables\", \"the waiter\"), true, 3). st_hpd(put_down(\"the waiter\", \"grilled salmon with vegetables\", t), true, 4). st_hpd(eat(\"David\", \"grilled salmon with vegetables\"), true, 4). st_hpd(pay(\"David\", b), true, 5). st_hpd(leave(\"David\"), true, 5)."
+      ]
+    },
+    {
+      "sid": 53,
+      "logic_form": [
+        "restaurant(\"family restaurant\"). customer(\"Mr. Johnson\"). customer(\"Mrs. Johnson\"). customer(\"their son\"). customer(they). member(\"Mr. Johnson\", they). member(\"Mrs. Johnson\", they). member(\"their son\", they). food(\"steak\"). food(\"salad\"). food(\"pizza\"). waiter(\"the waiter\"). story_step(0..4). st_hpd(enter(they, \"family restaurant\"), true, 0). st_obs(sitting(they), true, 1). st_hpd(order(\"Mr. Johnson\", \"steak\", \"the waiter\"), true, 2). st_hpd(order(\"Mrs. Johnson\", \"salad\", \"the waiter\"), true, 2). st_hpd(order(\"their son\", \"pizza\", \"the waiter\"), true, 2). st_hpd(put_down(\"the waiter\", f, t), true, 3)."
+      ]
+    },
+    {
+      "sid": 54,
+      "logic_form": [
+        "restaurant(\"the cafe\"). customer(\"Sarah\"). food(\"chicken sandwich\"). beverage(\"coffee\"). waiter(\"the waitress\"). story_step(0..4). st_hpd(enter(\"Sarah\", \"the cafe\"), true, 0). st_hpd(sit(\"Sarah\"), true, 1). st_hpd(order(\"Sarah\", \"chicken sandwich\", \"the waitress\"), true, 2). st_hpd(order(\"Sarah\", \"coffee\", \"the waitress\"), true, 2). st_hpd(put_down(\"the waitress\", \"chicken sandwich\", t), true, 3). st_hpd(put_down(\"the waitress\", \"coffee\", t), true, 3). st_hpd(eat(\"Sarah\", \"chicken sandwich\"), true, 4). st_hpd(drink(\"Sarah\", \"coffee\"), true, 4)."
+      ]
+    },
+    {
+      "sid": 55,
+      "logic_form": [
+        "restaurant(\"sushi restaurant\"). customer(\"Mark\"). customer(\"Lisa\"). customer(they). member(\"Mark\", they). member(\"Lisa\", they). food(\"tuna rolls\"). food(\"salmon nigiri\"). cook(\"the chef\"). story_step(0..4). st_hpd(enter(they, \"sushi restaurant\"), true, 0). st_obs(sitting(they), true, 1). st_hpd(order(\"Mark\", \"tuna rolls\", w), true, 2). st_hpd(order(\"Lisa\", \"salmon nigiri\", w), true, 2). st_hpd(prepare(\"the chef\", f, w), true, 3)."
+      ]
+    },
+    {
+      "sid": 56,
+      "logic_form": [
+        "restaurant(\"vegan restaurant\"). customer(\"Anna\"). food(\"quinoa bowl\"). beverage(\"green smoothie\"). waiter(\"the waiter\"). story_step(0..3). st_hpd(enter(\"Anna\", \"vegan restaurant\"), true, 0). st_hpd(order(\"Anna\", \"quinoa bowl\", \"the waiter\"), true, 1). st_hpd(order(\"Anna\", \"green smoothie\", \"the waiter\"), true, 1). st_hpd(eat(\"Anna\", \"quinoa bowl\"), true, 2). st_hpd(drink(\"Anna\", \"green smoothie\"), true, 2). st_hpd(pay(\"Anna\", tip), true, 3)."
+      ]
+    }
+  ]
+}

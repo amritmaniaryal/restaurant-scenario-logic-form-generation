@@ -1,0 +1,248 @@
+ {
+  "metadata": {
+      "Model": "Deepseek v3.1",
+      "Prompt": "In the json file uploaded, there are 40 natural language stories in 'Story' part of json file. Could you give me their logic form which can be useful in ASP code. Give the output in a similar format, where, in place of N/A in 'Logic Form', you can write the ASP logic form of those stories. Ignore 'Type' field for your analysis."
+  },
+  "data": [
+    {
+        "Scenario Number": "1",
+        "Type": "Normal",
+        "Story": "Allie enters the restaurant and claims her reservation. The waiter  seats her at her table. She orders fruit salad. The waiter brings her  fruit salad. After eating, she asks for the bill.",
+        "Logic Form": "enter(allie, restaurant1).\nclaim_reservation(allie).\nseat(waiter, allie, table1).\norder(allie, fruit_salad).\nserve(waiter, allie, fruit_salad).\neat(allie, fruit_salad).\nask_bill(allie)."
+    },
+    {
+        "Scenario Number": "2",
+        "Type": "Normal",
+        "Story": "Abdul is sitting in a vegetarian restaurant. The waiter takes his  order, and he orders hummus. The waiter brings the hummus to the table.",
+        "Logic Form": "enter(abdul, vegetarian_restaurant).\nseat(abdul, table1).\norder(abdul, hummus).\nserve(waiter, abdul, hummus)."
+    },
+    {
+        "Scenario Number": "3",
+        "Type": "Normal",
+        "Story": "John enters the restaurant. The waiter escorts him to a table. John  orders steak. The waiter brings the steak to the table. John asks for  the bill, and the waiter brings it to the table. John pays the bill and  leaves the restaurant.",
+        "Logic Form": "enter(john, restaurant1).\nseat(waiter, john, table1).\norder(john, steak).\nserve(waiter, john, steak).\nask_bill(john).\nbring_bill(waiter, john).\npay(john, bill).\nleave(john, restaurant1)."
+    },
+    {
+        "Scenario Number": "4",
+        "Type": "Normal",
+        "Story": "Jill enters the restaurant and is escorted to a table. She orders  chicken. The waiter brings the chicken to her table. After eating, Jill  asks for the bill.",
+        "Logic Form": "enter(jill, restaurant1).\nseat(waiter, jill, table1).\norder(jill, chicken).\nserve(waiter, jill, chicken).\neat(jill, chicken).\nask_bill(jill)."
+    },
+    {
+        "Scenario Number": "5",
+        "Type": "Normal",
+        "Story": "Bob is seated at a table in the restaurant. The waiter asks for his order, and he orders a hamburger.",
+        "Logic Form": "seat(bob, table1).\nask_order(waiter, bob).\norder(bob, hamburger)."
+    },
+    {
+        "Scenario Number": "6",
+        "Type": "Normal",
+        "Story": "The waiter shows Jane to her table. Jane is seated at a table in the  restaurant. The waiter asks for her order, and she orders fish. After  eating, the waiter brings the bill to the table.",
+        "Logic Form": "seat(waiter, jane, table1).\norder(jane, fish).\neat(jane, fish).\nbring_bill(waiter, jane)."
+    },
+    {
+        "Scenario Number": "7",
+        "Type": "Exception",
+        "Story": "Molly is seated at her table when the waiter asks for her order. She  orders a baked potato. The waiter brings out French fries.",
+        "Logic Form": "seat(molly, table1).\nask_order(waiter, molly).\norder(molly, baked_potato).\nserve(waiter, molly, french_fries)."
+    },
+    {
+        "Scenario Number": "8",
+        "Type": "Exception",
+        "Story": "Larry is seated at his table in the restaurant. The waiter brings him  a menu so he can decide what to order. After reviewing the menu, Larry  decides he doesn't want anything at this restaurant.",
+        "Logic Form": "seat(larry, table1).\nbring(waiter, larry, menu).\ndecide(larry, nothing).\nleave(larry, restaurant1)."
+    },
+    {
+        "Scenario Number": "9",
+        "Type": "Exception",
+        "Story": "Derek ordered a vegetable soup. The waiter brought out the vegetable  soup, but Derek was unsatisfied with the lack of vegetables in it. As an  apology, the waiter decided not to charge Derek for the soup.",
+        "Logic Form": "order(derek, vegetable_soup).\nserve(waiter, derek, vegetable_soup).\nunsatisfied(derek, vegetable_soup).\napologize(waiter, derek).\nno_charge(waiter, derek, vegetable_soup)."
+    },
+    {
+        "Scenario Number": "10",
+        "Type": "Exception",
+        "Story": "Pete is seated at his table in the restaurant. He has ordered and  received his chicken, but is unhappy with how undercooked the chicken  is. He complains to the waiter, and asks for a better cooked dish.",
+        "Logic Form": "seat(pete, table1).\norder(pete, chicken).\nserve(waiter, pete, chicken).\ncomplain(pete, undercooked_chicken).\nrequest(pete, better_cooked_dish)."
+    },
+    {
+        "Scenario Number": "11",
+        "Type": "Exception",
+        "Story": "Jim is seated at his table in the restaurant. He orders an appetizer.  After waiting for 20 minutes and not receiving his food, he decides to  leave the restaurant.",
+        "Logic Form": "seat(jim, table1).\norder(jim, appetizer).\nwait(jim, long).\nnot_served(jim, appetizer).\nleave(jim, restaurant1)."
+    },
+    {
+        "Scenario Number": "12",
+        "Type": "Exception",
+        "Story": "Jake is seated at his table in the restaurant. He orders a  medium-rare steak. The waiter brings out his order but it is too rare.",
+        "Logic Form": "seat(jake, table1).\norder(jake, steak_medium_rare).\nserve(waiter, jake, steak_too_rare)."
+    },
+    {
+        "Scenario Number": "13",
+        "Type": "Normal",
+        "Story": "My husband and I went to a famous restaurant listed in our guidebook.  We were seated at a booth and began studying the menu. We ordered  escargot, lamb, savory salmon, and a creamy flan dessert.",
+        "Logic Form": "enter(husband, restaurant1).\nenter(wife, restaurant1).\nseat(waiter, husband, booth).\nseat(waiter, wife, booth).\norder(husband, escargot).\norder(wife, lamb).\norder(husband, salmon).\norder(wife, flan)."
+    },
+    {
+        "Scenario Number": "14",
+        "Type": "Normal",
+        "Story": "Judy looked at the menu. She and her two kids, Alex and Zoe, were  seated in a booth in a local restaurant. They ordered fish and chips.",
+        "Logic Form": "enter(judy, restaurant1).\nseat(waiter, judy, booth).\nseat(waiter, alex, booth).\nseat(waiter, zoe, booth).\norder(judy, fish_and_chips).\norder(alex, fish_and_chips).\norder(zoe, fish_and_chips)."
+    },
+    {
+        "Scenario Number": "15",
+        "Type": "Normal",
+        "Story": "Samantha was in a five-star restaurant. Samantha started perusing the  menu. She ordered the barbecued veal chop with Asian slaw and Thai  fried rice.",
+        "Logic Form": "enter(samantha, restaurant1).\nread_menu(samantha).\norder(samantha, veal_chop).\norder(samantha, asian_slaw).\norder(samantha, thai_fried_rice)."
+    },
+    {
+        "Scenario Number": "16",
+        "Type": "Normal",
+        "Story": "The villager entered a fine restaurant and was seated at one of the  tables. He looked at the menu. He ordered one of the items on the list.  The waiter brought him a large plate of lettuce salad with several black  olives on top.",
+        "Logic Form": "enter(villager, restaurant1).\nseat(waiter, villager, table1).\nread_menu(villager).\norder(villager, menu_item).\nserve(waiter, villager, lettuce_salad_with_olives)."
+    },
+    {
+        "Scenario Number": "17",
+        "Type": "Exception",
+        "Story": "The waiter took Gavin and Amandine to a booth. They slid onto brown  vinyl seats. Gavin glanced over his menu. Amandine didn't need to look  to know what she wanted. She ordered egg drop soup with wonton, lobster  Cantonese and shrimp, beef and pork fried rice. Gavin ordered the same.",
+        "Logic Form": "seat(waiter, gavin, booth).\nseat(waiter, amandine, booth).\norder(amandine, egg_drop_soup).\norder(amandine, lobster_cantonese).\norder(amandine, fried_rice).\norder(gavin, egg_drop_soup).\norder(gavin, lobster_cantonese).\norder(gavin, fried_rice)."
+    },
+    {
+        "Scenario Number": "18",
+        "Type": "Exception",
+        "Story": "The waiter brought his dinner. He was eating something spotted with  eggs and livers. He finished but the waiter wouldn't come total the  bill.",
+        "Logic Form": "serve(waiter, man, dinner_with_eggs_and_livers).\neat(man, dinner_with_eggs_and_livers).\nnot_bring_bill(waiter, man)."
+    },
+    {
+        "Scenario Number": "19",
+        "Type": "Exception",
+        "Story": "Herbie and his father were at a meat restaurant. The waiter brought a  sizzling steak that smelled heavenly, and a plate with haddock and  creamed spinach. The waiter put Herbie's plate down. Herbie\u2019s father  asked the waiter to take the fish away and bring the boy some lamb chops  instead.",
+        "Logic Form": "seat(waiter, herbie, table1).\nseat(waiter, father, table1).\nserve(waiter, herbie, fish_and_spinach).\nserve(waiter, father, steak).\nrequest(father, lamb_chops_for_herbie)."
+    },
+    {
+        "Scenario Number": "20",
+        "Type": "Variation",
+        "Story": "Brand sat in a chair. He picked up the menu and ordered a whiskey with Pepsi, but no ice.  \t\t\tPyrogies and sausage cooked in sauerkraut, he told the waiter.  \t\t\tThe waiter brought Brand his drink. Then, the waiter placed the food on the table.  \t\t\tBrand asked the waiter to bring him a large bowl of borscht when he was done  \t\t\twith the pyrogies and sausage. The waiter went back into the kitchen.  \t\t\tBrand ate the pyrogies and then the sausage and sauerkraut.  \t\t\tThen, the waiter brought out Brand's bowl of soup.",
+        "Logic Form": "seat(brand, chair1).\nread_menu(brand).\norder(brand, whiskey_pepsi_no_ice).\norder(brand, pyrogies_and_sausage).\nserve(waiter, brand, whiskey_pepsi_no_ice).\nserve(waiter, brand, pyrogies_and_sausage).\nrequest(brand, borscht).\nserve(waiter, brand, borscht).\neat(brand, pyrogies).\neat(brand, sausage).\neat(brand, borscht)."
+    },
+    {
+        "Scenario Number": "21",
+        "Type": "Variation",
+        "Story": "The waiter brought out escargot for Molly and me.  \t\t\tThen the waiter brought out twelve oysters and twelve clams.  \t\t\tWe shared the clams and oysters. The waiter poured wine for us.",
+        "Logic Form": "serve(waiter, molly, escargot).\nserve(waiter, narrator, escargot).\nserve(waiter, molly, clams).\nserve(waiter, narrator, clams).\nserve(waiter, molly, oysters).\nserve(waiter, narrator, oysters).\nserve(waiter, molly, wine).\nserve(waiter, narrator, wine)."
+    },
+    {
+        "Scenario Number": "22",
+        "Type": "Variation",
+        "Story": "The waiter brought the wine to their table.  \t\t\tThen, Emanuel studied the menu.  \t\t\tHe ordered the gypsy shashlik for Ingrid and himself.  \t\t\tAfter the waiter left, they drank the wine.  \t\t\tThe waiter brought the shashlik to their table.",
+        "Logic Form": "serve(waiter, table1, wine).\nread_menu(emanuel).\norder(emanuel, gypsy_shashlik_for_two).\ndrink(emanuel, wine).\ndrink(ingrid, wine).\nserve(waiter, table1, shashlik)."
+    },
+    {
+        "Scenario Number": "23",
+        "Type": "Variation",
+        "Story": "Andrew was sitting in a restaurant.  \t\t\tSebastian entered the restaurant and sat down opposite Andrew.  \t\t\tThe waiter brought a bottle of wine. \t\t\tAndrew and Sebastian took a drink. The waiter gave the men a menu.",
+        "Logic Form": "seat(andrew, table1).\nenter(sebastian, restaurant1).\nseat(sebastian, table1).\nserve(waiter, table1, wine).\ndrink(andrew, wine).\ndrink(sebastian, wine).\nserve(waiter, table1, menu)."
+    },
+    {
+        "Scenario Number": "24",
+        "Type": "Variation",
+        "Story": "I opened the menu and chose the salmon.  \t\t\tThe waiter poured two glasses of red wine.  \t\t\tI sipped the wine.  \t\t\tThen our server brought a small plate of hors d'oeuvres.  \t\t\tI tried a little bit of everything.  \t\t\tSoon, the waiter brought the meal. I tasted the salmon.",
+        "Logic Form": "read_menu(narrator).\norder(narrator, salmon).\nserve(waiter, narrator, wine).\ndrink(narrator, wine).\nserve(waiter, narrator, hors_doeuvres).\neat(narrator, hors_doeuvres).\nserve(waiter, narrator, salmon).\neat(narrator, salmon)."
+    },
+    {
+        "Scenario Number": "25",
+        "Type": "Exception",
+        "Story": "Jasper invited Frank to a restaurant.  \t\t\tJasper ordered roast beef and coffee.  \t\t\tTheir conversation was interrupted by the arrival of the coffee and roast beef,  \t\t\twhich both he and his new friend attacked with vigor.  \t\t\tJasper wanted to invite Frank, but he had forgotten his wallet at home. Frank paid for both.",
+        "Logic Form": "invite(jasper, frank, restaurant1).\norder(jasper, roast_beef).\norder(jasper, coffee).\nserve(waiter, jasper, roast_beef).\nserve(waiter, jasper, coffee).\nforget_wallet(jasper).\npay(frank, bill)."
+    },
+    {
+        "Scenario Number": "26",
+        "Type": "Exception",
+        "Story": "I was the first person to appear at the restaurant.  \t\t\tI took my seat at the middle of the table. The head-waiter waited on me himself.  \t\t\tI had a capital dinner. Then Uncle Chipperton entered. He paid for the whole dinner.",
+        "Logic Form": "enter(narrator, restaurant1).\nseat(narrator, table1).\nserve(headwaiter, narrator, dinner).\neat(narrator, dinner).\nenter(uncle_chipperton, restaurant1).\npay(uncle_chipperton, dinner)."
+    },
+    {
+        "Scenario Number": "27",
+        "Type": "Normal",
+        "Story": "Nicole went to a vegetarian restaurant. She ordered lentil soup. The  waitress set the soup in the middle of the table. Nicole enjoyed the  soup. She left the restaurant.",
+        "Logic Form": "enter(nicole, vegetarian_restaurant).\norder(nicole, lentil_soup).\nserve(waitress, nicole, lentil_soup).\neat(nicole, lentil_soup).\nleave(nicole, restaurant1)."
+    },
+    {
+        "Scenario Number": "28",
+        "Type": "Normal",
+        "Story": "Nicole and Sam went to a vegetarian restaurant. She ordered a lentil  soup. He ordered a miso soup. They both enjoyed their soups.",
+        "Logic Form": "enter(nicole, vegetarian_restaurant).\nenter(sam, vegetarian_restaurant).\norder(nicole, lentil_soup).\norder(sam, miso_soup).\neat(nicole, lentil_soup).\neat(sam, miso_soup)."
+    },
+    {
+        "Scenario Number": "29",
+        "Type": "Normal",
+        "Story": "One day, Andy felt hungry, and went to the RRGrill restaurant for  dinner. The restaurant was open, so he walked into the restaurant where  he was greeted by the waiter and was led to the table. Andy ordered soup  and he ate it with pleasure. He paid cash and left.",
+        "Logic Form": "enter(andy, rrgrill).\nseat(waiter, andy, table1).\norder(andy, soup).\neat(andy, soup).\npay_cash(andy, bill).\nleave(andy, rrgrill)."
+    },
+    {
+        "Scenario Number": "30",
+        "Type": "Exception",
+        "Story": "Nicole went to a vegetarian restaurant. She ordered lentil soup. When  the waitress brought her the soup, she told Nicole that it was on the  house. Nicole enjoyed the soup and then left.",
+        "Logic Form": "enter(nicole, vegetarian_restaurant).\norder(nicole, lentil_soup).\nserve(waitress, nicole, lentil_soup).\nfree(waitress, nicole, lentil_soup).\neat(nicole, lentil_soup).\nleave(nicole, restaurant1)."
+    },
+    {
+        "Scenario Number": "31",
+        "Type": "Exception",
+        "Story": "Nicole went to a vegetarian restaurant. She ordered lentil soup. The waitress brought her a miso soup instead.",
+        "Logic Form": "enter(nicole, vegetarian_restaurant).\norder(nicole, lentil_soup).\nserve(waitress, nicole, miso_soup)."
+    },
+    {
+        "Scenario Number": "32",
+        "Type": "Exception",
+        "Story": "Nicole went to a vegetarian restaurant. She ordered lentil soup. The  waitress brought her a miso soup instead. Nicole decided to eat it  anyway.",
+        "Logic Form": "enter(nicole, vegetarian_restaurant).\norder(nicole, lentil_soup).\nserve(waitress, nicole, miso_soup).\neat(nicole, miso_soup)."
+    },
+    {
+        "Scenario Number": "33",
+        "Type": "Exception",
+        "Story": "Nicole went to a vegetarian restaurant. She ordered a lentil soup.  Nicole was in a hurry, so as soon as the waitress laid the dish on the  table, Nicole paid for it in cash and said that she didn't need the  bill.",
+        "Logic Form": "enter(nicole, vegetarian_restaurant).\norder(nicole, lentil_soup).\nserve(waitress, nicole, lentil_soup).\npay_cash(nicole, lentil_soup).\nno_bill(nicole).\nleave(nicole, restaurant1)."
+    },
+    {
+        "Scenario Number": "34",
+        "Type": "Exception",
+        "Story": "One day, Andy felt hungry and went to the RRGrill restaurant for  dinner. The restaurant was open, but there was no table available for  Andy.",
+        "Logic Form": "enter(andy, rrgrill).\nrestaurant_open(rrgrill).\nno_table(andy)."
+    },
+    {
+        "Scenario Number": "35",
+        "Type": "Exception",
+        "Story": "One day, Andy felt hungry and went to the RRGrill restaurant for  dinner. The restaurant was open, but there was no table available for  Andy. Andy decided to wait. A table became available soon after.",
+        "Logic Form": "enter(andy, rrgrill).\nrestaurant_open(rrgrill).\nno_table(andy).\nwait(andy, table).\nseat(waiter, andy, table2)."
+    },
+    {
+        "Scenario Number": "36",
+        "Type": "Exception",
+        "Story": "One day, Andy felt hungry and went to the RRGrill restaurant for  dinner. The restaurant was open, but there was no table available for  Andy. Andy decided to leave.",
+        "Logic Form": "enter(andy, rrgrill).\nrestaurant_open(rrgrill).\nno_table(andy).\nleave(andy, rrgrill)."
+    },
+    {
+        "Scenario Number": "37",
+        "Type": "Exception",
+        "Story": "One day, Andy felt hungry and went to the RRGrill restaurant for  dinner. The restaurant was open and Tom, Andy\u2019s friend, had his birthday  party in there. Tom had prepaid for all the food that was offered. The  waiter led Andy to Tom\u2019s table. Andy joined the party.",
+        "Logic Form": "enter(andy, rrgrill).\nrestaurant_open(rrgrill).\nparty(tom, rrgrill).\nprepaid(tom, food).\nseat(waiter, andy, tom_table).\njoin(andy, tom_party)."
+    },
+    {
+        "Scenario Number": "38",
+        "Type": "Exception",
+        "Story": "One day, Andy felt hungry and went to the RRGrill restaurant for  dinner. The restaurant was closed that day. He decided to go to Happy  Pizza instead.",
+        "Logic Form": "enter(andy, rrgrill).\nrestaurant_closed(rrgrill).\ngo(andy, happy_pizza)."
+    },
+    {
+        "Scenario Number": "39",
+        "Type": "Exception",
+        "Story": "One day, Andy felt hungry and went to the RRGrill restaurant for  dinner. The restaurant was open and the waiter led Andy to a table. Andy  went through the whole menu, but he didn't find any dish that he liked.  Andy decided to leave.",
+        "Logic Form": "enter(andy, rrgrill).\nrestaurant_open(rrgrill).\nseat(waiter, andy, table1).\nread_menu(andy).\nnot_find_preference(andy).\nleave(andy, rrgrill)."
+    },
+    {
+        "Scenario Number": "40",
+        "Type": "Exception",
+        "Story": "One day, Andy felt hungry and went to the RRGrill restaurant for  dinner. The restaurant was open. The waiter led him to a table. As Andy  was sitting down before having a chance to order, he received an  emergency phone call and had to leave.",
+        "Logic Form": "enter(andy, rrgrill).\nrestaurant_open(rrgrill).\nseat(waiter, andy, table1).\nphone_call(andy, emergency).\nleave(andy, rrgrill)."
+    }
+ ]
+}

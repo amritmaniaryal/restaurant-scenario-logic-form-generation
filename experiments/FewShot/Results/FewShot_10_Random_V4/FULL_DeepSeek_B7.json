@@ -1,0 +1,45 @@
+{
+  "id": "gen-1777147240-ojLz4fvsRXxbEOFFm088",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"data\": [\n    {\n      \"sid\": 68,\n      \"logic_form\": [\n        \"restaurant(\\\"local diner\\\"). customer(\\\"Frank\\\"). waiter(\\\"the waitress\\\"). food(\\\"pancakes\\\"). beverage(\\\"black coffee\\\"). story_step(0..5). st_obs(sitting(\\\"Frank\\\"), true, 0). st_hpd(put_down(\\\"the waitress\\\", \\\"black coffee\\\", t), true, 1). st_hpd(pick_up(\\\"Frank\\\", m, t), true, 2). st_hpd(order(\\\"Frank\\\", \\\"pancakes\\\", \\\"the waitress\\\"), true, 3). st_hpd(eat(\\\"Frank\\\", \\\"pancakes\\\"), true, 4). st_hpd(pay(\\\"Frank\\\", b), true, 5). st_hpd(leave(\\\"Frank\\\"), true, 5).\"\n      ]\n    },\n    {\n      \"sid\": 69,\n      \"logic_form\": [\n        \"restaurant(\\\"sandwich shop\\\"). customer(\\\"a group of coworkers\\\"). waiter(\\\"the waiter\\\"). food(\\\"all the sandwiches\\\"). story_step(0..4). st_hpd(enter(\\\"a group of coworkers\\\", \\\"sandwich shop\\\"), true, 0). st_hpd(lead_to(\\\"the waiter\\\", \\\"a group of coworkers\\\", t), true, 1). st_hpd(order(\\\"a group of coworkers\\\", f, \\\"the waiter\\\"), true, 2). st_hpd(put_down(\\\"the waiter\\\", \\\"all the sandwiches\\\", t), true, 3). st_hpd(eat(\\\"a group of coworkers\\\", \\\"all the sandwiches\\\"), true, 4). st_hpd(pay(\\\"a group of coworkers\\\", b), true, 4).\"\n      ]\n    },\n    {\n      \"sid\": 70,\n      \"logic_form\": [\n        \"restaurant(\\\"pizzeria\\\"). customer(\\\"the Jackson family\\\"). waiter(\\\"the waiter\\\"). food(\\\"large pepperoni pizza\\\"). beverage(\\\"pitcher of soda\\\"). story_step(0..4). st_hpd(enter(\\\"the Jackson family\\\", \\\"pizzeria\\\"), true, 0). st_hpd(lead_to(\\\"the waiter\\\", \\\"the Jackson family\\\", t), true, 1). st_hpd(order(\\\"the Jackson family\\\", \\\"large pepperoni pizza\\\", \\\"the waiter\\\"), true, 2). st_hpd(order(\\\"the Jackson family\\\", \\\"pitcher of soda\\\", \\\"the waiter\\\"), true, 2). st_hpd(put_down(\\\"the waiter\\\", \\\"large pepperoni pizza\\\", t), true, 3). st_hpd(put_down(\\\"the waiter\\\", \\\"pitcher of soda\\\", t), true, 3). st_hpd(eat(\\\"the Jackson family\\\", \\\"large pepperoni pizza\\\"), true, 4). st_hpd(drink(\\\"the Jackson family\\\", \\\"pitcher of soda\\\"), true, 4).\"\n      ]\n    },\n    {\n      \"sid\": 71,\n      \"logic_form\": [\n        \"restaurant(\\\"bistro\\\"). customer(\\\"Michael\\\"). waiter(\\\"a waitress\\\"). food(\\\"daily special\\\"). beverage(\\\"glass of water\\\"). story_step(0..4). st_hpd(enter(\\\"Michael\\\", \\\"bistro\\\"), true, 0). st_hpd(lead_to(\\\"a waitress\\\", \\\"Michael\\\", t), true, 1). st_hpd(order(\\\"Michael\\\", \\\"daily special\\\", \\\"a waitress\\\"), true, 2). st_hpd(order(\\\"Michael\\\", \\\"glass of water\\\", \\\"a waitress\\\"), true, 2). st_hpd(put_down(\\\"a waitress\\\", \\\"daily special\\\", t), true, 3). st_hpd(put_down(\\\"a waitress\\\", \\\"glass of water\\\", t), true, 3). st_hpd(eat(\\\"Michael\\\", \\\"daily special\\\"), true, 4). st_hpd(drink(\\\"Michael\\\", \\\"glass of water\\\"), true, 4). st_hpd(request(\\\"Michael\\\", b, \\\"a waitress\\\"), true, 4).\"\n      ]\n    },\n    {\n      \"sid\": 72,\n      \"logic_form\": [\n        \"restaurant(\\\"pancake house\\\"). customer(\\\"Susan\\\"). waiter(\\\"the server\\\"). food(\\\"blueberry pancakes\\\"). beverage(\\\"orange juice\\\"). story_step(0..4). st_hpd(enter(\\\"Susan\\\", \\\"pancake house\\\"), true, 0). st_hpd(order(\\\"Susan\\\", \\\"blueberry pancakes\\\", \\\"the server\\\"), true, 1). st_hpd(order(\\\"Susan\\\", \\\"orange juice\\\", \\\"the server\\\"), true, 1). st_hpd(put_down(\\\"the server\\\", \\\"blueberry pancakes\\\", t), true, 2). st_hpd(put_down(\\\"the server\\\", \\\"orange juice\\\", t), true, 2). st_hpd(eat(\\\"Susan\\\", \\\"blueberry pancakes\\\"), true, 3). st_hpd(drink(\\\"Susan\\\", \\\"orange juice\\\"), true, 3). st_hpd(pay(\\\"Susan\\\", b), true, 4).\"\n      ]\n    },\n    {\n      \"sid\": 73,\n      \"logic_form\": [\n        \"restaurant(\\\"deli\\\"). customer(\\\"David\\\"). waiter(\\\"the server\\\"). cook(\\\"the cook\\\"). food(\\\"pastrami sandwich\\\"). food(\\\"pickle\\\"). story_step(0..4). st_hpd(enter(\\\"David\\\", \\\"deli\\\"), true, 0). st_hpd(sit(\\\"David\\\"), true, 1). st_hpd(order(\\\"David\\\", \\\"pastrami sandwich\\\", \\\"the server\\\"), true, 2). st_hpd(order(\\\"David\\\", \\\"pickle\\\", \\\"the server\\\"), true, 2). st_hpd(prepare(\\\"the cook\\\", \\\"pastrami sandwich\\\", \\\"the server\\\"), true, 3). st_hpd(prepare(\\\"the cook\\\", \\\"pickle\\\", \\\"the server\\\"), true, 3). st_hpd(put_down(\\\"the server\\\", \\\"pastrami sandwich\\\", t), true, 4). st_hpd(put_down(\\\"the server\\\", \\\"pickle\\\", t), true, 4). st_hpd(eat(\\\"David\\\", \\\"pastrami sandwich\\\"), true, 4). st_hpd(eat(\\\"David\\\", \\\"pickle\\\"), true, 4).\"\n      ]\n    },\n    {\n      \"sid\": 75,\n      \"logic_form\": [\n        \"restaurant(\\\"new Sushi place\\\"). customer(\\\"I\\\"). customer(\\\"my husband\\\"). customer(we). member(\\\"I\\\", we). member(\\\"my husband\\\", we). food(\\\"spicy tuna rolls\\\"). food(\\\"eel\\\"). story_step(0..3). st_hpd(enter(we, \\\"new Sushi place\\\"), true, 0). st_hpd(order(we, \\\"spicy tuna rolls\\\", w), true, 1). st_hpd(order(we, \\\"eel\\\", w), true, 1). st_hpd(eat(we, \\\"spicy tuna rolls\\\"), true, 2). st_hpd(eat(we, \\\"eel\\\"), true, 2). st_obs(open(\\\"new Sushi place\\\"), true, 0).\"\n      ]\n    },\n    {\n      \"sid\": 76,\n      \"logic_form\": [\n        \"restaurant(\\\"Allston Diner\\\"). customer(\\\"we\\\"). customer(\\\"our son\\\"). customer(\\\"a friend\\\"). member(\\\"our son\\\", we). member(\\\"a friend\\\", we). food(\\\"large, hearty breakfast meals\\\"). story_step(0..3). st_hpd(enter(we, \\\"Allston Diner\\\"), true, 0). st_hpd(eat(we, \\\"large, hearty breakfast meals\\\"), true, 1). st_hpd(eat(\\\"our son\\\", \\\"large, hearty breakfast meals\\\"), true, 1). st_hpd(eat(\\\"a friend\\\", \\\"large, hearty breakfast meals\\\"), true, 1). st_hpd(leave(we), true, 2).\"\n      ]\n    },\n    {\n      \"sid\": 77,\n      \"logic_form\": [\n        \"restaurant(\\\"new restaurant\\\"). customer(\\\"Karl\\\"). customer(\\\"his wife\\\"). customer(they). member(\\\"Karl\\\", they). member(\\\"his wife\\\", they). waiter(\\\"the waiter\\\"). story_step(0..3). st_hpd(enter(they, \\\"new restaurant\\\"), true, 0). st_hpd(lead_to(\\\"the waiter\\\", they, t), false). st_hpd(order(they), false). st_hpd(leave(they), true, 3).\"\n      ]\n    },\n    {\n      \"sid\": 78,\n      \"logic_form\": [\n        \"restaurant(\\\"diner\\\"). customer(\\\"Betsy\\\"). waiter(\\\"the waitress\\\"). food(\\\"pancakes\\\"). food(\\\"bacon\\\"). beverage(\\\"coffee\\\"). story_step(0..4). st_hpd(enter(\\\"Betsy\\\", \\\"diner\\\"), true, 0). st_hpd(order(\\\"Betsy\\\", \\\"pancakes\\\", \\\"the waitress\\\"), true, 1). st_hpd(order(\\\"Betsy\\\", \\\"bacon\\\", \\\"the waitress\\\"), true, 1). st_hpd(order(\\\"Betsy\\\", \\\"coffee\\\", \\\"the waitress\\\"), true, 1). st_hpd(put_down(\\\"the waitress\\\", \\\"pancakes\\\", t), true, 2). st_hpd(put_down(\\\"the waitress\\\", \\\"bacon\\\", t), true, 2). st_hpd(put_down(\\\"the waitress\\\", \\\"coffee\\\", t), true, 2). st_hpd(eat(\\\"Betsy\\\", \\\"pancakes\\\"), true, 3). st_hpd(eat(\\\"Betsy\\\", \\\"bacon\\\"), true, 3). st_hpd(drink(\\\"Betsy\\\", \\\"coffee\\\"), true, 3). st_hpd(pay(\\\"Betsy\\\", tip), true, 4). st_hpd(leave(\\\"Betsy\\\"), true, 4).\"\n      ]\n    }\n  ]\n}",
+        "refusal": null,
+        "role": "assistant",
+        "reasoning": null
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1777147240,
+  "model": "deepseek/deepseek-chat-v3.1",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 2307,
+    "prompt_tokens": 4378,
+    "total_tokens": 6685,
+    "completion_tokens_details": {
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 4,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00274159,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00274159,
+      "upstream_inference_prompt_cost": 0.00091906,
+      "upstream_inference_completions_cost": 0.00182253
+    }
+  },
+  "provider": "DeepInfra"
+}

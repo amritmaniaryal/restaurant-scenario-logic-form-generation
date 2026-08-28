@@ -1,0 +1,52 @@
+{
+    "data": [
+        {
+            "sid": 0,
+            "logic_form": [
+                "restaurant(\"the restaurant\"). customer(\"Allie\"). food(\"fruit salad\"). waiter(\"the waiter\"). story_step(0..6). st_hpd(enter(\"Allie\", \"the restaurant\"), true, 0). st_hpd(lead_to(\"the waiter\", \"Allie\", t), true, 1). st_obs(sitting(\"Allie\"), true, 2). st_hpd(order(\"Allie\", \"fruit salad\", \"the waiter\"), true, 3). st_hpd(put_down(\"the waiter\", \"fruit salad\", t), true, 4). st_hpd(eat(\"Allie\", \"fruit salad\"), true, 5). st_hpd(request(\"Allie\", b, \"the waiter\"), true, 6)."
+            ]
+        },
+        {
+            "sid": 1,
+            "logic_form": [
+                "restaurant(\"vegetarian restaurant\"). customer(\"Abdul\"). food(\"hummus\"). waiter(\"the waiter\"). story_step(0..2). st_obs(in(\"Abdul\", \"vegetarian restaurant\"), true, 0). st_obs(sitting(\"Abdul\"), true, 0). st_hpd(order(\"Abdul\", \"hummus\", \"the waiter\"), true, 1). st_hpd(put_down(\"the waiter\", \"hummus\", t), true, 2)."
+            ]
+        },
+        {
+            "sid": 2,
+            "logic_form": [
+                "restaurant(\"the restaurant\"). customer(\"John\"). food(\"steak\"). waiter(\"the waiter\"). story_step(0..7). st_hpd(enter(\"John\", \"the restaurant\"), true, 0). st_hpd(lead_to(\"the waiter\", \"John\", t), true, 1). st_hpd(order(\"John\", \"steak\", \"the waiter\"), true, 2). st_hpd(put_down(\"the waiter\", \"steak\", t), true, 3). st_hpd(request(\"John\", b, \"the waiter\"), true, 4). st_hpd(put_down(\"the waiter\", b, t), true, 5). st_hpd(pay(\"John\", b), true, 6). st_hpd(leave(\"John\"), true, 7)."
+            ]
+        },
+        {
+            "sid": 3,
+            "logic_form": [
+                "restaurant(\"the restaurant\"). customer(\"Jill\"). waiter(\"the waiter\"). food(\"chicken\"). story_step(0..5). st_hpd(enter(\"Jill\", \"the restaurant\"), true, 0). st_hpd(lead_to(\"the waiter\", \"Jill\", t), true, 1). st_hpd(order(\"Jill\", \"chicken\", \"the waiter\"), true, 2). st_hpd(put_down(\"the waiter\", \"chicken\", t), true, 3). st_hpd(eat(\"Jill\", \"chicken\"), true, 4). st_hpd(request(\"Jill\", b, \"the waiter\"), true, 5)."
+            ]
+        },
+        {
+            "sid": 4,
+            "logic_form": [
+                "restaurant(\"the restaurant\"). customer(\"Bob\"). waiter(\"the waiter\"). food(\"hamburger\"). story_step(0..1). st_obs(sitting(\"Bob\"), true, 0). st_hpd(order(\"Bob\", \"hamburger\", \"the waiter\"), true, 1)."
+            ]
+        },
+        {
+            "sid": 8,
+            "logic_form": [
+                "restaurant(r). customer(\"Derek\"). waiter(\"the waiter\"). food(\"vegetable soup\"). story_step(0..2). st_hpd(order(\"Derek\", \"vegetable soup\", \"the waiter\"), true, 0). st_hpd(put_down(\"the waiter\", \"vegetable soup\", t), true, 1). st_hpd(cancel_bill(\"the waiter\"), true, 2)."
+            ]
+        },
+        {
+            "sid": 9,
+            "logic_form": [
+                "restaurant(\"the restaurant\"). customer(\"Pete\"). waiter(\"the waiter\"). food(\"chicken\"). food(\"better cooked dish\"). story_step(0..4). st_obs(in(\"Pete\", \"the restaurant\"), true, 0). st_obs(sitting(\"Pete\"), true, 0). st_hpd(order(\"Pete\", \"chicken\", \"the waiter\"), true, 1). st_hpd(put_down(\"the waiter\", \"chicken\", t), true, 2). st_next(2, 3). st_hpd(complain(\"Pete\", \"the waiter\"), true, 3). st_hpd(request(\"Pete\", \"better cooked dish\", \"the waiter\"), true, 4)."
+            ]
+        },
+        {
+            "sid": 10,
+            "logic_form": [
+                "restaurant(\"the restaurant\"). customer(\"Jim\"). waiter"
+            ]
+        }
+    ]
+}

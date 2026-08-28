@@ -1,0 +1,156 @@
+{
+  "description": "Mapping between story IDs in this repository and the original ROCStories corpus (Mostafazadeh et al., NAACL 2016). Raw ROCStories text is intentionally NOT included in this repository for distribution reasons. Given any storyid here, the full story text can be retrieved from the official ROCStories corpus (see RECONSTRUCTION.md).",
+  "corpus": "ROCStories (https://www.cs.rochester.edu/nlp/rocstories/)",
+  "records": [
+    {
+      "sid": 75,
+      "storyid": "99d073a9-375a-45ad-a070-0fdfbbf73f69",
+      "storytitle": "Going out for Sushi.",
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 76,
+      "storyid": "6ead4a09-8e5f-4fbc-8a32-b706bdbb7a87",
+      "storytitle": "Allston Diner",
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 77,
+      "storyid": "44b80dab-a351-4065-86b8-43d519dff470",
+      "storytitle": "The New Restaurant",
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 78,
+      "storyid": "02fbf49d-54f4-493d-b4af-609cc1e23a22",
+      "storytitle": "The Diner",
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 79,
+      "storyid": "845b62e4-9240-4afe-8d59-ae2bc183967c",
+      "storytitle": "The Steakhouse",
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 80,
+      "storyid": "d85b7ce5-0d84-4181-afe4-52c64711145a",
+      "storytitle": "Sushi",
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 81,
+      "storyid": "1d235832-c133-4950-ba20-512adb2e3edb",
+      "storytitle": "A New Restaurant",
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 82,
+      "storyid": "2cf524c3-5e49-4ba9-9590-f84429fbdc01",
+      "storytitle": "A Date at the Diner",
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 83,
+      "storyid": "9c2ccb82-003d-4253-9f19-65b157b9993f",
+      "storytitle": "Diner",
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 84,
+      "storyid": "0f9b69ff-6fbe-4e94-a37a-8ef3fbf2a876",
+      "storytitle": "Donna Visits the Diner",
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 85,
+      "storyid": "9915e783-6bf9-4d92-9150-b031bf778bb7",
+      "storytitle": "Returned order",
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 86,
+      "storyid": "541efb12-b331-4525-afe1-5422ff33a1ca",
+      "storytitle": "The Diner",
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 87,
+      "storyid": "7dc0c96f-dd24-4561-9a4f-bd1b6b3ca520",
+      "storytitle": "Wrong order",
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 88,
+      "storyid": "3a66621b-9dcf-4e32-b085-e4c0a2e89f8f",
+      "storytitle": "The new restaurant",
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 89,
+      "storyid": "c93ca5db-716f-4572-868e-bd22aa4a9018",
+      "storytitle": "Sushi",
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 90,
+      "storyid": "c4078b0f-e1c3-4c75-a05a-a52c9481fc2a",
+      "storytitle": "Fancy Restaurant",
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 91,
+      "storyid": "ac7250f9-d416-41bb-aac7-b1dd788b86fb",
+      "storytitle": "The Wrong Order",
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 92,
+      "storyid": "c9e533e3-d8cc-4e9c-a7a0-0369d6cdc537",
+      "storytitle": "Large Order",
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 93,
+      "storyid": "0b8e4ddd-6ada-42ba-9d6f-508db0bac85a",
+      "storytitle": "The Restaurant",
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 94,
+      "storyid": "63dfd3a4-930a-4a27-8ed9-60304b6c32f3",
+      "storytitle": "The Sushi",
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 95,
+      "storyid": "cd9a0a7b-ef8f-42c0-86ac-fe80542cebd3",
+      "storytitle": "Restaurant",
+      "scenario_type": "Variation"
+    },
+    {
+      "sid": 96,
+      "storyid": "77710d2a-dbc2-4c99-a892-190b529ad219",
+      "storytitle": "A Half Order",
+      "scenario_type": "Variation"
+    },
+    {
+      "sid": 97,
+      "storyid": "d25ec012-9f9f-48e6-8274-e6ac4a4b59e4",
+      "storytitle": "Wrong Order",
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 98,
+      "storyid": "09a69527-2433-4e12-9943-9dcacbdf9b04",
+      "storytitle": "new restaurant",
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 99,
+      "storyid": "11cd400e-b2b8-4279-9e2e-925de49fee44",
+      "storytitle": "The Mexican Restaurant",
+      "scenario_type": "Normal"
+    }
+  ]
+}

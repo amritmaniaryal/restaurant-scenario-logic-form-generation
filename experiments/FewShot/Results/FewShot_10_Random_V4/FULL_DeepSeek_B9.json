@@ -1,0 +1,45 @@
+{
+  "id": "gen-1777147628-3pPSGPn7FIq3Pa0pKUF0",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"data\": [\n    {\n      \"sid\": 89,\n      \"logic_form\": [\n        \"restaurant(\\\"Genki Ya\\\"). customer(\\\"my son\\\"). customer(\\\"I\\\"). food(\\\"sushi\\\"). food(\\\"sashimi\\\"). story_step(0..3). st_hpd(enter(\\\"my son\\\", \\\"Genki Ya\\\"), true, 0). st_hpd(enter(\\\"I\\\", \\\"Genki Ya\\\"), true, 0). st_hpd(order(\\\"my son\\\", \\\"sushi\\\", w), true, 1). st_hpd(order(\\\"I\\\", \\\"sushi\\\", w), true, 1). st_hpd(eat(\\\"my son\\\", \\\"sashimi\\\"), true, 2). st_hpd(eat(\\\"I\\\", \\\"sashimi\\\"), true, 2). st_hpd(complain(\\\"I\\\", w), false, 3).\"\n      ]\n    },\n    {\n      \"sid\": 90,\n      \"logic_form\": [\n        \"restaurant(\\\"a restaurant on the Ohio river\\\"). customer(\\\"My family\\\"). customer(\\\"I\\\"). food(\\\"five course meal\\\"). food(\\\"bread\\\"). food(\\\"salmon and asparagus\\\"). story_step(0..4). st_hpd(enter(\\\"My family\\\", \\\"a restaurant on the Ohio river\\\"), true, 0). st_hpd(order(\\\"My family\\\", \\\"five course meal\\\", w), true, 1). st_hpd(eat(\\\"People\\\", \\\"bread\\\"), true, 2). st_hpd(eat(\\\"I\\\", \\\"salmon and asparagus\\\"), true, 3). st_obs(served(\\\"I\\\"), true, 4).\"\n      ]\n    },\n    {\n      \"sid\": 91,\n      \"logic_form\": [\n        \"restaurant(\\\"fast food restaurant\\\"). customer(\\\"Emily\\\"). food(\\\"fries\\\"). food(\\\"burger\\\"). waiter(\\\"the cashier\\\"). story_step(0..3). st_obs(in(\\\"Emily\\\", \\\"fast food restaurant\\\"), true, 0). st_hpd(order(\\\"Emily\\\", \\\"fries\\\", \\\"the cashier\\\"), true, 1). st_hpd(order(\\\"Emily\\\", \\\"burger\\\", \\\"the cashier\\\"), true, 1). st_hpd(put_down(w, \\\"burger\\\", t), true, 2). st_hpd(put_down(w, \\\"fries\\\", t), false, 2). st_hpd(complain(\\\"Emily\\\", \\\"the cashier\\\"), true, 3). st_next(2, 3).\"\n      ]\n    },\n    {\n      \"sid\": 93,\n      \"logic_form\": [\n        \"restaurant(\\\"the restaurant\\\"). restaurant(\\\"Burger King\\\"). customer(\\\"Me\\\"). customer(\\\"my mother\\\"). food(\\\"steak\\\"). waiter(w). story_step(0..5). st_hpd(enter(\\\"Me\\\", \\\"the restaurant\\\"), true, 0). st_hpd(enter(\\\"my mother\\\", \\\"the restaurant\\\"), true, 0). st_obs(sitting(\\\"Me\\\"), true, 1). st_obs(sitting(\\\"my mother\\\"), true, 1). st_hpd(order(\\\"Me\\\", \\\"steak\\\", w), true, 2). st_hpd(order(\\\"my mother\\\", f, w), false, 2). st_hpd(available(\\\"steak\\\", \\\"the restaurant\\\"), false, 3). st_hpd(leave(\\\"Me\\\"), true, 4). st_hpd(leave(\\\"my mother\\\"), true, 4). st_hpd(enter(\\\"Me\\\", \\\"Burger King\\\"), true, 5). st_hpd(enter(\\\"my mother\\\", \\\"Burger King\\\"), true, 5).\"\n      ]\n    },\n    {\n      \"sid\": 94,\n      \"logic_form\": [\n        \"restaurant(\\\"new sushi place\\\"). customer(\\\"The couple\\\"). story_step(0..3). st_hpd(enter(\\\"The couple\\\", \\\"new sushi place\\\"), true, 0). st_hpd(order(\\\"The couple\\\", f, w), true, 1). st_hpd(eat(\\\"The couple\\\", f), true, 2). st_obs(served(\\\"The couple\\\"), true, 3).\"\n      ]\n    },\n    {\n      \"sid\": 95,\n      \"logic_form\": [\n        \"restaurant(\\\"a restaurant\\\"). customer(\\\"a homeless man\\\"). person(\\\"Austin\\\"). waiter(\\\"the wait staff\\\"). food(\\\"some spare food\\\"). food(\\\"full meal\\\"). story_step(0..4). st_hpd(enter(\\\"a homeless man\\\", \\\"a restaurant\\\"), true, 0). st_hpd(request(\\\"a homeless man\\\", \\\"some spare food\\\", \\\"Austin\\\"), true, 1). st_hpd(lead_to(\\\"Austin\\\", \\\"a homeless man\\\", t), true, 2). st_obs(sitting(\\\"a homeless man\\\"), true, 3). st_hpd(put_down(\\\"the wait staff\\\", \\\"full meal\\\", t), true, 4).\"\n      ]\n    },\n    {\n      \"sid\": 96,\n      \"logic_form\": [\n        \"restaurant(\\\"fast food restaurant\\\"). customer(\\\"Dina\\\"). customer(\\\"her friends\\\"). customer(they). member(\\\"Dina\\\", they). member(\\\"a friend\\\", they). food(\\\"order of fries\\\"). story_step(0..4). st_obs(in(\\\"Dina\\\", \\\"fast food restaurant\\\"), true, 0). st_obs(in(\\\"her friends\\\", \\\"fast food restaurant\\\"), true, 0). st_hpd(order(they, \\\"order of fries\\\", w), true, 1). st_hpd(pay(\\\"Dina\\\", b), true, 2). st_hpd(pay(\\\"a friend\\\", b), true, 2). st_hpd(eat(\\\"Dina\\\", \\\"order of fries\\\"), true, 3). st_hpd(eat(\\\"a friend\\\", \\\"order of fries\\\"), true, 3).\"\n      ]\n    },\n    {\n      \"sid\": 97,\n      \"logic_form\": [\n        \"restaurant(\\\"a restaurant\\\"). customer(\\\"Tim\\\"). waiter(\\\"the waiter\\\"). story_step(0..3). st_obs(in(\\\"Tim\\\", \\\"a restaurant\\\"), true, 0). st_hpd(order(\\\"Tim\\\", f, \\\"the waiter\\\"), true, 1). st_hpd(put_down(\\\"the waiter\\\", f2, t), true, 2). st_hpd(complain(\\\"Tim\\\", \\\"the waiter\\\"), true, 3). st_next(2, 3).\"\n      ]\n    },\n    {\n      \"sid\": 98,\n      \"logic_form\": [\n        \"restaurant(\\\"new place\\\"). customer(\\\"Joe\\\"). story_step(0..4). st_obs(hungry(\\\"Joe\\\"), true, 0). st_hpd(enter(\\\"Joe\\\", \\\"new place\\\"), true, 1). st_hpd(order(\\\"Joe\\\", \\\"a meal\\\", w), true, 2). st_hpd(eat(\\\"Joe\\\", \\\"a meal\\\"), true, 3). st_obs(hungry(\\\"Joe\\\"), false, 4).\"\n      ]\n    },\n    {\n      \"sid\": 99,\n      \"logic_form\": [\n        \"restaurant(\\\"new restaurant\\\"). customer(\\\"The family\\\"). food(\\\"Mexican\\\"). food(\\\"tacos\\\"). food(\\\"chicken tacos\\\"). story_step(0..4). st_hpd(enter(\\\"The family\\\", \\\"new restaurant\\\"), true, 0). st_hpd(order(\\\"The family\\\", \\\"tacos\\\", w), true, 1). st_hpd(eat(\\\"The family\\\", \\\"tacos\\\"), true, 2). st_hpd(eat(\\\"The family\\\", \\\"chicken tacos\\\"), true, 3). st_obs(served(\\\"The family\\\"), true, 4).\"\n      ]\n    }\n  ]\n}",
+        "refusal": null,
+        "role": "assistant",
+        "reasoning": null
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1777147628,
+  "model": "deepseek/deepseek-chat-v3.1",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 1802,
+    "prompt_tokens": 4392,
+    "total_tokens": 6194,
+    "completion_tokens_details": {
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.0030295,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.0030295,
+      "upstream_inference_prompt_cost": 0.0013176,
+      "upstream_inference_completions_cost": 0.0017119
+    }
+  },
+  "provider": "AtlasCloud"
+}

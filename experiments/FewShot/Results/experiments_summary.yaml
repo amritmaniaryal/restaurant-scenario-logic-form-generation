@@ -1,0 +1,452 @@
+FewShot_ChatGPT_4o_20260207T203508:
+  run_id: FewShot_ChatGPT_4o_20260207T203508
+  experiment_id: FewShot_10_Random_V3
+  parent_folder: FewShot
+  model_name: ChatGPT_4o
+  model_id: openai/chatgpt-4o-latest
+  start_time_utc: '2026-02-07T20:33:54.658635Z'
+  end_time_utc: '2026-02-07T20:35:08.776403Z'
+  duration_seconds: 74.117768
+  num_targets: 90
+  num_batches: 9
+  errors: 0
+  missing_sids_count: 0
+  result_file: E:\Amrit\MiamiUni\CourseWork\3rdSem\Research\PROJECT\experiments\FewShot\Results\FewShot_10_Random_V3\ChatGPT_4o.json
+FewShot_FewShot_10_Random_V3_20260207T203508:
+  run_id: FewShot_FewShot_10_Random_V3_20260207T203508
+  experiment_id: FewShot_10_Random_V3
+  start_time_utc: '2026-02-07T20:33:54.658635Z'
+  end_time_utc: '2026-02-07T20:35:08.788624Z'
+  duration_seconds: 74.130943
+  models:
+  - model_name: ChatGPT_4o
+    model_id: openai/chatgpt-4o-latest
+    duration_seconds: 74.117768
+    errors: 0
+    missing_sids_count: 0
+FewShot_Gemini_20260207T211604:
+  run_id: FewShot_Gemini_20260207T211604
+  experiment_id: FewShot_10_Random_V3
+  parent_folder: FewShot
+  model_name: Gemini
+  model_id: google/gemini-2.5-pro
+  start_time_utc: '2026-02-07T20:38:28.266850Z'
+  end_time_utc: '2026-02-07T21:16:04.832882Z'
+  duration_seconds: 2256.566032
+  num_targets: 90
+  num_batches: 9
+  errors: 3
+  missing_sids_count: 78
+  result_file: E:\Amrit\MiamiUni\CourseWork\3rdSem\Research\PROJECT\experiments\FewShot\Results\FewShot_10_Random_V3\Gemini.json
+FewShot_FewShot_10_Random_V3_20260207T211604:
+  run_id: FewShot_FewShot_10_Random_V3_20260207T211604
+  experiment_id: FewShot_10_Random_V3
+  start_time_utc: '2026-02-07T20:38:28.266850Z'
+  end_time_utc: '2026-02-07T21:16:04.852464Z'
+  duration_seconds: 2256.585614
+  models:
+  - model_name: Gemini
+    model_id: google/gemini-2.5-pro
+    duration_seconds: 2256.566032
+    errors: 3
+    missing_sids_count: 78
+FewShot_ChatGPT_4o_20260424T210138:
+  run_id: FewShot_ChatGPT_4o_20260424T210138
+  experiment_id: FewShot_10_Random_V1
+  parent_folder: FewShot
+  model_name: ChatGPT_4o
+  model_id: openai/chatgpt-4o-latest
+  start_time_utc: '2026-04-24T21:01:27.871543+00:00'
+  end_time_utc: '2026-04-24T21:01:38.481817+00:00'
+  duration_seconds: 10.610293
+  num_targets: 90
+  num_batches: 9
+  errors: 18
+  missing_sids_count: 90
+  result_file: /Users/maniamrit/Miami/thesis-work/experiments/FewShot/Results/FewShot_10_Random_V1/ChatGPT_4o.json
+FewShot_Gemini_flash_3.0_20260424T210258:
+  run_id: FewShot_Gemini_flash_3.0_20260424T210258
+  experiment_id: FewShot_10_Random_V1
+  parent_folder: FewShot
+  model_name: Gemini_flash_3.0
+  model_id: google/gemini-3-flash-preview
+  start_time_utc: '2026-04-24T21:01:38.491706+00:00'
+  end_time_utc: '2026-04-24T21:02:58.497087+00:00'
+  duration_seconds: 80.005417
+  num_targets: 90
+  num_batches: 9
+  errors: 0
+  missing_sids_count: 0
+  result_file: /Users/maniamrit/Miami/thesis-work/experiments/FewShot/Results/FewShot_10_Random_V1/Gemini_flash_3.0.json
+FewShot_FewShot_10_Random_V1_20260424T210258:
+  run_id: FewShot_FewShot_10_Random_V1_20260424T210258
+  experiment_id: FewShot_10_Random_V1
+  start_time_utc: '2026-04-24T21:01:27.870617+00:00'
+  end_time_utc: '2026-04-24T21:02:58.511277+00:00'
+  duration_seconds: 90.640691
+  models:
+  - model_name: ChatGPT_4o
+    model_id: openai/chatgpt-4o-latest
+    duration_seconds: 10.610293
+    errors: 18
+    missing_sids_count: 90
+  - model_name: Gemini_flash_3.0
+    model_id: google/gemini-3-flash-preview
+    duration_seconds: 80.005417
+    errors: 0
+    missing_sids_count: 0
+FewShot_ChatGPT_4o_20260424T210652:
+  run_id: FewShot_ChatGPT_4o_20260424T210652
+  experiment_id: FewShot_10_Random_V1
+  parent_folder: FewShot
+  model_name: ChatGPT_4o
+  model_id: openai/chatgpt-4o-2024-11-20
+  start_time_utc: '2026-04-24T21:06:42.078347+00:00'
+  end_time_utc: '2026-04-24T21:06:52.168912+00:00'
+  duration_seconds: 10.090581
+  num_targets: 90
+  num_batches: 9
+  errors: 18
+  missing_sids_count: 90
+  result_file: /Users/maniamrit/Miami/thesis-work/experiments/FewShot/Results/FewShot_10_Random_V1/ChatGPT_4o.json
+FewShot_FewShot_10_Random_V1_20260424T210652:
+  run_id: FewShot_FewShot_10_Random_V1_20260424T210652
+  experiment_id: FewShot_10_Random_V1
+  start_time_utc: '2026-04-24T21:06:42.077553+00:00'
+  end_time_utc: '2026-04-24T21:06:52.181881+00:00'
+  duration_seconds: 10.104355
+  models:
+  - model_name: ChatGPT_4o
+    model_id: openai/chatgpt-4o-2024-11-20
+    duration_seconds: 10.090581
+    errors: 18
+    missing_sids_count: 90
+FewShot_ChatGPT_4o_20260424T211153:
+  run_id: FewShot_ChatGPT_4o_20260424T211153
+  experiment_id: FewShot_10_Random_V1
+  parent_folder: FewShot
+  model_name: ChatGPT_4o
+  model_id: openai/gpt-4o-2024-08-06
+  start_time_utc: '2026-04-24T21:09:39.908348+00:00'
+  end_time_utc: '2026-04-24T21:11:53.189873+00:00'
+  duration_seconds: 133.281556
+  num_targets: 90
+  num_batches: 9
+  errors: 0
+  missing_sids_count: 0
+  result_file: /Users/maniamrit/Miami/thesis-work/experiments/FewShot/Results/FewShot_10_Random_V1/ChatGPT_4o.json
+FewShot_FewShot_10_Random_V1_20260424T211153:
+  run_id: FewShot_FewShot_10_Random_V1_20260424T211153
+  experiment_id: FewShot_10_Random_V1
+  start_time_utc: '2026-04-24T21:09:39.904765+00:00'
+  end_time_utc: '2026-04-24T21:11:53.213101+00:00'
+  duration_seconds: 133.308374
+  models:
+  - model_name: ChatGPT_4o
+    model_id: openai/gpt-4o-2024-08-06
+    duration_seconds: 133.281556
+    errors: 0
+    missing_sids_count: 0
+FewShot_Gemini_flash_2.5_20260425T185420:
+  run_id: FewShot_Gemini_flash_2.5_20260425T185420
+  experiment_id: FewShot_10_Random_V1
+  parent_folder: FewShot
+  model_name: Gemini_flash_2.5
+  model_id: google/gemini-2.5-flash
+  start_time_utc: '2026-04-25T18:53:02.780564+00:00'
+  end_time_utc: '2026-04-25T18:54:20.757698+00:00'
+  duration_seconds: 77.977179
+  num_targets: 90
+  num_batches: 9
+  errors: 0
+  missing_sids_count: 0
+  result_file: /Users/maniamrit/Miami/thesis-work/experiments/FewShot/Results/FewShot_10_Random_V1/Gemini_flash_2.5.json
+FewShot_FewShot_10_Random_V1_20260425T185420:
+  run_id: FewShot_FewShot_10_Random_V1_20260425T185420
+  experiment_id: FewShot_10_Random_V1
+  start_time_utc: '2026-04-25T18:53:02.779381+00:00'
+  end_time_utc: '2026-04-25T18:54:20.776688+00:00'
+  duration_seconds: 77.997322
+  models:
+  - model_name: Gemini_flash_2.5
+    model_id: google/gemini-2.5-flash
+    duration_seconds: 77.977179
+    errors: 0
+    missing_sids_count: 0
+FewShot_DeepSeek_20260425T200804:
+  run_id: FewShot_DeepSeek_20260425T200804
+  experiment_id: FewShot_10_Random_V4
+  parent_folder: FewShot
+  model_name: DeepSeek
+  model_id: deepseek/deepseek-chat-v3.1
+  start_time_utc: '2026-04-25T19:39:17.333936+00:00'
+  end_time_utc: '2026-04-25T20:08:04.895957+00:00'
+  duration_seconds: 1727.562082
+  num_targets: 90
+  num_batches: 9
+  errors: 0
+  missing_sids_count: 0
+  result_file: /Users/maniamrit/Miami/thesis-work/experiments/FewShot/Results/FewShot_10_Random_V4/DeepSeek.json
+FewShot_FewShot_10_Random_V4_20260425T200804:
+  run_id: FewShot_FewShot_10_Random_V4_20260425T200804
+  experiment_id: FewShot_10_Random_V4
+  start_time_utc: '2026-04-25T19:39:17.332013+00:00'
+  end_time_utc: '2026-04-25T20:08:04.921591+00:00'
+  duration_seconds: 1727.589607
+  models:
+  - model_name: DeepSeek
+    model_id: deepseek/deepseek-chat-v3.1
+    duration_seconds: 1727.562082
+    errors: 0
+    missing_sids_count: 0
+FewShot_DeepSeek_20260427T171202:
+  run_id: FewShot_DeepSeek_20260427T171202
+  experiment_id: test_experiment
+  parent_folder: FewShot
+  model_name: DeepSeek
+  model_id: deepseek/deepseek-chat-v3.1
+  start_time_utc: '2026-04-27T17:11:50.983288+00:00'
+  end_time_utc: '2026-04-27T17:12:02.710376+00:00'
+  duration_seconds: 11.727126
+  num_targets: 6
+  num_batches: 1
+  errors: 0
+  missing_sids_count: 0
+  result_file: /Users/maniamrit/Miami/thesis-work/experiments/FewShot/Results/test_experiment/DeepSeek.json
+FewShot_test_experiment_20260427T171202:
+  run_id: FewShot_test_experiment_20260427T171202
+  experiment_id: test_experiment
+  start_time_utc: '2026-04-27T17:11:50.980967+00:00'
+  end_time_utc: '2026-04-27T17:12:02.732780+00:00'
+  duration_seconds: 11.751827
+  models:
+  - model_name: DeepSeek
+    model_id: deepseek/deepseek-chat-v3.1
+    duration_seconds: 11.727126
+    errors: 0
+    missing_sids_count: 0
+FewShot_ChatGPT_20260504T011711:
+  run_id: FewShot_ChatGPT_20260504T011711
+  experiment_id: ZeroShot_V1
+  parent_folder: FewShot
+  model_name: ChatGPT
+  model_id: openai/gpt-5
+  start_time_utc: '2026-05-04T00:11:21.191782+00:00'
+  end_time_utc: '2026-05-04T01:17:11.123753+00:00'
+  duration_seconds: 3949.931989
+  num_targets: 100
+  num_batches: 10
+  errors: 20
+  missing_sids_count: 100
+  result_file: /Users/maniamrit/Miami/thesis-work/experiments/FewShot/Results/ZeroShot_V1/ChatGPT.json
+FewShot_Gemini_20260504T012401:
+  run_id: FewShot_Gemini_20260504T012401
+  experiment_id: ZeroShot_V1
+  parent_folder: FewShot
+  model_name: Gemini
+  model_id: google/gemini-2.5-pro
+  start_time_utc: '2026-05-04T01:17:11.146528+00:00'
+  end_time_utc: '2026-05-04T01:24:01.823728+00:00'
+  duration_seconds: 410.677238
+  num_targets: 100
+  num_batches: 10
+  errors: 0
+  missing_sids_count: 86
+  result_file: /Users/maniamrit/Miami/thesis-work/experiments/FewShot/Results/ZeroShot_V1/Gemini.json
+FewShot_DeepSeek_20260504T013834:
+  run_id: FewShot_DeepSeek_20260504T013834
+  experiment_id: ZeroShot_V1
+  parent_folder: FewShot
+  model_name: DeepSeek
+  model_id: deepseek/deepseek-chat-v3.1
+  start_time_utc: '2026-05-04T01:24:01.847449+00:00'
+  end_time_utc: '2026-05-04T01:38:34.301589+00:00'
+  duration_seconds: 872.454179
+  num_targets: 100
+  num_batches: 10
+  errors: 0
+  missing_sids_count: 0
+  result_file: /Users/maniamrit/Miami/thesis-work/experiments/FewShot/Results/ZeroShot_V1/DeepSeek.json
+FewShot_ZeroShot_V1_20260504T013834:
+  run_id: FewShot_ZeroShot_V1_20260504T013834
+  experiment_id: ZeroShot_V1
+  start_time_utc: '2026-05-04T00:11:21.190972+00:00'
+  end_time_utc: '2026-05-04T01:38:34.329559+00:00'
+  duration_seconds: 5233.138607
+  models:
+  - model_name: ChatGPT
+    model_id: openai/gpt-5
+    duration_seconds: 3949.931989
+    errors: 20
+    missing_sids_count: 100
+  - model_name: Gemini
+    model_id: google/gemini-2.5-pro
+    duration_seconds: 410.677238
+    errors: 0
+    missing_sids_count: 86
+  - model_name: DeepSeek
+    model_id: deepseek/deepseek-chat-v3.1
+    duration_seconds: 872.454179
+    errors: 0
+    missing_sids_count: 0
+FewShot_Gemini_20260504T044830:
+  run_id: FewShot_Gemini_20260504T044830
+  experiment_id: ZeroShot_V1
+  parent_folder: FewShot
+  model_name: Gemini
+  model_id: google/gemini-2.5-pro
+  start_time_utc: '2026-05-04T04:35:05.179411+00:00'
+  end_time_utc: '2026-05-04T04:48:30.259825+00:00'
+  duration_seconds: 805.080449
+  num_targets: 100
+  num_batches: 10
+  errors: 0
+  missing_sids_count: 0
+  result_file: /Users/maniamrit/Miami/thesis-work/experiments/FewShot/Results/ZeroShot_V1/Gemini.json
+FewShot_ZeroShot_V1_20260504T044830:
+  run_id: FewShot_ZeroShot_V1_20260504T044830
+  experiment_id: ZeroShot_V1
+  start_time_utc: '2026-05-04T04:35:05.178018+00:00'
+  end_time_utc: '2026-05-04T04:48:30.296480+00:00'
+  duration_seconds: 805.118482
+  models:
+  - model_name: Gemini
+    model_id: google/gemini-2.5-pro
+    duration_seconds: 805.080449
+    errors: 0
+    missing_sids_count: 0
+FewShot_ChatGPT_20260504T164304:
+  run_id: FewShot_ChatGPT_20260504T164304
+  experiment_id: ZeroShot_V1
+  parent_folder: FewShot
+  model_name: ChatGPT
+  model_id: openai/gpt-5
+  start_time_utc: '2026-05-04T16:23:08.930577+00:00'
+  end_time_utc: '2026-05-04T16:43:04.559854+00:00'
+  duration_seconds: 1195.629306
+  num_targets: 100
+  num_batches: 10
+  errors: 0
+  missing_sids_count: 0
+  result_file: /Users/maniamrit/Miami/thesis-work/experiments/FewShot/Results/ZeroShot_V1/ChatGPT.json
+FewShot_ZeroShot_V1_20260504T164304:
+  run_id: FewShot_ZeroShot_V1_20260504T164304
+  experiment_id: ZeroShot_V1
+  start_time_utc: '2026-05-04T16:23:08.929484+00:00'
+  end_time_utc: '2026-05-04T16:43:04.594205+00:00'
+  duration_seconds: 1195.66474
+  models:
+  - model_name: ChatGPT
+    model_id: openai/gpt-5
+    duration_seconds: 1195.629306
+    errors: 0
+    missing_sids_count: 0
+FewShot_ChatGPT_20260504T182457:
+  run_id: FewShot_ChatGPT_20260504T182457
+  experiment_id: FewShot_10_Random_V2
+  parent_folder: FewShot
+  model_name: ChatGPT
+  model_id: openai/gpt-5
+  start_time_utc: '2026-05-04T18:02:21.824658+00:00'
+  end_time_utc: '2026-05-04T18:24:57.761442+00:00'
+  duration_seconds: 1355.936821
+  num_targets: 90
+  num_batches: 9
+  errors: 0
+  missing_sids_count: 0
+  result_file: /Users/maniamrit/Miami/thesis-work/experiments/FewShot/Results/FewShot_10_Random_V2/ChatGPT.json
+FewShot_Gemini_20260504T184208:
+  run_id: FewShot_Gemini_20260504T184208
+  experiment_id: FewShot_10_Random_V2
+  parent_folder: FewShot
+  model_name: Gemini
+  model_id: google/gemini-2.5-pro
+  start_time_utc: '2026-05-04T18:24:57.794865+00:00'
+  end_time_utc: '2026-05-04T18:42:08.447540+00:00'
+  duration_seconds: 1030.652699
+  num_targets: 90
+  num_batches: 9
+  errors: 2
+  missing_sids_count: 0
+  result_file: /Users/maniamrit/Miami/thesis-work/experiments/FewShot/Results/FewShot_10_Random_V2/Gemini.json
+FewShot_DeepSeek_20260504T190756:
+  run_id: FewShot_DeepSeek_20260504T190756
+  experiment_id: FewShot_10_Random_V2
+  parent_folder: FewShot
+  model_name: DeepSeek
+  model_id: deepseek/deepseek-chat-v3.1
+  start_time_utc: '2026-05-04T18:42:08.478158+00:00'
+  end_time_utc: '2026-05-04T19:07:56.245965+00:00'
+  duration_seconds: 1547.767844
+  num_targets: 90
+  num_batches: 9
+  errors: 0
+  missing_sids_count: 0
+  result_file: /Users/maniamrit/Miami/thesis-work/experiments/FewShot/Results/FewShot_10_Random_V2/DeepSeek.json
+FewShot_FewShot_10_Random_V2_20260504T190756:
+  run_id: FewShot_FewShot_10_Random_V2_20260504T190756
+  experiment_id: FewShot_10_Random_V2
+  start_time_utc: '2026-05-04T18:02:21.822722+00:00'
+  end_time_utc: '2026-05-04T19:07:56.282867+00:00'
+  duration_seconds: 3934.460163
+  models:
+  - model_name: ChatGPT
+    model_id: openai/gpt-5
+    duration_seconds: 1355.936821
+    errors: 0
+    missing_sids_count: 0
+  - model_name: Gemini
+    model_id: google/gemini-2.5-pro
+    duration_seconds: 1030.652699
+    errors: 2
+    missing_sids_count: 0
+  - model_name: DeepSeek
+    model_id: deepseek/deepseek-chat-v3.1
+    duration_seconds: 1547.767844
+    errors: 0
+    missing_sids_count: 0
+FewShot_ChatGPT_20260506T204112:
+  run_id: FewShot_ChatGPT_20260506T204112
+  experiment_id: FewShot_10_Random_V1
+  parent_folder: FewShot
+  model_name: ChatGPT
+  model_id: openai/gpt-5
+  start_time_utc: '2026-05-06T20:25:22.036975+00:00'
+  end_time_utc: '2026-05-06T20:41:12.828296+00:00'
+  duration_seconds: 950.791775
+  num_targets: 90
+  num_batches: 9
+  errors: 0
+  missing_sids_count: 0
+  result_file: /Users/maniamrit/Miami/thesis-work/experiments/FewShot/Results/FewShot_10_Random_V1/ChatGPT.json
+FewShot_Gemini_20260506T205213:
+  run_id: FewShot_Gemini_20260506T205213
+  experiment_id: FewShot_10_Random_V1
+  parent_folder: FewShot
+  model_name: Gemini
+  model_id: google/gemini-2.5-pro
+  start_time_utc: '2026-05-06T20:41:12.863814+00:00'
+  end_time_utc: '2026-05-06T20:52:13.069053+00:00'
+  duration_seconds: 660.205302
+  num_targets: 90
+  num_batches: 9
+  errors: 0
+  missing_sids_count: 0
+  result_file: /Users/maniamrit/Miami/thesis-work/experiments/FewShot/Results/FewShot_10_Random_V1/Gemini.json
+FewShot_FewShot_10_Random_V1_20260506T205213:
+  run_id: FewShot_FewShot_10_Random_V1_20260506T205213
+  experiment_id: FewShot_10_Random_V1
+  start_time_utc: '2026-05-06T20:25:22.035900+00:00'
+  end_time_utc: '2026-05-06T20:52:13.106516+00:00'
+  duration_seconds: 1611.070636
+  models:
+  - model_name: ChatGPT
+    model_id: openai/gpt-5
+    duration_seconds: 950.791775
+    errors: 0
+    missing_sids_count: 0
+  - model_name: Gemini
+    model_id: google/gemini-2.5-pro
+    duration_seconds: 660.205302
+    errors: 0
+    missing_sids_count: 0

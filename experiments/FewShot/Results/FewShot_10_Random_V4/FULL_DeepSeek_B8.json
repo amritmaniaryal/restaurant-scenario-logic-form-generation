@@ -1,0 +1,45 @@
+{
+  "id": "gen-1777147576-aleypL9OpEPceWBihU2w",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"data\": [\n    {\n      \"sid\": 79,\n      \"logic_form\": [\"restaurant(\\\"a new steakhouse\\\"). customer(\\\"the couple\\\"). food(\\\"huge cuts of meat\\\"). food(\\\"steaks\\\"). story_step(0..4). st_hpd(enter(\\\"the couple\\\", \\\"a new steakhouse\\\"), true, 0). st_hpd(order(\\\"the couple\\\", \\\"huge cuts of meat\\\", w), true, 1). st_hpd(eat(\\\"the couple\\\", \\\"steaks\\\"), false, 2). st_hpd(put_down(w, b, t), true, 3). st_obs(paid(b), false, 4).\"]\n    },\n    {\n      \"sid\": 80,\n      \"logic_form\": [\"restaurant(\\\"Genki Ya\\\"). customer(\\\"my son\\\"). customer(\\\"I\\\"). customer(we). member(\\\"my son\\\", we). member(\\\"I\\\", we). beverage(\\\"Japanese beers\\\"). food(\\\"fish roe\\\"). food(\\\"two combo sashimi-sushi dishes\\\"). story_step(0..3). st_hpd(enter(we, \\\"Genki Ya\\\"), true, 0). st_hpd(order(we, \\\"Japanese beers\\\", w), true, 1). st_hpd(order(we, \\\"fish roe\\\", w), true, 1). st_hpd(order(we, \\\"two combo sashimi-sushi dishes\\\", w), true, 1). st_hpd(eat(we, \\\"fish roe\\\"), true, 2). st_hpd(eat(we, \\\"two combo sashimi-sushi dishes\\\"), true, 2). st_hpd(leave(we), true, 3).\"]\n    },\n    {\n      \"sid\": 81,\n      \"logic_form\": [\"restaurant(\\\"a new Italian restaurant\\\"). customer(\\\"Kathy\\\"). customer(\\\"her friend\\\"). customer(they). member(\\\"Kathy\\\", they). member(\\\"her friend\\\", they). story_step(0..4). st_hpd(enter(they, \\\"a new Italian restaurant\\\"), true, 0). st_hpd(order(they, f, w), true, 1). st_hpd(eat(they, f), true, 2). st_hpd(leave(they), true, 3).\"]\n    },\n    {\n      \"sid\": 82,\n      \"logic_form\": [\"restaurant(\\\"new restaurant\\\"). customer(\\\"Elmer\\\"). customer(\\\"Emma\\\"). customer(\\\"the couple\\\"). member(\\\"Elmer\\\", \\\"the couple\\\"). member(\\\"Emma\\\", \\\"the couple\\\"). food(\\\"burgers\\\"). beverage(\\\"milkshakes\\\"). food(\\\"fries\\\"). story_step(0..4). st_hpd(enter(\\\"the couple\\\", \\\"new restaurant\\\"), true, 0). st_hpd(order(\\\"the couple\\\", \\\"burgers\\\", w), true, 1). st_hpd(order(\\\"the couple\\\", \\\"milkshakes\\\", w), true, 1). st_hpd(order(\\\"Elmer\\\", \\\"fries\\\", w), true, 2). st_hpd(eat(\\\"the couple\\\", \\\"burgers\\\"), true, 3). st_hpd(drink(\\\"the couple\\\", \\\"milkshakes\\\"), true, 3). st_hpd(eat(\\\"the couple\\\", \\\"fries\\\"), true, 3). st_hpd(leave(\\\"the couple\\\"), true, 4).\"]\n    },\n    {\n      \"sid\": 83,\n      \"logic_form\": [\"restaurant(\\\"the diner\\\"). customer(\\\"the couple\\\"). waiter(\\\"the waitress\\\"). story_step(0..4). st_hpd(enter(\\\"the couple\\\", \\\"the diner\\\"), true, 0). st_obs(sitting(\\\"the couple\\\"), true, 1). st_hpd(greet(\\\"the waitress\\\", \\\"the couple\\\"), false, 2). st_hpd(stand_up(\\\"the couple\\\"), true, 3). st_hpd(greet(\\\"the waitress\\\", \\\"the couple\\\"), true, 4).\"]\n    },\n    {\n      \"sid\": 84,\n      \"logic_form\": [\"restaurant(\\\"the diner\\\"). customer(\\\"Donna\\\"). food(\\\"cheeseburger\\\"). food(\\\"onion rings\\\"). story_step(0..4). st_hpd(enter(\\\"Donna\\\", \\\"the diner\\\"), true, 0). st_hpd(order(\\\"Donna\\\", \\\"cheeseburger\\\", w), true, 1). st_hpd(order(\\\"Donna\\\", \\\"onion rings\\\", w), true, 1). st_hpd(eat(\\\"Donna\\\", \\\"cheeseburger\\\"), true, 2). st_hpd(eat(\\\"Donna\\\", \\\"onion rings\\\"), true, 2). st_hpd(leave(\\\"Donna\\\"), true, 3).\"]\n    },\n    {\n      \"sid\": 85,\n      \"logic_form\": [\"restaurant(\\\"a restaurant\\\"). customer(\\\"I\\\"). food(\\\"pizza\\\"). story_step(0..4). st_hpd(enter(\\\"I\\\", \\\"a restaurant\\\"), true, 0). st_hpd(order(\\\"I\\\", \\\"pizza\\\", w), true, 1). st_hpd(put_down(w, \\\"pizza\\\", t), true, 2). st_hpd(complain(\\\"I\\\", w), true, 3). st_next(2, 3). st_hpd(leave(\\\"I\\\"), true, 4).\"]\n    },\n    {\n      \"sid\": 86,\n      \"logic_form\": [\"restaurant(\\\"a diner\\\"). customer(\\\"Samuel\\\"). customer(\\\"John\\\"). food(\\\"hamburger without onions\\\"). food(\\\"hotdog\\\"). waiter(\\\"the waiter\\\"). story_step(0..4). st_hpd(enter(\\\"Samuel\\\", \\\"a diner\\\"), true, 0). st_hpd(order(\\\"Samuel\\\", \\\"hamburger without onions\\\", \\\"the waiter\\\"), true, 1). st_hpd(put_down(\\\"the waiter\\\", \\\"hotdog\\\", t), true, 2). st_hpd(complain(\\\"Samuel\\\", \\\"the waiter\\\"), true, 3). st_next(2, 3). st_hpd(put_down(\\\"the waiter\\\", \\\"hamburger without onions\\\", t), true, 4).\"]\n    },\n    {\n      \"sid\": 87,\n      \"logic_form\": [\"restaurant(\\\"the restaurant\\\"). customer(\\\"I\\\"). story_step(0..4). st_hpd(enter(\\\"I\\\", \\\"the restaurant\\\"), true, 0). st_hpd(order(\\\"I\\\", f, w), true, 1). st_hpd(put_down(w, f2, t), true, 2). st_hpd(complain(\\\"I\\\", w), true, 3). st_next(2, 3). st_hpd(leave(\\\"I\\\"), true, 4).\"]\n    },\n    {\n      \"sid\": 88,\n      \"logic_form\": [\"restaurant(\\\"little deli\\\"). customer(\\\"I\\\"). food(\\\"turkey sandwich\\\"). story_step(0..4). st_obs(hungry(\\\"I\\\"), true, 0). st_hpd(enter(\\\"I\\\", \\\"little deli\\\"), true, 1). st_hpd(order(\\\"I\\\", \\\"turkey sandwich\\\", w), true, 2). st_hpd(eat(\\\"I\\\", \\\"turkey sandwich\\\"), true, 3). st_hpd(leave(\\\"I\\\"), true, 4).\"]\n    }\n  ]\n}",
+        "refusal": null,
+        "role": "assistant",
+        "reasoning": null
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1777147576,
+  "model": "deepseek/deepseek-chat-v3.1",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 1711,
+    "prompt_tokens": 4376,
+    "total_tokens": 6087,
+    "completion_tokens_details": {
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00293825,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00293825,
+      "upstream_inference_prompt_cost": 0.0013128,
+      "upstream_inference_completions_cost": 0.00162545
+    }
+  },
+  "provider": "AtlasCloud"
+}

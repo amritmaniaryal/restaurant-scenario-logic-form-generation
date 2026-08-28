@@ -1,0 +1,46 @@
+{
+    "data": [
+        {
+            "sid": 5,
+            "text": "The waiter shows Jane to her table. Jane is seated at a table in the restaurant. The waiter asks for her order, and she orders fish. After eating, the waiter brings the bill to the table.",
+            "logic_form": [
+                "customer(\"Jane\"). food(\"fish\"). waiter(\"the waiter\"). restaurant(\"the restaurant\"). st_hpd(lead_to(\"the waiter\", \"Jane\", t), true, 0). st_obs(sitting(\"Jane\"), true, 1). st_hpd(order(\"Jane\", \"fish\", \"the waiter\"), true, 2). st_hpd(eat(\"Jane\", \"fish\"), true, 3). st_hpd(put_down(\"the waiter\", b, t), true, 4)."
+            ]
+        },
+        {
+            "sid": 6,
+            "text": "Molly is seated at her table when the waiter asks for her order. She orders a baked potato. The waiter brings out French fries.",
+            "logic_form": [
+                "customer(\"Molly\"). food(\"baked potato\"). food(\"French fries\"). waiter(\"the waiter\"). st_obs(sitting(\"Molly\"), true, 0). st_hpd(order(\"Molly\", \"baked potato\", \"the waiter\"), true, 1). st_hpd(put_down(\"the waiter\", \"French fries\", t), true, 2)."
+            ]
+        },
+        {
+            "sid": 7,
+            "text": "Larry is seated at his table in the restaurant. The waiter brings him a menu so he can decide what to order. After reviewing the menu, Larry decides he doesn't want anything at this restaurant.",
+            "logic_form": [
+                "customer(\"Larry\"). waiter(\"the waiter\"). restaurant(\"the restaurant\"). st_obs(sitting(\"Larry\"), true, 0). st_hpd(put_down(\"the waiter\", \"menu\", t), true, 1). st_hpd(read_menu(\"Larry\"), true, 2). st_hpd(order(\"Larry\"), false)."
+            ]
+        },
+        {
+            "sid": 8,
+            "text": "Derek ordered a vegetable soup. The waiter brought out the vegetable soup, but Derek was unsatisfied with the lack of vegetables in it. As an apology, the waiter decided not to charge Derek for the soup.",
+            "logic_form": [
+                "customer(\"Derek\"). food(\"vegetable soup\"). waiter(\"the waiter\"). st_hpd(order(\"Derek\", \"vegetable soup\", \"the waiter\"), true, 0). st_hpd(put_down(\"the waiter\", \"vegetable soup\", t), true, 1). st_hpd(cancel_bill(\"the waiter\"), true, 2)."
+            ]
+        },
+        {
+            "sid": 9,
+            "text": "Pete is seated at his table in the restaurant. He has ordered and received his chicken, but is unhappy with how undercooked the chicken is. He complains to the waiter, and asks for a better cooked dish.",
+            "logic_form": [
+                "customer(\"Pete\"). food(\"chicken\"). waiter(\"the waiter\"). restaurant(\"the restaurant\"). st_obs(sitting(\"Pete\"), true, 0). st_hpd(order(\"Pete\", \"chicken\", \"the waiter\"), true, 1). st_hpd(put_down(\"the waiter\", \"chicken\", t), true, 1). st_hpd(complain(\"Pete\", \"the waiter\"), true, 2). st_hpd(request(\"Pete\", \"better cooked dish\", \"the waiter\"), true, 3)."
+            ]
+        },
+        {
+            "sid": 10,
+            "text": "Jim is seated at his table in the restaurant. He orders an appetizer. After waiting for 20 minutes and not receiving his food, he decides to leave the restaurant.",
+            "logic_form": [
+                "customer(\"Jim\"). food(\"appetizer\"). restaurant(\"the restaurant\"). st_obs(sitting(\"Jim\"), true, 0). st_hpd(order(\"Jim\", \"appetizer\", w), true, 1). st_hpd(leave(\"Jim\"), true, 2)."
+            ]
+        }
+    ]
+}

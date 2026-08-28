@@ -1,0 +1,193 @@
+{
+  "metadata": {
+    "Model": "Gemini 2.5 Pro",
+    "Prompt Times": 2,
+    "date": "2025-09-28",
+    "Prompt": {
+      "1": "In the json file uploaded, there are 40 natural language stories in 'Story' part of json file. Could you give me their logic form which can be useful in ASP code. Give the output in a similar format, where, in place of N/A in 'Logic Form', you can write the ASP logic form of those stories. Ignore 'Type' field for your analysis.",
+      "2": "Yes I agree with you generating the remaining stories. Please do that and keep the same format as the shared data with you."
+    }
+  },
+  "data": [
+    {
+      "sid": 57,
+      "text": "Frank ordered a pasta dish described on the menu as 'mild'. When he tasted it, it was extremely spicy, much more than he could handle. He told the waiter that the food was too hot and he couldn't eat it.",
+      "logic_form": "N/A",
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 53,
+      "text": "The waiter brought food for a couple on a date. As he was setting down a glass of water, his hand slipped and he spilled the entire glass on one of the customers. The waiter apologized profusely and brought towels to help clean up.",
+      "logic_form": "N/A",
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 85,
+      "text": "Emily was at a food truck park. She walked up to the window of a taco truck, placed her order with the person inside, and paid. She waited off to the side until they called her name, then took her tacos to a nearby picnic table.",
+      "logic_form": "N/A",
+      "scenario_type": "Variation"
+    },
+    {
+      "sid": 82,
+      "text": "A woman with a reservation arrived at the restaurant. She gave her name to the host, who checked the reservation list and immediately led her to a prepared table.",
+      "logic_form": "N/A",
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 100,
+      "text": "After a satisfying dinner, the waiter asked a couple if they were interested in dessert. They looked at the dessert menu and ordered a slice of chocolate cake to share. The waiter brought the cake with two forks.",
+      "logic_form": "N/A",
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 89,
+      "text": "A woman entered a bakery cafe, chose a muffin from the display case, and ordered a latte. The cashier took her payment, and she waited at the end of the counter for the barista to make her drink. She took her food and drink and sat down.",
+      "logic_form": "N/A",
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 77,
+      "text": "Paul ordered the fish and chips. The menu said it came with tartar sauce. When the dish arrived, there was no sauce. He had to ask the waiter to bring him some.",
+      "logic_form": "N/A",
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 49,
+      "text": "Greg ordered the soup of the day. When he took his first spoonful, he found it to be completely cold. He flagged down the waiter and asked if the soup could be heated up.",
+      "logic_form": "N/A",
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 59,
+      "text": "Julie, who has a severe peanut allergy, ordered a dish and informed the waiter of her allergy. When the food arrived, she could see crushed peanuts sprinkled on top. She immediately sent it back, explaining the danger.",
+      "logic_form": "N/A",
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 97,
+      "text": "A diner's soup was served in a bowl that had a chip on the rim. He worried it was unhygienic and asked the waiter if he could have it served in a different bowl.",
+      "logic_form": "N/A",
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 61,
+      "text": "A customer finished his meal and gave the waiter his credit card to pay the bill. The waiter returned a minute later and informed him that his card had been declined. The customer had to use a different card.",
+      "logic_form": "N/A",
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 58,
+      "text": "A group of friends was celebrating a birthday. After their main course, the waiter brought out a small cake with a candle in it, and the restaurant staff sang 'Happy Birthday'. The cake was a surprise from one of the friends.",
+      "logic_form": "N/A",
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 94,
+      "text": "A child in a restaurant accidentally knocked over a full glass of milk, which spilled all over the table and floor. The parents apologized, and a waiter quickly came over with a mop and cloths to clean up the mess.",
+      "logic_form": "N/A",
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 99,
+      "text": "A man finished his coffee and wanted a refill. He tried to get the waiter's attention for several minutes, but the waiter was busy with other tables and did not see him. He eventually had to stand up and walk over to the service station to ask.",
+      "logic_form": "N/A",
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 48,
+      "text": "A group of friends went out for dinner. They ordered several appetizers and main courses to share. The waiter brought all the food out on large platters for the table. After eating, they asked to split the bill evenly among the four of them.",
+      "logic_form": "N/A",
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 50,
+      "text": "A family was seated at a table near a window. A few minutes into their meal, the restaurant's power went out, leaving them in the dark. The manager came around with flashlights and apologized for the inconvenience.",
+      "logic_form": "N/A",
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 88,
+      "text": "A restaurant had a policy of not seating incomplete parties. Two friends arrived for their reservation for four, but their other two friends were running late. The host told them they had to wait until the entire party was present to be seated.",
+      "logic_form": "N/A",
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 96,
+      "text": "At an omakase restaurant, the diners sat at a counter. There was no menu. The chef decided what to serve, preparing and presenting one piece of sushi at a time directly to the customer, explaining the type of fish.",
+      "logic_form": "N/A",
+      "scenario_type": "Variation"
+    },
+    {
+      "sid": 72,
+      "text": "A customer ordered a well-done steak. When the steak arrived and he cut into it, the inside was still very pink and bloody. He had to send it back to the kitchen to be cooked for longer.",
+      "logic_form": "N/A",
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 71,
+      "text": "A young woman went to a sushi restaurant. She sat at the sushi bar and ordered several pieces of nigiri directly from the sushi chef. The chef prepared her order in front of her and placed it on the counter for her to eat.",
+      "logic_form": "N/A",
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 70,
+      "text": "A restaurant was very busy and loud. An elderly couple was having trouble hearing each other speak. They asked the host if it would be possible to move to a quieter table in the corner, and the host was able to accommodate them.",
+      "logic_form": "N/A",
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 87,
+      "text": "Mike was seated at a table. He ordered an appetizer first. After he finished the appetizer, the waiter cleared the plate and then took his order for the main course. The main course was served after a short wait.",
+      "logic_form": "N/A",
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 45,
+      "text": "Chris met his client for a business lunch. They were seated promptly. They both ordered the lunch special. They discussed business while they ate. Chris paid for the meal with the company credit card.",
+      "logic_form": "N/A",
+      "scenario_type": "Normal"
+    },
+    {
+      "sid": 83,
+      "text": "While eating, a customer suddenly felt unwell. He told his friend he needed to leave immediately. His friend stayed behind to pay for both meals while he rushed out of the restaurant.",
+      "logic_form": "N/A",
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 56,
+      "text": "Rebecca used a mobile app to order a sandwich for pickup. She drove to the restaurant, went to the designated takeout counter, gave her name, and received her food in a bag. She took the food home to eat.",
+      "logic_form": "N/A",
+      "scenario_type": "Variation"
+    },
+    {
+      "sid": 47,
+      "text": "It was a teppanyaki restaurant. The guests sat around a large flat grill. The chef came out and cooked their orders of steak and shrimp right in front of them, putting on a show with his cooking utensils.",
+      "logic_form": "N/A",
+      "scenario_type": "Variation"
+    },
+    {
+      "sid": 79,
+      "text": "The waiter brought a basket of bread to the table before the meal. When a customer took a piece, she realized it was stale and hard as a rock. She informed the waiter, who apologized and brought a fresh basket.",
+      "logic_form": "N/A",
+      "scenario_type": "Exception"
+    },
+    {
+      "sid": 60,
+      "text": "The restaurant offered a prix-fixe tasting menu. The diners did not choose individual dishes. The waiter simply brought out a sequence of five small courses chosen by the chef, explaining each one as it was served.",
+      "logic_form": "N/A",
+      "scenario_type": "Variation"
+    },
+    {
+      "sid": 64,
+      "text": "A group went to a dim sum restaurant. Carts with different small dishes were pushed around the dining room. The diners pointed to the dishes they wanted from the carts, and the server would place them on their table and mark a card.",
+      "logic_form": "N/A",
+      "scenario_type": "Variation"
+    },
+    {
+      "sid": 44,
+      "text": "After finishing their meal, Tom asked for the bill. The waiter brought it over. Tom reviewed the items and noticed he had been charged for a bottle of wine that they did not order. He called the waiter over to correct the mistake.",
+      "logic_form": "N/A",
+      "scenario_type": "Exception"
+    }
+  ]
+}

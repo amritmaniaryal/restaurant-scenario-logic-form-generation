@@ -1,0 +1,2742 @@
+{
+  "summary": {
+    "total_common": 90,
+    "exact_matches": 6,
+    "partial_matches": 84,
+    "predicted_only_count": 0,
+    "ground_truth_only_count": 10,
+    "accuracy": 0.06666666666666667
+  },
+  "exact_matches": [
+    {
+      "sid": 14,
+      "similarity": 1.0,
+      "story": "Samantha was in a five-star restaurant. Samantha started perusing the menu. She ordered the barbecued veal chop with Asian slaw and Thai fried rice.",
+      "predicted": "restaurant(\"five-star restaurant\"). customer(\"Samantha\"). food(\"barbecued veal chop with Asian slaw and Thai fried rice\"). st_obs(in(\"Samantha\", \"five-star restaurant\"), true, 0). st_hpd(read_menu(\"Samantha\"), true, 1). st_hpd(order(\"Samantha\", \"barbecued veal chop with Asian slaw and Thai fried rice\", w), true, 2).",
+      "ground_truth": "restaurant(\"a five-star restaurant\"). customer(\"Samantha\"). food(\"barbecued veal chop with Asian slaw and Thai fried rice\"). story_step(0..2). st_obs(in(\"Samantha\", \"a five-star restaurant\"), true, 0). st_hpd(read_menu(\"Samantha\"), true, 1). st_hpd(order(\"Samantha\", \"barbecued veal chop with Asian slaw and Thai fried rice\", w), true, 2).",
+      "matching_predicates": [
+        "food(\"barbecued veal chop with asian slaw and thai fried rice\")",
+        "person(\"samantha\")",
+        "restaurant(\"five-star restaurant\")",
+        "st_hpd(order(\"samantha\", \"barbecued veal chop with asian slaw and thai fried rice\", \"w\"), \"true\", 2)",
+        "st_hpd(read_menu(\"samantha\"), \"true\", 1)",
+        "st_obs(in(\"samantha\", \"five-star restaurant\"), \"true\", 0)"
+      ],
+      "predicted_only_predicates": [],
+      "ground_truth_only_predicates": [],
+      "pred_predicate_count": 6,
+      "gt_predicate_count": 6
+    },
+    {
+      "sid": 51,
+      "similarity": 1.0,
+      "story": "Steve and his son entered a pizzeria. The waiter took them to a table by the window. They ordered a large pepperoni pizza to share. After eating, Steve paid the bill.",
+      "predicted": "customer(\"Steve\"). customer(\"his son\"). customer(they). member(\"Steve\", they). member(\"his son\", they). restaurant(\"pizzeria\"). waiter(\"the waiter\"). food(\"large pepperoni pizza\"). st_hpd(enter(they, \"pizzeria\"), true, 0). st_hpd(lead_to(\"the waiter\", they, t), true, 1). st_hpd(order(they, \"large pepperoni pizza\", \"the waiter\"), true, 2). st_hpd(eat(they, \"large pepperoni pizza\"), true, 3). st_hpd(pay(\"Steve\", b), true, 4).",
+      "ground_truth": "restaurant(\"pizzeria\"). customer(they). person(\"Steve\"). person(\"his son\"). member(\"Steve\", they). member(\"his son\", they). food(\"large pepperoni pizza\"). waiter(\"the waiter\"). story_step(0..4). st_hpd(enter(they, \"pizzeria\"), true, 0). st_hpd(lead_to(\"the waiter\", they, t), true, 1). st_hpd(order(they, \"large pepperoni pizza\", \"the waiter\"), true, 2). st_hpd(eat(they, \"large pepperoni pizza\"), true, 3). st_hpd(pay(\"Steve\", b), true, 4).",
+      "matching_predicates": [
+        "food(\"large pepperoni pizza\")",
+        "member(\"his son\", \"they\")",
+        "member(\"steve\", \"they\")",
+        "person(\"his son\")",
+        "person(\"steve\")",
+        "person(\"they\")",
+        "restaurant(\"pizzeria\")",
+        "st_hpd(eat(\"they\", \"large pepperoni pizza\"), \"true\", 3)",
+        "st_hpd(enter(\"they\", \"pizzeria\"), \"true\", 0)",
+        "st_hpd(lead_to(\"waiter\", \"they\", \"t\"), \"true\", 1)",
+        "st_hpd(order(\"they\", \"large pepperoni pizza\", \"waiter\"), \"true\", 2)",
+        "st_hpd(pay(\"steve\", \"b\"), \"true\", 4)",
+        "waiter(\"waiter\")"
+      ],
+      "predicted_only_predicates": [],
+      "ground_truth_only_predicates": [],
+      "pred_predicate_count": 13,
+      "gt_predicate_count": 13
+    },
+    {
+      "sid": 57,
+      "similarity": 1.0,
+      "story": "Carlos arrived at the Mexican restaurant and was greeted warmly. He ordered tacos and a margarita. The food arrived quickly and was perfectly prepared. Carlos enjoyed his meal thoroughly.",
+      "predicted": "restaurant(\"Mexican restaurant\"). customer(\"Carlos\"). food(\"tacos\"). beverage(\"margarita\"). waiter(w). st_hpd(enter(\"Carlos\", \"Mexican restaurant\"), true, 0). st_hpd(greet(w, \"Carlos\"), true, 1). st_hpd(order(\"Carlos\", \"tacos\", w), true, 2). st_hpd(order(\"Carlos\", \"margarita\", w), true, 2). st_hpd(put_down(w, \"tacos\", t), true, 3). st_hpd(put_down(w, \"margarita\", t), true, 3). st_hpd(eat(\"Carlos\", \"tacos\"), true, 4). st_hpd(drink(\"Carlos\", \"margarita\"), true, 4).",
+      "ground_truth": "restaurant(\"Mexican restaurant\"). customer(\"Carlos\"). waiter(w). food(\"tacos\"). beverage(\"margarita\"). story_step(0..4). st_hpd(enter(\"Carlos\", \"Mexican restaurant\"), true, 0). st_hpd(greet(w, \"Carlos\"), true, 1). st_hpd(order(\"Carlos\", \"tacos\", w), true, 2). st_hpd(order(\"Carlos\", \"margarita\", w), true, 2). st_hpd(put_down(w, \"tacos\", t), true, 3). st_hpd(put_down(w, \"margarita\", t), true, 3). st_hpd(eat(\"Carlos\", \"tacos\"), true, 4). st_hpd(drink(\"Carlos\", \"margarita\"), true, 4).",
+      "matching_predicates": [
+        "beverage(\"margarita\")",
+        "food(\"tacos\")",
+        "person(\"carlos\")",
+        "restaurant(\"mexican restaurant\")",
+        "st_hpd(drink(\"carlos\", \"margarita\"), \"true\", 4)",
+        "st_hpd(eat(\"carlos\", \"tacos\"), \"true\", 4)",
+        "st_hpd(enter(\"carlos\", \"mexican restaurant\"), \"true\", 0)",
+        "st_hpd(greet(\"w\", \"carlos\"), \"true\", 1)",
+        "st_hpd(order(\"carlos\", \"margarita\", \"w\"), \"true\", 2)",
+        "st_hpd(order(\"carlos\", \"tacos\", \"w\"), \"true\", 2)",
+        "st_hpd(put_down(\"w\", \"margarita\", \"t\"), \"true\", 3)",
+        "st_hpd(put_down(\"w\", \"tacos\", \"t\"), \"true\", 3)",
+        "waiter(\"w\")"
+      ],
+      "predicted_only_predicates": [],
+      "ground_truth_only_predicates": [],
+      "pred_predicate_count": 13,
+      "gt_predicate_count": 13
+    },
+    {
+      "sid": 63,
+      "similarity": 1.0,
+      "story": "At a cafe, Ivan ordered an espresso. The waiter brought it to his table. Ivan drank the espresso, left cash on the table for the bill, and then departed.",
+      "predicted": "restaurant(\"a cafe\"). customer(\"Ivan\"). beverage(\"espresso\"). waiter(\"The waiter\"). st_hpd(order(\"Ivan\", \"espresso\", \"The waiter\"), true, 0). st_hpd(put_down(\"The waiter\", \"espresso\", t), true, 1). st_hpd(drink(\"Ivan\", \"espresso\"), true, 2). st_hpd(pay(\"Ivan\", b), true, 3). st_hpd(leave(\"Ivan\"), true, 4).",
+      "ground_truth": "restaurant(\"cafe\"). customer(\"Ivan\"). beverage(\"espresso\"). waiter(\"the waiter\"). story_step(0..4). st_hpd(order(\"Ivan\", \"espresso\", \"the waiter\"), true, 0). st_hpd(put_down(\"the waiter\", \"espresso\", t), true, 1). st_hpd(drink(\"Ivan\", \"espresso\"), true, 2). st_hpd(pay(\"Ivan\", b), true, 3). st_hpd(leave(\"Ivan\"), true, 4).",
+      "matching_predicates": [
+        "beverage(\"espresso\")",
+        "person(\"ivan\")",
+        "restaurant(\"cafe\")",
+        "st_hpd(drink(\"ivan\", \"espresso\"), \"true\", 2)",
+        "st_hpd(leave(\"ivan\"), \"true\", 4)",
+        "st_hpd(order(\"ivan\", \"espresso\", \"waiter\"), \"true\", 0)",
+        "st_hpd(pay(\"ivan\", \"b\"), \"true\", 3)",
+        "st_hpd(put_down(\"waiter\", \"espresso\", \"t\"), \"true\", 1)",
+        "waiter(\"waiter\")"
+      ],
+      "predicted_only_predicates": [],
+      "ground_truth_only_predicates": [],
+      "pred_predicate_count": 9,
+      "gt_predicate_count": 9
+    },
+    {
+      "sid": 81,
+      "similarity": 1.0,
+      "story": "[REDACTED — original ROCStories text; storyid=1d235832-c133-4950-ba20-512adb2e3edb]",
+      "predicted": "restaurant(\"a new Italian restaurant\"). customer(\"Kathy\"). customer(\"her friend\"). customer(they). member(\"Kathy\", they). member(\"her friend\", they). food(\"dinner\"). st_hpd(enter(they, \"a new Italian restaurant\"), true, 0). st_hpd(eat(they, \"dinner\"), true, 1).",
+      "ground_truth": "restaurant(\"new Italian restaurant\"). customer(they). person(\"Kathy\"). person(\"her friend\"). member(\"Kathy\", they). member(\"her friend\", they). food(\"dinner\"). st_hpd(enter(they, \"new Italian restaurant\"), true, 0). st_hpd(eat(they, \"dinner\"), true, 1).",
+      "matching_predicates": [
+        "food(\"dinner\")",
+        "member(\"her friend\", \"they\")",
+        "member(\"kathy\", \"they\")",
+        "person(\"her friend\")",
+        "person(\"kathy\")",
+        "person(\"they\")",
+        "restaurant(\"new italian restaurant\")",
+        "st_hpd(eat(\"they\", \"dinner\"), \"true\", 1)",
+        "st_hpd(enter(\"they\", \"new italian restaurant\"), \"true\", 0)"
+      ],
+      "predicted_only_predicates": [],
+      "ground_truth_only_predicates": [],
+      "pred_predicate_count": 9,
+      "gt_predicate_count": 9
+    },
+    {
+      "sid": 98,
+      "similarity": 1.0,
+      "story": "[REDACTED — original ROCStories text; storyid=09a69527-2433-4e12-9943-9dcacbdf9b04]",
+      "predicted": "customer(\"Joe\"). restaurant(\"a new place\"). food(\"a meal\"). st_obs(hungry(\"Joe\"), true, 0). st_hpd(enter(\"Joe\", \"a new place\"), true, 1). st_hpd(order(\"Joe\", \"a meal\", w), true, 2). st_hpd(eat(\"Joe\", \"a meal\"), true, 3). st_obs(hungry(\"Joe\"), false, 4).",
+      "ground_truth": "restaurant(\"new place\"). customer(\"Joe\"). food(\"a meal\"). st_obs(hungry(\"Joe\"), true, 0). st_hpd(enter(\"Joe\", \"new place\"), true, 1). st_hpd(order(\"Joe\", \"a meal\", w), true, 2). st_hpd(eat(\"Joe\", \"a meal\"), true, 3). st_obs(hungry(\"Joe\"), false, 4).",
+      "matching_predicates": [
+        "food(\"meal\")",
+        "person(\"joe\")",
+        "restaurant(\"new place\")",
+        "st_hpd(eat(\"joe\", \"meal\"), \"true\", 3)",
+        "st_hpd(enter(\"joe\", \"new place\"), \"true\", 1)",
+        "st_hpd(order(\"joe\", \"meal\", \"w\"), \"true\", 2)",
+        "st_obs(hungry(\"joe\"), \"false\", 4)",
+        "st_obs(hungry(\"joe\"), \"true\", 0)"
+      ],
+      "predicted_only_predicates": [],
+      "ground_truth_only_predicates": [],
+      "pred_predicate_count": 8,
+      "gt_predicate_count": 8
+    }
+  ],
+  "predicted_only_sids": [],
+  "ground_truth_only_sids": [
+    5,
+    6,
+    7,
+    15,
+    35,
+    43,
+    50,
+    59,
+    74,
+    92
+  ],
+  "predicted_entries_missing_sid": [],
+  "ground_truth_entries_missing_sid": [],
+  "predicted_with_capitalized_predicates": {},
+  "ground_truth_with_capitalized_predicates": {},
+  "partial_matches": [
+    {
+      "sid": 87,
+      "similarity": 0.058823529411764705,
+      "story": "[REDACTED — original ROCStories text; storyid=7dc0c96f-dd24-4561-9a4f-bd1b6b3ca520]",
+      "predicted": "restaurant(r). customer(\"I\"). food(f1). food(f2). waiter(w). st_hpd(enter(\"I\", r), true, 0). st_hpd(order(\"I\", f1, w), true, 1). st_hpd(put_down(w, f2, t), true, 2). st_hpd(complain(\"I\", w), true, 3). st_next(2, 3).",
+      "ground_truth": "restaurant(\"the restaurant\"). customer(\"I\"). food(\"wrong order\"). st_hpd(enter(\"I\", \"the restaurant\"), true, 0). st_hpd(order(\"I\", f, w), true, 1). st_hpd(put_down(w, \"wrong order\", t), true, 2). st_hpd(request(\"I\", pick_up(w, \"burnt pizza\", t), w), true, 3). st_next(2,3).",
+      "matching_predicates": [
+        "person(\"i\")"
+      ],
+      "predicted_only_predicates": [
+        "food(f1)",
+        "food(f2)",
+        "restaurant(r)",
+        "st_hpd(complain(\"I\", w), true, 3)",
+        "st_hpd(enter(\"I\", r), true, 0)",
+        "st_hpd(order(\"I\", f1, w), true, 1)",
+        "st_hpd(put_down(w, f2, t), true, 2)",
+        "st_next(2, 3)",
+        "waiter(w)"
+      ],
+      "ground_truth_only_predicates": [
+        "food(\"wrong order\")",
+        "restaurant(\"the restaurant\")",
+        "st_hpd(enter(\"I\", \"the restaurant\"), true, 0)",
+        "st_hpd(order(\"I\", f, w), true, 1)",
+        "st_hpd(put_down(w, \"wrong order\", t), true, 2)",
+        "st_hpd(request(\"I\", pick_up(w, \"burnt pizza\", t), w), true, 3)",
+        "st_next(2,3)"
+      ],
+      "pred_predicate_count": 10,
+      "gt_predicate_count": 8
+    },
+    {
+      "sid": 24,
+      "similarity": 0.06666666666666667,
+      "story": "Jasper invited Frank to a restaurant. Jasper ordered roast beef and coffee. Their conversation was interrupted by the arrival of the coffee and roast beef, which both he and his new friend attacked with vigor. Jasper wanted to invite Frank, but he had forgotten his wallet at home. Frank paid for both.",
+      "predicted": "customer(\"Jasper\"). customer(\"Frank\"). restaurant(r). food(\"roast beef\"). beverage(\"coffee\"). waiter(w). st_hpd(enter(\"Jasper\", r), true, 0). st_hpd(enter(\"Frank\", r), true, 0). st_hpd(order(\"Jasper\", \"roast beef\", w), true, 1). st_hpd(order(\"Jasper\", \"coffee\", w), true, 1). st_hpd(put_down(w, \"roast beef\", t), true, 2). st_hpd(put_down(w, \"coffee\", t), true, 2). st_hpd(eat(\"Jasper\", \"roast beef\"), true, 3). st_hpd(eat(\"Frank\", \"roast beef\"), true, 3). st_hpd(drink(\"Jasper\", \"coffee\"), true, 3). st_hpd(drink(\"Frank\", \"coffee\"), true, 3). st_hpd(pay(\"Frank\", b), true, 4). st_hpd(pay(\"Jasper\", b), false).",
+      "ground_truth": "restaurant(\"a restaurant\"). customer(they). member(\"Jasper\", they). member(\"Frank\", they). food(f). member(\"roast beef\", f). member(coffee, f). waiter(w). story_step(0..4). st_hpd(enter(they, \"a restaurant\"), true, 0). st_hpd(order_for(\"Jasper\", they, f, w), true, 1). st_hpd(put_down(w, f, t), true, 2). st_hpd(eat(they, f), true, 3). st_hpd(pay(\"Jasper\", b), false, 4). st_hpd(pay(\"Frank\", b), true, 4).",
+      "matching_predicates": [
+        "st_hpd(pay(\"frank\", \"b\"), \"true\", 4)",
+        "waiter(\"w\")"
+      ],
+      "predicted_only_predicates": [
+        "beverage(\"coffee\")",
+        "customer(\"Frank\")",
+        "customer(\"Jasper\")",
+        "food(\"roast beef\")",
+        "restaurant(r)",
+        "st_hpd(drink(\"Frank\", \"coffee\"), true, 3)",
+        "st_hpd(drink(\"Jasper\", \"coffee\"), true, 3)",
+        "st_hpd(eat(\"Frank\", \"roast beef\"), true, 3)",
+        "st_hpd(eat(\"Jasper\", \"roast beef\"), true, 3)",
+        "st_hpd(enter(\"Frank\", r), true, 0)",
+        "st_hpd(enter(\"Jasper\", r), true, 0)",
+        "st_hpd(order(\"Jasper\", \"coffee\", w), true, 1)",
+        "st_hpd(order(\"Jasper\", \"roast beef\", w), true, 1)",
+        "st_hpd(pay(\"Jasper\", b), false)",
+        "st_hpd(put_down(w, \"coffee\", t), true, 2)",
+        "st_hpd(put_down(w, \"roast beef\", t), true, 2)"
+      ],
+      "ground_truth_only_predicates": [
+        "customer(they)",
+        "food(f)",
+        "member(\"Frank\", they)",
+        "member(\"Jasper\", they)",
+        "member(\"roast beef\", f)",
+        "member(coffee, f)",
+        "restaurant(\"a restaurant\")",
+        "st_hpd(eat(they, f), true, 3)",
+        "st_hpd(enter(they, \"a restaurant\"), true, 0)",
+        "st_hpd(order_for(\"Jasper\", they, f, w), true, 1)",
+        "st_hpd(pay(\"Jasper\", b), false, 4)",
+        "st_hpd(put_down(w, f, t), true, 2)"
+      ],
+      "pred_predicate_count": 18,
+      "gt_predicate_count": 14
+    },
+    {
+      "sid": 0,
+      "similarity": 0.10526315789473684,
+      "story": "Allie enters the restaurant and claims her reservation. The waiter seats her at her table. She orders fruit salad. The waiter brings her fruit salad. After eating, she asks for the bill.",
+      "predicted": "restaurant(r). customer(\"Allie\"). waiter(w). food(\"fruit salad\"). st_hpd(enter(\"Allie\", r), true, 0). st_hpd(lead_to(w, \"Allie\", t), true, 1). st_hpd(order(\"Allie\", \"fruit salad\", w), true, 2). st_hpd(put_down(w, \"fruit salad\", t), true, 3). st_hpd(eat(\"Allie\", \"fruit salad\"), true, 4). st_hpd(request(\"Allie\", b, w), true, 5).",
+      "ground_truth": "restaurant(\"the restaurant\"). customer(\"Allie\"). food(\"fruit salad\"). waiter(\"the waiter\"). story_step(0..6). st_hpd(enter(\"Allie\", \"the restaurant\"), true, 0). st_hpd(lead_to(\"the waiter\", \"Allie\", t), true, 1). st_hpd(sit(\"Allie\"), true, 2). st_hpd(order(\"Allie\", \"fruit salad\", \"the waiter\"), true, 3). st_hpd(put_down(\"the waiter\", \"fruit salad\", t), true, 4). st_hpd(eat(\"Allie\", \"fruit salad\"), true, 5). st_hpd(request(\"Allie\", b, \"the waiter\"), true, 6).",
+      "matching_predicates": [
+        "food(\"fruit salad\")",
+        "person(\"allie\")"
+      ],
+      "predicted_only_predicates": [
+        "restaurant(r)",
+        "st_hpd(eat(\"Allie\", \"fruit salad\"), true, 4)",
+        "st_hpd(enter(\"Allie\", r), true, 0)",
+        "st_hpd(lead_to(w, \"Allie\", t), true, 1)",
+        "st_hpd(order(\"Allie\", \"fruit salad\", w), true, 2)",
+        "st_hpd(put_down(w, \"fruit salad\", t), true, 3)",
+        "st_hpd(request(\"Allie\", b, w), true, 5)",
+        "waiter(w)"
+      ],
+      "ground_truth_only_predicates": [
+        "restaurant(\"the restaurant\")",
+        "st_hpd(eat(\"Allie\", \"fruit salad\"), true, 5)",
+        "st_hpd(enter(\"Allie\", \"the restaurant\"), true, 0)",
+        "st_hpd(lead_to(\"the waiter\", \"Allie\", t), true, 1)",
+        "st_hpd(order(\"Allie\", \"fruit salad\", \"the waiter\"), true, 3)",
+        "st_hpd(put_down(\"the waiter\", \"fruit salad\", t), true, 4)",
+        "st_hpd(request(\"Allie\", b, \"the waiter\"), true, 6)",
+        "st_hpd(sit(\"Allie\"), true, 2)",
+        "waiter(\"the waiter\")"
+      ],
+      "pred_predicate_count": 10,
+      "gt_predicate_count": 11
+    },
+    {
+      "sid": 61,
+      "similarity": 0.11764705882352941,
+      "story": "The book club members met at the quiet cafe. They ordered various teas and pastries. Everyone enjoyed their selections while discussing the latest novel.",
+      "predicted": "restaurant(\"the quiet cafe\"). customer(they). beverage(\"various teas\"). food(\"pastries\"). waiter(w). st_hpd(enter(they, \"the quiet cafe\"), true, 0). st_hpd(order(they, \"various teas\", w), true, 1). st_hpd(order(they, \"pastries\", w), true, 1). st_hpd(drink(they, \"various teas\"), true, 2). st_hpd(eat(they, \"pastries\"), true, 2).",
+      "ground_truth": "restaurant(\"quiet cafe\"). customer(\"book club members\"). food(\"pastries\"). beverage(\"teas\"). story_step(0..2). st_hpd(enter(\"book club members\", \"quiet cafe\"), true, 0). st_hpd(order(\"book club members\", \"pastries\", \"the waiter\"), true, 1). st_hpd(order(\"book club members\", \"teas\", \"the waiter\"), true, 1). st_hpd(eat(\"book club members\", \"pastries\"), true, 2). st_hpd(drink(\"book club members\", \"teas\"), true, 2).",
+      "matching_predicates": [
+        "food(\"pastries\")",
+        "restaurant(\"quiet cafe\")"
+      ],
+      "predicted_only_predicates": [
+        "beverage(\"various teas\")",
+        "customer(they)",
+        "st_hpd(drink(they, \"various teas\"), true, 2)",
+        "st_hpd(eat(they, \"pastries\"), true, 2)",
+        "st_hpd(enter(they, \"the quiet cafe\"), true, 0)",
+        "st_hpd(order(they, \"pastries\", w), true, 1)",
+        "st_hpd(order(they, \"various teas\", w), true, 1)",
+        "waiter(w)"
+      ],
+      "ground_truth_only_predicates": [
+        "beverage(\"teas\")",
+        "customer(\"book club members\")",
+        "st_hpd(drink(\"book club members\", \"teas\"), true, 2)",
+        "st_hpd(eat(\"book club members\", \"pastries\"), true, 2)",
+        "st_hpd(enter(\"book club members\", \"quiet cafe\"), true, 0)",
+        "st_hpd(order(\"book club members\", \"pastries\", \"the waiter\"), true, 1)",
+        "st_hpd(order(\"book club members\", \"teas\", \"the waiter\"), true, 1)"
+      ],
+      "pred_predicate_count": 10,
+      "gt_predicate_count": 9
+    },
+    {
+      "sid": 16,
+      "similarity": 0.16666666666666666,
+      "story": "The waiter took Gavin and Amandine to a booth. They slid onto brown vinyl seats. Gavin glanced over his menu. Amandine didn't need to look to know what she wanted. She ordered egg drop soup with wonton, lobster Cantonese and shrimp, beef and pork fried rice. Gavin ordered the same.",
+      "predicted": "restaurant(r). waiter(\"the waiter\"). customer(\"Gavin\"). customer(\"Amandine\"). customer(they). member(\"Gavin\", they). member(\"Amandine\", they). food(\"egg drop soup with wonton\"). food(\"lobster Cantonese and shrimp\"). food(\"beef and pork fried rice\"). st_hpd(lead_to(\"the waiter\", they, \"a booth\"), true, 0). st_hpd(sit(they), true, 1). st_hpd(read_menu(\"Gavin\"), true, 2). st_hpd(read_menu(\"Amandine\"), false). st_hpd(order(\"Amandine\", \"egg drop soup with wonton\", \"the waiter\"), true, 3). st_hpd(order(\"Amandine\", \"lobster Cantonese and shrimp\", \"the waiter\"), true, 3). st_hpd(order(\"Amandine\", \"beef and pork fried rice\", \"the waiter\"), true, 3). st_hpd(order(\"Gavin\", \"egg drop soup with wonton\", \"the waiter\"), true, 4). st_hpd(order(\"Gavin\", \"lobster Cantonese and shrimp\", \"the waiter\"), true, 4). st_hpd(order(\"Gavin\", \"beef and pork fried rice\", \"the waiter\"), true, 4).",
+      "ground_truth": "waiter(\"the waiter\"). customer(\"Gavin\"). customer(\"Amandine\"). food(f). member(\"egg drop soup with wonton\", f). member(\"lobster Cantonese\", f). member(\"shrimp, beef and pork fried rice\", f). story_step(0..4). st_hpd(lead_to(\"the waiter\", \"Gavin\", t), true, 0). st_hpd(lead_to(\"the waiter\", \"Amandine\", t), true, 0). st_hpd(sit(\"Gavin\"), true, 1). st_hpd(sit(\"Amandine\"), true, 1). st_hpd(read_menu(\"Gavin\"), true, 2). st_hpd(read_menu(\"Amandine\"), false). st_hpd(order(\"Amandine\", f, \"the waiter\"), true, 3). st_hpd(order(\"Gavin\", f, \"the waiter\"), true, 4).",
+      "matching_predicates": [
+        "person(\"amandine\")",
+        "person(\"gavin\")",
+        "st_hpd(read_menu(\"amandine\"), \"false\")",
+        "st_hpd(read_menu(\"gavin\"), \"true\", 2)",
+        "waiter(\"waiter\")"
+      ],
+      "predicted_only_predicates": [
+        "customer(they)",
+        "food(\"beef and pork fried rice\")",
+        "food(\"egg drop soup with wonton\")",
+        "food(\"lobster Cantonese and shrimp\")",
+        "member(\"Amandine\", they)",
+        "member(\"Gavin\", they)",
+        "restaurant(r)",
+        "st_hpd(lead_to(\"the waiter\", they, \"a booth\"), true, 0)",
+        "st_hpd(order(\"Amandine\", \"beef and pork fried rice\", \"the waiter\"), true, 3)",
+        "st_hpd(order(\"Amandine\", \"egg drop soup with wonton\", \"the waiter\"), true, 3)",
+        "st_hpd(order(\"Amandine\", \"lobster Cantonese and shrimp\", \"the waiter\"), true, 3)",
+        "st_hpd(order(\"Gavin\", \"beef and pork fried rice\", \"the waiter\"), true, 4)",
+        "st_hpd(order(\"Gavin\", \"egg drop soup with wonton\", \"the waiter\"), true, 4)",
+        "st_hpd(order(\"Gavin\", \"lobster Cantonese and shrimp\", \"the waiter\"), true, 4)",
+        "st_hpd(sit(they), true, 1)"
+      ],
+      "ground_truth_only_predicates": [
+        "food(f)",
+        "member(\"egg drop soup with wonton\", f)",
+        "member(\"lobster Cantonese\", f)",
+        "member(\"shrimp, beef and pork fried rice\", f)",
+        "st_hpd(lead_to(\"the waiter\", \"Amandine\", t), true, 0)",
+        "st_hpd(lead_to(\"the waiter\", \"Gavin\", t), true, 0)",
+        "st_hpd(order(\"Amandine\", f, \"the waiter\"), true, 3)",
+        "st_hpd(order(\"Gavin\", f, \"the waiter\"), true, 4)",
+        "st_hpd(sit(\"Amandine\"), true, 1)",
+        "st_hpd(sit(\"Gavin\"), true, 1)"
+      ],
+      "pred_predicate_count": 20,
+      "gt_predicate_count": 15
+    },
+    {
+      "sid": 19,
+      "similarity": 0.1724137931034483,
+      "story": "Brand sat in a chair. He picked up the menu and ordered a whiskey with Pepsi, but no ice. Pyrogies and sausage cooked in sauerkraut, he told the waiter. The waiter brought Brand his drink. Then, the waiter placed the food on the table. Brand asked the waiter to bring him a large bowl of borscht when he was done with the pyrogies and sausage. The waiter went back into the kitchen. Brand ate the pyrogies and then the sausage and sauerkraut. Then, the waiter brought out Brand's bowl of soup.",
+      "predicted": "restaurant(r). customer(\"Brand\"). waiter(\"the waiter\"). beverage(\"whiskey with Pepsi, but no ice\"). food(\"Pyrogies and sausage cooked in sauerkraut\"). food(\"large bowl of borscht\"). st_hpd(sit(\"Brand\"), true, 0). st_hpd(pick_up(\"Brand\", m, t), true, 1). st_hpd(order(\"Brand\", \"whiskey with Pepsi, but no ice\", \"the waiter\"), true, 2). st_hpd(order(\"Brand\", \"Pyrogies and sausage cooked in sauerkraut\", \"the waiter\"), true, 2). st_hpd(put_down(\"the waiter\", \"whiskey with Pepsi, but no ice\", t), true, 3). st_hpd(put_down(\"the waiter\", \"Pyrogies and sausage cooked in sauerkraut\", t), true, 4). st_hpd(request(\"Brand\", \"bring him a large bowl of borscht\", \"the waiter\"), true, 5). st_hpd(move(\"the waiter\", t, \"kitchen\"), true, 6). st_hpd(eat(\"Brand\", \"Pyrogies and sausage cooked in sauerkraut\"), true, 7). st_hpd(put_down(\"the waiter\", \"large bowl of borscht\", t), true, 8).",
+      "ground_truth": "restaurant(r). customer(\"Brand\"). beverage(\"whiskey with Pepsi, no ice\"). food(f). member(pyrogies, f). member(\"sausage in sauerkraut\", f). food(borscht). waiter(\"the waiter\"). story_step(0..9). st_hpd(sit(\"Brand\"), true, 0). st_hpd(pick_up(\"Brand\", m, t), true, 1). st_hpd(order(\"Brand\", \"whiskey with Pepsi, no ice\", \"the waiter\"), true, 2). st_hpd(order(\"Brand\", f, \"the waiter\"), true, 3). st_hpd(put_down(\"the waiter\", \"whiskey with Pepsi, no ice\"), t), true, 4). st_hpd(put_down(\"the waiter\", f, t), true, 5). st_hpd(order(\"Brand\", borscht, \"the waiter\"), true, 6). st_hpd(move(\"the waiter\", t, kitchen), true, 7). st_hpd(eat(\"Brand\", f), true, 8). st_hpd(put_down(\"the waiter\", borscht, t), true, 9).",
+      "matching_predicates": [
+        "person(\"brand\")",
+        "restaurant(\"r\")",
+        "st_hpd(pick_up(\"brand\", \"m\", \"t\"), \"true\", 1)",
+        "st_hpd(sit(\"brand\"), \"true\", 0)",
+        "waiter(\"waiter\")"
+      ],
+      "predicted_only_predicates": [
+        "beverage(\"whiskey with Pepsi, but no ice\")",
+        "food(\"Pyrogies and sausage cooked in sauerkraut\")",
+        "food(\"large bowl of borscht\")",
+        "st_hpd(eat(\"Brand\", \"Pyrogies and sausage cooked in sauerkraut\"), true, 7)",
+        "st_hpd(move(\"the waiter\", t, \"kitchen\"), true, 6)",
+        "st_hpd(order(\"Brand\", \"Pyrogies and sausage cooked in sauerkraut\", \"the waiter\"), true, 2)",
+        "st_hpd(order(\"Brand\", \"whiskey with Pepsi, but no ice\", \"the waiter\"), true, 2)",
+        "st_hpd(put_down(\"the waiter\", \"Pyrogies and sausage cooked in sauerkraut\", t), true, 4)",
+        "st_hpd(put_down(\"the waiter\", \"large bowl of borscht\", t), true, 8)",
+        "st_hpd(put_down(\"the waiter\", \"whiskey with Pepsi, but no ice\", t), true, 3)",
+        "st_hpd(request(\"Brand\", \"bring him a large bowl of borscht\", \"the waiter\"), true, 5)"
+      ],
+      "ground_truth_only_predicates": [
+        "beverage(\"whiskey with Pepsi, no ice\")",
+        "food(borscht)",
+        "food(f)",
+        "member(\"sausage in sauerkraut\", f)",
+        "member(pyrogies, f)",
+        "st_hpd(eat(\"Brand\", f), true, 8)",
+        "st_hpd(move(\"the waiter\", t, kitchen), true, 7)",
+        "st_hpd(order(\"Brand\", \"whiskey with Pepsi, no ice\", \"the waiter\"), true, 2)",
+        "st_hpd(order(\"Brand\", borscht, \"the waiter\"), true, 6)",
+        "st_hpd(order(\"Brand\", f, \"the waiter\"), true, 3)",
+        "st_hpd(put_down(\"the waiter\", \"whiskey with Pepsi, no ice\"), t)",
+        "st_hpd(put_down(\"the waiter\", borscht, t), true, 9)",
+        "st_hpd(put_down(\"the waiter\", f, t), true, 5)"
+      ],
+      "pred_predicate_count": 16,
+      "gt_predicate_count": 18
+    },
+    {
+      "sid": 3,
+      "similarity": 0.17647058823529413,
+      "story": "Jill enters the restaurant and is escorted to a table. She orders chicken. The waiter brings the chicken to her table. After eating, Jill asks for the bill.",
+      "predicted": "restaurant(r). customer(\"Jill\"). waiter(w). food(\"chicken\"). st_hpd(enter(\"Jill\", r), true, 0). st_hpd(lead_to(w, \"Jill\", t), true, 1). st_hpd(order(\"Jill\", \"chicken\", w), true, 2). st_hpd(put_down(w, \"chicken\", t), true, 3). st_hpd(eat(\"Jill\", \"chicken\"), true, 4). st_hpd(request(\"Jill\", b, w), true, 5).",
+      "ground_truth": "restaurant(\"the restaurant\"). customer(\"Jill\"). food(\"chicken\"). waiter(\"the waiter\"). story_step(0..5). st_hpd(enter(\"Jill\", \"the restaurant\"), true, 0). st_hpd(lead_to(\"the waiter\", \"Jill\", t), true, 1). st_hpd(order(\"Jill\", \"chicken\", \"the waiter\"), true, 2). st_hpd(put_down(\"the waiter\", \"chicken\", t), true, 3). st_hpd(eat(\"Jill\", \"chicken\"), true, 4). st_hpd(request(\"Jill\", b, \"the waiter\"), true, 5).",
+      "matching_predicates": [
+        "food(\"chicken\")",
+        "person(\"jill\")",
+        "st_hpd(eat(\"jill\", \"chicken\"), \"true\", 4)"
+      ],
+      "predicted_only_predicates": [
+        "restaurant(r)",
+        "st_hpd(enter(\"Jill\", r), true, 0)",
+        "st_hpd(lead_to(w, \"Jill\", t), true, 1)",
+        "st_hpd(order(\"Jill\", \"chicken\", w), true, 2)",
+        "st_hpd(put_down(w, \"chicken\", t), true, 3)",
+        "st_hpd(request(\"Jill\", b, w), true, 5)",
+        "waiter(w)"
+      ],
+      "ground_truth_only_predicates": [
+        "restaurant(\"the restaurant\")",
+        "st_hpd(enter(\"Jill\", \"the restaurant\"), true, 0)",
+        "st_hpd(lead_to(\"the waiter\", \"Jill\", t), true, 1)",
+        "st_hpd(order(\"Jill\", \"chicken\", \"the waiter\"), true, 2)",
+        "st_hpd(put_down(\"the waiter\", \"chicken\", t), true, 3)",
+        "st_hpd(request(\"Jill\", b, \"the waiter\"), true, 5)",
+        "waiter(\"the waiter\")"
+      ],
+      "pred_predicate_count": 10,
+      "gt_predicate_count": 10
+    },
+    {
+      "sid": 73,
+      "similarity": 0.18181818181818182,
+      "story": "David entered the deli and took a seat at the counter. He ordered a pastrami sandwich and a pickle. The cook prepared his sandwich and the server brought it to him. David ate his lunch quickly.",
+      "predicted": "customer(\"David\"). restaurant(\"the deli\"). cook(\"The cook\"). waiter(\"the server\"). food(\"a pastrami sandwich\"). food(\"a pickle\"). st_hpd(enter(\"David\", \"the deli\"), true, 0). st_hpd(sit(\"David\"), true, 1). st_hpd(order(\"David\", \"a pastrami sandwich\", \"the server\"), true, 2). st_hpd(order(\"David\", \"a pickle\", \"the server\"), true, 2). st_hpd(prepare(\"The cook\", \"a pastrami sandwich\", \"the server\"), true, 3). st_hpd(put_down(\"the server\", \"a pastrami sandwich\", t), true, 4). st_hpd(put_down(\"the server\", \"a pickle\", t), true, 4). st_hpd(eat(\"David\", \"a pastrami sandwich\"), true, 5). st_hpd(eat(\"David\", \"a pickle\"), true, 5).",
+      "ground_truth": "restaurant(\"the deli\"). customer(\"David\"). food(f). member(\"pastrami sandwich\", f). member(\"pickle\", f). st_hpd(enter(\"David\", \"the deli\"), true, 0). st_hpd(sit(\"David\"), true, 1). st_hpd(order(\"David\", f, \"the server\"), true, 2). st_hpd(prepare(\"the cook\", f, \"the server\"), true, 3). st_hpd(put_down(\"the server\", f, t), true, 4). st_hpd(eat(\"David\", f), true, 5).",
+      "matching_predicates": [
+        "person(\"david\")",
+        "restaurant(\"deli\")",
+        "st_hpd(enter(\"david\", \"deli\"), \"true\", 0)",
+        "st_hpd(sit(\"david\"), \"true\", 1)"
+      ],
+      "predicted_only_predicates": [
+        "cook(\"The cook\")",
+        "food(\"a pastrami sandwich\")",
+        "food(\"a pickle\")",
+        "st_hpd(eat(\"David\", \"a pastrami sandwich\"), true, 5)",
+        "st_hpd(eat(\"David\", \"a pickle\"), true, 5)",
+        "st_hpd(order(\"David\", \"a pastrami sandwich\", \"the server\"), true, 2)",
+        "st_hpd(order(\"David\", \"a pickle\", \"the server\"), true, 2)",
+        "st_hpd(prepare(\"The cook\", \"a pastrami sandwich\", \"the server\"), true, 3)",
+        "st_hpd(put_down(\"the server\", \"a pastrami sandwich\", t), true, 4)",
+        "st_hpd(put_down(\"the server\", \"a pickle\", t), true, 4)",
+        "waiter(\"the server\")"
+      ],
+      "ground_truth_only_predicates": [
+        "food(f)",
+        "member(\"pastrami sandwich\", f)",
+        "member(\"pickle\", f)",
+        "st_hpd(eat(\"David\", f), true, 5)",
+        "st_hpd(order(\"David\", f, \"the server\"), true, 2)",
+        "st_hpd(prepare(\"the cook\", f, \"the server\"), true, 3)",
+        "st_hpd(put_down(\"the server\", f, t), true, 4)"
+      ],
+      "pred_predicate_count": 15,
+      "gt_predicate_count": 11
+    },
+    {
+      "sid": 78,
+      "similarity": 0.18181818181818182,
+      "story": "[REDACTED — original ROCStories text; storyid=02fbf49d-54f4-493d-b4af-609cc1e23a22]",
+      "predicted": "customer(\"Betsy\"). restaurant(\"a diner\"). waiter(\"the waitress\"). food(\"pancakes\"). food(\"bacon\"). beverage(\"coffee\"). st_hpd(enter(\"Betsy\", \"a diner\"), true, 0). st_hpd(order(\"Betsy\", \"pancakes\", \"the waitress\"), true, 1). st_hpd(order(\"Betsy\", \"bacon\", \"the waitress\"), true, 1). st_hpd(order(\"Betsy\", \"coffee\", \"the waitress\"), true, 1). st_hpd(eat(\"Betsy\", \"pancakes\"), true, 2). st_hpd(eat(\"Betsy\", \"bacon\"), true, 2). st_hpd(drink(\"Betsy\", \"coffee\"), true, 2). st_hpd(pay(\"Betsy\", tip), true, 3).",
+      "ground_truth": "restaurant(\"a diner\"). customer(\"Betsy\"). food(f). member(\"pancakes\", f). member(\"bacon\", f). beverage(\"coffee\"). waiter(\"the waitress\"). st_hpd(order(\"Betsy\", f, \"the waitress\"), true, 0). st_hpd(order(\"Betsy\", \"coffee\", \"the waitress\"), true, 0). st_hpd(eat(\"Betsy\", f), true, 1). st_hpd(drink(\"Betsy\", \"coffee\"), true, 1). st_hpd(pay(\"Betsy\", tip), true, 2).",
+      "matching_predicates": [
+        "beverage(\"coffee\")",
+        "person(\"betsy\")",
+        "restaurant(\"diner\")",
+        "waiter(\"waitress\")"
+      ],
+      "predicted_only_predicates": [
+        "food(\"bacon\")",
+        "food(\"pancakes\")",
+        "st_hpd(drink(\"Betsy\", \"coffee\"), true, 2)",
+        "st_hpd(eat(\"Betsy\", \"bacon\"), true, 2)",
+        "st_hpd(eat(\"Betsy\", \"pancakes\"), true, 2)",
+        "st_hpd(enter(\"Betsy\", \"a diner\"), true, 0)",
+        "st_hpd(order(\"Betsy\", \"bacon\", \"the waitress\"), true, 1)",
+        "st_hpd(order(\"Betsy\", \"coffee\", \"the waitress\"), true, 1)",
+        "st_hpd(order(\"Betsy\", \"pancakes\", \"the waitress\"), true, 1)",
+        "st_hpd(pay(\"Betsy\", tip), true, 3)"
+      ],
+      "ground_truth_only_predicates": [
+        "food(f)",
+        "member(\"bacon\", f)",
+        "member(\"pancakes\", f)",
+        "st_hpd(drink(\"Betsy\", \"coffee\"), true, 1)",
+        "st_hpd(eat(\"Betsy\", f), true, 1)",
+        "st_hpd(order(\"Betsy\", \"coffee\", \"the waitress\"), true, 0)",
+        "st_hpd(order(\"Betsy\", f, \"the waitress\"), true, 0)",
+        "st_hpd(pay(\"Betsy\", tip), true, 2)"
+      ],
+      "pred_predicate_count": 14,
+      "gt_predicate_count": 12
+    },
+    {
+      "sid": 47,
+      "similarity": 0.1875,
+      "story": "Gary went to a restaurant for his birthday. He ordered a steak. After he finished eating, the waiter surprised him with a small cake, on the house. Gary left a large tip.",
+      "predicted": "customer(\"Gary\"). restaurant(r). food(\"steak\"). food(\"small cake\"). waiter(\"the waiter\"). st_hpd(enter(\"Gary\", r), true, 0). st_hpd(order(\"Gary\", \"steak\", \"the waiter\"), true, 1). st_hpd(eat(\"Gary\", \"steak\"), true, 2). st_hpd(put_down(\"the waiter\", \"small cake\", t), true, 3). st_hpd(pay(\"Gary\", tip), true, 4).",
+      "ground_truth": "restaurant(\"a restaurant\"). customer(\"Gary\"). food(\"steak\"). food(\"cake\"). waiter(\"the waiter\"). story_step(0..3). st_hpd(order(\"Gary\", \"steak\", \"the waiter\"), true, 0). st_hpd(eat(\"Gary\", \"steak\"), true, 1). st_hpd(put_down(\"the waiter\", \"cake\", t), true, 2). st_hpd(pay(\"Gary\", tip), true, 3).",
+      "matching_predicates": [
+        "food(\"steak\")",
+        "person(\"gary\")",
+        "waiter(\"waiter\")"
+      ],
+      "predicted_only_predicates": [
+        "food(\"small cake\")",
+        "restaurant(r)",
+        "st_hpd(eat(\"Gary\", \"steak\"), true, 2)",
+        "st_hpd(enter(\"Gary\", r), true, 0)",
+        "st_hpd(order(\"Gary\", \"steak\", \"the waiter\"), true, 1)",
+        "st_hpd(pay(\"Gary\", tip), true, 4)",
+        "st_hpd(put_down(\"the waiter\", \"small cake\", t), true, 3)"
+      ],
+      "ground_truth_only_predicates": [
+        "food(\"cake\")",
+        "restaurant(\"a restaurant\")",
+        "st_hpd(eat(\"Gary\", \"steak\"), true, 1)",
+        "st_hpd(order(\"Gary\", \"steak\", \"the waiter\"), true, 0)",
+        "st_hpd(pay(\"Gary\", tip), true, 3)",
+        "st_hpd(put_down(\"the waiter\", \"cake\", t), true, 2)"
+      ],
+      "pred_predicate_count": 10,
+      "gt_predicate_count": 9
+    },
+    {
+      "sid": 2,
+      "similarity": 0.2,
+      "story": "John enters the restaurant. The waiter escorts him to a table. John orders steak. The waiter brings the steak to the table. John asks for the bill, and the waiter brings it to the table. John pays the bill and leaves the restaurant.",
+      "predicted": "restaurant(r). customer(\"John\"). waiter(w). food(\"steak\"). st_hpd(enter(\"John\", r), true, 0). st_hpd(lead_to(w, \"John\", t), true, 1). st_hpd(order(\"John\", \"steak\", w), true, 2). st_hpd(put_down(w, \"steak\", t), true, 3). st_hpd(request(\"John\", b, w), true, 4). st_hpd(put_down(w, b, t), true, 5). st_hpd(pay(\"John\", b), true, 6). st_hpd(leave(\"John\"), true, 7).",
+      "ground_truth": "restaurant(\"the restaurant\"). customer(\"John\"). food(\"steak\"). waiter(\"the waiter\"). story_step(0..6). st_hpd(enter(\"John\", \"the restaurant\"), true, 0). st_hpd(lead_to(\"the waiter\", \"John\", t), true, 1). st_hpd(order(\"John\", \"steak\", \"the waiter\"), true, 2). st_hpd(put_down(\"the waiter\", \"steak\", t), true, 3). st_hpd(request(\"John\", b, \"the waiter\"), true, 4). st_hpd(put_down(\"the waiter\", b, t), true, 5). st_hpd(pay(\"John\", b), true, 6). st_hpd(leave(\"John\"), true, 7).",
+      "matching_predicates": [
+        "food(\"steak\")",
+        "person(\"john\")",
+        "st_hpd(leave(\"john\"), \"true\", 7)",
+        "st_hpd(pay(\"john\", \"b\"), \"true\", 6)"
+      ],
+      "predicted_only_predicates": [
+        "restaurant(r)",
+        "st_hpd(enter(\"John\", r), true, 0)",
+        "st_hpd(lead_to(w, \"John\", t), true, 1)",
+        "st_hpd(order(\"John\", \"steak\", w), true, 2)",
+        "st_hpd(put_down(w, \"steak\", t), true, 3)",
+        "st_hpd(put_down(w, b, t), true, 5)",
+        "st_hpd(request(\"John\", b, w), true, 4)",
+        "waiter(w)"
+      ],
+      "ground_truth_only_predicates": [
+        "restaurant(\"the restaurant\")",
+        "st_hpd(enter(\"John\", \"the restaurant\"), true, 0)",
+        "st_hpd(lead_to(\"the waiter\", \"John\", t), true, 1)",
+        "st_hpd(order(\"John\", \"steak\", \"the waiter\"), true, 2)",
+        "st_hpd(put_down(\"the waiter\", \"steak\", t), true, 3)",
+        "st_hpd(put_down(\"the waiter\", b, t), true, 5)",
+        "st_hpd(request(\"John\", b, \"the waiter\"), true, 4)",
+        "waiter(\"the waiter\")"
+      ],
+      "pred_predicate_count": 12,
+      "gt_predicate_count": 12
+    },
+    {
+      "sid": 8,
+      "similarity": 0.2,
+      "story": "Derek ordered a vegetable soup. The waiter brought out the vegetable soup, but Derek was unsatisfied with the lack of vegetables in it. As an apology, the waiter decided not to charge Derek for the soup.",
+      "predicted": "restaurant(r). customer(\"Derek\"). waiter(w). food(\"vegetable soup\"). st_hpd(order(\"Derek\", \"vegetable soup\", w), true, 0). st_hpd(put_down(w, \"vegetable soup\", t), true, 1). st_hpd(complain(\"Derek\", w), true, 2). st_next(1, 2). st_hpd(cancel_bill(w), true, 3).",
+      "ground_truth": "restaurant(\"restaurant\"). customer(\"Derek\"). food(\"vegetable soup\"). waiter(\"the waiter\"). story_step(0..3). st_hpd(order(\"Derek\", \"vegetable soup\", \"the waiter\"), true, 0). st_hpd(put_down(\"the waiter\", \"vegetable soup\", t), true, 1). st_hpd(complain(\"Derek\", \"the waiter\"), true, 2). st_next(1, 2). st_hpd(pay(\"derek\", b), false, 3).",
+      "matching_predicates": [
+        "food(\"vegetable soup\")",
+        "person(\"derek\")",
+        "st_next(1, 2)"
+      ],
+      "predicted_only_predicates": [
+        "restaurant(r)",
+        "st_hpd(cancel_bill(w), true, 3)",
+        "st_hpd(complain(\"Derek\", w), true, 2)",
+        "st_hpd(order(\"Derek\", \"vegetable soup\", w), true, 0)",
+        "st_hpd(put_down(w, \"vegetable soup\", t), true, 1)",
+        "waiter(w)"
+      ],
+      "ground_truth_only_predicates": [
+        "restaurant(\"restaurant\")",
+        "st_hpd(complain(\"Derek\", \"the waiter\"), true, 2)",
+        "st_hpd(order(\"Derek\", \"vegetable soup\", \"the waiter\"), true, 0)",
+        "st_hpd(pay(\"derek\", b), false, 3)",
+        "st_hpd(put_down(\"the waiter\", \"vegetable soup\", t), true, 1)",
+        "waiter(\"the waiter\")"
+      ],
+      "pred_predicate_count": 9,
+      "gt_predicate_count": 9
+    },
+    {
+      "sid": 79,
+      "similarity": 0.2,
+      "story": "[REDACTED — original ROCStories text; storyid=845b62e4-9240-4afe-8d59-ae2bc183967c]",
+      "predicted": "restaurant(\"a new steakhouse\"). customer(\"the couple\"). food(\"steaks\"). st_hpd(eat(\"the couple\", \"steaks\"), true, 0). st_hpd(read_bill(\"the couple\"), true, 1).",
+      "ground_truth": "restaurant(\"new steakhouse\"). customer(\"the couple\"). food(\"huge cuts of meat\"). st_obs(in(\"the couple\", \"new steakhouse\"), true, 0). st_hpd(put_down(w, \"huge cuts of meat\", t), true, 1). st_hpd(eat(\"the couple\", \"huge cuts of meat\"), true, 2). st_hpd(put_down(w, b, t), true, 3).",
+      "matching_predicates": [
+        "person(\"couple\")",
+        "restaurant(\"new steakhouse\")"
+      ],
+      "predicted_only_predicates": [
+        "food(\"steaks\")",
+        "st_hpd(eat(\"the couple\", \"steaks\"), true, 0)",
+        "st_hpd(read_bill(\"the couple\"), true, 1)"
+      ],
+      "ground_truth_only_predicates": [
+        "food(\"huge cuts of meat\")",
+        "st_hpd(eat(\"the couple\", \"huge cuts of meat\"), true, 2)",
+        "st_hpd(put_down(w, \"huge cuts of meat\", t), true, 1)",
+        "st_hpd(put_down(w, b, t), true, 3)",
+        "st_obs(in(\"the couple\", \"new steakhouse\"), true, 0)"
+      ],
+      "pred_predicate_count": 5,
+      "gt_predicate_count": 7
+    },
+    {
+      "sid": 52,
+      "similarity": 0.21052631578947367,
+      "story": "David walked into the seafood restaurant and was shown to his table. He browsed the menu and ordered grilled salmon with vegetables. The food arrived quickly. David ate his meal and paid the bill before leaving.",
+      "predicted": "customer(\"David\"). restaurant(\"seafood restaurant\"). food(\"grilled salmon with vegetables\"). waiter(w). st_hpd(enter(\"David\", \"seafood restaurant\"), true, 0). st_hpd(lead_to(w, \"David\", t), true, 1). st_hpd(read_menu(\"David\"), true, 2). st_hpd(order(\"David\", \"grilled salmon with vegetables\", w), true, 3). st_hpd(put_down(w, \"grilled salmon with vegetables\", t), true, 4). st_hpd(eat(\"David\", \"grilled salmon with vegetables\"), true, 5). st_hpd(pay(\"David\", b), true, 6). st_hpd(leave(\"David\"), true, 7).",
+      "ground_truth": "restaurant(\"seafood restaurant\"). customer(\"David\"). food(\"grilled salmon with vegetables\"). waiter(\"the waiter\"). st_hpd(enter(\"David\", \"seafood restaurant\"), true, 0). st_hpd(lead_to(\"the waiter\", \"David\", t), true, 1). st_hpd(order(\"David\", \"grilled salmon with vegetables\", \"the waiter\"), true, 2). st_hpd(put_down(\"the waiter\", \"grilled salmon with vegetables\", t), true, 3). st_hpd(eat(\"David\", \"grilled salmon with vegetables\"), true, 4). st_hpd(pay(\"David\", b), true, 5). st_hpd(leave(\"David\"), true, 6).",
+      "matching_predicates": [
+        "food(\"grilled salmon with vegetables\")",
+        "person(\"david\")",
+        "restaurant(\"seafood restaurant\")",
+        "st_hpd(enter(\"david\", \"seafood restaurant\"), \"true\", 0)"
+      ],
+      "predicted_only_predicates": [
+        "st_hpd(eat(\"David\", \"grilled salmon with vegetables\"), true, 5)",
+        "st_hpd(lead_to(w, \"David\", t), true, 1)",
+        "st_hpd(leave(\"David\"), true, 7)",
+        "st_hpd(order(\"David\", \"grilled salmon with vegetables\", w), true, 3)",
+        "st_hpd(pay(\"David\", b), true, 6)",
+        "st_hpd(put_down(w, \"grilled salmon with vegetables\", t), true, 4)",
+        "st_hpd(read_menu(\"David\"), true, 2)",
+        "waiter(w)"
+      ],
+      "ground_truth_only_predicates": [
+        "st_hpd(eat(\"David\", \"grilled salmon with vegetables\"), true, 4)",
+        "st_hpd(lead_to(\"the waiter\", \"David\", t), true, 1)",
+        "st_hpd(leave(\"David\"), true, 6)",
+        "st_hpd(order(\"David\", \"grilled salmon with vegetables\", \"the waiter\"), true, 2)",
+        "st_hpd(pay(\"David\", b), true, 5)",
+        "st_hpd(put_down(\"the waiter\", \"grilled salmon with vegetables\", t), true, 3)",
+        "waiter(\"the waiter\")"
+      ],
+      "pred_predicate_count": 12,
+      "gt_predicate_count": 11
+    },
+    {
+      "sid": 84,
+      "similarity": 0.21428571428571427,
+      "story": "[REDACTED — original ROCStories text; storyid=0f9b69ff-6fbe-4e94-a37a-8ef3fbf2a876]",
+      "predicted": "restaurant(\"the diner\"). customer(\"Donna\"). food(\"the cheeseburger\"). food(\"onion rings\"). waiter(w). st_hpd(enter(\"Donna\", \"the diner\"), true, 0). st_hpd(order(\"Donna\", \"the cheeseburger\", w), true, 1). st_hpd(order(\"Donna\", \"onion rings\", w), true, 1). st_hpd(eat(\"Donna\", \"the cheeseburger\"), true, 2).",
+      "ground_truth": "restaurant(\"diner\"). customer(\"Donna\"). food(f). member(\"cheeseburger\", f). member(\"onion rings\", f). st_hpd(enter(\"Donna\", \"diner\"), true, 0). st_hpd(order(\"Donna\", f, w), true, 1). st_hpd(eat(\"Donna\", f), true, 2).",
+      "matching_predicates": [
+        "person(\"donna\")",
+        "restaurant(\"diner\")",
+        "st_hpd(enter(\"donna\", \"diner\"), \"true\", 0)"
+      ],
+      "predicted_only_predicates": [
+        "food(\"onion rings\")",
+        "food(\"the cheeseburger\")",
+        "st_hpd(eat(\"Donna\", \"the cheeseburger\"), true, 2)",
+        "st_hpd(order(\"Donna\", \"onion rings\", w), true, 1)",
+        "st_hpd(order(\"Donna\", \"the cheeseburger\", w), true, 1)",
+        "waiter(w)"
+      ],
+      "ground_truth_only_predicates": [
+        "food(f)",
+        "member(\"cheeseburger\", f)",
+        "member(\"onion rings\", f)",
+        "st_hpd(eat(\"Donna\", f), true, 2)",
+        "st_hpd(order(\"Donna\", f, w), true, 1)"
+      ],
+      "pred_predicate_count": 9,
+      "gt_predicate_count": 8
+    },
+    {
+      "sid": 71,
+      "similarity": 0.21739130434782608,
+      "story": "Michael entered the bistro and was led to a table by a waitress. He ordered the daily special and a glass of water. The waitress brought his meal promptly. Michael enjoyed his food and asked for the check.",
+      "predicted": "customer(\"Michael\"). restaurant(\"the bistro\"). waiter(\"a waitress\"). food(\"the daily special\"). beverage(\"a glass of water\"). st_hpd(enter(\"Michael\", \"the bistro\"), true, 0). st_hpd(lead_to(\"a waitress\", \"Michael\", t), true, 1). st_obs(sitting(\"Michael\"), true, 2). st_hpd(order(\"Michael\", \"the daily special\", \"a waitress\"), true, 3). st_hpd(order(\"Michael\", \"a glass of water\", \"a waitress\"), true, 3). st_hpd(put_down(\"a waitress\", \"the daily special\", t), true, 4). st_hpd(put_down(\"a waitress\", \"a glass of water\", t), true, 4). st_hpd(eat(\"Michael\", \"the daily special\"), true, 5). st_hpd(request(\"Michael\", b, \"a waitress\"), true, 6).",
+      "ground_truth": "restaurant(\"the bistro\"). customer(\"Michael\"). food(\"daily special\"). beverage(\"water\"). waiter(\"the waitress\"). st_hpd(enter(\"Michael\", \"the bistro\"), true, 0). st_hpd(lead_to(\"the host\", \"Michael\", t), true, 1). st_hpd(order(\"Michael\", \"daily special\", \"the waitress\"), true, 2). st_hpd(order(\"Michael\", \"water\", \"the waitress\"), true, 2). st_hpd(put_down(\"the waitress\", \"daily special\", t), true, 3). st_hpd(put_down(\"the waitress\", \"water\", t), true, 3). st_hpd(eat(\"Michael\", \"daily special\"), true, 4). st_hpd(drink(\"Michael\", \"water\"), true, 4). st_hpd(request(\"Michael\", b, \"the waitress\"), true, 5).",
+      "matching_predicates": [
+        "food(\"daily special\")",
+        "person(\"michael\")",
+        "restaurant(\"bistro\")",
+        "st_hpd(enter(\"michael\", \"bistro\"), \"true\", 0)",
+        "waiter(\"waitress\")"
+      ],
+      "predicted_only_predicates": [
+        "beverage(\"a glass of water\")",
+        "st_hpd(eat(\"Michael\", \"the daily special\"), true, 5)",
+        "st_hpd(lead_to(\"a waitress\", \"Michael\", t), true, 1)",
+        "st_hpd(order(\"Michael\", \"a glass of water\", \"a waitress\"), true, 3)",
+        "st_hpd(order(\"Michael\", \"the daily special\", \"a waitress\"), true, 3)",
+        "st_hpd(put_down(\"a waitress\", \"a glass of water\", t), true, 4)",
+        "st_hpd(put_down(\"a waitress\", \"the daily special\", t), true, 4)",
+        "st_hpd(request(\"Michael\", b, \"a waitress\"), true, 6)",
+        "st_obs(sitting(\"Michael\"), true, 2)"
+      ],
+      "ground_truth_only_predicates": [
+        "beverage(\"water\")",
+        "st_hpd(drink(\"Michael\", \"water\"), true, 4)",
+        "st_hpd(eat(\"Michael\", \"daily special\"), true, 4)",
+        "st_hpd(lead_to(\"the host\", \"Michael\", t), true, 1)",
+        "st_hpd(order(\"Michael\", \"daily special\", \"the waitress\"), true, 2)",
+        "st_hpd(order(\"Michael\", \"water\", \"the waitress\"), true, 2)",
+        "st_hpd(put_down(\"the waitress\", \"daily special\", t), true, 3)",
+        "st_hpd(put_down(\"the waitress\", \"water\", t), true, 3)",
+        "st_hpd(request(\"Michael\", b, \"the waitress\"), true, 5)"
+      ],
+      "pred_predicate_count": 14,
+      "gt_predicate_count": 14
+    },
+    {
+      "sid": 29,
+      "similarity": 0.2222222222222222,
+      "story": "Nicole went to a vegetarian restaurant. She ordered lentil soup. When the waitress brought her the soup, she told Nicole that it was on the house. Nicole enjoyed the soup and then left.",
+      "predicted": "customer(\"Nicole\"). restaurant(\"vegetarian restaurant\"). food(\"lentil soup\"). waiter(\"the waitress\"). st_hpd(enter(\"Nicole\", \"vegetarian restaurant\"), true, 0). st_hpd(order(\"Nicole\", \"lentil soup\", \"the waitress\"), true, 1). st_hpd(put_down(\"the waitress\", \"lentil soup\", t), true, 2). st_hpd(cancel_bill(\"the waitress\"), true, 2). st_hpd(eat(\"Nicole\", \"lentil soup\"), true, 3). st_hpd(leave(\"Nicole\"), true, 4). st_hpd(pay(\"Nicole\", b), false).",
+      "ground_truth": "restaurant(veg_r). customer(nicole). person(owner). food(lentil_soup). waiter(waitress). story_step(0..5). st_hpd(enter(nicole, veg_r), true, 0). st_hpd(order(nicole, lentil_soup, waitress), true, 1). st_hpd(pay(owner, b), true, 2). st_hpd(put_down(waitress, lentil_soup, t), true, 3). st_hpd(eat(nicole, lentil_soup), true, 4). st_hpd(leave(nicole), true, 5).",
+      "matching_predicates": [
+        "food(\"lentil soup\")",
+        "person(\"nicole\")",
+        "st_hpd(order(\"nicole\", \"lentil soup\", \"waitress\"), \"true\", 1)",
+        "waiter(\"waitress\")"
+      ],
+      "predicted_only_predicates": [
+        "restaurant(\"vegetarian restaurant\")",
+        "st_hpd(cancel_bill(\"the waitress\"), true, 2)",
+        "st_hpd(eat(\"Nicole\", \"lentil soup\"), true, 3)",
+        "st_hpd(enter(\"Nicole\", \"vegetarian restaurant\"), true, 0)",
+        "st_hpd(leave(\"Nicole\"), true, 4)",
+        "st_hpd(pay(\"Nicole\", b), false)",
+        "st_hpd(put_down(\"the waitress\", \"lentil soup\", t), true, 2)"
+      ],
+      "ground_truth_only_predicates": [
+        "person(owner)",
+        "restaurant(veg_r)",
+        "st_hpd(eat(nicole, lentil_soup), true, 4)",
+        "st_hpd(enter(nicole, veg_r), true, 0)",
+        "st_hpd(leave(nicole), true, 5)",
+        "st_hpd(pay(owner, b), true, 2)",
+        "st_hpd(put_down(waitress, lentil_soup, t), true, 3)"
+      ],
+      "pred_predicate_count": 11,
+      "gt_predicate_count": 11
+    },
+    {
+      "sid": 33,
+      "similarity": 0.2222222222222222,
+      "story": "One day, Andy felt hungry and went to the RRGrill restaurant for dinner. The restaurant was open, but there was no table available for Andy.",
+      "predicted": "customer(\"Andy\"). restaurant(\"RRGrill\"). st_obs(hungry(\"Andy\"), true, 0). st_hpd(enter(\"Andy\", \"RRGrill\"), true, 1). st_obs(open(\"RRGrill\"), true, 1). st_obs(table_available, false, 2). stop_activity(\"Andy\", 2).",
+      "ground_truth": "restaurant(\"RRGrill\"). customer(\"Andy\"). story_step(0..1). st_hpd(enter(\"Andy\", \"RRGrill\"), true, 0). st_obs(table_available, false, 1).",
+      "matching_predicates": [
+        "person(\"andy\")",
+        "restaurant(\"rrgrill\")"
+      ],
+      "predicted_only_predicates": [
+        "st_hpd(enter(\"Andy\", \"RRGrill\"), true, 1)",
+        "st_obs(hungry(\"Andy\"), true, 0)",
+        "st_obs(open(\"RRGrill\"), true, 1)",
+        "st_obs(table_available, false, 2)",
+        "stop_activity(\"Andy\", 2)"
+      ],
+      "ground_truth_only_predicates": [
+        "st_hpd(enter(\"Andy\", \"RRGrill\"), true, 0)",
+        "st_obs(table_available, false, 1)"
+      ],
+      "pred_predicate_count": 7,
+      "gt_predicate_count": 4
+    },
+    {
+      "sid": 40,
+      "similarity": 0.23529411764705882,
+      "story": "Ken was at a sushi restaurant. He ordered the tuna roll. The waiter brought the tuna roll, but Ken noticed a long hair in it. He complained to the waiter, who apologized and brought a new, hair-free roll.",
+      "predicted": "customer(\"Ken\"). restaurant(\"sushi restaurant\"). food(\"tuna roll\"). food(\"new, hair-free roll\"). waiter(\"the waiter\"). st_obs(in(\"Ken\", \"sushi restaurant\"), true, 0). st_hpd(order(\"Ken\", \"tuna roll\", \"the waiter\"), true, 1). st_hpd(put_down(\"the waiter\", \"tuna roll\", t), true, 2). st_hpd(complain(\"Ken\", \"the waiter\"), true, 3). st_next(2, 3). st_hpd(put_down(\"the waiter\", \"new, hair-free roll\", t), true, 4).",
+      "ground_truth": "restaurant(\"sushi restaurant\"). customer(\"Ken\"). food(\"tuna roll\"). food(\"new tuna roll\"). waiter(\"the waiter\"). story_step(0..4). st_hpd(order(\"Ken\", \"tuna roll\", \"the waiter\"), true, 0). st_hpd(put_down(\"the waiter\", \"tuna roll\", t), true, 1). st_hpd(complain(\"Ken\", \"the waiter\"), true, 2). st_next(1, 2). st_hpd(put_down(w, \"new tuna roll\", t), true, 3).",
+      "matching_predicates": [
+        "food(\"tuna roll\")",
+        "person(\"ken\")",
+        "restaurant(\"sushi restaurant\")",
+        "waiter(\"waiter\")"
+      ],
+      "predicted_only_predicates": [
+        "food(\"new, hair-free roll\")",
+        "st_hpd(complain(\"Ken\", \"the waiter\"), true, 3)",
+        "st_hpd(order(\"Ken\", \"tuna roll\", \"the waiter\"), true, 1)",
+        "st_hpd(put_down(\"the waiter\", \"new, hair-free roll\", t), true, 4)",
+        "st_hpd(put_down(\"the waiter\", \"tuna roll\", t), true, 2)",
+        "st_next(2, 3)",
+        "st_obs(in(\"Ken\", \"sushi restaurant\"), true, 0)"
+      ],
+      "ground_truth_only_predicates": [
+        "food(\"new tuna roll\")",
+        "st_hpd(complain(\"Ken\", \"the waiter\"), true, 2)",
+        "st_hpd(order(\"Ken\", \"tuna roll\", \"the waiter\"), true, 0)",
+        "st_hpd(put_down(\"the waiter\", \"tuna roll\", t), true, 1)",
+        "st_hpd(put_down(w, \"new tuna roll\", t), true, 3)",
+        "st_next(1, 2)"
+      ],
+      "pred_predicate_count": 11,
+      "gt_predicate_count": 10
+    },
+    {
+      "sid": 27,
+      "similarity": 0.23809523809523808,
+      "story": "Nicole and Sam went to a vegetarian restaurant. She ordered a lentil soup. He ordered a miso soup. They both enjoyed their soups.",
+      "predicted": "customer(\"Nicole\"). customer(\"Sam\"). customer(they). member(\"Nicole\", they). member(\"Sam\", they). restaurant(\"vegetarian restaurant\"). food(\"lentil soup\"). food(\"miso soup\"). waiter(w). st_hpd(enter(they, \"vegetarian restaurant\"), true, 0). st_hpd(order(\"Nicole\", \"lentil soup\", w), true, 1). st_hpd(order(\"Sam\", \"miso soup\", w), true, 1). st_hpd(eat(\"Nicole\", \"lentil soup\"), true, 2). st_hpd(eat(\"Sam\", \"miso soup\"), true, 2).",
+      "ground_truth": "restaurant(veg_r). customer(nicole). customer(sam). food(lentil_soup). food(miso_soup). waiter(w). story_step(0..3). st_hpd(enter(nicole, veg_r), true, 0). st_hpd(enter(sam, veg_r), true, 0). st_hpd(order(nicole, lentil_soup, waitress), true, 1). st_hpd(order(sam, miso_soup, waitress), true, 2). st_hpd(eat(nicole, lentil_soup), true, 3). st_hpd(eat(sam, miso_soup), true, 3).",
+      "matching_predicates": [
+        "food(\"lentil soup\")",
+        "food(\"miso soup\")",
+        "person(\"nicole\")",
+        "person(\"sam\")",
+        "waiter(\"w\")"
+      ],
+      "predicted_only_predicates": [
+        "customer(they)",
+        "member(\"Nicole\", they)",
+        "member(\"Sam\", they)",
+        "restaurant(\"vegetarian restaurant\")",
+        "st_hpd(eat(\"Nicole\", \"lentil soup\"), true, 2)",
+        "st_hpd(eat(\"Sam\", \"miso soup\"), true, 2)",
+        "st_hpd(enter(they, \"vegetarian restaurant\"), true, 0)",
+        "st_hpd(order(\"Nicole\", \"lentil soup\", w), true, 1)",
+        "st_hpd(order(\"Sam\", \"miso soup\", w), true, 1)"
+      ],
+      "ground_truth_only_predicates": [
+        "restaurant(veg_r)",
+        "st_hpd(eat(nicole, lentil_soup), true, 3)",
+        "st_hpd(eat(sam, miso_soup), true, 3)",
+        "st_hpd(enter(nicole, veg_r), true, 0)",
+        "st_hpd(enter(sam, veg_r), true, 0)",
+        "st_hpd(order(nicole, lentil_soup, waitress), true, 1)",
+        "st_hpd(order(sam, miso_soup, waitress), true, 2)"
+      ],
+      "pred_predicate_count": 14,
+      "gt_predicate_count": 12
+    },
+    {
+      "sid": 23,
+      "similarity": 0.2608695652173913,
+      "story": "I opened the menu and chose the salmon. The waiter poured two glasses of red wine. I sipped the wine. Then our server brought a small plate of hors d'oeuvres. I tried a little bit of everything. Soon, the waiter brought the meal. I tasted the salmon.",
+      "predicted": "restaurant(r). customer(\"I\"). waiter(\"the waiter\"). waiter(\"our server\"). food(\"salmon\"). beverage(\"red wine\"). food(\"hors d'oeuvres\"). st_hpd(read_menu(\"I\"), true, 0). st_hpd(order(\"I\", \"salmon\", \"the waiter\"), true, 0). st_hpd(put_down(\"the waiter\", \"red wine\", t), true, 1). st_hpd(drink(\"I\", \"red wine\"), true, 2). st_hpd(put_down(\"our server\", \"hors d'oeuvres\", t), true, 3). st_hpd(eat(\"I\", \"hors d'oeuvres\"), true, 4). st_hpd(put_down(\"the waiter\", \"salmon\", t), true, 5). st_hpd(eat(\"I\", \"salmon\"), true, 6).",
+      "ground_truth": "restaurant(r). customer(\"I\"). food(salmon). beverage(\"red wine\"). food(\"hors d'oeuvres\"). waiter(\"the waiter\"). story_step(0..7). st_hpd(pick_up(\"I\", m, t), true, 0). st_hpd(order(\"I\", salmon, \"the waiter\"), true, 1). st_hpd(put_down(\"I\", \"red wine\", t), true, 2). st_hpd(drink(\"I\", \"red wine\"), true, 3). st_hpd(put_down(\"the waiter\", \"hors d'oeuvres\", t), true, 4). st_hpd(eat(\"I\", \"hors d'oeuvres\"), true, 5). st_hpd(put_down(\"the waiter\", salmon, t), true, 6). st_hpd(eat(\"I\", salmon), true, 7).",
+      "matching_predicates": [
+        "beverage(\"red wine\")",
+        "food(\"hors d'oeuvres\")",
+        "food(\"salmon\")",
+        "person(\"i\")",
+        "restaurant(\"r\")",
+        "waiter(\"waiter\")"
+      ],
+      "predicted_only_predicates": [
+        "st_hpd(drink(\"I\", \"red wine\"), true, 2)",
+        "st_hpd(eat(\"I\", \"hors d'oeuvres\"), true, 4)",
+        "st_hpd(eat(\"I\", \"salmon\"), true, 6)",
+        "st_hpd(order(\"I\", \"salmon\", \"the waiter\"), true, 0)",
+        "st_hpd(put_down(\"our server\", \"hors d'oeuvres\", t), true, 3)",
+        "st_hpd(put_down(\"the waiter\", \"red wine\", t), true, 1)",
+        "st_hpd(put_down(\"the waiter\", \"salmon\", t), true, 5)",
+        "st_hpd(read_menu(\"I\"), true, 0)",
+        "waiter(\"our server\")"
+      ],
+      "ground_truth_only_predicates": [
+        "st_hpd(drink(\"I\", \"red wine\"), true, 3)",
+        "st_hpd(eat(\"I\", \"hors d'oeuvres\"), true, 5)",
+        "st_hpd(eat(\"I\", salmon), true, 7)",
+        "st_hpd(order(\"I\", salmon, \"the waiter\"), true, 1)",
+        "st_hpd(pick_up(\"I\", m, t), true, 0)",
+        "st_hpd(put_down(\"I\", \"red wine\", t), true, 2)",
+        "st_hpd(put_down(\"the waiter\", \"hors d'oeuvres\", t), true, 4)",
+        "st_hpd(put_down(\"the waiter\", salmon, t), true, 6)"
+      ],
+      "pred_predicate_count": 15,
+      "gt_predicate_count": 14
+    },
+    {
+      "sid": 64,
+      "similarity": 0.2631578947368421,
+      "story": "Penny booked a table for two. She and her friend arrived at the restaurant and were seated immediately. They perused the menu, ordered their food, and had a lovely meal.",
+      "predicted": "restaurant(r). customer(\"Penny\"). customer(\"her friend\"). customer(they). member(\"Penny\", they). member(\"her friend\", they). waiter(w). st_hpd(enter(they, r), true, 0). st_obs(sitting(they), true, 1). st_hpd(read_menu(they), true, 2). st_hpd(order(they, f, w), true, 3). st_hpd(eat(they, f), true, 4).",
+      "ground_truth": "restaurant(\"the restaurant\"). customer(they). person(\"Penny\"). person(\"her friend\"). member(\"Penny\", they). member(\"her friend\", they). food(\"food\"). story_step(0..5). st_hpd(enter(they, \"the restaurant\"), true, 0). st_hpd(sit(they), true, 1). st_hpd(read_menu(they), true, 3). st_hpd(order(they, \"food\", w), true, 4). st_hpd(eat(they, \"food\"), true, 5).",
+      "matching_predicates": [
+        "member(\"her friend\", \"they\")",
+        "member(\"penny\", \"they\")",
+        "person(\"her friend\")",
+        "person(\"penny\")",
+        "person(\"they\")"
+      ],
+      "predicted_only_predicates": [
+        "restaurant(r)",
+        "st_hpd(eat(they, f), true, 4)",
+        "st_hpd(enter(they, r), true, 0)",
+        "st_hpd(order(they, f, w), true, 3)",
+        "st_hpd(read_menu(they), true, 2)",
+        "st_obs(sitting(they), true, 1)",
+        "waiter(w)"
+      ],
+      "ground_truth_only_predicates": [
+        "food(\"food\")",
+        "restaurant(\"the restaurant\")",
+        "st_hpd(eat(they, \"food\"), true, 5)",
+        "st_hpd(enter(they, \"the restaurant\"), true, 0)",
+        "st_hpd(order(they, \"food\", w), true, 4)",
+        "st_hpd(read_menu(they), true, 3)",
+        "st_hpd(sit(they), true, 1)"
+      ],
+      "pred_predicate_count": 12,
+      "gt_predicate_count": 12
+    },
+    {
+      "sid": 32,
+      "similarity": 0.26666666666666666,
+      "story": "Nicole went to a vegetarian restaurant. She ordered a lentil soup. Nicole was in a hurry, so as soon as the waitress laid the dish on the table, Nicole paid for it in cash and said that she didn't need the bill.",
+      "predicted": "customer(\"Nicole\"). restaurant(\"vegetarian restaurant\"). food(\"lentil soup\"). waiter(\"the waitress\"). st_hpd(enter(\"Nicole\", \"vegetarian restaurant\"), true, 0). st_hpd(order(\"Nicole\", \"lentil soup\", \"the waitress\"), true, 1). st_hpd(put_down(\"the waitress\", \"lentil soup\", t), true, 2). st_hpd(pay(\"Nicole\", b), true, 2). st_hpd(read_bill(\"Nicole\"), false).",
+      "ground_truth": "restaurant(veg_r). customer(nicole). person(owner). food(lentil_soup). waiter(waitress). story_step(0..3). st_hpd(enter(nicole, veg_r), true, 0). st_hpd(order(nicole, lentil_soup, waitress), true, 1). st_hpd(put_down(waitress, miso_soup, t), true, 2). st_hpd(pay(nicole, b), true, 3). next_st(2, 3).",
+      "matching_predicates": [
+        "food(\"lentil soup\")",
+        "person(\"nicole\")",
+        "st_hpd(order(\"nicole\", \"lentil soup\", \"waitress\"), \"true\", 1)",
+        "waiter(\"waitress\")"
+      ],
+      "predicted_only_predicates": [
+        "restaurant(\"vegetarian restaurant\")",
+        "st_hpd(enter(\"Nicole\", \"vegetarian restaurant\"), true, 0)",
+        "st_hpd(pay(\"Nicole\", b), true, 2)",
+        "st_hpd(put_down(\"the waitress\", \"lentil soup\", t), true, 2)",
+        "st_hpd(read_bill(\"Nicole\"), false)"
+      ],
+      "ground_truth_only_predicates": [
+        "next_st(2, 3)",
+        "person(owner)",
+        "restaurant(veg_r)",
+        "st_hpd(enter(nicole, veg_r), true, 0)",
+        "st_hpd(pay(nicole, b), true, 3)",
+        "st_hpd(put_down(waitress, miso_soup, t), true, 2)"
+      ],
+      "pred_predicate_count": 9,
+      "gt_predicate_count": 10
+    },
+    {
+      "sid": 21,
+      "similarity": 0.2727272727272727,
+      "story": "The waiter brought the wine to their table. Then, Emanuel studied the menu. He ordered the gypsy shashlik for Ingrid and himself. After the waiter left, they drank the wine. The waiter brought the shashlik to their table.",
+      "predicted": "restaurant(r). waiter(\"the waiter\"). customer(\"Emanuel\"). customer(\"Ingrid\"). customer(they). member(\"Emanuel\", they). member(\"Ingrid\", they). beverage(\"wine\"). food(\"gypsy shashlik\"). st_hpd(put_down(\"the waiter\", \"wine\", t), true, 0). st_hpd(read_menu(\"Emanuel\"), true, 1). st_hpd(order_for(\"Emanuel\", \"Ingrid\", \"gypsy shashlik\", \"the waiter\"), true, 2). st_hpd(order_for(\"Emanuel\", \"Emanuel\", \"gypsy shashlik\", \"the waiter\"), true, 2). st_hpd(drink(they, \"wine\"), true, 3). st_hpd(put_down(\"the waiter\", \"gypsy shashlik\", t), true, 4).",
+      "ground_truth": "restaurant(r). customer(they). member(\"Emanuel\"). member(\"Ingrid\"). beverage(wine). food(\"gypsy shashlik\"). waiter(\"the waiter\"). story_step(0..5). st_hpd(put_down(\"the waiter\", wine, t), true, 0). st_hpd(pick_up(\"Emanuel\", m, t), true, 1). st_hpd(order_for(\"Emanuel\", they, \"gypsy shashlik\", \"the waiter\"), true, 2). st_hpd(move(\"the waiter\", t, kitchen), true, 3). st_hpd(drink(they, wine), true, 4). st_hpd(put_down(\"the waiter\", \"gypsy shashlik\", t), true, 5).",
+      "matching_predicates": [
+        "beverage(\"wine\")",
+        "food(\"gypsy shashlik\")",
+        "person(\"they\")",
+        "restaurant(\"r\")",
+        "st_hpd(put_down(\"waiter\", \"wine\", \"t\"), \"true\", 0)",
+        "waiter(\"waiter\")"
+      ],
+      "predicted_only_predicates": [
+        "customer(\"Emanuel\")",
+        "customer(\"Ingrid\")",
+        "member(\"Emanuel\", they)",
+        "member(\"Ingrid\", they)",
+        "st_hpd(drink(they, \"wine\"), true, 3)",
+        "st_hpd(order_for(\"Emanuel\", \"Emanuel\", \"gypsy shashlik\", \"the waiter\"), true, 2)",
+        "st_hpd(order_for(\"Emanuel\", \"Ingrid\", \"gypsy shashlik\", \"the waiter\"), true, 2)",
+        "st_hpd(put_down(\"the waiter\", \"gypsy shashlik\", t), true, 4)",
+        "st_hpd(read_menu(\"Emanuel\"), true, 1)"
+      ],
+      "ground_truth_only_predicates": [
+        "member(\"Emanuel\")",
+        "member(\"Ingrid\")",
+        "st_hpd(drink(they, wine), true, 4)",
+        "st_hpd(move(\"the waiter\", t, kitchen), true, 3)",
+        "st_hpd(order_for(\"Emanuel\", they, \"gypsy shashlik\", \"the waiter\"), true, 2)",
+        "st_hpd(pick_up(\"Emanuel\", m, t), true, 1)",
+        "st_hpd(put_down(\"the waiter\", \"gypsy shashlik\", t), true, 5)"
+      ],
+      "pred_predicate_count": 15,
+      "gt_predicate_count": 13
+    },
+    {
+      "sid": 37,
+      "similarity": 0.2727272727272727,
+      "story": "One day, Andy felt hungry and went to the RRGrill restaurant for dinner. The restaurant was closed that day. He decided to go to Happy Pizza instead.",
+      "predicted": "customer(\"Andy\"). restaurant(\"RRGrill\"). restaurant(\"Happy Pizza\"). st_obs(hungry(\"Andy\"), true, 0). st_hpd(enter(\"Andy\", \"RRGrill\"), true, 0). st_obs(open(\"RRGrill\"), false, 1). st_hpd(leave(\"Andy\"), true, 2). st_hpd(enter(\"Andy\", \"Happy Pizza\"), true, 3).",
+      "ground_truth": "restaurant(\"RRGrill\"). restaurant(\"Happy Pizza\"). customer(\"Andy\"). story_step(0..2). st_obs(closed(\"RRGrill\"), true, 0). stop_activity(\"Andy\", 1). st_hpd(move(\"Andy\", \"RRGrill\", \"Happy Pizza\"), true, 2).",
+      "matching_predicates": [
+        "person(\"andy\")",
+        "restaurant(\"happy pizza\")",
+        "restaurant(\"rrgrill\")"
+      ],
+      "predicted_only_predicates": [
+        "st_hpd(enter(\"Andy\", \"Happy Pizza\"), true, 3)",
+        "st_hpd(enter(\"Andy\", \"RRGrill\"), true, 0)",
+        "st_hpd(leave(\"Andy\"), true, 2)",
+        "st_obs(hungry(\"Andy\"), true, 0)",
+        "st_obs(open(\"RRGrill\"), false, 1)"
+      ],
+      "ground_truth_only_predicates": [
+        "st_hpd(move(\"Andy\", \"RRGrill\", \"Happy Pizza\"), true, 2)",
+        "st_obs(closed(\"RRGrill\"), true, 0)",
+        "stop_activity(\"Andy\", 1)"
+      ],
+      "pred_predicate_count": 8,
+      "gt_predicate_count": 6
+    },
+    {
+      "sid": 11,
+      "similarity": 0.2857142857142857,
+      "story": "Jake is seated at his table in the restaurant. He orders a medium-rare steak. The waiter brings out his order but it is too rare.",
+      "predicted": "restaurant(\"the restaurant\"). customer(\"Jake\"). waiter(w). food(\"medium-rare steak\"). food(\"rare steak\"). st_obs(sitting(\"Jake\"), true, 0). st_hpd(order(\"Jake\", \"medium-rare steak\", w), true, 1). st_hpd(put_down(w, \"rare steak\", t), true, 2). st_hpd(complain(\"Jake\", w), true, 3). st_next(2, 3).",
+      "ground_truth": "restaurant(\"the restaurant\"). customer(\"Jake\"). food(\"medium-rare steak\"). food(\"too rare steak\"). waiter(\"the waiter\"). story_step(0..2). st_obs(sitting(\"Jake\"), true, 0). st_hpd(order(\"Jake\", \"medium-rare steak\", \"the waiter\"), true, 1). st_hpd(put_down(\"the waiter\", \"too rare steak\", t), true, 2).",
+      "matching_predicates": [
+        "food(\"medium-rare steak\")",
+        "person(\"jake\")",
+        "restaurant(\"restaurant\")",
+        "st_obs(sitting(\"jake\"), \"true\", 0)"
+      ],
+      "predicted_only_predicates": [
+        "food(\"rare steak\")",
+        "st_hpd(complain(\"Jake\", w), true, 3)",
+        "st_hpd(order(\"Jake\", \"medium-rare steak\", w), true, 1)",
+        "st_hpd(put_down(w, \"rare steak\", t), true, 2)",
+        "st_next(2, 3)",
+        "waiter(w)"
+      ],
+      "ground_truth_only_predicates": [
+        "food(\"too rare steak\")",
+        "st_hpd(order(\"Jake\", \"medium-rare steak\", \"the waiter\"), true, 1)",
+        "st_hpd(put_down(\"the waiter\", \"too rare steak\", t), true, 2)",
+        "waiter(\"the waiter\")"
+      ],
+      "pred_predicate_count": 10,
+      "gt_predicate_count": 8
+    },
+    {
+      "sid": 80,
+      "similarity": 0.3,
+      "story": "[REDACTED — original ROCStories text; storyid=d85b7ce5-0d84-4181-afe4-52c64711145a]",
+      "predicted": "restaurant(\"Genki Ya on Fresh Pond\"). customer(\"I\"). customer(\"my son\"). customer(we). member(\"I\", we). member(\"my son\", we). beverage(\"Japanese beers\"). food(\"fish roe\"). food(\"two combo sashimi-sushi dishes\"). st_hpd(enter(we, \"Genki Ya on Fresh Pond\"), true, 0). st_hpd(drink(we, \"Japanese beers\"), true, 1). st_hpd(eat(we, \"fish roe\"), true, 1). st_hpd(eat(we, \"two combo sashimi-sushi dishes\"), true, 1).",
+      "ground_truth": "restaurant(\"Genki Ya\"). customer(we). person(\"my son\"). person(\"I\"). member(\"my son\", we). member(\"I\", we). beverage(\"japanese beers\"). food(f). member(\"fish roe\", f). member(\"sashimi-sushi dishes\", f). st_hpd(enter(we, \"Genki Ya\"), true, 0). st_hpd(eat(we, f), true, 2). st_hpd(drink(we, \"japanese beers\"), true, 2).",
+      "matching_predicates": [
+        "beverage(\"japanese beers\")",
+        "member(\"i\", \"we\")",
+        "member(\"my son\", \"we\")",
+        "person(\"i\")",
+        "person(\"my son\")",
+        "person(\"we\")"
+      ],
+      "predicted_only_predicates": [
+        "food(\"fish roe\")",
+        "food(\"two combo sashimi-sushi dishes\")",
+        "restaurant(\"Genki Ya on Fresh Pond\")",
+        "st_hpd(drink(we, \"Japanese beers\"), true, 1)",
+        "st_hpd(eat(we, \"fish roe\"), true, 1)",
+        "st_hpd(eat(we, \"two combo sashimi-sushi dishes\"), true, 1)",
+        "st_hpd(enter(we, \"Genki Ya on Fresh Pond\"), true, 0)"
+      ],
+      "ground_truth_only_predicates": [
+        "food(f)",
+        "member(\"fish roe\", f)",
+        "member(\"sashimi-sushi dishes\", f)",
+        "restaurant(\"Genki Ya\")",
+        "st_hpd(drink(we, \"japanese beers\"), true, 2)",
+        "st_hpd(eat(we, f), true, 2)",
+        "st_hpd(enter(we, \"Genki Ya\"), true, 0)"
+      ],
+      "pred_predicate_count": 13,
+      "gt_predicate_count": 13
+    },
+    {
+      "sid": 93,
+      "similarity": 0.3,
+      "story": "[REDACTED — original ROCStories text; storyid=0b8e4ddd-6ada-42ba-9d6f-508db0bac85a]",
+      "predicted": "customer(\"I\"). customer(\"my mother\"). customer(we). member(\"I\", we). member(\"my mother\", we). restaurant(\"the restaurant\"). restaurant(\"Burger King\"). food(\"steak\"). waiter(\"she\"). st_hpd(enter(we, \"the restaurant\"), true, 0). st_obs(sitting(we), true, 1). st_hpd(order(\"I\", \"steak\", \"she\"), true, 2). st_obs(available(\"steak\", \"the restaurant\"), false, 3). st_hpd(leave(we), true, 4). st_hpd(enter(we, \"Burger King\"), true, 5).",
+      "ground_truth": "restaurant(\"the restaurant\"). restaurant(\"Burger King\"). customer(we). person(\"I\"). person(\"my mother\"). food(\"steak\"). st_hpd(sit(we), true, 0). st_hpd(order(\"I\", \"steak\", w), true, 1). st_obs(available(\"steak\", \"the restaurant\"), false, 1). st_hpd(leave(we), true, 2). st_hpd(enter(we, \"Burger King\"), true, 3).",
+      "matching_predicates": [
+        "food(\"steak\")",
+        "person(\"i\")",
+        "person(\"my mother\")",
+        "person(\"we\")",
+        "restaurant(\"burger king\")",
+        "restaurant(\"restaurant\")"
+      ],
+      "predicted_only_predicates": [
+        "member(\"I\", we)",
+        "member(\"my mother\", we)",
+        "st_hpd(enter(we, \"Burger King\"), true, 5)",
+        "st_hpd(enter(we, \"the restaurant\"), true, 0)",
+        "st_hpd(leave(we), true, 4)",
+        "st_hpd(order(\"I\", \"steak\", \"she\"), true, 2)",
+        "st_obs(available(\"steak\", \"the restaurant\"), false, 3)",
+        "st_obs(sitting(we), true, 1)",
+        "waiter(\"she\")"
+      ],
+      "ground_truth_only_predicates": [
+        "st_hpd(enter(we, \"Burger King\"), true, 3)",
+        "st_hpd(leave(we), true, 2)",
+        "st_hpd(order(\"I\", \"steak\", w), true, 1)",
+        "st_hpd(sit(we), true, 0)",
+        "st_obs(available(\"steak\", \"the restaurant\"), false, 1)"
+      ],
+      "pred_predicate_count": 15,
+      "gt_predicate_count": 11
+    },
+    {
+      "sid": 38,
+      "similarity": 0.3125,
+      "story": "One day, Andy felt hungry and went to the RRGrill restaurant for dinner. The restaurant was open and the waiter led Andy to a table. Andy went through the whole menu, but he didn't find any dish that he liked. Andy decided to leave.",
+      "predicted": "customer(\"Andy\"). restaurant(\"RRGrill\"). waiter(\"the waiter\"). st_obs(hungry(\"Andy\"), true, 0). st_hpd(enter(\"Andy\", \"RRGrill\"), true, 0). st_obs(open(\"RRGrill\"), true, 1). st_hpd(lead_to(\"the waiter\", \"Andy\", t), true, 1). st_obs(sitting(\"Andy\"), true, 2). st_hpd(read_menu(\"Andy\"), true, 3). st_hpd(order(\"Andy\"), false, 4). st_hpd(leave(\"Andy\"), true, 5).",
+      "ground_truth": "restaurant(\"RRGrill\"). customer(\"Andy\"). food(\"nothing\"). waiter(\"the waiter\"). story_step(0..4). st_hpd(enter(\"Andy\", \"RRGrill\"), true, 0). st_hpd(lead_to(\"the waiter\", \"Andy\", t), true, 1). st_hpd(put_down(\"Andy\", m, t), true, 2). st_stop_activity(\"Andy\", 3). next_st(2, 3). st_hpd(leave(\"Andy\"), true, 4).",
+      "matching_predicates": [
+        "person(\"andy\")",
+        "restaurant(\"rrgrill\")",
+        "st_hpd(enter(\"andy\", \"rrgrill\"), \"true\", 0)",
+        "st_hpd(lead_to(\"waiter\", \"andy\", \"t\"), \"true\", 1)",
+        "waiter(\"waiter\")"
+      ],
+      "predicted_only_predicates": [
+        "st_hpd(leave(\"Andy\"), true, 5)",
+        "st_hpd(order(\"Andy\"), false, 4)",
+        "st_hpd(read_menu(\"Andy\"), true, 3)",
+        "st_obs(hungry(\"Andy\"), true, 0)",
+        "st_obs(open(\"RRGrill\"), true, 1)",
+        "st_obs(sitting(\"Andy\"), true, 2)"
+      ],
+      "ground_truth_only_predicates": [
+        "food(\"nothing\")",
+        "next_st(2, 3)",
+        "st_hpd(leave(\"Andy\"), true, 4)",
+        "st_hpd(put_down(\"Andy\", m, t), true, 2)",
+        "st_stop_activity(\"Andy\", 3)"
+      ],
+      "pred_predicate_count": 11,
+      "gt_predicate_count": 10
+    },
+    {
+      "sid": 22,
+      "similarity": 0.3181818181818182,
+      "story": "Andrew was sitting in a restaurant. Sebastian entered the restaurant and sat down opposite Andrew. The waiter brought a bottle of wine. Andrew and Sebastian took a drink. The waiter gave the men a menu.",
+      "predicted": "restaurant(r). customer(\"Andrew\"). customer(\"Sebastian\"). customer(men). member(\"Andrew\", men). member(\"Sebastian\", men). waiter(\"the waiter\"). beverage(\"bottle of wine\"). st_obs(sitting(\"Andrew\"), true, 0). st_hpd(enter(\"Sebastian\", r), true, 1). st_hpd(sit(\"Sebastian\"), true, 1). st_hpd(put_down(\"the waiter\", \"bottle of wine\", t), true, 2). st_hpd(drink(men, \"bottle of wine\"), true, 3). st_hpd(put_down(\"the waiter\", m, t), true, 4).",
+      "ground_truth": "restaurant(\"a restaurant\"). customer(\"the men\"). person(\"Andrew\"). person(\"Sebastian\"). member(\"Andrew\", \"the men\"). member(\"Sebastian\", \"the men\"). beverage(wine). waiter(\"the waiter\"). story_step(0..5). st_obs(in(\"Andrew\", \"a restaurant\"), true, 0). st_obs(sitting(\"Andrew\"), true, 0). st_hpd(enter(\"Sebastian\", \"a restaurant\"), true, 1). st_hpd(sit(\"Sebastian\"), true, 2). st_hpd(put_down(\"the waiter\", wine, t), true, 3). st_hpd(drink(\"the men\", wine), true, 4). st_hpd(put_down(\"the waiter\", m, t), true, 5).",
+      "matching_predicates": [
+        "member(\"andrew\", \"men\")",
+        "member(\"sebastian\", \"men\")",
+        "person(\"andrew\")",
+        "person(\"men\")",
+        "person(\"sebastian\")",
+        "st_obs(sitting(\"andrew\"), \"true\", 0)",
+        "waiter(\"waiter\")"
+      ],
+      "predicted_only_predicates": [
+        "beverage(\"bottle of wine\")",
+        "restaurant(r)",
+        "st_hpd(drink(men, \"bottle of wine\"), true, 3)",
+        "st_hpd(enter(\"Sebastian\", r), true, 1)",
+        "st_hpd(put_down(\"the waiter\", \"bottle of wine\", t), true, 2)",
+        "st_hpd(put_down(\"the waiter\", m, t), true, 4)",
+        "st_hpd(sit(\"Sebastian\"), true, 1)"
+      ],
+      "ground_truth_only_predicates": [
+        "beverage(wine)",
+        "restaurant(\"a restaurant\")",
+        "st_hpd(drink(\"the men\", wine), true, 4)",
+        "st_hpd(enter(\"Sebastian\", \"a restaurant\"), true, 1)",
+        "st_hpd(put_down(\"the waiter\", m, t), true, 5)",
+        "st_hpd(put_down(\"the waiter\", wine, t), true, 3)",
+        "st_hpd(sit(\"Sebastian\"), true, 2)",
+        "st_obs(in(\"Andrew\", \"a restaurant\"), true, 0)"
+      ],
+      "pred_predicate_count": 14,
+      "gt_predicate_count": 15
+    },
+    {
+      "sid": 69,
+      "similarity": 0.35294117647058826,
+      "story": "A group of coworkers went to a sandwich shop for lunch. The waiter seated them at a long table, and took their orders. The waiter brought out all the sandwiches. They ate, paid their separate bills, and returned to work.",
+      "predicted": "customer(\"A group of coworkers\"). restaurant(\"a sandwich shop\"). waiter(\"The waiter\"). food(\"sandwiches\"). st_hpd(enter(\"A group of coworkers\", \"a sandwich shop\"), true, 0). st_hpd(lead_to(\"The waiter\", \"A group of coworkers\", t), true, 1). st_obs(sitting(\"A group of coworkers\"), true, 2). st_hpd(order(\"A group of coworkers\", f, \"The waiter\"), true, 3). st_hpd(put_down(\"The waiter\", \"sandwiches\", t), true, 4). st_hpd(eat(\"A group of coworkers\", \"sandwiches\"), true, 5). st_hpd(pay(\"A group of coworkers\", b), true, 6). st_hpd(leave(\"A group of coworkers\"), true, 7).",
+      "ground_truth": "restaurant(\"sandwich shop\"). customer(\"group of coworkers\"). food(\"sandwiches\"). waiter(\"the waiter\"). st_hpd(enter(\"group of coworkers\", \"sandwich shop\"), true, 0). st_hpd(lead_to(\"the waiter\", \"group of coworkers\", t), true, 1). st_hpd(order(\"group of coworkers\", \"sandwiches\", \"the waiter\"), true, 2). st_hpd(put_down(\"the waiter\", \"sandwiches\", t), true, 3). st_hpd(eat(\"group of coworkers\", \"sandwiches\"), true, 4). st_hpd(pay(\"group of coworkers\", b), true, 5). st_hpd(leave(\"group of coworkers\"), true, 6).",
+      "matching_predicates": [
+        "food(\"sandwiches\")",
+        "person(\"group of coworkers\")",
+        "restaurant(\"sandwich shop\")",
+        "st_hpd(enter(\"group of coworkers\", \"sandwich shop\"), \"true\", 0)",
+        "st_hpd(lead_to(\"waiter\", \"group of coworkers\", \"t\"), \"true\", 1)",
+        "waiter(\"waiter\")"
+      ],
+      "predicted_only_predicates": [
+        "st_hpd(eat(\"A group of coworkers\", \"sandwiches\"), true, 5)",
+        "st_hpd(leave(\"A group of coworkers\"), true, 7)",
+        "st_hpd(order(\"A group of coworkers\", f, \"The waiter\"), true, 3)",
+        "st_hpd(pay(\"A group of coworkers\", b), true, 6)",
+        "st_hpd(put_down(\"The waiter\", \"sandwiches\", t), true, 4)",
+        "st_obs(sitting(\"A group of coworkers\"), true, 2)"
+      ],
+      "ground_truth_only_predicates": [
+        "st_hpd(eat(\"group of coworkers\", \"sandwiches\"), true, 4)",
+        "st_hpd(leave(\"group of coworkers\"), true, 6)",
+        "st_hpd(order(\"group of coworkers\", \"sandwiches\", \"the waiter\"), true, 2)",
+        "st_hpd(pay(\"group of coworkers\", b), true, 5)",
+        "st_hpd(put_down(\"the waiter\", \"sandwiches\", t), true, 3)"
+      ],
+      "pred_predicate_count": 12,
+      "gt_predicate_count": 11
+    },
+    {
+      "sid": 91,
+      "similarity": 0.35294117647058826,
+      "story": "[REDACTED — original ROCStories text; storyid=ac7250f9-d416-41bb-aac7-b1dd788b86fb]",
+      "predicted": "restaurant(\"a fast food restaurant\"). customer(\"Emily\"). food(\"fries\"). food(\"burger\"). waiter(\"the cashier\"). st_obs(in(\"Emily\", \"a fast food restaurant\"), true, 0). st_hpd(order(\"Emily\", \"fries\", \"the cashier\"), true, 1). st_hpd(order(\"Emily\", \"burger\", \"the cashier\"), true, 1). st_hpd(put_down(\"the cashier\", \"burger\", t), true, 2). st_hpd(put_down(\"the cashier\", \"fries\", t), false). st_hpd(complain(\"Emily\", \"the cashier\"), true, 3). st_next(2, 3).",
+      "ground_truth": "restaurant(\"fast food restaurant\"). customer(\"Emily\"). food(\"fries\"). food(\"burger\"). waiter(\"the cashier\"). st_hpd(order(\"Emily\", \"fries\", \"the cashier\"), true, 0). st_hpd(order(\"Emily\", \"burger\", \"the cashier\"), true, 0). st_hpd(put_down(\"the cashier\", \"burger\", t), true, 1). st_hpd(put_down(\"the cashier\", \"fries\", t), false). st_hpd(complain(\"Emily\", \"the cashier\"), true, 2). st_next(1,2).",
+      "matching_predicates": [
+        "food(\"burger\")",
+        "food(\"fries\")",
+        "person(\"emily\")",
+        "restaurant(\"fast food restaurant\")",
+        "st_hpd(put_down(\"cashier\", \"fries\", \"t\"), \"false\")",
+        "waiter(\"cashier\")"
+      ],
+      "predicted_only_predicates": [
+        "st_hpd(complain(\"Emily\", \"the cashier\"), true, 3)",
+        "st_hpd(order(\"Emily\", \"burger\", \"the cashier\"), true, 1)",
+        "st_hpd(order(\"Emily\", \"fries\", \"the cashier\"), true, 1)",
+        "st_hpd(put_down(\"the cashier\", \"burger\", t), true, 2)",
+        "st_next(2, 3)",
+        "st_obs(in(\"Emily\", \"a fast food restaurant\"), true, 0)"
+      ],
+      "ground_truth_only_predicates": [
+        "st_hpd(complain(\"Emily\", \"the cashier\"), true, 2)",
+        "st_hpd(order(\"Emily\", \"burger\", \"the cashier\"), true, 0)",
+        "st_hpd(order(\"Emily\", \"fries\", \"the cashier\"), true, 0)",
+        "st_hpd(put_down(\"the cashier\", \"burger\", t), true, 1)",
+        "st_next(1,2)"
+      ],
+      "pred_predicate_count": 12,
+      "gt_predicate_count": 11
+    },
+    {
+      "sid": 36,
+      "similarity": 0.35714285714285715,
+      "story": "One day, Andy felt hungry and went to the RRGrill restaurant for dinner. The restaurant was open and Tom, Andyâ€™s friend, had his birthday party in there. Tom had prepaid for all the food that was offered. The waiter led Andy to Tomâ€™s table. Andy joined the party.",
+      "predicted": "customer(\"Andy\"). customer(\"Tom\"). restaurant(\"RRGrill\"). waiter(\"the waiter\"). st_obs(hungry(\"Andy\"), true, 0). st_hpd(enter(\"Andy\", \"RRGrill\"), true, 0). st_obs(open(\"RRGrill\"), true, 1). st_obs(paid(b), true, 1). st_hpd(lead_to(\"the waiter\", \"Andy\", t), true, 2). st_obs(sitting(\"Andy\"), true, 3).",
+      "ground_truth": "restaurant(\"RRGrill\"). customer(\"Andy\"). person(\"Tom\"). food(\"all the food\"). waiter(\"the waiter\"). story_step(0..2). st_hpd(enter(\"Andy\", \"RRGrill\"), true, 0). st_hpd(lead_to(\"the waiter\", \"Andy\", t), true, 1). st_obs(informed(\"the waiter\", \"all the food\", \"Andy\"), true, 2). st_hpd(pay(\"Tom\", b), 2).",
+      "matching_predicates": [
+        "person(\"andy\")",
+        "person(\"tom\")",
+        "restaurant(\"rrgrill\")",
+        "st_hpd(enter(\"andy\", \"rrgrill\"), \"true\", 0)",
+        "waiter(\"waiter\")"
+      ],
+      "predicted_only_predicates": [
+        "st_hpd(lead_to(\"the waiter\", \"Andy\", t), true, 2)",
+        "st_obs(hungry(\"Andy\"), true, 0)",
+        "st_obs(open(\"RRGrill\"), true, 1)",
+        "st_obs(paid(b), true, 1)",
+        "st_obs(sitting(\"Andy\"), true, 3)"
+      ],
+      "ground_truth_only_predicates": [
+        "food(\"all the food\")",
+        "st_hpd(lead_to(\"the waiter\", \"Andy\", t), true, 1)",
+        "st_hpd(pay(\"Tom\", b), 2)",
+        "st_obs(informed(\"the waiter\", \"all the food\", \"Andy\"), true, 2)"
+      ],
+      "pred_predicate_count": 10,
+      "gt_predicate_count": 9
+    },
+    {
+      "sid": 44,
+      "similarity": 0.35714285714285715,
+      "story": "At an Italian restaurant, Chloe ordered lasagna. The waiter brought her spaghetti instead. Chloe informed the waiter of the mistake.",
+      "predicted": "customer(\"Chloe\"). restaurant(\"Italian restaurant\"). food(\"lasagna\"). food(\"spaghetti\"). waiter(\"the waiter\"). st_obs(in(\"Chloe\", \"Italian restaurant\"), true, 0). st_hpd(order(\"Chloe\", \"lasagna\", \"the waiter\"), true, 1). st_hpd(put_down(\"the waiter\", \"spaghetti\", t), true, 2). st_hpd(complain(\"Chloe\", \"the waiter\"), true, 3). st_next(2, 3).",
+      "ground_truth": "restaurant(\"Italian restaurant\"). customer(\"Chloe\"). food(\"lasagna\"). food(\"spaghetti\"). waiter(\"the waiter\"). story_step(0..2). st_hpd(order(\"Chloe\", \"lasagna\", \"the waiter\"), true, 0). st_hpd(put_down(\"the waiter\", \"spaghetti\", t), true, 1). st_hpd(complain(\"Chloe\", \"the waiter\"), true, 2). st_next(1, 2).",
+      "matching_predicates": [
+        "food(\"lasagna\")",
+        "food(\"spaghetti\")",
+        "person(\"chloe\")",
+        "restaurant(\"italian restaurant\")",
+        "waiter(\"waiter\")"
+      ],
+      "predicted_only_predicates": [
+        "st_hpd(complain(\"Chloe\", \"the waiter\"), true, 3)",
+        "st_hpd(order(\"Chloe\", \"lasagna\", \"the waiter\"), true, 1)",
+        "st_hpd(put_down(\"the waiter\", \"spaghetti\", t), true, 2)",
+        "st_next(2, 3)",
+        "st_obs(in(\"Chloe\", \"Italian restaurant\"), true, 0)"
+      ],
+      "ground_truth_only_predicates": [
+        "st_hpd(complain(\"Chloe\", \"the waiter\"), true, 2)",
+        "st_hpd(order(\"Chloe\", \"lasagna\", \"the waiter\"), true, 0)",
+        "st_hpd(put_down(\"the waiter\", \"spaghetti\", t), true, 1)",
+        "st_next(1, 2)"
+      ],
+      "pred_predicate_count": 10,
+      "gt_predicate_count": 9
+    },
+    {
+      "sid": 49,
+      "similarity": 0.36363636363636365,
+      "story": "The waiter brought the bill to Mark's table. Mark reviewed it and noticed he had been charged for a dessert he didn't order. He called the waiter over to correct the bill.",
+      "predicted": "customer(\"Mark\"). waiter(\"the waiter\"). food(\"dessert\"). st_hpd(put_down(\"the waiter\", b, t), true, 0). st_hpd(read_bill(\"Mark\"), true, 1). st_hpd(order(\"Mark\", \"dessert\", \"the waiter\"), false). st_hpd(complain(\"Mark\", \"the waiter\"), true, 2). st_next(1, 2).",
+      "ground_truth": "restaurant(r). customer(\"Mark\"). food(\"dessert\"). waiter(\"the waiter\"). st_hpd(put_down(\"the waiter\", b, t), true, 0). st_hpd(pick_up(\"Mark\", b, t), true, 1). st_hpd(request(\"Mark\", \"correction\", \"the waiter\"), true, 1).",
+      "matching_predicates": [
+        "food(\"dessert\")",
+        "person(\"mark\")",
+        "st_hpd(put_down(\"waiter\", \"b\", \"t\"), \"true\", 0)",
+        "waiter(\"waiter\")"
+      ],
+      "predicted_only_predicates": [
+        "st_hpd(complain(\"Mark\", \"the waiter\"), true, 2)",
+        "st_hpd(order(\"Mark\", \"dessert\", \"the waiter\"), false)",
+        "st_hpd(read_bill(\"Mark\"), true, 1)",
+        "st_next(1, 2)"
+      ],
+      "ground_truth_only_predicates": [
+        "restaurant(r)",
+        "st_hpd(pick_up(\"Mark\", b, t), true, 1)",
+        "st_hpd(request(\"Mark\", \"correction\", \"the waiter\"), true, 1)"
+      ],
+      "pred_predicate_count": 8,
+      "gt_predicate_count": 7
+    },
+    {
+      "sid": 75,
+      "similarity": 0.3684210526315789,
+      "story": "[REDACTED — original ROCStories text; storyid=99d073a9-375a-45ad-a070-0fdfbbf73f69]",
+      "predicted": "customer(\"I\"). customer(\"my husband\"). customer(\"We\"). member(\"I\", \"We\"). member(\"my husband\", \"We\"). restaurant(\"a new Sushi place\"). food(\"spicy tuna rolls\"). food(\"eel\"). st_hpd(enter(\"We\", \"a new Sushi place\"), true, 0). st_obs(sitting(\"We\"), true, 1). st_hpd(order(\"We\", \"spicy tuna rolls\", w), true, 2). st_hpd(order(\"We\", \"eel\", w), true, 2). st_hpd(eat(\"We\", \"spicy tuna rolls\"), true, 3). st_hpd(eat(\"We\", \"eel\"), true, 3).",
+      "ground_truth": "restaurant(\"new Sushi place\"). customer(we). person(\"I\"). person(\"my husband\"). member(\"I\", we). member(\"my husband\", we). food(f). member(\"spicy tuna rolls\", f). member(\"eel\", f). st_hpd(enter(we, \"new Sushi place\"), true, 0). st_hpd(order(we, f, w), true, 1). st_hpd(eat(we, f), true, 2).",
+      "matching_predicates": [
+        "member(\"i\", \"we\")",
+        "member(\"my husband\", \"we\")",
+        "person(\"i\")",
+        "person(\"my husband\")",
+        "person(\"we\")",
+        "restaurant(\"new sushi place\")",
+        "st_hpd(enter(\"we\", \"new sushi place\"), \"true\", 0)"
+      ],
+      "predicted_only_predicates": [
+        "food(\"eel\")",
+        "food(\"spicy tuna rolls\")",
+        "st_hpd(eat(\"We\", \"eel\"), true, 3)",
+        "st_hpd(eat(\"We\", \"spicy tuna rolls\"), true, 3)",
+        "st_hpd(order(\"We\", \"eel\", w), true, 2)",
+        "st_hpd(order(\"We\", \"spicy tuna rolls\", w), true, 2)",
+        "st_obs(sitting(\"We\"), true, 1)"
+      ],
+      "ground_truth_only_predicates": [
+        "food(f)",
+        "member(\"eel\", f)",
+        "member(\"spicy tuna rolls\", f)",
+        "st_hpd(eat(we, f), true, 2)",
+        "st_hpd(order(we, f, w), true, 1)"
+      ],
+      "pred_predicate_count": 14,
+      "gt_predicate_count": 12
+    },
+    {
+      "sid": 31,
+      "similarity": 0.375,
+      "story": "Nicole went to a vegetarian restaurant. She ordered lentil soup. The waitress brought her a miso soup instead. Nicole decided to eat it anyway.",
+      "predicted": "customer(\"Nicole\"). restaurant(\"vegetarian restaurant\"). food(\"lentil soup\"). food(\"miso soup\"). waiter(\"the waitress\"). st_hpd(enter(\"Nicole\", \"vegetarian restaurant\"), true, 0). st_hpd(order(\"Nicole\", \"lentil soup\", \"the waitress\"), true, 1). st_hpd(put_down(\"the waitress\", \"miso soup\", t), true, 2). st_hpd(eat(\"Nicole\", \"miso soup\"), true, 3). st_hpd(eat(\"Nicole\", \"lentil soup\"), false).",
+      "ground_truth": "restaurant(veg_r). customer(nicole). person(owner). food(lentil_soup). food(miso_soup). waiter(waitress). story_step(0..4). st_hpd(enter(nicole, veg_r), true, 0). st_hpd(order(nicole, lentil_soup, waitress), true, 1). st_hpd(put_down(waitress, miso_soup, t), true, 2). stop_activity(nicole, 3). next_st(2, 3). st_hpd(eat(nicole, miso_soup), true, 4).",
+      "matching_predicates": [
+        "food(\"lentil soup\")",
+        "food(\"miso soup\")",
+        "person(\"nicole\")",
+        "st_hpd(order(\"nicole\", \"lentil soup\", \"waitress\"), \"true\", 1)",
+        "st_hpd(put_down(\"waitress\", \"miso soup\", \"t\"), \"true\", 2)",
+        "waiter(\"waitress\")"
+      ],
+      "predicted_only_predicates": [
+        "restaurant(\"vegetarian restaurant\")",
+        "st_hpd(eat(\"Nicole\", \"lentil soup\"), false)",
+        "st_hpd(eat(\"Nicole\", \"miso soup\"), true, 3)",
+        "st_hpd(enter(\"Nicole\", \"vegetarian restaurant\"), true, 0)"
+      ],
+      "ground_truth_only_predicates": [
+        "next_st(2, 3)",
+        "person(owner)",
+        "restaurant(veg_r)",
+        "st_hpd(eat(nicole, miso_soup), true, 4)",
+        "st_hpd(enter(nicole, veg_r), true, 0)",
+        "stop_activity(nicole, 3)"
+      ],
+      "pred_predicate_count": 10,
+      "gt_predicate_count": 12
+    },
+    {
+      "sid": 77,
+      "similarity": 0.375,
+      "story": "[REDACTED — original ROCStories text; storyid=44b80dab-a351-4065-86b8-43d519dff470]",
+      "predicted": "customer(\"Karl\"). customer(\"his wife\"). customer(\"They\"). member(\"Karl\", \"They\"). member(\"his wife\", \"They\"). restaurant(\"a new restaurant\"). st_hpd(enter(\"They\", \"a new restaurant\"), true, 0). st_obs(sitting(\"They\"), true, 1). st_obs(served(\"They\"), false, 2). st_hpd(order(\"They\"), false). st_hpd(leave(\"They\"), true, 3).",
+      "ground_truth": "restaurant(\"new restaurant\"). waiter(\"the waiter\"). customer(they). person(\"Karl\"). person(\"his wife\"). member(\"Karl\", they). member(\"his wife\", they). waiter(w). st_obs(sitting(they), true, 0). st_hpd(served(they), false, 1). st_hpd(leave(they), true, 2).",
+      "matching_predicates": [
+        "member(\"his wife\", \"they\")",
+        "member(\"karl\", \"they\")",
+        "person(\"his wife\")",
+        "person(\"karl\")",
+        "person(\"they\")",
+        "restaurant(\"new restaurant\")"
+      ],
+      "predicted_only_predicates": [
+        "st_hpd(enter(\"They\", \"a new restaurant\"), true, 0)",
+        "st_hpd(leave(\"They\"), true, 3)",
+        "st_hpd(order(\"They\"), false)",
+        "st_obs(served(\"They\"), false, 2)",
+        "st_obs(sitting(\"They\"), true, 1)"
+      ],
+      "ground_truth_only_predicates": [
+        "st_hpd(leave(they), true, 2)",
+        "st_hpd(served(they), false, 1)",
+        "st_obs(sitting(they), true, 0)",
+        "waiter(\"the waiter\")",
+        "waiter(w)"
+      ],
+      "pred_predicate_count": 11,
+      "gt_predicate_count": 11
+    },
+    {
+      "sid": 94,
+      "similarity": 0.375,
+      "story": "[REDACTED — original ROCStories text; storyid=63dfd3a4-930a-4a27-8ed9-60304b6c32f3]",
+      "predicted": "customer(\"The couple\"). restaurant(\"the new sushi place\"). food(\"new foods\"). food(\"things they had never had before\"). st_hpd(enter(\"The couple\", \"the new sushi place\"), true, 0). st_hpd(eat(\"The couple\", \"things they had never had before\"), true, 1).",
+      "ground_truth": "restaurant(\"new sushi place\"). customer(\"The couple\"). food(f). st_hpd(enter(\"The couple\", \"new sushi place\"), true, 0). st_hpd(eat(\"The couple\", f), true, 1).",
+      "matching_predicates": [
+        "person(\"couple\")",
+        "restaurant(\"new sushi place\")",
+        "st_hpd(enter(\"couple\", \"new sushi place\"), \"true\", 0)"
+      ],
+      "predicted_only_predicates": [
+        "food(\"new foods\")",
+        "food(\"things they had never had before\")",
+        "st_hpd(eat(\"The couple\", \"things they had never had before\"), true, 1)"
+      ],
+      "ground_truth_only_predicates": [
+        "food(f)",
+        "st_hpd(eat(\"The couple\", f), true, 1)"
+      ],
+      "pred_predicate_count": 6,
+      "gt_predicate_count": 5
+    },
+    {
+      "sid": 67,
+      "similarity": 0.38461538461538464,
+      "story": "Maria and Leo entered a quiet Italian restaurant. The waiter seated them at a corner table. They ordered a bottle of red wine. After the waiter brought the wine, they ordered two pasta dishes. They enjoyed their meal, paid the bill, and left.",
+      "predicted": "restaurant(\"quiet Italian restaurant\"). customer(\"Maria\"). customer(\"Leo\"). customer(they). member(\"Maria\", they). member(\"Leo\", they). waiter(\"The waiter\"). beverage(\"bottle of red wine\"). food(\"two pasta dishes\"). st_hpd(enter(they, \"quiet Italian restaurant\"), true, 0). st_obs(sitting(they), true, 1). st_hpd(order(they, \"bottle of red wine\", \"The waiter\"), true, 2). st_hpd(put_down(\"The waiter\", \"bottle of red wine\", t), true, 3). st_hpd(order(they, \"two pasta dishes\", \"The waiter\"), true, 4). st_hpd(eat(they, \"two pasta dishes\"), true, 5). st_hpd(drink(they, \"bottle of red wine\"), true, 5). st_hpd(pay(they, b), true, 6). st_hpd(leave(they), true, 7).",
+      "ground_truth": "restaurant(\"quiet Italian restaurant\"). customer(they). person(\"Maria\"). person(\"Leo\"). member(\"Maria\", they). member(\"Leo\", they). beverage(\"red wine\"). food(\"pasta dishes\"). waiter(\"the waiter\"). story_step(0..7). st_hpd(enter(they, \"quiet Italian restaurant\"), true, 0). st_hpd(lead_to(\"the waiter\", they, t), true, 1). st_hpd(order(they, \"red wine\", \"the waiter\"), true, 2). st_hpd(put_down(\"the waiter\", \"red wine\", t), true, 3). st_hpd(order(they, \"pasta dishes\", \"the waiter\"), true, 4). st_hpd(eat(they, \"pasta dishes\"), true, 5). st_hpd(drink(they, \"red wine\"), true, 5). st_hpd(pay(they, b), true, 6). st_hpd(leave(they), true, 7).",
+      "matching_predicates": [
+        "member(\"leo\", \"they\")",
+        "member(\"maria\", \"they\")",
+        "person(\"leo\")",
+        "person(\"maria\")",
+        "person(\"they\")",
+        "restaurant(\"quiet italian restaurant\")",
+        "st_hpd(enter(\"they\", \"quiet italian restaurant\"), \"true\", 0)",
+        "st_hpd(leave(\"they\"), \"true\", 7)",
+        "st_hpd(pay(\"they\", \"b\"), \"true\", 6)",
+        "waiter(\"waiter\")"
+      ],
+      "predicted_only_predicates": [
+        "beverage(\"bottle of red wine\")",
+        "food(\"two pasta dishes\")",
+        "st_hpd(drink(they, \"bottle of red wine\"), true, 5)",
+        "st_hpd(eat(they, \"two pasta dishes\"), true, 5)",
+        "st_hpd(order(they, \"bottle of red wine\", \"The waiter\"), true, 2)",
+        "st_hpd(order(they, \"two pasta dishes\", \"The waiter\"), true, 4)",
+        "st_hpd(put_down(\"The waiter\", \"bottle of red wine\", t), true, 3)",
+        "st_obs(sitting(they), true, 1)"
+      ],
+      "ground_truth_only_predicates": [
+        "beverage(\"red wine\")",
+        "food(\"pasta dishes\")",
+        "st_hpd(drink(they, \"red wine\"), true, 5)",
+        "st_hpd(eat(they, \"pasta dishes\"), true, 5)",
+        "st_hpd(lead_to(\"the waiter\", they, t), true, 1)",
+        "st_hpd(order(they, \"pasta dishes\", \"the waiter\"), true, 4)",
+        "st_hpd(order(they, \"red wine\", \"the waiter\"), true, 2)",
+        "st_hpd(put_down(\"the waiter\", \"red wine\", t), true, 3)"
+      ],
+      "pred_predicate_count": 18,
+      "gt_predicate_count": 18
+    },
+    {
+      "sid": 90,
+      "similarity": 0.38461538461538464,
+      "story": "[REDACTED — original ROCStories text; storyid=c4078b0f-e1c3-4c75-a05a-a52c9481fc2a]",
+      "predicted": "customer(\"My family\"). customer(\"I\"). member(\"I\", \"My family\"). restaurant(\"a restaurant on the Ohio river\"). food(\"five course meal\"). food(\"bread\"). food(\"salmon and asparagus\"). st_hpd(enter(\"My family\", \"a restaurant on the Ohio river\"), true, 0). st_hpd(eat(\"My family\", \"bread\"), true, 1). st_hpd(eat(\"I\", \"salmon and asparagus\"), true, 2).",
+      "ground_truth": "restaurant(\"a restaurant\"). customer(\"My family\"). customer(\"I\"). food(\"bread\"). food(\"salmon and asparagus\"). st_hpd(enter(\"My family\", \"a restaurant\"), true, 0). st_hpd(eat(\"My family\", \"bread\"), true, 1). st_hpd(eat(\"I\", \"salmon and asparagus\"), true, 1).",
+      "matching_predicates": [
+        "food(\"bread\")",
+        "food(\"salmon and asparagus\")",
+        "person(\"i\")",
+        "person(\"my family\")",
+        "st_hpd(eat(\"my family\", \"bread\"), \"true\", 1)"
+      ],
+      "predicted_only_predicates": [
+        "food(\"five course meal\")",
+        "member(\"I\", \"My family\")",
+        "restaurant(\"a restaurant on the Ohio river\")",
+        "st_hpd(eat(\"I\", \"salmon and asparagus\"), true, 2)",
+        "st_hpd(enter(\"My family\", \"a restaurant on the Ohio river\"), true, 0)"
+      ],
+      "ground_truth_only_predicates": [
+        "restaurant(\"a restaurant\")",
+        "st_hpd(eat(\"I\", \"salmon and asparagus\"), true, 1)",
+        "st_hpd(enter(\"My family\", \"a restaurant\"), true, 0)"
+      ],
+      "pred_predicate_count": 10,
+      "gt_predicate_count": 8
+    },
+    {
+      "sid": 70,
+      "similarity": 0.3888888888888889,
+      "story": "The Jackson family went to a pizzeria on Friday night. The waiter led them to a booth. They ordered a large pepperoni pizza and a pitcher of soda. The waiter brought their order to the table. They all loved the pizza.",
+      "predicted": "customer(\"The Jackson family\"). restaurant(\"a pizzeria\"). waiter(\"The waiter\"). food(\"large pepperoni pizza\"). beverage(\"pitcher of soda\"). st_hpd(enter(\"The Jackson family\", \"a pizzeria\"), true, 0). st_hpd(lead_to(\"The waiter\", \"The Jackson family\", t), true, 1). st_obs(sitting(\"The Jackson family\"), true, 2). st_hpd(order(\"The Jackson family\", \"large pepperoni pizza\", \"The waiter\"), true, 3). st_hpd(order(\"The Jackson family\", \"pitcher of soda\", \"The waiter\"), true, 3). st_hpd(put_down(\"The waiter\", \"large pepperoni pizza\", t), true, 4). st_hpd(put_down(\"The waiter\", \"pitcher of soda\", t), true, 4). st_hpd(eat(\"The Jackson family\", \"large pepperoni pizza\"), true, 5).",
+      "ground_truth": "restaurant(\"pizzeria\"). customer(\"The Jackson family\"). food(\"large pepperoni pizza\"). beverage(\"pitcher of soda\"). waiter(\"the waiter\"). st_hpd(enter(\"The Jackson family\", \"pizzeria\"), true, 0). st_hpd(lead_to(\"the waiter\", \"The Jackson family\", t), true, 1). st_hpd(order(\"The Jackson family\", \"large pepperoni pizza\", \"the waiter\"), true, 2). st_hpd(order(\"The Jackson family\", \"pitcher of soda\", \"the waiter\"), true, 2). st_hpd(put_down(\"the waiter\", \"large pepperoni pizza\", t), true, 3). st_hpd(put_down(\"the waiter\", \"pitcher of soda\", t), true, 3). st_hpd(eat(\"The Jackson family\", \"large pepperoni pizza\"), true, 4).",
+      "matching_predicates": [
+        "beverage(\"pitcher of soda\")",
+        "food(\"large pepperoni pizza\")",
+        "person(\"jackson family\")",
+        "restaurant(\"pizzeria\")",
+        "st_hpd(enter(\"jackson family\", \"pizzeria\"), \"true\", 0)",
+        "st_hpd(lead_to(\"waiter\", \"jackson family\", \"t\"), \"true\", 1)",
+        "waiter(\"waiter\")"
+      ],
+      "predicted_only_predicates": [
+        "st_hpd(eat(\"The Jackson family\", \"large pepperoni pizza\"), true, 5)",
+        "st_hpd(order(\"The Jackson family\", \"large pepperoni pizza\", \"The waiter\"), true, 3)",
+        "st_hpd(order(\"The Jackson family\", \"pitcher of soda\", \"The waiter\"), true, 3)",
+        "st_hpd(put_down(\"The waiter\", \"large pepperoni pizza\", t), true, 4)",
+        "st_hpd(put_down(\"The waiter\", \"pitcher of soda\", t), true, 4)",
+        "st_obs(sitting(\"The Jackson family\"), true, 2)"
+      ],
+      "ground_truth_only_predicates": [
+        "st_hpd(eat(\"The Jackson family\", \"large pepperoni pizza\"), true, 4)",
+        "st_hpd(order(\"The Jackson family\", \"large pepperoni pizza\", \"the waiter\"), true, 2)",
+        "st_hpd(order(\"The Jackson family\", \"pitcher of soda\", \"the waiter\"), true, 2)",
+        "st_hpd(put_down(\"the waiter\", \"large pepperoni pizza\", t), true, 3)",
+        "st_hpd(put_down(\"the waiter\", \"pitcher of soda\", t), true, 3)"
+      ],
+      "pred_predicate_count": 13,
+      "gt_predicate_count": 12
+    },
+    {
+      "sid": 12,
+      "similarity": 0.391304347826087,
+      "story": "My husband and I went to a famous restaurant listed in our guidebook. We were seated at a booth and began studying the menu. We ordered escargot, lamb, savory salmon, and a creamy flan dessert.",
+      "predicted": "restaurant(\"a famous restaurant\"). customer(\"I\"). customer(\"My husband\"). customer(we). member(\"I\", we). member(\"My husband\", we). food(\"escargot\"). food(\"lamb\"). food(\"savory salmon\"). food(\"a creamy flan dessert\"). waiter(w). st_hpd(enter(we, \"a famous restaurant\"), true, 0). st_obs(sitting(we), true, 1). st_hpd(read_menu(we), true, 2). st_hpd(order(we, \"escargot\", w), true, 3). st_hpd(order(we, \"lamb\", w), true, 3). st_hpd(order(we, \"savory salmon\", w), true, 3). st_hpd(order(we, \"a creamy flan dessert\", w), true, 3).",
+      "ground_truth": "restaurant(\"a famous restaurant\"). person(\"my husband\"). person(\"I\"). customer(\"we\"). member(\"my husband\", \"we\"). member(\"I\", \"we\"). member(\"escargot\", f). member(\"lamb\", f). member(\"savory salmon\", f). member(\"creamy flan dessert\", f) story_step(0..3). st_hpd(enter(\"we\", \"a famous restaurant\"), true, 0). st_obs(sitting(\"we\"), true, 1). st_hpd(read_menu(\"we\"), true, 2). st_hpd(order(\"we\", f, w), true, 3).",
+      "matching_predicates": [
+        "member(\"i\", \"we\")",
+        "member(\"my husband\", \"we\")",
+        "person(\"i\")",
+        "person(\"my husband\")",
+        "person(\"we\")",
+        "restaurant(\"famous restaurant\")",
+        "st_hpd(enter(\"we\", \"famous restaurant\"), \"true\", 0)",
+        "st_hpd(read_menu(\"we\"), \"true\", 2)",
+        "st_obs(sitting(\"we\"), \"true\", 1)"
+      ],
+      "predicted_only_predicates": [
+        "food(\"a creamy flan dessert\")",
+        "food(\"escargot\")",
+        "food(\"lamb\")",
+        "food(\"savory salmon\")",
+        "st_hpd(order(we, \"a creamy flan dessert\", w), true, 3)",
+        "st_hpd(order(we, \"escargot\", w), true, 3)",
+        "st_hpd(order(we, \"lamb\", w), true, 3)",
+        "st_hpd(order(we, \"savory salmon\", w), true, 3)",
+        "waiter(w)"
+      ],
+      "ground_truth_only_predicates": [
+        "member(\"creamy flan dessert\", f)",
+        "member(\"escargot\", f)",
+        "member(\"lamb\", f)",
+        "member(\"savory salmon\", f)",
+        "st_hpd(order(\"we\", f, w), true, 3)"
+      ],
+      "pred_predicate_count": 18,
+      "gt_predicate_count": 14
+    },
+    {
+      "sid": 1,
+      "similarity": 0.4,
+      "story": "Abdul is sitting in a vegetarian restaurant. The waiter takes his order, and he orders hummus. The waiter brings the hummus to the table.",
+      "predicted": "restaurant(\"a vegetarian restaurant\"). customer(\"Abdul\"). waiter(w). food(\"hummus\"). st_obs(sitting(\"Abdul\"), true, 0). st_hpd(order(\"Abdul\", \"hummus\", w), true, 1). st_hpd(put_down(w, \"hummus\", t), true, 2).",
+      "ground_truth": "restaurant(\"vegetarian restaurant\"). customer(\"Abdul\"). food(\"hummus\"). waiter(\"the waiter\"). story_step(0..2). st_obs(sitting(\"Abdul\"), true, 0). st_hpd(order(\"Abdul\", \"hummus\", \"the waiter\"), true, 1). st_hpd(put_down(\"the waiter\", \"hummus\", t), true, 2).",
+      "matching_predicates": [
+        "food(\"hummus\")",
+        "person(\"abdul\")",
+        "restaurant(\"vegetarian restaurant\")",
+        "st_obs(sitting(\"abdul\"), \"true\", 0)"
+      ],
+      "predicted_only_predicates": [
+        "st_hpd(order(\"Abdul\", \"hummus\", w), true, 1)",
+        "st_hpd(put_down(w, \"hummus\", t), true, 2)",
+        "waiter(w)"
+      ],
+      "ground_truth_only_predicates": [
+        "st_hpd(order(\"Abdul\", \"hummus\", \"the waiter\"), true, 1)",
+        "st_hpd(put_down(\"the waiter\", \"hummus\", t), true, 2)",
+        "waiter(\"the waiter\")"
+      ],
+      "pred_predicate_count": 7,
+      "gt_predicate_count": 7
+    },
+    {
+      "sid": 88,
+      "similarity": 0.4,
+      "story": "[REDACTED — original ROCStories text; storyid=3a66621b-9dcf-4e32-b085-e4c0a2e89f8f]",
+      "predicted": "restaurant(\"little deli\"). customer(\"I\"). food(\"a turkey sandwich\"). waiter(w). st_obs(hungry(\"I\"), true, 0). st_hpd(enter(\"I\", \"little deli\"), true, 1). st_hpd(order(\"I\", \"a turkey sandwich\", w), true, 2). st_hpd(eat(\"I\", \"a turkey sandwich\"), true, 3).",
+      "ground_truth": "restaurant(\"little deli\"). customer(\"I\"). food(\"turkey sandwich\"). st_obs(hungry(\"I\"), true, 0). st_hpd(order(\"I\", \"turkey sandwich\", w), true, 1). st_hpd(eat(\"I\", \"turkey sandwich\"), true, 2).",
+      "matching_predicates": [
+        "food(\"turkey sandwich\")",
+        "person(\"i\")",
+        "restaurant(\"little deli\")",
+        "st_obs(hungry(\"i\"), \"true\", 0)"
+      ],
+      "predicted_only_predicates": [
+        "st_hpd(eat(\"I\", \"a turkey sandwich\"), true, 3)",
+        "st_hpd(enter(\"I\", \"little deli\"), true, 1)",
+        "st_hpd(order(\"I\", \"a turkey sandwich\", w), true, 2)",
+        "waiter(w)"
+      ],
+      "ground_truth_only_predicates": [
+        "st_hpd(eat(\"I\", \"turkey sandwich\"), true, 2)",
+        "st_hpd(order(\"I\", \"turkey sandwich\", w), true, 1)"
+      ],
+      "pred_predicate_count": 8,
+      "gt_predicate_count": 6
+    },
+    {
+      "sid": 89,
+      "similarity": 0.4,
+      "story": "[REDACTED — original ROCStories text; storyid=c93ca5db-716f-4572-868e-bd22aa4a9018]",
+      "predicted": "customer(\"my son\"). customer(\"I\"). customer(we). member(\"my son\", we). member(\"I\", we). person(\"my wife\"). food(\"sushi\"). food(\"sashimi\"). restaurant(\"Genki Ya\"). st_hpd(enter(we, \"Genki Ya\"), true, 0). st_hpd(order(we, \"sushi\", w), true, 1). st_hpd(eat(we, \"sashimi\"), true, 2).",
+      "ground_truth": "restaurant(\"Genki Ya\"). customer(we). person(\"my son\"). person(\"me\"). member(\"my son\", we). member(\"me\", we). food(\"sashimi\"). st_hpd(enter(we, \"Genki Ya\"), true, 0). st_hpd(eat(we, \"sashimi\"), true, 1).",
+      "matching_predicates": [
+        "food(\"sashimi\")",
+        "member(\"my son\", \"we\")",
+        "person(\"my son\")",
+        "person(\"we\")",
+        "restaurant(\"genki ya\")",
+        "st_hpd(enter(\"we\", \"genki ya\"), \"true\", 0)"
+      ],
+      "predicted_only_predicates": [
+        "customer(\"I\")",
+        "food(\"sushi\")",
+        "member(\"I\", we)",
+        "person(\"my wife\")",
+        "st_hpd(eat(we, \"sashimi\"), true, 2)",
+        "st_hpd(order(we, \"sushi\", w), true, 1)"
+      ],
+      "ground_truth_only_predicates": [
+        "member(\"me\", we)",
+        "person(\"me\")",
+        "st_hpd(eat(we, \"sashimi\"), true, 1)"
+      ],
+      "pred_predicate_count": 12,
+      "gt_predicate_count": 9
+    },
+    {
+      "sid": 20,
+      "similarity": 0.4090909090909091,
+      "story": "The waiter brought out escargot for Molly and me. Then the waiter brought out twelve oysters and twelve clams. We shared the clams and oysters. The waiter poured wine for us.",
+      "predicted": "restaurant(r). waiter(\"the waiter\"). customer(\"Molly\"). customer(\"me\"). customer(we). member(\"Molly\", we). member(\"me\", we). food(\"escargot\"). food(\"twelve oysters\"). food(\"twelve clams\"). beverage(\"wine\"). st_hpd(put_down(\"the waiter\", \"escargot\", t), true, 0). st_hpd(put_down(\"the waiter\", \"twelve oysters\", t), true, 1). st_hpd(put_down(\"the waiter\", \"twelve clams\", t), true, 1). st_hpd(eat(we, \"twelve clams\"), true, 2). st_hpd(eat(we, \"twelve oysters\"), true, 2). st_hpd(put_down(\"the waiter\", \"wine\", t), true, 3).",
+      "ground_truth": "restaurant(r). customer(we). member(\"Molly\", we). member(me, we). food(escargot). food(f). member(\"twelve oysters\", f). member(\"twelve clams\", f). beverage(\"wine\"). waiter(\"the waiter\"). story_step(0..3). st_hpd(put_down(\"the waiter\", escargot, t), true, 0). st_hpd(put_down(\"the waiter\", f, t), true, 1). st_hpd(eat(we, f), true, 2). st_hpd(put_down(\"the waiter\", wine, t), true, 3).",
+      "matching_predicates": [
+        "beverage(\"wine\")",
+        "food(\"escargot\")",
+        "member(\"me\", \"we\")",
+        "member(\"molly\", \"we\")",
+        "person(\"we\")",
+        "restaurant(\"r\")",
+        "st_hpd(put_down(\"waiter\", \"escargot\", \"t\"), \"true\", 0)",
+        "st_hpd(put_down(\"waiter\", \"wine\", \"t\"), \"true\", 3)",
+        "waiter(\"waiter\")"
+      ],
+      "predicted_only_predicates": [
+        "customer(\"Molly\")",
+        "customer(\"me\")",
+        "food(\"twelve clams\")",
+        "food(\"twelve oysters\")",
+        "st_hpd(eat(we, \"twelve clams\"), true, 2)",
+        "st_hpd(eat(we, \"twelve oysters\"), true, 2)",
+        "st_hpd(put_down(\"the waiter\", \"twelve clams\", t), true, 1)",
+        "st_hpd(put_down(\"the waiter\", \"twelve oysters\", t), true, 1)"
+      ],
+      "ground_truth_only_predicates": [
+        "food(f)",
+        "member(\"twelve clams\", f)",
+        "member(\"twelve oysters\", f)",
+        "st_hpd(eat(we, f), true, 2)",
+        "st_hpd(put_down(\"the waiter\", f, t), true, 1)"
+      ],
+      "pred_predicate_count": 17,
+      "gt_predicate_count": 14
+    },
+    {
+      "sid": 53,
+      "similarity": 0.41379310344827586,
+      "story": "The Johnson family entered the family restaurant. They were seated in a booth and given menus. Mr. Johnson ordered steak, Mrs. Johnson ordered salad, and their son ordered pizza. The waiter brought all their orders together.",
+      "predicted": "customer(\"Mr. Johnson\"). customer(\"Mrs. Johnson\"). customer(\"their son\"). customer(they). member(\"Mr. Johnson\", they). member(\"Mrs. Johnson\", they). member(\"their son\", they). restaurant(\"family restaurant\"). food(\"steak\"). food(\"salad\"). food(\"pizza\"). waiter(\"The waiter\"). st_hpd(enter(they, \"family restaurant\"), true, 0). st_obs(sitting(they), true, 1). st_hpd(put_down(\"The waiter\", m, t), true, 1). st_hpd(order(\"Mr. Johnson\", \"steak\", \"The waiter\"), true, 2). st_hpd(order(\"Mrs. Johnson\", \"salad\", \"The waiter\"), true, 2). st_hpd(order(\"their son\", \"pizza\", \"The waiter\"), true, 2). st_hpd(put_down(\"The waiter\", \"steak\", t), true, 3). st_hpd(put_down(\"The waiter\", \"salad\", t), true, 3). st_hpd(put_down(\"The waiter\", \"pizza\", t), true, 3).",
+      "ground_truth": "restaurant(\"family restaurant\"). person(\"Mr. Johnson\"). person(\"Mrs. Johnson\"). person(\"son\"). customer(\"Johnson family\"). member(\"Mr. Johnson\", \"Johnson family\"). member(\"Mrs. Johnson\", \"Johnson family\"). member(\"son\", \"Johnson family\"). food(\"steak\"). food(\"salad\"). food(\"pizza\"). waiter(\"the waiter\"). story_step(0..4). st_hpd(enter(\"Johnson family\", \"family restaurant\"), true, 0). st_obs(sitting(\"Johnson family\"), true, 1). st_hpd(order(\"Mr. Johnson\", \"steak\", \"the waiter\"), true, 2). st_hpd(order(\"Mrs. Johnson\", \"salad\", \"the waiter\"), true, 2). st_hpd(order(\"son\", \"pizza\", \"the waiter\"), true, 2). st_hpd(put_down(\"the waiter\", \"steak\", t), true, 3). st_hpd(put_down(\"the waiter\", \"salad\", t), true, 3). st_hpd(put_down(\"the waiter\", \"pizza\", t), true, 3).",
+      "matching_predicates": [
+        "food(\"pizza\")",
+        "food(\"salad\")",
+        "food(\"steak\")",
+        "person(\"mr. johnson\")",
+        "person(\"mrs. johnson\")",
+        "restaurant(\"family restaurant\")",
+        "st_hpd(order(\"mr. johnson\", \"steak\", \"waiter\"), \"true\", 2)",
+        "st_hpd(order(\"mrs. johnson\", \"salad\", \"waiter\"), \"true\", 2)",
+        "st_hpd(put_down(\"waiter\", \"pizza\", \"t\"), \"true\", 3)",
+        "st_hpd(put_down(\"waiter\", \"salad\", \"t\"), \"true\", 3)",
+        "st_hpd(put_down(\"waiter\", \"steak\", \"t\"), \"true\", 3)",
+        "waiter(\"waiter\")"
+      ],
+      "predicted_only_predicates": [
+        "customer(\"their son\")",
+        "customer(they)",
+        "member(\"Mr. Johnson\", they)",
+        "member(\"Mrs. Johnson\", they)",
+        "member(\"their son\", they)",
+        "st_hpd(enter(they, \"family restaurant\"), true, 0)",
+        "st_hpd(order(\"their son\", \"pizza\", \"The waiter\"), true, 2)",
+        "st_hpd(put_down(\"The waiter\", m, t), true, 1)",
+        "st_obs(sitting(they), true, 1)"
+      ],
+      "ground_truth_only_predicates": [
+        "customer(\"Johnson family\")",
+        "member(\"Mr. Johnson\", \"Johnson family\")",
+        "member(\"Mrs. Johnson\", \"Johnson family\")",
+        "member(\"son\", \"Johnson family\")",
+        "person(\"son\")",
+        "st_hpd(enter(\"Johnson family\", \"family restaurant\"), true, 0)",
+        "st_hpd(order(\"son\", \"pizza\", \"the waiter\"), true, 2)",
+        "st_obs(sitting(\"Johnson family\"), true, 1)"
+      ],
+      "pred_predicate_count": 21,
+      "gt_predicate_count": 20
+    },
+    {
+      "sid": 65,
+      "similarity": 0.43478260869565216,
+      "story": "Maria entered the Italian restaurant and was greeted by the host. She was seated at a corner table and handed a menu. Maria ordered spaghetti carbonara and a glass of red wine. The waiter brought her order promptly. She enjoyed her meal and asked for the bill.",
+      "predicted": "restaurant(\"Italian restaurant\"). customer(\"Maria\"). host(\"the host\"). food(\"spaghetti carbonara\"). beverage(\"glass of red wine\"). waiter(\"The waiter\"). st_hpd(enter(\"Maria\", \"Italian restaurant\"), true, 0). st_hpd(greet(\"the host\", \"Maria\"), true, 1). st_obs(sitting(\"Maria\"), true, 2). st_hpd(put_down(\"the host\", m, t), true, 2). st_hpd(order(\"Maria\", \"spaghetti carbonara\", \"The waiter\"), true, 3). st_hpd(order(\"Maria\", \"glass of red wine\", \"The waiter\"), true, 3). st_hpd(put_down(\"The waiter\", \"spaghetti carbonara\", t), true, 4). st_hpd(put_down(\"The waiter\", \"glass of red wine\", t), true, 4). st_hpd(eat(\"Maria\", \"spaghetti carbonara\"), true, 5). st_hpd(drink(\"Maria\", \"glass of red wine\"), true, 5). st_hpd(request(\"Maria\", b, \"The waiter\"), true, 6).",
+      "ground_truth": "restaurant(\"Italian restaurant\"). customer(\"Maria\"). person(\"the host\"). food(\"spaghetti carbonara\"). beverage(\"red wine\"). waiter(\"the waiter\"). story_step(0..6). st_hpd(enter(\"Maria\", \"Italian restaurant\"), true, 0). st_hpd(greet(\"the host\", \"Maria\"), true, 1). st_hpd(lead_to(\"the host\", \"Maria\", t), true, 2). st_hpd(order(\"Maria\", \"spaghetti carbonara\", \"the waiter\"), true, 3). st_hpd(order(\"Maria\", \"red wine\", \"the waiter\"), true, 3). st_hpd(put_down(\"the waiter\", \"spaghetti carbonara\", t), true, 4). st_hpd(put_down(\"the waiter\", \"red wine\", t), true, 4). st_hpd(eat(\"Maria\", \"spaghetti carbonara\"), true, 5). st_hpd(drink(\"Maria\", \"red wine\"), true, 5). st_hpd(request(\"Maria\", b, \"the waiter\"), true, 6).",
+      "matching_predicates": [
+        "food(\"spaghetti carbonara\")",
+        "person(\"maria\")",
+        "restaurant(\"italian restaurant\")",
+        "st_hpd(eat(\"maria\", \"spaghetti carbonara\"), \"true\", 5)",
+        "st_hpd(enter(\"maria\", \"italian restaurant\"), \"true\", 0)",
+        "st_hpd(greet(\"host\", \"maria\"), \"true\", 1)",
+        "st_hpd(order(\"maria\", \"spaghetti carbonara\", \"waiter\"), \"true\", 3)",
+        "st_hpd(put_down(\"waiter\", \"spaghetti carbonara\", \"t\"), \"true\", 4)",
+        "st_hpd(request(\"maria\", \"b\", \"waiter\"), \"true\", 6)",
+        "waiter(\"waiter\")"
+      ],
+      "predicted_only_predicates": [
+        "beverage(\"glass of red wine\")",
+        "host(\"the host\")",
+        "st_hpd(drink(\"Maria\", \"glass of red wine\"), true, 5)",
+        "st_hpd(order(\"Maria\", \"glass of red wine\", \"The waiter\"), true, 3)",
+        "st_hpd(put_down(\"The waiter\", \"glass of red wine\", t), true, 4)",
+        "st_hpd(put_down(\"the host\", m, t), true, 2)",
+        "st_obs(sitting(\"Maria\"), true, 2)"
+      ],
+      "ground_truth_only_predicates": [
+        "beverage(\"red wine\")",
+        "person(\"the host\")",
+        "st_hpd(drink(\"Maria\", \"red wine\"), true, 5)",
+        "st_hpd(lead_to(\"the host\", \"Maria\", t), true, 2)",
+        "st_hpd(order(\"Maria\", \"red wine\", \"the waiter\"), true, 3)",
+        "st_hpd(put_down(\"the waiter\", \"red wine\", t), true, 4)"
+      ],
+      "pred_predicate_count": 17,
+      "gt_predicate_count": 16
+    },
+    {
+      "sid": 41,
+      "similarity": 0.4375,
+      "story": "Laura was at a cafe. She ordered a coffee and a croissant. The waiter brought the coffee promptly, but after 30 minutes, the croissant still hadn't arrived. Laura gave up, paid for her coffee, and left.",
+      "predicted": "customer(\"Laura\"). restaurant(\"cafe\"). beverage(\"coffee\"). food(\"croissant\"). waiter(\"the waiter\"). st_obs(in(\"Laura\", \"cafe\"), true, 0). st_hpd(order(\"Laura\", \"coffee\", \"the waiter\"), true, 1). st_hpd(order(\"Laura\", \"croissant\", \"the waiter\"), true, 1). st_hpd(put_down(\"the waiter\", \"coffee\", t), true, 2). st_hpd(put_down(\"the waiter\", \"croissant\", t), false). st_hpd(pay(\"Laura\", b), true, 3). st_hpd(leave(\"Laura\"), true, 4).",
+      "ground_truth": "restaurant(\"cafe\"). customer(\"Laura\"). beverage(\"coffee\"). food(\"croissant\").  waiter(\"the waiter\"). story_step(0..4). st_hpd(order(\"Laura\", \"coffee\", \"the waiter\"), true, 0). st_hpd(order(\"Laura\", \"croissant\", \"the waiter\"), true, 0). st_hpd(put_down(\"the waiter\", \"coffee\", t), true, 1). st_obs(served(\"Laura\"), false, 2). st_hpd(pay(\"Laura\", b), true, 3). st_hpd(leave(\"Laura\"), true, 4).",
+      "matching_predicates": [
+        "beverage(\"coffee\")",
+        "food(\"croissant\")",
+        "person(\"laura\")",
+        "restaurant(\"cafe\")",
+        "st_hpd(leave(\"laura\"), \"true\", 4)",
+        "st_hpd(pay(\"laura\", \"b\"), \"true\", 3)",
+        "waiter(\"waiter\")"
+      ],
+      "predicted_only_predicates": [
+        "st_hpd(order(\"Laura\", \"coffee\", \"the waiter\"), true, 1)",
+        "st_hpd(order(\"Laura\", \"croissant\", \"the waiter\"), true, 1)",
+        "st_hpd(put_down(\"the waiter\", \"coffee\", t), true, 2)",
+        "st_hpd(put_down(\"the waiter\", \"croissant\", t), false)",
+        "st_obs(in(\"Laura\", \"cafe\"), true, 0)"
+      ],
+      "ground_truth_only_predicates": [
+        "st_hpd(order(\"Laura\", \"coffee\", \"the waiter\"), true, 0)",
+        "st_hpd(order(\"Laura\", \"croissant\", \"the waiter\"), true, 0)",
+        "st_hpd(put_down(\"the waiter\", \"coffee\", t), true, 1)",
+        "st_obs(served(\"Laura\"), false, 2)"
+      ],
+      "pred_predicate_count": 12,
+      "gt_predicate_count": 11
+    },
+    {
+      "sid": 95,
+      "similarity": 0.4375,
+      "story": "[REDACTED — original ROCStories text; storyid=cd9a0a7b-ef8f-42c0-86ac-fe80542cebd3]",
+      "predicted": "waiter(\"Austin\"). restaurant(r). customer(\"a homeless man\"). food(\"spare food\"). food(\"a full meal\"). waiter(\"The wait staff\"). st_hpd(enter(\"a homeless man\", r), true, 0). st_hpd(request(\"a homeless man\", \"spare food\", \"Austin\"), true, 1). st_hpd(lead_to(\"Austin\", \"a homeless man\", t), true, 2). st_obs(sitting(\"a homeless man\"), true, 2). st_hpd(put_down(\"The wait staff\", \"a full meal\", t), true, 3). st_hpd(pay(\"a homeless man\", b), false).",
+      "ground_truth": "restaurant(\"a restaurant\"). customer(\"a homeless man\"). waiter(\"wait staff\"). person(\"Austin\"). food(\"spare food\"). food(\"full meal\").  st_hpd(enter(\"a homeless man\", \"a restaurant\"), true, 0). st_hpd(request(\"a homeless man\", \"spare food\", \"Austin\"), true, 1). st_hpd(sit(\"a homeless man\"), true, 2). st_hpd(put_down(\"wait staff\", \"full meal\", t), true, 3). st_hpd(pay(\"a homeless man\", b), false).",
+      "matching_predicates": [
+        "food(\"full meal\")",
+        "food(\"spare food\")",
+        "person(\"homeless man\")",
+        "st_hpd(pay(\"homeless man\", \"b\"), \"false\")",
+        "st_hpd(put_down(\"wait staff\", \"full meal\", \"t\"), \"true\", 3)",
+        "st_hpd(request(\"homeless man\", \"spare food\", \"austin\"), \"true\", 1)",
+        "waiter(\"wait staff\")"
+      ],
+      "predicted_only_predicates": [
+        "restaurant(r)",
+        "st_hpd(enter(\"a homeless man\", r), true, 0)",
+        "st_hpd(lead_to(\"Austin\", \"a homeless man\", t), true, 2)",
+        "st_obs(sitting(\"a homeless man\"), true, 2)",
+        "waiter(\"Austin\")"
+      ],
+      "ground_truth_only_predicates": [
+        "person(\"Austin\")",
+        "restaurant(\"a restaurant\")",
+        "st_hpd(enter(\"a homeless man\", \"a restaurant\"), true, 0)",
+        "st_hpd(sit(\"a homeless man\"), true, 2)"
+      ],
+      "pred_predicate_count": 12,
+      "gt_predicate_count": 11
+    },
+    {
+      "sid": 34,
+      "similarity": 0.4444444444444444,
+      "story": "One day, Andy felt hungry and went to the RRGrill restaurant for dinner. The restaurant was open, but there was no table available for Andy. Andy decided to wait. A table became available soon after.",
+      "predicted": "customer(\"Andy\"). restaurant(\"RRGrill\"). st_obs(hungry(\"Andy\"), true, 0). st_hpd(enter(\"Andy\", \"RRGrill\"), true, 0). st_obs(open(\"RRGrill\"), true, 1). st_obs(table_available, false, 1). st_obs(table_available, true, 2).",
+      "ground_truth": "restaurant(\"RRGrill\"). customer(\"Andy\"). story_step(0..2). st_hpd(enter(\"Andy\", \"RRGrill\"), true, 0). st_obs(table_available, false, 1). st_hpd(wait(\"Andy\"), true, 1). st_hpd(free_table, true, 2).",
+      "matching_predicates": [
+        "person(\"andy\")",
+        "restaurant(\"rrgrill\")",
+        "st_hpd(enter(\"andy\", \"rrgrill\"), \"true\", 0)",
+        "st_obs(\"table available\", \"false\", 1)"
+      ],
+      "predicted_only_predicates": [
+        "st_obs(hungry(\"Andy\"), true, 0)",
+        "st_obs(open(\"RRGrill\"), true, 1)",
+        "st_obs(table_available, true, 2)"
+      ],
+      "ground_truth_only_predicates": [
+        "st_hpd(free_table, true, 2)",
+        "st_hpd(wait(\"Andy\"), true, 1)"
+      ],
+      "pred_predicate_count": 7,
+      "gt_predicate_count": 6
+    },
+    {
+      "sid": 76,
+      "similarity": 0.45454545454545453,
+      "story": "[REDACTED — original ROCStories text; storyid=6ead4a09-8e5f-4fbc-8a32-b706bdbb7a87]",
+      "predicted": "customer(\"we\"). customer(\"our son\"). customer(\"a friend\"). restaurant(\"the Allston Diner\"). food(\"large, hearty breakfast meals\"). st_hpd(enter(\"we\", \"the Allston Diner\"), true, 0). st_hpd(eat(\"we\", \"large, hearty breakfast meals\"), true, 1).",
+      "ground_truth": "restaurant(\"Allston Diner\"). customer(we). person(\"our son\"). customer(\"a friend\"). member(\"our son\", we). food(\"breakfast meals\"). st_hpd(enter(we, \"Allston Diner\"), true, 0). st_hpd(eat(we, \"breakfast meals\"), true, 1). st_hpd(eat(\"a friend\", \"breakfast meals\"), true, 1).",
+      "matching_predicates": [
+        "person(\"friend\")",
+        "person(\"our son\")",
+        "person(\"we\")",
+        "restaurant(\"allston diner\")",
+        "st_hpd(enter(\"we\", \"allston diner\"), \"true\", 0)"
+      ],
+      "predicted_only_predicates": [
+        "food(\"large, hearty breakfast meals\")",
+        "st_hpd(eat(\"we\", \"large, hearty breakfast meals\"), true, 1)"
+      ],
+      "ground_truth_only_predicates": [
+        "food(\"breakfast meals\")",
+        "member(\"our son\", we)",
+        "st_hpd(eat(\"a friend\", \"breakfast meals\"), true, 1)",
+        "st_hpd(eat(we, \"breakfast meals\"), true, 1)"
+      ],
+      "pred_predicate_count": 7,
+      "gt_predicate_count": 9
+    },
+    {
+      "sid": 85,
+      "similarity": 0.46153846153846156,
+      "story": "[REDACTED — original ROCStories text; storyid=9915e783-6bf9-4d92-9150-b031bf778bb7]",
+      "predicted": "restaurant(r). customer(\"I\"). food(\"a pizza\"). food(\"burnt pizza\"). waiter(w). st_hpd(enter(\"I\", r), true, 0). st_hpd(order(\"I\", \"a pizza\", w), true, 1). st_hpd(put_down(w, \"burnt pizza\", t), true, 2). st_hpd(complain(\"I\", w), true, 3). st_next(2, 3). st_hpd(leave(\"I\"), true, 4).",
+      "ground_truth": "restaurant(\"a restaurant\"). customer(\"I\"). food(\"pizza\"). food(\"burnt pizza\"). st_hpd(enter(\"I\", r), true, 0). st_hpd(order(\"I\", \"pizza\", w), true, 1). st_hpd(put_down(w, \"burnt pizza\", t), true, 2). st_hpd(request(\"I\", pick_up(w, \"burnt pizza\", t), w), true, 3).",
+      "matching_predicates": [
+        "food(\"burnt pizza\")",
+        "food(\"pizza\")",
+        "person(\"i\")",
+        "st_hpd(enter(\"i\", \"r\"), \"true\", 0)",
+        "st_hpd(order(\"i\", \"pizza\", \"w\"), \"true\", 1)",
+        "st_hpd(put_down(\"w\", \"burnt pizza\", \"t\"), \"true\", 2)"
+      ],
+      "predicted_only_predicates": [
+        "restaurant(r)",
+        "st_hpd(complain(\"I\", w), true, 3)",
+        "st_hpd(leave(\"I\"), true, 4)",
+        "st_next(2, 3)",
+        "waiter(w)"
+      ],
+      "ground_truth_only_predicates": [
+        "restaurant(\"a restaurant\")",
+        "st_hpd(request(\"I\", pick_up(w, \"burnt pizza\", t), w), true, 3)"
+      ],
+      "pred_predicate_count": 11,
+      "gt_predicate_count": 8
+    },
+    {
+      "sid": 25,
+      "similarity": 0.4666666666666667,
+      "story": "I was the first person to appear at the restaurant. I took my seat at the middle of the table. The head-waiter waited on me himself. I had a capital dinner. Then Uncle Chipperton entered. He paid for the whole dinner.",
+      "predicted": "customer(\"I\"). customer(\"Uncle Chipperton\"). restaurant(r). waiter(\"the head-waiter\"). food(\"capital dinner\"). st_hpd(enter(\"I\", r), true, 0). st_hpd(sit(\"I\"), true, 1). st_hpd(order(\"I\", \"capital dinner\", \"the head-waiter\"), true, 2). st_hpd(eat(\"I\", \"capital dinner\"), true, 3). st_hpd(enter(\"Uncle Chipperton\", r), true, 4). st_hpd(pay(\"Uncle Chipperton\", b), true, 5).",
+      "ground_truth": "restaurant(\"the restaurant\"). customer(\"I\"). waiter(\"head-waiter\") food(\"capital dinner\"). person(\"Uncle Chipperton\"). story_step(0..5). st_hpd(enter(\"I\", \"the restaurant\"), true, 0). st_hpd(sit(\"I\"), true, 1). st_hpd(put_down(\"head-waiter\", \"capital dinner\", t), true, 2). st_hpd(eat(\"I\", \"capital dinner\"), true, 3). st_hpd(enter(\"Uncle Chipperton\", \"the restaurant\"), true, 4). st_hpd(pay(\"Uncle Chipperton\", b), true, 5).",
+      "matching_predicates": [
+        "food(\"capital dinner\")",
+        "person(\"i\")",
+        "person(\"uncle chipperton\")",
+        "st_hpd(eat(\"i\", \"capital dinner\"), \"true\", 3)",
+        "st_hpd(pay(\"uncle chipperton\", \"b\"), \"true\", 5)",
+        "st_hpd(sit(\"i\"), \"true\", 1)",
+        "waiter(\"head-waiter\")"
+      ],
+      "predicted_only_predicates": [
+        "restaurant(r)",
+        "st_hpd(enter(\"I\", r), true, 0)",
+        "st_hpd(enter(\"Uncle Chipperton\", r), true, 4)",
+        "st_hpd(order(\"I\", \"capital dinner\", \"the head-waiter\"), true, 2)"
+      ],
+      "ground_truth_only_predicates": [
+        "restaurant(\"the restaurant\")",
+        "st_hpd(enter(\"I\", \"the restaurant\"), true, 0)",
+        "st_hpd(enter(\"Uncle Chipperton\", \"the restaurant\"), true, 4)",
+        "st_hpd(put_down(\"head-waiter\", \"capital dinner\", t), true, 2)"
+      ],
+      "pred_predicate_count": 11,
+      "gt_predicate_count": 11
+    },
+    {
+      "sid": 4,
+      "similarity": 0.5,
+      "story": "Bob is seated at a table in the restaurant. The waiter asks for his order, and he orders a hamburger.",
+      "predicted": "restaurant(\"the restaurant\"). customer(\"Bob\"). waiter(w). food(\"a hamburger\"). st_obs(sitting(\"Bob\"), true, 0). st_hpd(order(\"Bob\", \"a hamburger\", w), true, 1).",
+      "ground_truth": "restaurant(\"the restaurant\"). customer(\"Bob\"). food(\"hamburger\"). waiter(\"the waiter\"). story_step(0..1). st_obs(sitting(\"Bob\"), true, 0). st_hpd(order(\"Bob\", \"hamburger\", \"the waiter\"), true, 1).",
+      "matching_predicates": [
+        "food(\"hamburger\")",
+        "person(\"bob\")",
+        "restaurant(\"restaurant\")",
+        "st_obs(sitting(\"bob\"), \"true\", 0)"
+      ],
+      "predicted_only_predicates": [
+        "st_hpd(order(\"Bob\", \"a hamburger\", w), true, 1)",
+        "waiter(w)"
+      ],
+      "ground_truth_only_predicates": [
+        "st_hpd(order(\"Bob\", \"hamburger\", \"the waiter\"), true, 1)",
+        "waiter(\"the waiter\")"
+      ],
+      "pred_predicate_count": 6,
+      "gt_predicate_count": 6
+    },
+    {
+      "sid": 39,
+      "similarity": 0.5,
+      "story": "One day, Andy felt hungry and went to the RRGrill restaurant for dinner. The restaurant was open. The waiter led him to a table. As Andy was sitting down before having a chance to order, he received an emergency phone call and had to leave.",
+      "predicted": "customer(\"Andy\"). restaurant(\"RRGrill\"). waiter(\"the waiter\"). st_obs(hungry(\"Andy\"), true, 0). st_hpd(enter(\"Andy\", \"RRGrill\"), true, 0). st_obs(open(\"RRGrill\"), true, 1). st_hpd(lead_to(\"the waiter\", \"Andy\", t), true, 1). st_hpd(sit(\"Andy\"), true, 2). st_hpd(order(\"Andy\"), false). st_hpd(leave(\"Andy\"), true, 3).",
+      "ground_truth": "restaurant(\"RRGrill\"). customer(\"Andy\"). waiter(\"the waiter\"). story_step(0..3). st_hpd(enter(\"Andy\", \"RRGrill\"), true, 0). st_hpd(lead_to(\"the waiter\", \"Andy\", t), true, 1). st_obs(sitting(\"Andy\"), true, 2). st_stop_activity(\"Andy\", 2). st_hpd(leave(\"Andy\"), true, 3).",
+      "matching_predicates": [
+        "person(\"andy\")",
+        "restaurant(\"rrgrill\")",
+        "st_hpd(enter(\"andy\", \"rrgrill\"), \"true\", 0)",
+        "st_hpd(lead_to(\"waiter\", \"andy\", \"t\"), \"true\", 1)",
+        "st_hpd(leave(\"andy\"), \"true\", 3)",
+        "waiter(\"waiter\")"
+      ],
+      "predicted_only_predicates": [
+        "st_hpd(order(\"Andy\"), false)",
+        "st_hpd(sit(\"Andy\"), true, 2)",
+        "st_obs(hungry(\"Andy\"), true, 0)",
+        "st_obs(open(\"RRGrill\"), true, 1)"
+      ],
+      "ground_truth_only_predicates": [
+        "st_obs(sitting(\"Andy\"), true, 2)",
+        "st_stop_activity(\"Andy\", 2)"
+      ],
+      "pred_predicate_count": 10,
+      "gt_predicate_count": 8
+    },
+    {
+      "sid": 45,
+      "similarity": 0.5,
+      "story": "The restaurant was very busy. A group of friends was seated, but no waiter came to take their order. After waiting for twenty minutes, they decided to leave and go somewhere else.",
+      "predicted": "customer(\"a group of friends\"). restaurant(r). waiter(w). st_obs(sitting(\"a group of friends\"), true, 0). st_hpd(order(\"a group of friends\", f, w), false). st_hpd(leave(\"a group of friends\"), true, 1).",
+      "ground_truth": "restaurant(\"the restaurant\"). customer(\"group of friends\"). waiter(w). story_step(0..2). st_obs(sitting(\"group of friends\"), true, 0). st_hpd(served(\"group of friends\"), false). st_hpd(leave(\"group of friends\"), true, 1).",
+      "matching_predicates": [
+        "person(\"group of friends\")",
+        "st_hpd(leave(\"group of friends\"), \"true\", 1)",
+        "st_obs(sitting(\"group of friends\"), \"true\", 0)",
+        "waiter(\"w\")"
+      ],
+      "predicted_only_predicates": [
+        "restaurant(r)",
+        "st_hpd(order(\"a group of friends\", f, w), false)"
+      ],
+      "ground_truth_only_predicates": [
+        "restaurant(\"the restaurant\")",
+        "st_hpd(served(\"group of friends\"), false)"
+      ],
+      "pred_predicate_count": 6,
+      "gt_predicate_count": 6
+    },
+    {
+      "sid": 48,
+      "similarity": 0.5,
+      "story": "Olivia sat down at a table. The waiter greeted her and took her drink order: a glass of water. The waiter brought the water.",
+      "predicted": "customer(\"Olivia\"). waiter(\"the waiter\"). beverage(\"glass of water\"). st_hpd(sit(\"Olivia\"), true, 0). st_hpd(greet(\"the waiter\", \"Olivia\"), true, 1). st_hpd(order(\"Olivia\", \"glass of water\", \"the waiter\"), true, 1). st_hpd(put_down(\"the waiter\", \"glass of water\", t), true, 2).",
+      "ground_truth": "restaurant(r). customer(\"Olivia\"). beverage(\"glass of water\"). waiter(\"the waiter\"). story_step(0..3). st_hpd(sit(\"Olivia\"), true, 0). st_hpd(greet(\"the waiter\", \"Olivia\"), true, 1). st_hpd(order(\"Olivia\", \"glass of water\", \"the waiter\"), true, 2). st_hpd(put_down(\"the waiter\", \"glass of water\", t), true, 3).",
+      "matching_predicates": [
+        "beverage(\"glass of water\")",
+        "person(\"olivia\")",
+        "st_hpd(greet(\"waiter\", \"olivia\"), \"true\", 1)",
+        "st_hpd(sit(\"olivia\"), \"true\", 0)",
+        "waiter(\"waiter\")"
+      ],
+      "predicted_only_predicates": [
+        "st_hpd(order(\"Olivia\", \"glass of water\", \"the waiter\"), true, 1)",
+        "st_hpd(put_down(\"the waiter\", \"glass of water\", t), true, 2)"
+      ],
+      "ground_truth_only_predicates": [
+        "restaurant(r)",
+        "st_hpd(order(\"Olivia\", \"glass of water\", \"the waiter\"), true, 2)",
+        "st_hpd(put_down(\"the waiter\", \"glass of water\", t), true, 3)"
+      ],
+      "pred_predicate_count": 7,
+      "gt_predicate_count": 8
+    },
+    {
+      "sid": 97,
+      "similarity": 0.5,
+      "story": "[REDACTED — original ROCStories text; storyid=d25ec012-9f9f-48e6-8274-e6ac4a4b59e4]",
+      "predicted": "customer(\"Tim\"). restaurant(r). waiter(\"the waiter\"). food(\"wrong food\"). st_obs(in(\"Tim\", r), true, 0). st_hpd(put_down(\"the waiter\", \"wrong food\", t), true, 1). st_hpd(order(\"Tim\", \"wrong food\", \"the waiter\"), false). st_hpd(complain(\"Tim\", \"the waiter\"), true, 2). st_next(1, 2).",
+      "ground_truth": "restaurant(r). customer(\"Tim\"). food(\"wrong order\"). waiter(\"the waiter\"). st_obs(in(\"Tim\", r), true, 0). st_hpd(put_down(\"the waiter\", \"wrong order\", t), true, 1). st_hpd(complain(\"Tim\", \"the waiter\"), true, 2). st_next(1, 2). st_hpd(put_down(\"the waiter\", f, t), true, 3).",
+      "matching_predicates": [
+        "person(\"tim\")",
+        "restaurant(\"r\")",
+        "st_hpd(complain(\"tim\", \"waiter\"), \"true\", 2)",
+        "st_next(1, 2)",
+        "st_obs(in(\"tim\", \"r\"), \"true\", 0)",
+        "waiter(\"waiter\")"
+      ],
+      "predicted_only_predicates": [
+        "food(\"wrong food\")",
+        "st_hpd(order(\"Tim\", \"wrong food\", \"the waiter\"), false)",
+        "st_hpd(put_down(\"the waiter\", \"wrong food\", t), true, 1)"
+      ],
+      "ground_truth_only_predicates": [
+        "food(\"wrong order\")",
+        "st_hpd(put_down(\"the waiter\", \"wrong order\", t), true, 1)",
+        "st_hpd(put_down(\"the waiter\", f, t), true, 3)"
+      ],
+      "pred_predicate_count": 9,
+      "gt_predicate_count": 9
+    },
+    {
+      "sid": 99,
+      "similarity": 0.5,
+      "story": "[REDACTED — original ROCStories text; storyid=11cd400e-b2b8-4279-9e2e-925de49fee44]",
+      "predicted": "customer(\"The family\"). restaurant(\"a new restaurant\"). food(\"tacos\"). food(\"different foods\"). food(\"chicken tacos\"). st_hpd(enter(\"The family\", \"a new restaurant\"), true, 0). st_hpd(eat(\"The family\", \"different foods\"), true, 1). st_hpd(eat(\"The family\", \"chicken tacos\"), true, 2).",
+      "ground_truth": "restaurant(\"new restaurant\"). customer(\"The family\"). food(\"different foods\"). food(\"tacos\"). st_hpd(enter(\"The family\", \"new restaurant\"), true, 0). st_hpd(order(\"The family\", \"different foods\", w), true, 1). st_hpd(eat(\"The family\", \"different foods\"), true, 2).",
+      "matching_predicates": [
+        "food(\"different foods\")",
+        "food(\"tacos\")",
+        "person(\"family\")",
+        "restaurant(\"new restaurant\")",
+        "st_hpd(enter(\"family\", \"new restaurant\"), \"true\", 0)"
+      ],
+      "predicted_only_predicates": [
+        "food(\"chicken tacos\")",
+        "st_hpd(eat(\"The family\", \"chicken tacos\"), true, 2)",
+        "st_hpd(eat(\"The family\", \"different foods\"), true, 1)"
+      ],
+      "ground_truth_only_predicates": [
+        "st_hpd(eat(\"The family\", \"different foods\"), true, 2)",
+        "st_hpd(order(\"The family\", \"different foods\", w), true, 1)"
+      ],
+      "pred_predicate_count": 8,
+      "gt_predicate_count": 7
+    },
+    {
+      "sid": 30,
+      "similarity": 0.5454545454545454,
+      "story": "Nicole went to a vegetarian restaurant. She ordered lentil soup. The waitress brought her a miso soup instead.",
+      "predicted": "customer(\"Nicole\"). restaurant(\"vegetarian restaurant\"). food(\"lentil soup\"). food(\"miso soup\"). waiter(\"the waitress\"). st_hpd(enter(\"Nicole\", \"vegetarian restaurant\"), true, 0). st_hpd(order(\"Nicole\", \"lentil soup\", \"the waitress\"), true, 1). st_hpd(put_down(\"the waitress\", \"miso soup\", t), true, 2).",
+      "ground_truth": "restaurant(veg_r). customer(nicole). person(owner). food(lentil_soup). food(miso_soup). waiter(waitress). story_step(0..2). st_hpd(enter(nicole, veg_r), true, 0). st_hpd(order(nicole, lentil_soup, waitress), true, 1). st_hpd(put_down(waitress, miso_soup, t), true, 2).",
+      "matching_predicates": [
+        "food(\"lentil soup\")",
+        "food(\"miso soup\")",
+        "person(\"nicole\")",
+        "st_hpd(order(\"nicole\", \"lentil soup\", \"waitress\"), \"true\", 1)",
+        "st_hpd(put_down(\"waitress\", \"miso soup\", \"t\"), \"true\", 2)",
+        "waiter(\"waitress\")"
+      ],
+      "predicted_only_predicates": [
+        "restaurant(\"vegetarian restaurant\")",
+        "st_hpd(enter(\"Nicole\", \"vegetarian restaurant\"), true, 0)"
+      ],
+      "ground_truth_only_predicates": [
+        "person(owner)",
+        "restaurant(veg_r)",
+        "st_hpd(enter(nicole, veg_r), true, 0)"
+      ],
+      "pred_predicate_count": 8,
+      "gt_predicate_count": 9
+    },
+    {
+      "sid": 9,
+      "similarity": 0.6,
+      "story": "Pete is seated at his table in the restaurant. He has ordered and received his chicken, but is unhappy with how undercooked the chicken is. He complains to the waiter, and asks for a better cooked dish.",
+      "predicted": "restaurant(\"the restaurant\"). customer(\"Pete\"). waiter(\"the waiter\"). food(\"chicken\"). food(\"undercooked chicken\"). food(\"better cooked dish\"). st_obs(sitting(\"Pete\"), true, 0). st_hpd(order(\"Pete\", \"chicken\", \"the waiter\"), true, 1). st_hpd(put_down(\"the waiter\", \"undercooked chicken\", t), true, 2). st_hpd(complain(\"Pete\", \"the waiter\"), true, 3). st_hpd(request(\"Pete\", \"better cooked dish\", \"the waiter\"), true, 3). st_next(2, 3).",
+      "ground_truth": "restaurant(\"the restaurant\"). customer(\"Pete\"). food(\"chicken\"). food(\"undercooked chicken\"). food(\"better cooked chicken\"). waiter(\"the waiter\"). story_step(0..4). st_obs(sitting(\"Pete\"), true, 0). st_hpd(order(\"Pete\", \"chicken\", \"the waiter\"), true, 1). st_hpd(put_down(\"the waiter\", \"undercooked_chicken\", t), true, 2). st_hpd(complain(\"Pete\", \"the waiter\"), true, 3). st_next(2, 3). st_hpd(order(\"Pete\", \"better cooked chicken\", \"the waiter\"), true, 4).",
+      "matching_predicates": [
+        "food(\"chicken\")",
+        "food(\"undercooked chicken\")",
+        "person(\"pete\")",
+        "restaurant(\"restaurant\")",
+        "st_hpd(complain(\"pete\", \"waiter\"), \"true\", 3)",
+        "st_hpd(order(\"pete\", \"chicken\", \"waiter\"), \"true\", 1)",
+        "st_next(2, 3)",
+        "st_obs(sitting(\"pete\"), \"true\", 0)",
+        "waiter(\"waiter\")"
+      ],
+      "predicted_only_predicates": [
+        "food(\"better cooked dish\")",
+        "st_hpd(put_down(\"the waiter\", \"undercooked chicken\", t), true, 2)",
+        "st_hpd(request(\"Pete\", \"better cooked dish\", \"the waiter\"), true, 3)"
+      ],
+      "ground_truth_only_predicates": [
+        "food(\"better cooked chicken\")",
+        "st_hpd(order(\"Pete\", \"better cooked chicken\", \"the waiter\"), true, 4)",
+        "st_hpd(put_down(\"the waiter\", \"undercooked_chicken\", t), true, 2)"
+      ],
+      "pred_predicate_count": 12,
+      "gt_predicate_count": 12
+    },
+    {
+      "sid": 10,
+      "similarity": 0.6,
+      "story": "Jim is seated at his table in the restaurant. He orders an appetizer. After waiting for 20 minutes and not receiving his food, he decides to leave the restaurant.",
+      "predicted": "restaurant(\"the restaurant\"). customer(\"Jim\"). food(\"an appetizer\"). waiter(w). st_obs(sitting(\"Jim\"), true, 0). st_hpd(order(\"Jim\", \"an appetizer\", w), true, 1). st_obs(served(\"Jim\"), false, 2). stop_activity(\"Jim\", 2). st_hpd(leave(\"Jim\"), true, 3).",
+      "ground_truth": "restaurant(\"the restaurant\"). customer(\"Jim\"). food(\"appetizer\"). story_step(0..3). st_obs(sitting(\"Jim\"), true, 0). st_hpd(order(\"Jim\", \"appetizer\", w), true, 1). st_obs(served(\"Pete\"), false, 2). st_hpd(leave(\"Jim\"), true, 3).",
+      "matching_predicates": [
+        "food(\"appetizer\")",
+        "person(\"jim\")",
+        "restaurant(\"restaurant\")",
+        "st_hpd(leave(\"jim\"), \"true\", 3)",
+        "st_hpd(order(\"jim\", \"appetizer\", \"w\"), \"true\", 1)",
+        "st_obs(sitting(\"jim\"), \"true\", 0)"
+      ],
+      "predicted_only_predicates": [
+        "st_obs(served(\"Jim\"), false, 2)",
+        "stop_activity(\"Jim\", 2)",
+        "waiter(w)"
+      ],
+      "ground_truth_only_predicates": [
+        "st_obs(served(\"Pete\"), false, 2)"
+      ],
+      "pred_predicate_count": 9,
+      "gt_predicate_count": 7
+    },
+    {
+      "sid": 28,
+      "similarity": 0.6,
+      "story": "One day, Andy felt hungry, and went to the RRGrill restaurant for dinner. The restaurant was open, so he walked into the restaurant where he was greeted by the waiter and was led to the table. Andy ordered soup and he ate it with pleasure. He paid cash and left.",
+      "predicted": "customer(\"Andy\"). restaurant(\"RRGrill\"). food(\"soup\"). waiter(\"the waiter\"). st_obs(hungry(\"Andy\"), true, 0). st_hpd(enter(\"Andy\", \"RRGrill\"), true, 1). st_obs(open(\"RRGrill\"), true, 1). st_hpd(greet(\"the waiter\", \"Andy\"), true, 2). st_hpd(lead_to(\"the waiter\", \"Andy\", t), true, 2). st_hpd(order(\"Andy\", \"soup\", \"the waiter\"), true, 3). st_hpd(eat(\"Andy\", \"soup\"), true, 4). st_hpd(pay(\"Andy\", b), true, 5). st_hpd(leave(\"Andy\"), true, 6).",
+      "ground_truth": "restaurant(\"RRGrill\"). customer(andy). food(soup). waiter(\"the waiter\"). story_step(0..4). st_hpd(enter(andy, \"RRGrill\"), true, 0). st_hpd(greet(\"the waiter\", andy), true, 1). st_hpd(lead_to(\"the waiter\", andy, t), true, 2). st_hpd(order(andy, soup, \"the waiter\"), true, 3). st_hpd(eat(andy, soup), true, 4). st_hpd(pay(andy, b), true, 5). st_hpd(leave(andy), true, 6).",
+      "matching_predicates": [
+        "food(\"soup\")",
+        "person(\"andy\")",
+        "restaurant(\"rrgrill\")",
+        "st_hpd(eat(\"andy\", \"soup\"), \"true\", 4)",
+        "st_hpd(lead_to(\"waiter\", \"andy\", \"t\"), \"true\", 2)",
+        "st_hpd(leave(\"andy\"), \"true\", 6)",
+        "st_hpd(order(\"andy\", \"soup\", \"waiter\"), \"true\", 3)",
+        "st_hpd(pay(\"andy\", \"b\"), \"true\", 5)",
+        "waiter(\"waiter\")"
+      ],
+      "predicted_only_predicates": [
+        "st_hpd(enter(\"Andy\", \"RRGrill\"), true, 1)",
+        "st_hpd(greet(\"the waiter\", \"Andy\"), true, 2)",
+        "st_obs(hungry(\"Andy\"), true, 0)",
+        "st_obs(open(\"RRGrill\"), true, 1)"
+      ],
+      "ground_truth_only_predicates": [
+        "st_hpd(enter(andy, \"RRGrill\"), true, 0)",
+        "st_hpd(greet(\"the waiter\", andy), true, 1)"
+      ],
+      "pred_predicate_count": 13,
+      "gt_predicate_count": 11
+    },
+    {
+      "sid": 58,
+      "similarity": 0.6153846153846154,
+      "story": "Ben went to the diner for breakfast. He sat at the counter and ordered pancakes with bacon and coffee. The cook prepared his order right in front of him.",
+      "predicted": "restaurant(\"the diner\"). customer(\"Ben\"). food(\"pancakes with bacon\"). beverage(\"coffee\"). cook(\"the cook\"). waiter(w). st_hpd(enter(\"Ben\", \"the diner\"), true, 0). st_hpd(sit(\"Ben\"), true, 1). st_hpd(order(\"Ben\", \"pancakes with bacon\", w), true, 2). st_hpd(order(\"Ben\", \"coffee\", w), true, 2). st_hpd(prepare(\"the cook\", \"pancakes with bacon\", w), true, 3). st_hpd(prepare(\"the cook\", \"coffee\", w), true, 3).",
+      "ground_truth": "restaurant(\"the diner\"). customer(\"Ben\"). food(\"pancakes with bacon\"). beverage(\"coffee\"). story_step(0..3). st_hpd(enter(\"Ben\", \"the diner\"), true, 0). st_hpd(sit(\"Ben\"), true, 1). st_hpd(order(\"Ben\", \"pancakes with bacon\", w), true, 2). st_hpd(prepare(\"the cook\", \"pancakes with bacon\", w), true, 3). st_hpd(prepare(\"the cook\", \"coffee\", \"Ben\"), true, 3).",
+      "matching_predicates": [
+        "beverage(\"coffee\")",
+        "food(\"pancakes with bacon\")",
+        "person(\"ben\")",
+        "restaurant(\"diner\")",
+        "st_hpd(enter(\"ben\", \"diner\"), \"true\", 0)",
+        "st_hpd(order(\"ben\", \"pancakes with bacon\", \"w\"), \"true\", 2)",
+        "st_hpd(prepare(\"cook\", \"pancakes with bacon\", \"w\"), \"true\", 3)",
+        "st_hpd(sit(\"ben\"), \"true\", 1)"
+      ],
+      "predicted_only_predicates": [
+        "cook(\"the cook\")",
+        "st_hpd(order(\"Ben\", \"coffee\", w), true, 2)",
+        "st_hpd(prepare(\"the cook\", \"coffee\", w), true, 3)",
+        "waiter(w)"
+      ],
+      "ground_truth_only_predicates": [
+        "st_hpd(prepare(\"the cook\", \"coffee\", \"Ben\"), true, 3)"
+      ],
+      "pred_predicate_count": 12,
+      "gt_predicate_count": 9
+    },
+    {
+      "sid": 18,
+      "similarity": 0.625,
+      "story": "Herbie and his father were at a meat restaurant. The waiter brought a sizzling steak that smelled heavenly, and a plate with haddock and creamed spinach. The waiter put Herbie's plate down. Herbieâ€™s father asked the waiter to take the fish away and bring the boy some lamb chops instead.",
+      "predicted": "restaurant(\"a meat restaurant\"). waiter(\"the waiter\"). customer(\"Herbie\"). customer(\"his father\"). food(\"sizzling steak\"). food(\"haddock and creamed spinach\"). food(\"lamb chops\"). st_obs(in(\"Herbie\", \"a meat restaurant\"), true, 0). st_obs(in(\"his father\", \"a meat restaurant\"), true, 0). st_hpd(put_down(\"the waiter\", \"sizzling steak\", t), true, 1). st_hpd(put_down(\"the waiter\", \"haddock and creamed spinach\", t), true, 1). st_hpd(request(\"his father\", \"take the fish away\", \"the waiter\"), true, 2). st_hpd(request(\"his father\", \"bring the boy some lamb chops\", \"the waiter\"), true, 2).",
+      "ground_truth": "restaurant(\"a meat restaurant\"). customer(\"Herbie\"). customer(\"his father\"). food(\"a sizzling steak\"). food(\"haddock and creamed spinach\"). food(\"lamb chops\"). waiter(\"the waiter\"). story_step(0..4). st_obs(in(\"Herbie\", \"a meat restaurant\"), true, 0). st_obs(in(\"his father\", \"a meat restaurant\"), true, 0). st_hpd(put_down(\"the waiter\", \"a sizzling steak\", t), true, 1). st_hpd(put_down(\"the waiter\", \"haddock and creamed spinach\", t), true, 2). st_hpd(request(\"his father\", pick_up(\"the waiter\", \"haddock and creamed spinach\", t), \"the waiter\"), true, 3). st_hpd(order_for(\"his father\", \"Herbie\", \"lamb chops\", \"the waiter\"), true, 4).",
+      "matching_predicates": [
+        "food(\"haddock and creamed spinach\")",
+        "food(\"lamb chops\")",
+        "food(\"sizzling steak\")",
+        "person(\"herbie\")",
+        "person(\"his father\")",
+        "restaurant(\"meat restaurant\")",
+        "st_hpd(put_down(\"waiter\", \"sizzling steak\", \"t\"), \"true\", 1)",
+        "st_obs(in(\"herbie\", \"meat restaurant\"), \"true\", 0)",
+        "st_obs(in(\"his father\", \"meat restaurant\"), \"true\", 0)",
+        "waiter(\"waiter\")"
+      ],
+      "predicted_only_predicates": [
+        "st_hpd(put_down(\"the waiter\", \"haddock and creamed spinach\", t), true, 1)",
+        "st_hpd(request(\"his father\", \"bring the boy some lamb chops\", \"the waiter\"), true, 2)",
+        "st_hpd(request(\"his father\", \"take the fish away\", \"the waiter\"), true, 2)"
+      ],
+      "ground_truth_only_predicates": [
+        "st_hpd(order_for(\"his father\", \"Herbie\", \"lamb chops\", \"the waiter\"), true, 4)",
+        "st_hpd(put_down(\"the waiter\", \"haddock and creamed spinach\", t), true, 2)",
+        "st_hpd(request(\"his father\", pick_up(\"the waiter\", \"haddock and creamed spinach\", t), \"the waiter\"), true, 3)"
+      ],
+      "pred_predicate_count": 13,
+      "gt_predicate_count": 13
+    },
+    {
+      "sid": 26,
+      "similarity": 0.6363636363636364,
+      "story": "Nicole went to a vegetarian restaurant. She ordered lentil soup. The waitress set the soup in the middle of the table. Nicole enjoyed the soup. She left the restaurant.",
+      "predicted": "customer(\"Nicole\"). restaurant(\"vegetarian restaurant\"). food(\"lentil soup\"). waiter(\"the waitress\"). st_hpd(enter(\"Nicole\", \"vegetarian restaurant\"), true, 0). st_hpd(order(\"Nicole\", \"lentil soup\", \"the waitress\"), true, 1). st_hpd(put_down(\"the waitress\", \"lentil soup\", t), true, 2). st_hpd(eat(\"Nicole\", \"lentil soup\"), true, 3). st_hpd(leave(\"Nicole\"), true, 4).",
+      "ground_truth": "restaurant(veg_r). customer(nicole). food(lentil_soup). waiter(waitress). story_step(0..4). st_hpd(enter(nicole, veg_r), true, 0). st_hpd(order(nicole, lentil_soup, waitress), true, 1). st_hpd(put_down(waitress, lentil_soup, t), true, 2). st_hpd(eat(nicole, lentil_soup), true, 3). st_hpd(leave(nicole), true, 4).",
+      "matching_predicates": [
+        "food(\"lentil soup\")",
+        "person(\"nicole\")",
+        "st_hpd(eat(\"nicole\", \"lentil soup\"), \"true\", 3)",
+        "st_hpd(leave(\"nicole\"), \"true\", 4)",
+        "st_hpd(order(\"nicole\", \"lentil soup\", \"waitress\"), \"true\", 1)",
+        "st_hpd(put_down(\"waitress\", \"lentil soup\", \"t\"), \"true\", 2)",
+        "waiter(\"waitress\")"
+      ],
+      "predicted_only_predicates": [
+        "restaurant(\"vegetarian restaurant\")",
+        "st_hpd(enter(\"Nicole\", \"vegetarian restaurant\"), true, 0)"
+      ],
+      "ground_truth_only_predicates": [
+        "restaurant(veg_r)",
+        "st_hpd(enter(nicole, veg_r), true, 0)"
+      ],
+      "pred_predicate_count": 9,
+      "gt_predicate_count": 9
+    },
+    {
+      "sid": 13,
+      "similarity": 0.6428571428571429,
+      "story": "Judy looked at the menu. She and her two kids, Alex and Zoe, were seated in a booth in a local restaurant. They ordered fish and chips.",
+      "predicted": "restaurant(\"local restaurant\"). customer(\"Judy\"). customer(\"Alex\"). customer(\"Zoe\"). customer(they). member(\"Judy\", they). member(\"Alex\", they). member(\"Zoe\", they). food(\"fish and chips\"). st_hpd(read_menu(\"Judy\"), true, 0). st_obs(sitting(they), true, 1). st_hpd(order(they, \"fish and chips\", w), true, 2).",
+      "ground_truth": "restaurant(\"a local restaurant\"). person(\"Judy\"). person(\"Alex\"). person(\"Zoe\"). customer(\"they\"). member(\"Judy\", \"they\"). member(\"Alex\", \"they\"). member(\"Zoe\", \"they\"). food(\"fish and chips\"). story_step(0..1). st_obs(sitting(\"they\"), true, 0). st_hpd(order(\"they\", \"fish and chips\", w), true, 1).",
+      "matching_predicates": [
+        "food(\"fish and chips\")",
+        "member(\"alex\", \"they\")",
+        "member(\"judy\", \"they\")",
+        "member(\"zoe\", \"they\")",
+        "person(\"alex\")",
+        "person(\"judy\")",
+        "person(\"they\")",
+        "person(\"zoe\")",
+        "restaurant(\"local restaurant\")"
+      ],
+      "predicted_only_predicates": [
+        "st_hpd(order(they, \"fish and chips\", w), true, 2)",
+        "st_hpd(read_menu(\"Judy\"), true, 0)",
+        "st_obs(sitting(they), true, 1)"
+      ],
+      "ground_truth_only_predicates": [
+        "st_hpd(order(\"they\", \"fish and chips\", w), true, 1)",
+        "st_obs(sitting(\"they\"), true, 0)"
+      ],
+      "pred_predicate_count": 12,
+      "gt_predicate_count": 11
+    },
+    {
+      "sid": 56,
+      "similarity": 0.6666666666666666,
+      "story": "Anna visited the vegan restaurant downtown. She ordered the quinoa bowl and a green smoothie. The food was fresh and delicious. She left a generous tip for the excellent service.",
+      "predicted": "customer(\"Anna\"). restaurant(\"vegan restaurant\"). food(\"quinoa bowl\"). beverage(\"green smoothie\"). waiter(w). st_hpd(enter(\"Anna\", \"vegan restaurant\"), true, 0). st_hpd(order(\"Anna\", \"quinoa bowl\", w), true, 1). st_hpd(order(\"Anna\", \"green smoothie\", w), true, 1). st_hpd(pay(\"Anna\", tip), true, 2).",
+      "ground_truth": "restaurant(\"vegan restaurant\"). customer(\"Anna\"). food(\"quinoa bowl\"). beverage(\"green smoothie\"). waiter(w). story_step(0..4). st_hpd(enter(\"Anna\", \"vegan restaurant\"), true, 0). st_hpd(order(\"Anna\", \"quinoa bowl\", w), true, 1). st_hpd(order(\"Anna\", \"green smoothie\", w), true, 1). st_hpd(eat(\"Anna\", \"quinoa bowl\"), true, 3). st_hpd(drink(\"Anna\", \"green smoothie\"), true, 3). st_hpd(pay(\"Anna\", tip), true, 4).",
+      "matching_predicates": [
+        "beverage(\"green smoothie\")",
+        "food(\"quinoa bowl\")",
+        "person(\"anna\")",
+        "restaurant(\"vegan restaurant\")",
+        "st_hpd(enter(\"anna\", \"vegan restaurant\"), \"true\", 0)",
+        "st_hpd(order(\"anna\", \"green smoothie\", \"w\"), \"true\", 1)",
+        "st_hpd(order(\"anna\", \"quinoa bowl\", \"w\"), \"true\", 1)",
+        "waiter(\"w\")"
+      ],
+      "predicted_only_predicates": [
+        "st_hpd(pay(\"Anna\", tip), true, 2)"
+      ],
+      "ground_truth_only_predicates": [
+        "st_hpd(drink(\"Anna\", \"green smoothie\"), true, 3)",
+        "st_hpd(eat(\"Anna\", \"quinoa bowl\"), true, 3)",
+        "st_hpd(pay(\"Anna\", tip), true, 4)"
+      ],
+      "pred_predicate_count": 9,
+      "gt_predicate_count": 11
+    },
+    {
+      "sid": 82,
+      "similarity": 0.6875,
+      "story": "[REDACTED — original ROCStories text; storyid=2cf524c3-5e49-4ba9-9590-f84429fbdc01]",
+      "predicted": "restaurant(\"the new restaurant in town\"). customer(\"Elmer\"). customer(\"Emma\"). customer(\"the couple\"). member(\"Elmer\", \"the couple\"). member(\"Emma\", \"the couple\"). food(\"burgers\"). beverage(\"milkshakes\"). food(\"fries\"). waiter(w). st_hpd(enter(\"the couple\", \"the new restaurant in town\"), true, 0). st_hpd(order(\"the couple\", \"burgers\", w), true, 1). st_hpd(order(\"the couple\", \"milkshakes\", w), true, 1). st_hpd(order(\"Elmer\", \"fries\", w), true, 2).",
+      "ground_truth": "restaurant(\"new restaurant\"). customer(\"the couple\"). person(\"Elmer\"). person(\"Emma\"). member(\"Elmer\", \"the couple\"). member(\"Emma\", \"the couple\"). food(\"burgers\"). food(\"fries\"). beverage(\"milkshakes\"). st_hpd(enter(\"the couple\", \"new restaurant\"), true, 0). st_hpd(order(\"the couple\", \"burgers\", w), true, 1). st_hpd(order(\"the couple\", \"milkshakes\", w), true, 1). st_hpd(order(\"Elmer\", \"fries\", w), true, 2).",
+      "matching_predicates": [
+        "beverage(\"milkshakes\")",
+        "food(\"burgers\")",
+        "food(\"fries\")",
+        "member(\"elmer\", \"couple\")",
+        "member(\"emma\", \"couple\")",
+        "person(\"couple\")",
+        "person(\"elmer\")",
+        "person(\"emma\")",
+        "st_hpd(order(\"couple\", \"burgers\", \"w\"), \"true\", 1)",
+        "st_hpd(order(\"couple\", \"milkshakes\", \"w\"), \"true\", 1)",
+        "st_hpd(order(\"elmer\", \"fries\", \"w\"), \"true\", 2)"
+      ],
+      "predicted_only_predicates": [
+        "restaurant(\"the new restaurant in town\")",
+        "st_hpd(enter(\"the couple\", \"the new restaurant in town\"), true, 0)",
+        "waiter(w)"
+      ],
+      "ground_truth_only_predicates": [
+        "restaurant(\"new restaurant\")",
+        "st_hpd(enter(\"the couple\", \"new restaurant\"), true, 0)"
+      ],
+      "pred_predicate_count": 14,
+      "gt_predicate_count": 13
+    },
+    {
+      "sid": 42,
+      "similarity": 0.7058823529411765,
+      "story": "David and his date, Sarah, went to a fancy restaurant. David ordered for both of them, choosing the duck confit. The waiter served the meal and poured them some wine. They enjoyed their dinner.",
+      "predicted": "customer(\"David\"). customer(\"Sarah\"). customer(they). member(\"David\", they). member(\"Sarah\", they). restaurant(\"a fancy restaurant\"). food(\"duck confit\"). beverage(\"wine\"). waiter(\"the waiter\"). st_hpd(enter(they, \"a fancy restaurant\"), true, 0). st_hpd(order_for(\"David\", they, \"duck confit\", \"the waiter\"), true, 1). st_hpd(put_down(\"the waiter\", \"duck confit\", t), true, 2). st_hpd(put_down(\"the waiter\", \"wine\", t), true, 2). st_hpd(eat(they, \"duck confit\"), true, 3). st_hpd(drink(they, \"wine\"), true, 3).",
+      "ground_truth": "restaurant(\"fancy restaurant\"). customer(they). person(\"David\"). person(\"Sarah\"). member(\"David\", they). member(\"Sarah\", they). food(\"duck confit\"). beverage(\"wine\"). waiter(\"the waiter\"). story_step(0..3). st_hpd(order_for(\"David\", they, \"duck confit\", \"the waiter\"), true, 0). st_hpd(put_down(\"the waiter\", \"duck confit\", t), true, 1). st_hpd(put_down(\"the waiter\", \"wine\", t), true, 2). st_hpd(eat(they, \"duck confit\"), true, 3). st_hpd(drink(they, \"wine\"), true, 3).",
+      "matching_predicates": [
+        "beverage(\"wine\")",
+        "food(\"duck confit\")",
+        "member(\"david\", \"they\")",
+        "member(\"sarah\", \"they\")",
+        "person(\"david\")",
+        "person(\"sarah\")",
+        "person(\"they\")",
+        "restaurant(\"fancy restaurant\")",
+        "st_hpd(drink(\"they\", \"wine\"), \"true\", 3)",
+        "st_hpd(eat(\"they\", \"duck confit\"), \"true\", 3)",
+        "st_hpd(put_down(\"waiter\", \"wine\", \"t\"), \"true\", 2)",
+        "waiter(\"waiter\")"
+      ],
+      "predicted_only_predicates": [
+        "st_hpd(enter(they, \"a fancy restaurant\"), true, 0)",
+        "st_hpd(order_for(\"David\", they, \"duck confit\", \"the waiter\"), true, 1)",
+        "st_hpd(put_down(\"the waiter\", \"duck confit\", t), true, 2)"
+      ],
+      "ground_truth_only_predicates": [
+        "st_hpd(order_for(\"David\", they, \"duck confit\", \"the waiter\"), true, 0)",
+        "st_hpd(put_down(\"the waiter\", \"duck confit\", t), true, 1)"
+      ],
+      "pred_predicate_count": 15,
+      "gt_predicate_count": 14
+    },
+    {
+      "sid": 66,
+      "similarity": 0.7142857142857143,
+      "story": "Charlie entered a restaurant and was led to a table. He ordered a burger. The waiter brought the burger. Charlie ate it, asked for the bill, paid, and left.",
+      "predicted": "restaurant(r). customer(\"Charlie\"). food(\"burger\"). waiter(\"The waiter\"). st_hpd(enter(\"Charlie\", r), true, 0). st_hpd(lead_to(\"The waiter\", \"Charlie\", t), true, 1). st_hpd(order(\"Charlie\", \"burger\", \"The waiter\"), true, 2). st_hpd(put_down(\"The waiter\", \"burger\", t), true, 3). st_hpd(eat(\"Charlie\", \"burger\"), true, 4). st_hpd(request(\"Charlie\", b, \"The waiter\"), true, 5). st_hpd(pay(\"Charlie\", b), true, 6). st_hpd(leave(\"Charlie\"), true, 7).",
+      "ground_truth": "restaurant(\"a restaurant\"). customer(\"Charlie\"). food(\"burger\"). waiter(\"the waiter\"). story_step(0..7). st_hpd(enter(\"Charlie\", \"a restaurant\"), true, 0). st_hpd(lead_to(\"the waiter\", \"Charlie\", t), true, 1). st_hpd(order(\"Charlie\", \"burger\", \"the waiter\"), true, 2). st_hpd(put_down(\"the waiter\", \"burger\", t), true, 3). st_hpd(eat(\"Charlie\", \"burger\"), true, 4). st_hpd(request(\"Charlie\", b, \"the waiter\"), true, 5). st_hpd(pay(\"Charlie\", b), true, 6). st_hpd(leave(\"Charlie\"), true, 7).",
+      "matching_predicates": [
+        "food(\"burger\")",
+        "person(\"charlie\")",
+        "st_hpd(eat(\"charlie\", \"burger\"), \"true\", 4)",
+        "st_hpd(lead_to(\"waiter\", \"charlie\", \"t\"), \"true\", 1)",
+        "st_hpd(leave(\"charlie\"), \"true\", 7)",
+        "st_hpd(order(\"charlie\", \"burger\", \"waiter\"), \"true\", 2)",
+        "st_hpd(pay(\"charlie\", \"b\"), \"true\", 6)",
+        "st_hpd(put_down(\"waiter\", \"burger\", \"t\"), \"true\", 3)",
+        "st_hpd(request(\"charlie\", \"b\", \"waiter\"), \"true\", 5)",
+        "waiter(\"waiter\")"
+      ],
+      "predicted_only_predicates": [
+        "restaurant(r)",
+        "st_hpd(enter(\"Charlie\", r), true, 0)"
+      ],
+      "ground_truth_only_predicates": [
+        "restaurant(\"a restaurant\")",
+        "st_hpd(enter(\"Charlie\", \"a restaurant\"), true, 0)"
+      ],
+      "pred_predicate_count": 12,
+      "gt_predicate_count": 12
+    },
+    {
+      "sid": 83,
+      "similarity": 0.7142857142857143,
+      "story": "[REDACTED — original ROCStories text; storyid=9c2ccb82-003d-4253-9f19-65b157b9993f]",
+      "predicted": "restaurant(\"the diner\"). customer(\"the couple\"). waiter(\"the waitress\"). st_hpd(sit(\"the couple\"), true, 0). st_hpd(stand_up(\"the couple\"), true, 1). st_hpd(order(\"the couple\", f, \"the waitress\"), true, 2).",
+      "ground_truth": "restaurant(\"diner\"). customer(\"the couple\"). waiter(\"the waitress\"). st_hpd(sit(\"the couple\"), true, 0). st_hpd(greet(\"the waitress\", \"the couple\"), false). st_hpd(stand_up(\"the couple\"), true, 1).",
+      "matching_predicates": [
+        "person(\"couple\")",
+        "restaurant(\"diner\")",
+        "st_hpd(sit(\"couple\"), \"true\", 0)",
+        "st_hpd(stand_up(\"couple\"), \"true\", 1)",
+        "waiter(\"waitress\")"
+      ],
+      "predicted_only_predicates": [
+        "st_hpd(order(\"the couple\", f, \"the waitress\"), true, 2)"
+      ],
+      "ground_truth_only_predicates": [
+        "st_hpd(greet(\"the waitress\", \"the couple\"), false)"
+      ],
+      "pred_predicate_count": 6,
+      "gt_predicate_count": 6
+    },
+    {
+      "sid": 62,
+      "similarity": 0.7272727272727273,
+      "story": "The waiter at the steakhouse brought a rare steak for Wendy, but she had ordered it well-done. She sent it back to the kitchen to be cooked more.",
+      "predicted": "restaurant(\"the steakhouse\"). customer(\"Wendy\"). waiter(\"The waiter\"). food(\"rare steak\"). food(\"well-done steak\"). st_hpd(order(\"Wendy\", \"well-done steak\", \"The waiter\"), true, 0). st_hpd(put_down(\"The waiter\", \"rare steak\", t), true, 1). st_hpd(complain(\"Wendy\", \"The waiter\"), true, 2). st_next(1, 2). st_hpd(pick_up(\"The waiter\", \"rare steak\", t), true, 3).",
+      "ground_truth": "restaurant(\"the steakhouse\"). customer(\"Wendy\"). food(\"rare steak\"). food(\"well-done steak\"). waiter(\"the waiter\"). story_step(0..2). st_hpd(order(\"Wendy\", \"well-done steak\", \"the waiter\"), true, 0). st_hpd(put_down(\"the waiter\", \"rare steak\", t), true, 1). st_hpd(request(\"Wendy\", pick_up(\"the waiter\", \"rare steak\", t), \"the waiter\"), true, 2). st_next(1, 2).",
+      "matching_predicates": [
+        "food(\"rare steak\")",
+        "food(\"well-done steak\")",
+        "person(\"wendy\")",
+        "restaurant(\"steakhouse\")",
+        "st_hpd(order(\"wendy\", \"well-done steak\", \"waiter\"), \"true\", 0)",
+        "st_hpd(put_down(\"waiter\", \"rare steak\", \"t\"), \"true\", 1)",
+        "st_next(1, 2)",
+        "waiter(\"waiter\")"
+      ],
+      "predicted_only_predicates": [
+        "st_hpd(complain(\"Wendy\", \"The waiter\"), true, 2)",
+        "st_hpd(pick_up(\"The waiter\", \"rare steak\", t), true, 3)"
+      ],
+      "ground_truth_only_predicates": [
+        "st_hpd(request(\"Wendy\", pick_up(\"the waiter\", \"rare steak\", t), \"the waiter\"), true, 2)"
+      ],
+      "pred_predicate_count": 10,
+      "gt_predicate_count": 9
+    },
+    {
+      "sid": 96,
+      "similarity": 0.7857142857142857,
+      "story": "[REDACTED — original ROCStories text; storyid=77710d2a-dbc2-4c99-a892-190b529ad219]",
+      "predicted": "customer(\"Dina\"). customer(\"a friend\"). customer(they). member(\"Dina\", they). member(\"a friend\", they). restaurant(\"a fast food restaurant\"). food(\"fries\"). st_obs(in(\"Dina\", \"a fast food restaurant\"), true, 0). st_obs(hungry(\"Dina\"), false, 1). st_hpd(order(they, \"fries\", w), true, 2). st_hpd(pay(they, b), true, 3). st_hpd(eat(\"Dina\", \"fries\"), true, 4).",
+      "ground_truth": "restaurant(\"fast food restaurant\"). customer(they). person(\"Dina\"). person(\"a friend\"). member(\"Dina\", they). member(\"a friend\", they). food(\"fries\"). st_obs(in(\"Dina\", \"fast food restaurant\"), true, 0). st_obs(hungry(\"Dina\"), false, 1). st_hpd(order(they, \"fries\", w), true, 2). st_hpd(pay(\"Dina\", b), true, 3). st_hpd(pay(\"a friend\", b), true, 3). st_hpd(eat(\"Dina\", \"fries\"), true, 4).",
+      "matching_predicates": [
+        "food(\"fries\")",
+        "member(\"dina\", \"they\")",
+        "member(\"friend\", \"they\")",
+        "person(\"dina\")",
+        "person(\"friend\")",
+        "person(\"they\")",
+        "restaurant(\"fast food restaurant\")",
+        "st_hpd(eat(\"dina\", \"fries\"), \"true\", 4)",
+        "st_hpd(order(\"they\", \"fries\", \"w\"), \"true\", 2)",
+        "st_obs(hungry(\"dina\"), \"false\", 1)",
+        "st_obs(in(\"dina\", \"fast food restaurant\"), \"true\", 0)"
+      ],
+      "predicted_only_predicates": [
+        "st_hpd(pay(they, b), true, 3)"
+      ],
+      "ground_truth_only_predicates": [
+        "st_hpd(pay(\"Dina\", b), true, 3)",
+        "st_hpd(pay(\"a friend\", b), true, 3)"
+      ],
+      "pred_predicate_count": 12,
+      "gt_predicate_count": 13
+    },
+    {
+      "sid": 60,
+      "similarity": 0.8181818181818182,
+      "story": "Robert ordered a medium-rare steak but received a well-done one. He called the waiter and complained about the mistake. The waiter apologized and took the steak back to the kitchen.",
+      "predicted": "restaurant(r). customer(\"Robert\"). food(\"medium-rare steak\"). food(\"well-done steak\"). waiter(\"the waiter\"). st_hpd(order(\"Robert\", \"medium-rare steak\", \"the waiter\"), true, 0). st_hpd(put_down(\"the waiter\", \"well-done steak\", t), true, 1). st_hpd(complain(\"Robert\", \"the waiter\"), true, 2). st_next(1, 2). st_hpd(pick_up(\"the waiter\", \"well-done steak\", t), true, 3).",
+      "ground_truth": "restaurant(\"the restaurant\"). customer(\"Robert\"). food(\"medium-rare steak\"). food(\"well-done steak\"). waiter(\"the waiter\"). story_step(0..3). st_hpd(order(\"Robert\", \"medium-rare steak\", \"the waiter\"), true, 0). st_hpd(put_down(\"the waiter\", \"well-done steak\", t), true, 1). st_hpd(complain(\"Robert\", \"the waiter\"), true, 2). st_next(1, 2). st_hpd(pick_up(\"the waiter\", \"well-done steak\", t), true, 3).",
+      "matching_predicates": [
+        "food(\"medium-rare steak\")",
+        "food(\"well-done steak\")",
+        "person(\"robert\")",
+        "st_hpd(complain(\"robert\", \"waiter\"), \"true\", 2)",
+        "st_hpd(order(\"robert\", \"medium-rare steak\", \"waiter\"), \"true\", 0)",
+        "st_hpd(pick_up(\"waiter\", \"well-done steak\", \"t\"), \"true\", 3)",
+        "st_hpd(put_down(\"waiter\", \"well-done steak\", \"t\"), \"true\", 1)",
+        "st_next(1, 2)",
+        "waiter(\"waiter\")"
+      ],
+      "predicted_only_predicates": [
+        "restaurant(r)"
+      ],
+      "ground_truth_only_predicates": [
+        "restaurant(\"the restaurant\")"
+      ],
+      "pred_predicate_count": 10,
+      "gt_predicate_count": 10
+    },
+    {
+      "sid": 54,
+      "similarity": 0.8461538461538461,
+      "story": "Sarah visited the cafe for lunch. She sat at a table by the window and ordered a chicken sandwich and coffee. The waitress brought her order. Sarah ate quickly as she was in a hurry.",
+      "predicted": "customer(\"Sarah\"). restaurant(\"the cafe\"). food(\"chicken sandwich\"). beverage(\"coffee\"). waiter(\"The waitress\"). st_hpd(enter(\"Sarah\", \"the cafe\"), true, 0). st_hpd(sit(\"Sarah\"), true, 1). st_hpd(order(\"Sarah\", \"chicken sandwich\", \"The waitress\"), true, 2). st_hpd(order(\"Sarah\", \"coffee\", \"The waitress\"), true, 2). st_hpd(put_down(\"The waitress\", \"chicken sandwich\", t), true, 3). st_hpd(put_down(\"The waitress\", \"coffee\", t), true, 3). st_hpd(eat(\"Sarah\", \"chicken sandwich\"), true, 4). st_hpd(drink(\"Sarah\", \"coffee\"), true, 4).",
+      "ground_truth": "restaurant(\"the cafe\"). customer(\"Sarah\"). food(\"chicken sandwich\"). beverage(\"coffee\"). waiter(\"the waitress\"). story_step(0..4). st_hpd(enter(\"Sarah\", \"the cafe\"), true, 0). st_hpd(sit(\"Sarah\"), true, 1). st_hpd(order(\"Sarah\", \"chicken sandwich\", \"the waitress\"), true, 2). st_hpd(put_down(\"the waitress\", \"chicken sandwich\", t), true, 3). st_hpd(eat(\"Sarah\", \"chicken sandwich\"), true, 4). st_hpd(drink(\"Sarah\", \"coffee\"), true, 4).",
+      "matching_predicates": [
+        "beverage(\"coffee\")",
+        "food(\"chicken sandwich\")",
+        "person(\"sarah\")",
+        "restaurant(\"cafe\")",
+        "st_hpd(drink(\"sarah\", \"coffee\"), \"true\", 4)",
+        "st_hpd(eat(\"sarah\", \"chicken sandwich\"), \"true\", 4)",
+        "st_hpd(enter(\"sarah\", \"cafe\"), \"true\", 0)",
+        "st_hpd(order(\"sarah\", \"chicken sandwich\", \"waitress\"), \"true\", 2)",
+        "st_hpd(put_down(\"waitress\", \"chicken sandwich\", \"t\"), \"true\", 3)",
+        "st_hpd(sit(\"sarah\"), \"true\", 1)",
+        "waiter(\"waitress\")"
+      ],
+      "predicted_only_predicates": [
+        "st_hpd(order(\"Sarah\", \"coffee\", \"The waitress\"), true, 2)",
+        "st_hpd(put_down(\"The waitress\", \"coffee\", t), true, 3)"
+      ],
+      "ground_truth_only_predicates": [],
+      "pred_predicate_count": 13,
+      "gt_predicate_count": 11
+    },
+    {
+      "sid": 68,
+      "similarity": 0.8461538461538461,
+      "story": "Frank sat down at his usual table in the local diner. The waitress brought him a black coffee. Frank looked at the menu and then ordered pancakes. He ate them, left cash on the table for the bill, and left.",
+      "predicted": "customer(\"Frank\"). restaurant(\"local diner\"). waiter(\"The waitress\"). beverage(\"black coffee\"). food(\"pancakes\"). st_hpd(sit(\"Frank\"), true, 0). st_hpd(put_down(\"The waitress\", \"black coffee\", t), true, 1). st_hpd(read_menu(\"Frank\"), true, 2). st_hpd(order(\"Frank\", \"pancakes\", \"The waitress\"), true, 3). st_hpd(eat(\"Frank\", \"pancakes\"), true, 4). st_hpd(pay(\"Frank\", b), true, 5). st_hpd(leave(\"Frank\"), true, 6).",
+      "ground_truth": "restaurant(\"local diner\"). customer(\"Frank\"). beverage(\"black coffee\"). food(\"pancakes\"). waiter(\"the waitress\"). story_step(0..6). st_obs(sitting(\"Frank\"), true, 0). st_hpd(put_down(\"the waitress\", \"black coffee\", t), true, 1). st_hpd(read_menu(\"Frank\"), true, 2). st_hpd(order(\"Frank\", \"pancakes\", \"the waitress\"), true, 3). st_hpd(eat(\"Frank\", \"pancakes\"), true, 4). st_hpd(pay(\"Frank\", b), true, 5). st_hpd(leave(\"Frank\"), true, 6).",
+      "matching_predicates": [
+        "beverage(\"black coffee\")",
+        "food(\"pancakes\")",
+        "person(\"frank\")",
+        "restaurant(\"local diner\")",
+        "st_hpd(eat(\"frank\", \"pancakes\"), \"true\", 4)",
+        "st_hpd(leave(\"frank\"), \"true\", 6)",
+        "st_hpd(order(\"frank\", \"pancakes\", \"waitress\"), \"true\", 3)",
+        "st_hpd(pay(\"frank\", \"b\"), \"true\", 5)",
+        "st_hpd(put_down(\"waitress\", \"black coffee\", \"t\"), \"true\", 1)",
+        "st_hpd(read_menu(\"frank\"), \"true\", 2)",
+        "waiter(\"waitress\")"
+      ],
+      "predicted_only_predicates": [
+        "st_hpd(sit(\"Frank\"), true, 0)"
+      ],
+      "ground_truth_only_predicates": [
+        "st_obs(sitting(\"Frank\"), true, 0)"
+      ],
+      "pred_predicate_count": 12,
+      "gt_predicate_count": 12
+    },
+    {
+      "sid": 72,
+      "similarity": 0.8461538461538461,
+      "story": "Susan visited the pancake house for breakfast. She ordered blueberry pancakes and orange juice. The server brought her order quickly. Susan ate her breakfast and paid with her credit card.",
+      "predicted": "customer(\"Susan\"). restaurant(\"the pancake house\"). waiter(\"The server\"). food(\"blueberry pancakes\"). beverage(\"orange juice\"). st_hpd(enter(\"Susan\", \"the pancake house\"), true, 0). st_hpd(order(\"Susan\", \"blueberry pancakes\", \"The server\"), true, 1). st_hpd(order(\"Susan\", \"orange juice\", \"The server\"), true, 1). st_hpd(put_down(\"The server\", \"blueberry pancakes\", t), true, 2). st_hpd(put_down(\"The server\", \"orange juice\", t), true, 2). st_hpd(eat(\"Susan\", \"blueberry pancakes\"), true, 3). st_hpd(drink(\"Susan\", \"orange juice\"), true, 3). st_hpd(pay(\"Susan\", b), true, 4).",
+      "ground_truth": "restaurant(\"the pancake house\"). customer(\"Susan\"). food(\"blueberry pancakes\"). beverage(\"orange juice\"). waiter(\"the server\"). st_hpd(enter(\"Susan\", \"the pancake house\"), true, 0). st_hpd(order(\"Susan\", \"blueberry pancakes\", \"the server\"), true, 1). st_hpd(order(\"Susan\", \"orange juice\", \"the server\"), true, 1). st_hpd(put_down(\"the server\", \"blueberry pancakes\", t), true, 2). st_hpd(eat(\"Susan\", \"blueberry pancakes\"), true, 3). st_hpd(pay(\"Susan\", b), true, 4).",
+      "matching_predicates": [
+        "beverage(\"orange juice\")",
+        "food(\"blueberry pancakes\")",
+        "person(\"susan\")",
+        "restaurant(\"pancake house\")",
+        "st_hpd(eat(\"susan\", \"blueberry pancakes\"), \"true\", 3)",
+        "st_hpd(enter(\"susan\", \"pancake house\"), \"true\", 0)",
+        "st_hpd(order(\"susan\", \"blueberry pancakes\", \"server\"), \"true\", 1)",
+        "st_hpd(order(\"susan\", \"orange juice\", \"server\"), \"true\", 1)",
+        "st_hpd(pay(\"susan\", \"b\"), \"true\", 4)",
+        "st_hpd(put_down(\"server\", \"blueberry pancakes\", \"t\"), \"true\", 2)",
+        "waiter(\"server\")"
+      ],
+      "predicted_only_predicates": [
+        "st_hpd(drink(\"Susan\", \"orange juice\"), true, 3)",
+        "st_hpd(put_down(\"The server\", \"orange juice\", t), true, 2)"
+      ],
+      "ground_truth_only_predicates": [],
+      "pred_predicate_count": 13,
+      "gt_predicate_count": 11
+    },
+    {
+      "sid": 17,
+      "similarity": 0.8571428571428571,
+      "story": "The waiter brought his dinner. He was eating something spotted with eggs and livers. He finished but the waiter wouldn't come total the bill.",
+      "predicted": "restaurant(r). waiter(\"the waiter\"). customer(\"He\"). food(\"something spotted with eggs and livers\"). st_hpd(put_down(\"the waiter\", \"something spotted with eggs and livers\", t), true, 0). st_hpd(eat(\"He\", \"something spotted with eggs and livers\"), true, 1). st_hpd(put_down(\"the waiter\", b, t), false).",
+      "ground_truth": "customer(\"he\"). food(\"something spotted with eggs and livers\"). waiter(\"the waiter\"). story_step(0..1). st_hpd(put_down(\"the waiter\", \"something spotted with eggs and livers\", t), true, 0). st_hpd(eat(\"he\", \"something spotted with eggs and livers\"), true, 1). st_hpd(put_down(\"the waiter\", b, t), false).",
+      "matching_predicates": [
+        "food(\"something spotted with eggs and livers\")",
+        "person(\"he\")",
+        "st_hpd(eat(\"he\", \"something spotted with eggs and livers\"), \"true\", 1)",
+        "st_hpd(put_down(\"waiter\", \"b\", \"t\"), \"false\")",
+        "st_hpd(put_down(\"waiter\", \"something spotted with eggs and livers\", \"t\"), \"true\", 0)",
+        "waiter(\"waiter\")"
+      ],
+      "predicted_only_predicates": [
+        "restaurant(r)"
+      ],
+      "ground_truth_only_predicates": [],
+      "pred_predicate_count": 7,
+      "gt_predicate_count": 6
+    },
+    {
+      "sid": 86,
+      "similarity": 0.8571428571428571,
+      "story": "[REDACTED — original ROCStories text; storyid=541efb12-b331-4525-afe1-5422ff33a1ca]",
+      "predicted": "restaurant(\"a diner\"). customer(\"Samuel\"). customer(\"John\"). food(\"a hamburger without onions\"). food(\"a hotdog\"). waiter(\"the waiter\"). st_obs(in(\"Samuel\", \"a diner\"), true, 0). st_obs(in(\"John\", \"a diner\"), true, 0). st_hpd(order(\"Samuel\", \"a hamburger without onions\", \"the waiter\"), true, 1). st_hpd(put_down(\"the waiter\", \"a hotdog\", t), true, 2). st_hpd(complain(\"Samuel\", \"the waiter\"), true, 3). st_next(2, 3). st_hpd(put_down(\"the waiter\", \"a hamburger without onions\", t), true, 4).",
+      "ground_truth": "restaurant(\"diner\"). customer(\"Samuel\"). customer(\"John\"). food(\"hamburger without onions\"). food(\"hotdog\"). waiter(\"the waiter\"). st_obs(in(\"Samuel\", \"diner\"), true, 0). st_obs(in(\"John\", \"diner\"), true, 0). st_hpd(order(\"Samuel\", \"hamburger without onions\", \"the waiter\"), true, 1). st_hpd(put_down(\"the waiter\", \"hotdog\", t), true, 2). st_hpd(complain(\"Samuel\", \"the waiter\"), true, 3). st_next(2,3). st_hpd(put_down(\"the waiter\", \"hamburger without onions\", t), true, 4).",
+      "matching_predicates": [
+        "food(\"hamburger without onions\")",
+        "food(\"hotdog\")",
+        "person(\"john\")",
+        "person(\"samuel\")",
+        "restaurant(\"diner\")",
+        "st_hpd(complain(\"samuel\", \"waiter\"), \"true\", 3)",
+        "st_hpd(order(\"samuel\", \"hamburger without onions\", \"waiter\"), \"true\", 1)",
+        "st_hpd(put_down(\"waiter\", \"hamburger without onions\", \"t\"), \"true\", 4)",
+        "st_hpd(put_down(\"waiter\", \"hotdog\", \"t\"), \"true\", 2)",
+        "st_obs(in(\"john\", \"diner\"), \"true\", 0)",
+        "st_obs(in(\"samuel\", \"diner\"), \"true\", 0)",
+        "waiter(\"waiter\")"
+      ],
+      "predicted_only_predicates": [
+        "st_next(2, 3)"
+      ],
+      "ground_truth_only_predicates": [
+        "st_next(2,3)"
+      ],
+      "pred_predicate_count": 13,
+      "gt_predicate_count": 13
+    },
+    {
+      "sid": 46,
+      "similarity": 0.875,
+      "story": "Rita finished her salad. She requested the bill from the waiter. The waiter brought the bill, and Rita paid with her credit card.",
+      "predicted": "customer(\"Rita\"). food(\"salad\"). waiter(\"the waiter\"). st_hpd(eat(\"Rita\", \"salad\"), true, 0). st_hpd(request(\"Rita\", b, \"the waiter\"), true, 1). st_hpd(put_down(\"the waiter\", b, t), true, 2). st_hpd(pay(\"Rita\", b), true, 3).",
+      "ground_truth": "restaurant(r). customer(\"Rita\"). food(\"salad\"). waiter(\"the waiter\"). story_step(0..3). st_hpd(eat(\"Rita\", \"salad\"), true, 0). st_hpd(request(\"Rita\", b, \"the waiter\"), true, 1). st_hpd(put_down(\"the waiter\", b, t), true, 2). st_hpd(pay(\"Rita\", b), true, 3).",
+      "matching_predicates": [
+        "food(\"salad\")",
+        "person(\"rita\")",
+        "st_hpd(eat(\"rita\", \"salad\"), \"true\", 0)",
+        "st_hpd(pay(\"rita\", \"b\"), \"true\", 3)",
+        "st_hpd(put_down(\"waiter\", \"b\", \"t\"), \"true\", 2)",
+        "st_hpd(request(\"rita\", \"b\", \"waiter\"), \"true\", 1)",
+        "waiter(\"waiter\")"
+      ],
+      "predicted_only_predicates": [],
+      "ground_truth_only_predicates": [
+        "restaurant(r)"
+      ],
+      "pred_predicate_count": 7,
+      "gt_predicate_count": 8
+    },
+    {
+      "sid": 55,
+      "similarity": 0.875,
+      "story": "Mark and Lisa went to their favorite sushi restaurant. They were seated at the sushi bar. Mark ordered tuna rolls and Lisa ordered salmon nigiri. The chef prepared their order in front of them.",
+      "predicted": "customer(\"Mark\"). customer(\"Lisa\"). customer(they). member(\"Mark\", they). member(\"Lisa\", they). restaurant(\"sushi restaurant\"). food(\"tuna rolls\"). food(\"salmon nigiri\"). cook(\"The chef\"). waiter(w). st_hpd(enter(they, \"sushi restaurant\"), true, 0). st_obs(sitting(they), true, 1). st_hpd(order(\"Mark\", \"tuna rolls\", w), true, 2). st_hpd(order(\"Lisa\", \"salmon nigiri\", w), true, 2). st_hpd(prepare(\"The chef\", \"tuna rolls\", w), true, 3). st_hpd(prepare(\"The chef\", \"salmon nigiri\", w), true, 3).",
+      "ground_truth": "restaurant(\"sushi restaurant\"). waiter(w). person(\"Mark\"). person(\"Lisa\"). customer(\"they\"). member(\"Mark\", \"they\"). member(\"Mark\", \"they\"). food(\"tuna rolls\"). food(\"salmon nigiri\"). story_step(0..4). st_hpd(enter(\"they\", \"sushi restaurant\"), true, 0). st_obs(sitting(\"they\"), true, 1). st_hpd(order(\"Mark\", \"tuna rolls\", w), true, 2). st_hpd(order(\"Lisa\", \"salmon nigiri\", w), true, 2). st_hpd(prepare(\"the chef\", \"tuna rolls\", w), true, 3). st_hpd(prepare(\"the chef\", \"salmon nigiri\", w), true, 3).",
+      "matching_predicates": [
+        "food(\"salmon nigiri\")",
+        "food(\"tuna rolls\")",
+        "member(\"mark\", \"they\")",
+        "person(\"lisa\")",
+        "person(\"mark\")",
+        "person(\"they\")",
+        "restaurant(\"sushi restaurant\")",
+        "st_hpd(enter(\"they\", \"sushi restaurant\"), \"true\", 0)",
+        "st_hpd(order(\"lisa\", \"salmon nigiri\", \"w\"), \"true\", 2)",
+        "st_hpd(order(\"mark\", \"tuna rolls\", \"w\"), \"true\", 2)",
+        "st_hpd(prepare(\"chef\", \"salmon nigiri\", \"w\"), \"true\", 3)",
+        "st_hpd(prepare(\"chef\", \"tuna rolls\", \"w\"), \"true\", 3)",
+        "st_obs(sitting(\"they\"), \"true\", 1)",
+        "waiter(\"w\")"
+      ],
+      "predicted_only_predicates": [
+        "cook(\"The chef\")",
+        "member(\"Lisa\", they)"
+      ],
+      "ground_truth_only_predicates": [],
+      "pred_predicate_count": 16,
+      "gt_predicate_count": 14
+    }
+  ],
+  "mismatches": []
+}

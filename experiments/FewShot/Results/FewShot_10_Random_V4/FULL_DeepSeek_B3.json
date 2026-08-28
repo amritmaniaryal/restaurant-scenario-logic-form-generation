@@ -1,0 +1,45 @@
+{
+  "id": "gen-1777146406-m0airBZMv67AGgjmEgTG",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": null,
+      "message": {
+        "content": "{\n  \"data\": [\n    {\n      \"sid\": 23,\n      \"logic_form\": [\n        \"customer(\\\"I\\\"). food(\\\"salmon\\\"). beverage(\\\"red wine\\\"). food(\\\"hors d'oeuvres\\\"). waiter(\\\"the waiter\\\"). waiter(\\\"our server\\\"). story_step(0..6). st_hpd(pick_up(\\\"I\\\", m, t), true, 0). st_hpd(order(\\\"I\\\", \\\"salmon\\\", \\\"the waiter\\\"), true, 1). st_hpd(put_down(\\\"the waiter\\\", \\\"red wine\\\", t), true, 2). st_hpd(drink(\\\"I\\\", \\\"red wine\\\"), true, 3). st_hpd(put_down(\\\"our server\\\", \\\"hors d'oeuvres\\\", t), true, 4). st_hpd(eat(\\\"I\\\", \\\"hors d'oeuvres\\\"), true, 5). st_hpd(put_down(\\\"the waiter\\\", \\\"salmon\\\", t), true, 6). st_hpd(eat(\\\"I\\\", \\\"salmon\\\"), true, 7).\"\n      ]\n    },\n    {\n      \"sid\": 24,\n      \"logic_form\": [\n        \"customer(\\\"Jasper\\\"). customer(\\\"Frank\\\"). food(\\\"roast beef\\\"). beverage(\\\"coffee\\\"). waiter(w). story_step(0..5). st_hpd(enter(\\\"Jasper\\\", r), true, 0). st_hpd(order(\\\"Jasper\\\", \\\"roast beef\\\", w), true, 1). st_hpd(order(\\\"Jasper\\\", \\\"coffee\\\", w), true, 1). st_hpd(put_down(w, \\\"coffee\\\", t), true, 2). st_hpd(put_down(w, \\\"roast beef\\\", t), true, 2). st_hpd(eat(\\\"Jasper\\\", \\\"roast beef\\\"), true, 3). st_hpd(drink(\\\"Jasper\\\", \\\"coffee\\\"), true, 3). st_hpd(eat(\\\"Frank\\\", \\\"roast beef\\\"), true, 3). st_hpd(drink(\\\"Frank\\\", \\\"coffee\\\"), true, 3). st_hpd(pay(\\\"Frank\\\", b), true, 4).\"\n      ]\n    },\n    {\n      \"sid\": 25,\n      \"logic_form\": [\n        \"customer(\\\"I\\\"). customer(\\\"Uncle Chipperton\\\"). waiter(\\\"the head-waiter\\\"). story_step(0..4). st_hpd(enter(\\\"I\\\", r), true, 0). st_hpd(sit(\\\"I\\\"), true, 1). st_hpd(order(\\\"I\\\", f, \\\"the head-waiter\\\"), true, 2). st_hpd(eat(\\\"I\\\", f), true, 3). st_hpd(enter(\\\"Uncle Chipperton\\\", r), true, 4). st_hpd(pay(\\\"Uncle Chipperton\\\", b), true, 5).\"\n      ]\n    },\n    {\n      \"sid\": 26,\n      \"logic_form\": [\n        \"restaurant(\\\"vegetarian restaurant\\\"). customer(\\\"Nicole\\\"). food(\\\"lentil soup\\\"). waiter(\\\"the waitress\\\"). story_step(0..4). st_hpd(enter(\\\"Nicole\\\", \\\"vegetarian restaurant\\\"), true, 0). st_hpd(order(\\\"Nicole\\\", \\\"lentil soup\\\", \\\"the waitress\\\"), true, 1). st_hpd(put_down(\\\"the waitress\\\", \\\"lentil soup\\\", t), true, 2). st_hpd(eat(\\\"Nicole\\\", \\\"lentil soup\\\"), true, 3). st_hpd(leave(\\\"Nicole\\\"), true, 4).\"\n      ]\n    },\n    {\n      \"sid\": 27,\n      \"logic_form\": [\n        \"restaurant(\\\"vegetarian restaurant\\\"). customer(\\\"Nicole\\\"). customer(\\\"Sam\\\"). customer(they). member(\\\"Nicole\\\", they). member(\\\"Sam\\\", they). food(\\\"lentil soup\\\"). food(\\\"miso soup\\\"). waiter(w). story_step(0..3). st_hpd(enter(they, \\\"vegetarian restaurant\\\"), true, 0). st_hpd(order(\\\"Nicole\\\", \\\"lentil soup\\\", w), true, 1). st_hpd(order(\\\"Sam\\\", \\\"miso soup\\\", w), true, 1). st_hpd(eat(\\\"Nicole\\\", \\\"lentil soup\\\"), true, 2). st_hpd(eat(\\\"Sam\\\", \\\"miso soup\\\"), true, 2).\"\n      ]\n    },\n    {\n      \"sid\": 28,\n      \"logic_form\": [\n        \"restaurant(\\\"RRGrill\\\"). customer(\\\"Andy\\\"). waiter(\\\"the waiter\\\"). food(\\\"soup\\\"). story_step(0..6). st_hpd(enter(\\\"Andy\\\", \\\"RRGrill\\\"), true, 0). st_hpd(greet(\\\"the waiter\\\", \\\"Andy\\\"), true, 1). st_hpd(lead_to(\\\"the waiter\\\", \\\"Andy\\\", t), true, 2). st_hpd(order(\\\"Andy\\\", \\\"soup\\\", \\\"the waiter\\\"), true, 3). st_hpd(eat(\\\"Andy\\\", \\\"soup\\\"), true, 4). st_hpd(pay(\\\"Andy\\\", b), true, 5). st_hpd(leave(\\\"Andy\\\"), true, 6).\"\n      ]\n    },\n    {\n      \"sid\": 29,\n      \"logic_form\": [\n        \"restaurant(\\\"vegetarian restaurant\\\"). customer(\\\"Nicole\\\"). food(\\\"lentil soup\\\"). waiter(\\\"the waitress\\\"). story_step(0..4). st_hpd(enter(\\\"Nicole\\\", \\\"vegetarian restaurant\\\"), true, 0). st_hpd(order(\\\"Nicole\\\", \\\"lentil soup\\\", \\\"the waitress\\\"), true, 1). st_hpd(put_down(\\\"the waitress\\\", \\\"lentil soup\\\", t), true, 2). st_hpd(eat(\\\"Nicole\\\", \\\"lentil soup\\\"), true, 3). st_hpd(leave(\\\"Nicole\\\"), true, 4).\"\n      ]\n    },\n    {\n      \"sid\": 30,\n      \"logic_form\": [\n        \"restaurant(\\\"vegetarian restaurant\\\"). customer(\\\"Nicole\\\"). food(\\\"lentil soup\\\"). food(\\\"miso soup\\\"). waiter(\\\"the waitress\\\"). story_step(0..2). st_hpd(enter(\\\"Nicole\\\", \\\"vegetarian restaurant\\\"), true, 0). st_hpd(order(\\\"Nicole\\\", \\\"lentil soup\\\", \\\"the waitress\\\"), true, 1). st_hpd(put_down(\\\"the waitress\\\", \\\"miso soup\\\", t), true, 2). st_next(1, 2).\"\n      ]\n    },\n    {\n      \"sid\": 31,\n      \"logic_form\": [\n        \"restaurant(\\\"vegetarian restaurant\\\"). customer(\\\"Nicole\\\"). food(\\\"lentil soup\\\"). food(\\\"miso soup\\\"). waiter(\\\"the waitress\\\"). story_step(0..3). st_hpd(enter(\\\"Nicole\\\", \\\"vegetarian restaurant\\\"), true, 0). st_hpd(order(\\\"Nicole\\\", \\\"lentil soup\\\", \\\"the waitress\\\"), true, 1). st_hpd(put_down(\\\"the waitress\\\", \\\"miso soup\\\", t), true, 2). st_hpd(eat(\\\"Nicole\\\", \\\"miso soup\\\"), true, 3). st_next(1, 2).\"\n      ]\n    },\n    {\n      \"sid\": 32,\n      \"logic_form\": [\n        \"restaurant(\\\"vegetarian restaurant\\\"). customer(\\\"Nicole\\\"). food(\\\"lentil soup\\\"). waiter(\\\"the waitress\\\"). story_step(0..3). st_hpd(enter(\\\"Nicole\\\", \\\"vegetarian restaurant\\\"), true, 0). st_hpd(order(\\\"Nicole\\\", \\\"lentil soup\\\", \\\"the waitress\\\"), true, 1). st_hpd(put_down(\\\"the waitress\\\", \\\"lentil soup\\\", t), true, 2). st_hpd(pay(\\\"Nicole\\\", b), true, 3).\"\n      ]\n    }\n  ]\n}",
+        "refusal": null,
+        "role": "assistant",
+        "reasoning": null
+      },
+      "native_finish_reason": "stop"
+    }
+  ],
+  "created": 1777146406,
+  "model": "deepseek/deepseek-chat-v3.1",
+  "object": "chat.completion",
+  "system_fingerprint": null,
+  "usage": {
+    "completion_tokens": 1872,
+    "prompt_tokens": 4349,
+    "total_tokens": 6221,
+    "completion_tokens_details": {
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "image_tokens": 0
+    },
+    "prompt_tokens_details": {
+      "audio_tokens": 0,
+      "cached_tokens": 3708,
+      "cache_write_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost": 0.00209553,
+    "is_byok": false,
+    "cost_details": {
+      "upstream_inference_cost": 0.00209553,
+      "upstream_inference_prompt_cost": 0.00061665,
+      "upstream_inference_completions_cost": 0.00147888
+    }
+  },
+  "provider": "DeepInfra"
+}

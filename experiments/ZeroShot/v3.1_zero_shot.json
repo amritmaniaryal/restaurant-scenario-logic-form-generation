@@ -1,0 +1,249 @@
+{
+  "metadata": {
+      "Model": "Deepseek v3.1",
+      "Prompt Times": 1,
+      "Prompt": "In the json file uploaded, there are 40 natural language stories in 'Story' part of json file. Could you give me their logic form which can be useful in ASP code. Give the output in a similar format, where, in place of N/A in 'Logic Form', you can write the ASP logic form of those stories. Ignore 'Type' field for your analysis."
+  },
+  "data": [
+    {
+        "Scenario Number": "1",
+        "Type": "Normal",
+        "Story": "Allie enters the restaurant and claims her reservation. The waiter  seats her at her table. She orders fruit salad. The waiter brings her  fruit salad. After eating, she asks for the bill.",
+        "Logic Form": "happens(enter(allie), 1).\nhappens(claim_reservation(allie), 2).\nhappens(seat(waiter, allie, table1), 3).\ninitiates(seat(waiter, allie, table1), seated(allie), 3).\nhappens(order(allie, order1), 4).\nproperty(order1, fruit_salad).\nhappens(bring(waiter, order1, allie), 5).\ninitiates(bring(waiter, order1, allie), has(allie, order1), 5).\nhappens(eat(allie, order1), 6).\nterminates(eat(allie, order1), has(allie, order1), 6).\nhappens(ask_for_bill(allie), 7)."
+    },
+    {
+        "Scenario Number": "2",
+        "Type": "Normal",
+        "Story": "Abdul is sitting in a vegetarian restaurant. The waiter takes his  order, and he orders hummus. The waiter brings the hummus to the table.",
+        "Logic Form": "holdsAt(seated(abdul), 1).\nhappens(take_order(waiter, abdul), 2).\nhappens(order(abdul, order1), 3).\nproperty(order1, hummus).\nhappens(bring(waiter, order1, table1), 4).\ninitiates(bring(waiter, order1, table1), on_table(order1), 4)."
+    },
+    {
+        "Scenario Number": "3",
+        "Type": "Normal",
+        "Story": "John enters the restaurant. The waiter escorts him to a table. John  orders steak. The waiter brings the steak to the table. John asks for  the bill, and the waiter brings it to the table. John pays the bill and  leaves the restaurant.",
+        "Logic Form": "happens(enter(john), 1).\nhappens(escort(waiter, john, table1), 2).\ninitiates(escort(waiter, john, table1), seated(john), 2).\nhappens(order(john, order1), 3).\nproperty(order1, steak).\nhappens(bring(waiter, order1, table1), 4).\ninitiates(bring(waiter, order1, table1), on_table(order1), 4).\nhappens(ask_for_bill(john), 5).\nhappens(bring(waiter, bill1, table1), 6).\ninitiates(bring(waiter, bill1, table1), on_table(bill1), 6).\nhappens(pay(john, bill1), 7).\nterminates(pay(john, bill1), on_table(bill1), 7).\nhappens(leave(john), 8).\nterminates(leave(john), seated(john), 8)."
+    },
+    {
+        "Scenario Number": "4",
+        "Type": "Normal",
+        "Story": "Jill enters the restaurant and is escorted to a table. She orders  chicken. The waiter brings the chicken to her table. After eating, Jill  asks for the bill.",
+        "Logic Form": "happens(enter(jill), 1).\nhappens(escort(waiter, jill, table1), 2).\ninitiates(escort(waiter, jill, table1), seated(jill), 2).\nhappens(order(jill, order1), 3).\nproperty(order1, chicken).\nhappens(bring(waiter, order1, table1), 4).\ninitiates(bring(waiter, order1, table1), on_table(order1), 4).\nhappens(eat(jill, order1), 5).\nterminates(eat(jill, order1), on_table(order1), 5).\nhappens(ask_for_bill(jill), 6)."
+    },
+    {
+        "Scenario Number": "5",
+        "Type": "Normal",
+        "Story": "Bob is seated at a table in the restaurant. The waiter asks for his order, and he orders a hamburger.",
+        "Logic Form": "holdsAt(seated(bob), 1).\nhappens(ask_for_order(waiter, bob), 2).\nhappens(order(bob, order1), 3).\nproperty(order1, hamburger)."
+    },
+    {
+        "Scenario Number": "6",
+        "Type": "Normal",
+        "Story": "The waiter shows Jane to her table. Jane is seated at a table in the  restaurant. The waiter asks for her order, and she orders fish. After  eating, the waiter brings the bill to the table.",
+        "Logic Form": "happens(show_to_table(waiter, jane, table1), 1).\ninitiates(show_to_table(waiter, jane, table1), seated(jane), 1).\nhappens(ask_for_order(waiter, jane), 2).\nhappens(order(jane, order1), 3).\nproperty(order1, fish).\nhappens(eat(jane, order1), 4).\nhappens(bring(waiter, bill1, table1), 5).\ninitiates(bring(waiter, bill1, table1), on_table(bill1), 5)."
+    },
+    {
+        "Scenario Number": "7",
+        "Type": "Exception",
+        "Story": "Molly is seated at her table when the waiter asks for her order. She  orders a baked potato. The waiter brings out French fries.",
+        "Logic Form": "holdsAt(seated(molly), 1).\nhappens(ask_for_order(waiter, molly), 2).\nhappens(order(molly, order1), 3).\nproperty(order1, baked_potato).\nhappens(bring(waiter, order2, molly), 4).\nproperty(order2, french_fries).\n:- property(order1, X), property(order2, Y), X != Y."
+    },
+    {
+        "Scenario Number": "8",
+        "Type": "Exception",
+        "Story": "Larry is seated at his table in the restaurant. The waiter brings him  a menu so he can decide what to order. After reviewing the menu, Larry  decides he doesn't want anything at this restaurant.",
+        "Logic Form": "holdsAt(seated(larry), 1).\nhappens(bring(waiter, menu1, larry), 2).\ninitiates(bring(waiter, menu1, larry), has(larry, menu1), 2).\nhappens(review_menu(larry, menu1), 3).\nhappens(decide_not_to_order(larry), 4).\nhappens(leave(larry), 5).\nterminates(leave(larry), seated(larry), 5)."
+    },
+    {
+        "Scenario Number": "9",
+        "Type": "Exception",
+        "Story": "Derek ordered a vegetable soup. The waiter brought out the vegetable  soup, but Derek was unsatisfied with the lack of vegetables in it. As an  apology, the waiter decided not to charge Derek for the soup.",
+        "Logic Form": "happens(order(derek, order1), 1).\nproperty(order1, vegetable_soup).\nhappens(bring(waiter, order1, derek), 2).\ninitiates(bring(waiter, order1, derek), has(derek, order1), 2).\nhappens(unsatisfied(derek, order1), 3).\nreason(unsatisfied, lack_of_vegetables).\nhappens(apologize(waiter, derek), 4).\nhappens(waive_charge(waiter, order1), 5).\ninitiates(waive_charge(waiter, order1), free(order1), 5)."
+    },
+    {
+        "Scenario Number": "10",
+        "Type": "Exception",
+        "Story": "Pete is seated at his table in the restaurant. He has ordered and  received his chicken, but is unhappy with how undercooked the chicken  is. He complains to the waiter, and asks for a better cooked dish.",
+        "Logic Form": "holdsAt(seated(pete), 1).\nholdsAt(has(pete, order1), 2).\nproperty(order1, chicken).\nproperty(order1, undercooked).\nhappens(complain_about(pete, order1, waiter), 3).\nhappens(ask_for_replacement(pete), 4)."
+    },
+    {
+        "Scenario Number": "11",
+        "Type": "Exception",
+        "Story": "Jim is seated at his table in the restaurant. He orders an appetizer.  After waiting for 20 minutes and not receiving his food, he decides to  leave the restaurant.",
+        "Logic Form": "holdsAt(seated(jim), 1).\nhappens(order(jim, order1), 2).\nproperty(order1, appetizer).\nholdsAt(not_received(order1), 3).\nholdsAt(waited_long(jim, 20), 4).\nhappens(decide_to_leave(jim), 5).\nhappens(leave(jim), 6).\nterminates(leave(jim), seated(jim), 6)."
+    },
+    {
+        "Scenario Number": "12",
+        "Type": "Exception",
+        "Story": "Jake is seated at his table in the restaurant. He orders a  medium-rare steak. The waiter brings out his order but it is too rare.",
+        "Logic Form": "holdsAt(seated(jake), 1).\nhappens(order(jake, order1), 2).\nproperty(order1, steak).\nproperty(order1, medium_rare).\nhappens(bring(waiter, order2, jake), 3).\nproperty(order2, steak).\nproperty(order2, rare).\n:- property(order1, medium_rare), property(order2, rare)."
+    },
+    {
+        "Scenario Number": "13",
+        "Type": "Normal",
+        "Story": "My husband and I went to a famous restaurant listed in our guidebook.  We were seated at a booth and began studying the menu. We ordered  escargot, lamb, savory salmon, and a creamy flan dessert.",
+        "Logic Form": "happens(enter(i), 1).\nhappens(enter(husband), 1).\nhappens(seat(waiter, i, booth1), 2).\nhappens(seat(waiter, husband, booth1), 2).\ninitiates(seat(waiter, i, booth1), seated(i), 2).\ninitiates(seat(waiter, husband, booth1), seated(husband), 2).\nhappens(study_menu(i, menu1), 3).\nhappens(study_menu(husband, menu1), 3).\nhappens(order(i, order1), 4).\nproperty(order1, escargot).\nhappens(order(husband, order2), 5).\nproperty(order2, lamb).\nhappens(order(i, order3), 6).\nproperty(order3, savory_salmon).\nhappens(order(husband, order4), 7).\nproperty(order4, creamy_flan)."
+    },
+    {
+        "Scenario Number": "14",
+        "Type": "Normal",
+        "Story": "Judy looked at the menu. She and her two kids, Alex and Zoe, were  seated in a booth in a local restaurant. They ordered fish and chips.",
+        "Logic Form": "holdsAt(seated(judy), 1).\nholdsAt(seated(alex), 1).\nholdsAt(seated(zoe), 1).\nhappens(look_at_menu(judy, menu1), 2).\nhappens(order(judy, order1), 3).\nproperty(order1, fish_and_chips).\nserves(order1, judy).\nserves(order1, alex).\nserves(order1, zoe)."
+    },
+    {
+        "Scenario Number": "15",
+        "Type": "Normal",
+        "Story": "Samantha was in a five-star restaurant. Samantha started perusing the  menu. She ordered the barbecued veal chop with Asian slaw and Thai  fried rice.",
+        "Logic Form": "holdsAt(in(samantha, restaurant), 1).\nproperty(restaurant, five_star).\nhappens(peruse_menu(samantha, menu1), 2).\nhappens(order(samantha, order1), 3).\nproperty(order1, barbecued_veal_chop).\nproperty(order1, asian_slaw).\nproperty(order1, thai_fried_rice)."
+    },
+    {
+        "Scenario Number": "16",
+        "Type": "Normal",
+        "Story": "The villager entered a fine restaurant and was seated at one of the  tables. He looked at the menu. He ordered one of the items on the list.  The waiter brought him a large plate of lettuce salad with several black  olives on top.",
+        "Logic Form": "happens(enter(villager), 1).\nproperty(restaurant, fine).\nhappens(seat(waiter, villager, table1), 2).\ninitiates(seat(waiter, villager, table1), seated(villager), 2).\nhappens(look_at_menu(villager, menu1), 3).\nhappens(order(villager, order1), 4).\nitem_on_menu(order1, menu1).\nhappens(bring(waiter, order1, villager), 5).\nproperty(order1, lettuce_salad).\nproperty(order1, large_plate).\nproperty(order1, has_black_olives)."
+    },
+    {
+        "Scenario Number": "17",
+        "Type": "Exception",
+        "Story": "The waiter took Gavin and Amandine to a booth. They slid onto brown  vinyl seats. Gavin glanced over his menu. Amandine didn't need to look  to know what she wanted. She ordered egg drop soup with wonton, lobster  Cantonese and shrimp, beef and pork fried rice. Gavin ordered the same.",
+        "Logic Form": "happens(take_to_booth(waiter, gavin, booth1), 1).\nhappens(take_to_booth(waiter, amandine, booth1), 1).\ninitiates(take_to_booth(waiter, gavin, booth1), seated(gavin), 1).\ninitiates(take_to_booth(waiter, amandine, booth1), seated(amandine), 1).\nhappens(glance_menu(gavin, menu1), 2).\nhappens(order(amandine, order1), 3).\nproperty(order1, egg_drop_soup_wonton).\nproperty(order1, lobster_cantonese_shrimp).\nproperty(order1, beef_pork_fried_rice).\nserves(order1, amandine).\nhappens(order(gavin, order2), 4).\nproperty(order2, egg_drop_soup_wonton).\nproperty(order2, lobster_cantonese_shrimp).\nproperty(order2, beef_pork_fried_rice).\nserves(order2, gavin)."
+    },
+    {
+        "Scenario Number": "18",
+        "Type": "Exception",
+        "Story": "The waiter brought his dinner. He was eating something spotted with  eggs and livers. He finished but the waiter wouldn't come total the  bill.",
+        "Logic Form": "happens(bring(waiter, dinner1, table1), 1).\ninitiates(bring(waiter, dinner1, table1), on_table(dinner1), 1).\nproperty(dinner1, has_eggs).\nproperty(dinner1, has_livers).\nhappens(eat(he, dinner1), 2).\nterminates(eat(he, dinner1), on_table(dinner1), 2).\nhappens(finish_eating(he), 3).\nholdsAt(not_available(waiter), 4).\nholdsAt(not_received(bill1), 5)."
+    },
+    {
+        "Scenario Number": "19",
+        "Type": "Exception",
+        "Story": "Herbie and his father were at a meat restaurant. The waiter brought a  sizzling steak that smelled heavenly, and a plate with haddock and  creamed spinach. The waiter put Herbie's plate down. Herbie’s father  asked the waiter to take the fish away and bring the boy some lamb chops  instead.",
+        "Logic Form": "holdsAt(in(herbie, restaurant), 1).\nholdsAt(in(father, restaurant), 1).\nproperty(restaurant, meat_restaurant).\nhappens(bring(waiter, order1, table1), 2).\nproperty(order1, sizzling_steak).\nserves(order1, father).\nhappens(bring(waiter, order2, herbie), 3).\nproperty(order2, haddock).\nproperty(order2, creamed_spinach).\nserves(order2, herbie).\nhappens(ask_to_take_away(father, order2, waiter), 4).\nterminates(ask_to_take_away(father, order2, waiter), served(herbie, order2), 4).\nhappens(ask_to_bring(father, order3, waiter), 5).\nproperty(order3, lamb_chops).\nserves(order3, herbie)."
+    },
+    {
+        "Scenario Number": "20",
+        "Type": "Variation",
+        "Story": "Brand sat in a chair. He picked up the menu and ordered a whiskey with Pepsi, but no ice.  \t\t\tPyrogies and sausage cooked in sauerkraut, he told the waiter.  \t\t\tThe waiter brought Brand his drink. Then, the waiter placed the food on the table.  \t\t\tBrand asked the waiter to bring him a large bowl of borscht when he was done  \t\t\twith the pyrogies and sausage. The waiter went back into the kitchen.  \t\t\tBrand ate the pyrogies and then the sausage and sauerkraut.  \t\t\tThen, the waiter brought out Brand's bowl of soup.",
+        "Logic Form": "happens(sit(brand, chair1), 1).\ninitiates(sit(brand, chair1), seated(brand), 1).\nhappens(pick_up_menu(brand, menu1), 2).\nhappens(order(brand, order1), 3).\nproperty(order1, whiskey_pepsi_no_ice).\nhappens(order(brand, order2), 4).\nproperty(order2, pyrogies_sausage_sauerkraut).\nhappens(bring(waiter, order1, brand), 5).\ninitiates(bring(waiter, order1, brand), has(brand, order1), 5).\nhappens(bring(waiter, order2, brand), 6).\ninitiates(bring(waiter, order2, brand), has(brand, order2), 6).\nhappens(ask_for_later_course(brand, order3), 7).\nproperty(order3, large_bowl_borscht).\nhappens(eat(brand, pyrogies), 8).\npart_of(pyrogies, order2).\nhappens(eat(brand, sausage_sauerkraut), 9).\npart_of(sausage_sauerkraut, order2).\nterminates(eat(brand, order2), has(brand, order2), 9).\nhappens(bring(waiter, order3, brand), 10).\ninitiates(bring(waiter, order3, brand), has(brand, order3), 10)."
+    },
+    {
+        "Scenario Number": "21",
+        "Type": "Variation",
+        "Story": "The waiter brought out escargot for Molly and me.  \t\t\tThen the waiter brought out twelve oysters and twelve clams.  \t\t\tWe shared the clams and oysters. The waiter poured wine for us.",
+        "Logic Form": "happens(bring(waiter, order1, table1), 1).\nproperty(order1, escargot).\nserves(order1, molly).\nserves(order1, me).\nhappens(bring(waiter, order2, table1), 2).\nproperty(order2, oysters).\nquantity(order2, 12).\nproperty(order3, clams).\nquantity(order3, 12).\nhappens(share(molly, order2), 3).\nhappens(share(me, order2), 3).\nhappens(share(molly, order3), 3).\nhappens(share(me, order3), 3).\nhappens(pour_wine(waiter, wine1, molly), 4).\nhappens(pour_wine(waiter, wine1, me), 4)."
+    },
+    {
+        "Scenario Number": "22",
+        "Type": "Variation",
+        "Story": "The waiter brought the wine to their table.  \t\t\tThen, Emanuel studied the menu.  \t\t\tHe ordered the gypsy shashlik for Ingrid and himself.  \t\t\tAfter the waiter left, they drank the wine.  \t\t\tThe waiter brought the shashlik to their table.",
+        "Logic Form": "happens(bring(waiter, wine1, table1), 1).\ninitiates(bring(waiter, wine1, table1), on_table(wine1), 1).\nhappens(study_menu(emanuel, menu1), 2).\nhappens(order(emanuel, order1), 3).\nproperty(order1, gypsy_shashlik).\nserves(order1, emanuel).\nserves(order1, ingrid).\nhappens(leave(waiter), 4).\nhappens(drink(emanuel, wine1), 5).\nhappens(drink(ingrid, wine1), 5).\nhappens(bring(waiter, order1, table1), 6).\ninitiates(bring(waiter, order1, table1), on_table(order1), 6)."
+    },
+    {
+        "Scenario Number": "23",
+        "Type": "Variation",
+        "Story": "Andrew was sitting in a restaurant.  \t\t\tSebastian entered the restaurant and sat down opposite Andrew.  \t\t\tThe waiter brought a bottle of wine. \t\t\tAndrew and Sebastian took a drink. The waiter gave the men a menu.",
+        "Logic Form": "holdsAt(sitting(andrew), 1).\nhappens(enter(sebastian), 2).\nhappens(sit_opposite(sebastian, andrew), 3).\ninitiates(sit_opposite(sebastian, andrew), seated(sebastian), 3).\nhappens(bring(waiter, wine1, table1), 4).\ninitiates(bring(waiter, wine1, table1), on_table(wine1), 4).\nhappens(drink(andrew, wine1), 5).\nhappens(drink(sebastian, wine1), 5).\nhappens(give(waiter, menu1, andrew), 6).\nhappens(give(waiter, menu1, sebastian), 6)."
+    },
+    {
+        "Scenario Number": "24",
+        "Type": "Variation",
+        "Story": "I opened the menu and chose the salmon.  \t\t\tThe waiter poured two glasses of red wine.  \t\t\tI sipped the wine.  \t\t\tThen our server brought a small plate of hors d'oeuvres.  \t\t\tI tried a little bit of everything.  \t\t\tSoon, the waiter brought the meal. I tasted the salmon.",
+        "Logic Form": "happens(open_menu(me, menu1), 1).\nhappens(choose(me, salmon), 2).\nhappens(order(me, order1), 3).\nproperty(order1, salmon).\nhappens(pour_wine(waiter, red_wine, glass1), 4).\nhappens(pour_wine(waiter, red_wine, glass2), 4).\nhappens(sip(me, red_wine), 5).\nhappens(bring(server, order2, table1), 6).\nproperty(order2, hors_doeuvres).\nproperty(order2, small_plate).\nhappens(try(me, order2), 7).\nhappens(bring(waiter, order1, me), 8).\ninitiates(bring(waiter, order1, me), has(me, order1), 8).\nhappens(taste(me, salmon), 9).\npart_of(salmon, order1)."
+    },
+    {
+        "Scenario Number": "25",
+        "Type": "Exception",
+        "Story": "Jasper invited Frank to a restaurant.  \t\t\tJasper ordered roast beef and coffee.  \t\t\tTheir conversation was interrupted by the arrival of the coffee and roast beef,  \t\t\twhich both he and his new friend attacked with vigor.  \t\t\tJasper wanted to invite Frank, but he had forgotten his wallet at home. Frank paid for both.",
+        "Logic Form": "happens(invite_to_restaurant(jasper, frank), 1).\nhappens(order(jasper, order1), 2).\nproperty(order1, roast_beef).\nserves(order1, jasper).\nhappens(order(jasper, order2), 3).\nproperty(order2, coffee).\nserves(order2, jasper).\nhappens(bring(waiter, order1, jasper), 4).\ninitiates(bring(waiter, order1, jasper), has(jasper, order1), 4).\nhappens(bring(waiter, order2, jasper), 4).\ninitiates(bring(waiter, order2, jasper), has(jasper, order2), 4).\nhappens(eat(jasper, order1), 5).\nhappens(drink(jasper, order2), 5).\nhappens(eat(frank, order1), 5).\nhappens(drink(frank, order2), 5).\nholdsAt(has_no_wallet(jasper), 6).\nhappens(pay(frank, bill1), 7).\npaid_for(bill1, jasper).\npaid_for(bill1, frank)."
+    },
+    {
+        "Scenario Number": "26",
+        "Type": "Exception",
+        "Story": "I was the first person to appear at the restaurant.  \t\t\tI took my seat at the middle of the table. The head-waiter waited on me himself.  \t\t\tI had a capital dinner. Then Uncle Chipperton entered. He paid for the whole dinner.",
+        "Logic Form": "happens(enter(i), 1).\nfirst_person(i).\nhappens(take_seat(i, middle_table), 2).\ninitiates(take_seat(i, middle_table), seated(i), 2).\nagent(waiter1, head_waiter).\nhappens(serve(waiter1, i), 3).\nhappens(have_dinner(i, dinner1), 4).\nproperty(dinner1, capital).\nhappens(enter(uncle_chipperton), 5).\nhappens(pay(uncle_chipperton, bill1), 6).\npaid_for(bill1, i)."
+    },
+    {
+        "Scenario Number": "27",
+        "Type": "Normal",
+        "Story": "Nicole went to a vegetarian restaurant. She ordered lentil soup. The  waitress set the soup in the middle of the table. Nicole enjoyed the  soup. She left the restaurant.",
+        "Logic Form": "happens(go_to(nicole, restaurant), 1).\nproperty(restaurant, vegetarian).\nhappens(order(nicole, order1), 2).\nproperty(order1, lentil_soup).\nhappens(bring(waitress, order1, middle_table), 3).\ninitiates(bring(waitress, order1, middle_table), on_table(order1), 3).\nhappens(enjoy(nicole, order1), 4).\nhappens(leave(nicole), 5).\nterminates(leave(nicole), in(nicole, restaurant), 5)."
+    },
+    {
+        "Scenario Number": "28",
+        "Type": "Normal",
+        "Story": "Nicole and Sam went to a vegetarian restaurant. She ordered a lentil  soup. He ordered a miso soup. They both enjoyed their soups.",
+        "Logic Form": "happens(go_to(nicole, restaurant), 1).\nhappens(go_to(sam, restaurant), 1).\nproperty(restaurant, vegetarian).\nhappens(order(nicole, order1), 2).\nproperty(order1, lentil_soup).\nserves(order1, nicole).\nhappens(order(sam, order2), 3).\nproperty(order2, miso_soup).\nserves(order2, sam).\nhappens(enjoy(nicole, order1), 4).\nhappens(enjoy(sam, order2), 4)."
+    },
+    {
+        "Scenario Number": "29",
+        "Type": "Normal",
+        "Story": "One day, Andy felt hungry, and went to the RRGrill restaurant for  dinner. The restaurant was open, so he walked into the restaurant where  he was greeted by the waiter and was led to the table. Andy ordered soup  and he ate it with pleasure. He paid cash and left.",
+        "Logic Form": "holdsAt(hungry(andy), 1).\nhappens(go_to(andy, rrgrill), 2).\nproperty(rrgrill, open).\nhappens(enter(andy, rrgrill), 3).\nhappens(greet(waiter, andy), 4).\nhappens(lead_to_table(waiter, andy, table1), 5).\ninitiates(lead_to_table(waiter, andy, table1), seated(andy), 5).\nhappens(order(andy, order1), 6).\nproperty(order1, soup).\nhappens(bring(waiter, order1, andy), 7).\ninitiates(bring(waiter, order1, andy), has(andy, order1), 7).\nhappens(eat_with_pleasure(andy, order1), 8).\nterminates(eat_with_pleasure(andy, order1), has(andy, order1), 8).\nhappens(pay_cash(andy, bill1), 9).\nhappens(leave(andy), 10).\nterminates(leave(andy), in(andy, rrgrill), 10)."
+    },
+    {
+        "Scenario Number": "30",
+        "Type": "Exception",
+        "Story": "Nicole went to a vegetarian restaurant. She ordered lentil soup. When  the waitress brought her the soup, she told Nicole that it was on the  house. Nicole enjoyed the soup and then left.",
+        "Logic Form": "happens(go_to(nicole, restaurant), 1).\nproperty(restaurant, vegetarian).\nhappens(order(nicole, order1), 2).\nproperty(order1, lentil_soup).\nhappens(bring(waitress, order1, nicole), 3).\ninitiates(bring(waitress, order1, nicole), has(nicole, order1), 3).\nhappens(inform_complimentary(waitress, order1, nicole), 4).\ninitiates(inform_complimentary(waitress, order1, nicole), free(order1), 4).\nhappens(enjoy(nicole, order1), 5).\nhappens(leave(nicole), 6)."
+    },
+    {
+        "Scenario Number": "31",
+        "Type": "Exception",
+        "Story": "Nicole went to a vegetarian restaurant. She ordered lentil soup. The waitress brought her a miso soup instead.",
+        "Logic Form": "happens(go_to(nicole, restaurant), 1).\nproperty(restaurant, vegetarian).\nhappens(order(nicole, order1), 2).\nproperty(order1, lentil_soup).\nhappens(bring(waitress, order2, nicole), 3).\nproperty(order2, miso_soup).\n:- property(order1, X), property(order2, Y), X != Y."
+    },
+    {
+        "Scenario Number": "32",
+        "Type": "Exception",
+        "Story": "Nicole went to a vegetarian restaurant. She ordered lentil soup. The  waitress brought her a miso soup instead. Nicole decided to eat it  anyway.",
+        "Logic Form": "happens(go_to(nicole, restaurant), 1).\nproperty(restaurant, vegetarian).\nhappens(order(nicole, order1), 2).\nproperty(order1, lentil_soup).\nhappens(bring(waitress, order2, nicole), 3).\nproperty(order2, miso_soup).\nhappens(decide_to_eat_anyway(nicole, order2), 4).\nhappens(eat(nicole, order2), 5).\nterminates(eat(nicole, order2), has(nicole, order2), 5).\n:- property(order1, X), property(order2, Y), X != Y."
+    },
+    {
+        "Scenario Number": "33",
+        "Type": "Exception",
+        "Story": "Nicole went to a vegetarian restaurant. She ordered lentil soup. The  waitress brought her a miso soup instead. Nicole decided to send it  back. The waitress brought her a lentil soup.",
+        "Logic Form": "happens(go_to(nicole, restaurant), 1).\nproperty(restaurant, vegetarian).\nhappens(order(nicole, order1), 2).\nproperty(order1, lentil_soup).\nhappens(bring(waitress, order2, nicole), 3).\nproperty(order2, miso_soup).\nhappens(decide_to_send_back(nicole, order2), 4).\nterminates(decide_to_send_back(nicole, order2), has(nicole, order2), 4).\nhappens(bring(waitress, order1, nicole), 5).\ninitiates(bring(waitress, order1, nicole), has(nicole, order1), 5).\n:- property(order1, X), property(order2, Y), X != Y."
+    },
+    {
+        "Scenario Number": "34",
+        "Type": "Exception",
+        "Story": "Nicole went to a vegetarian restaurant. She ordered lentil soup. The  waitress told her that they were out of lentil soup. Nicole ordered a  miso soup instead.",
+        "Logic Form": "happens(go_to(nicole, restaurant), 1).\nproperty(restaurant, vegetarian).\nhappens(order(nicole, order1), 2).\nproperty(order1, lentil_soup).\nhappens(inform_out_of_stock(waitress, lentil_soup, nicole), 3).\nhappens(order(nicole, order2), 4).\nproperty(order2, miso_soup)."
+    },
+    {
+        "Scenario Number": "35",
+        "Type": "Exception",
+        "Story": "Nicole went to a vegetarian restaurant. She ordered lentil soup. The  waitress told her that they were out of lentil soup. Nicole decided to  leave.",
+        "Logic Form": "happens(go_to(nicole, restaurant), 1).\nproperty(restaurant, vegetarian).\nhappens(order(nicole, order1), 2).\nproperty(order1, lentil_soup).\nhappens(inform_out_of_stock(waitress, lentil_soup, nicole), 3).\nhappens(decide_to_leave(nicole), 4).\nhappens(leave(nicole), 5)."
+    },
+    {
+        "Scenario Number": "36",
+        "Type": "Exception",
+        "Story": "Nicole went to a vegetarian restaurant. She ordered lentil soup. The  waitress told her that they were out of lentil soup, but that the  special of the day was a delicious potato soup. Nicole ordered the  special.",
+        "Logic Form": "happens(go_to(nicole, restaurant), 1).\nproperty(restaurant, vegetarian).\nhappens(order(nicole, order1), 2).\nproperty(order1, lentil_soup).\nhappens(inform_out_of_stock(waitress, lentil_soup, nicole), 3).\nhappens(inform_special(waitress, potato_soup, nicole), 4).\nproperty(potato_soup, delicious).\nhappens(order(nicole, order2), 5).\nproperty(order2, potato_soup)."
+    },
+    {
+        "Scenario Number": "37",
+        "Type": "Exception",
+        "Story": "Nicole went to a vegetarian restaurant. She ordered lentil soup. The  waitress brought her the soup. Nicole tasted it and found it too salty.  She asked the waitress to take it back.",
+        "Logic Form": "happens(go_to(nicole, restaurant), 1).\nproperty(restaurant, vegetarian).\nhappens(order(nicole, order1), 2).\nproperty(order1, lentil_soup).\nhappens(bring(waitress, order1, nicole), 3).\ninitiates(bring(waitress, order1, nicole), has(nicole, order1), 3).\nhappens(taste(nicole, order1), 4).\nproperty(order1, too_salty).\nhappens(ask_to_take_back(nicole, order1, waitress), 5).\nterminates(ask_to_take_back(nicole, order1, waitress), has(nicole, order1), 5)."
+    },
+    {
+        "Scenario Number": "38",
+        "Type": "Exception",
+        "Story": "Nicole went to a vegetarian restaurant. She ordered lentil soup. The  waitress brought her the soup. Nicole tasted it and found it too salty.  She asked the waitress to take it back. The waitress brought her a new  bowl of soup.",
+        "Logic Form": "happens(go_to(nicole, restaurant), 1).\nproperty(restaurant, vegetarian).\nhappens(order(nicole, order1), 2).\nproperty(order1, lentil_soup).\nhappens(bring(waitress, order1, nicole), 3).\ninitiates(bring(waitress, order1, nicole), has(nicole, order1), 3).\nhappens(taste(nicole, order1), 4).\nproperty(order1, too_salty).\nhappens(ask_to_take_back(nicole, order1, waitress), 5).\nterminates(ask_to_take_back(nicole, order1, waitress), has(nicole, order1), 5).\nhappens(bring(waitress, order2, nicole), 6).\nproperty(order2, lentil_soup).\ninitiates(bring(waitress, order2, nicole), has(nicole, order2), 6)."
+    },
+    {
+        "Scenario Number": "39",
+        "Type": "Exception",
+        "Story": "Nicole went to a vegetarian restaurant. She ordered lentil soup. The  waitress brought her the soup. Nicole tasted it and found it too salty.  She asked the waitress to take it back. The waitress brought her a new  bowl of soup. Nicole tasted the new soup and found it delicious.",
+        "Logic Form": "happens(go_to(nicole, restaurant), 1).\nproperty(restaurant, vegetarian).\nhappens(order(nicole, order1), 2).\nproperty(order1, lentil_soup).\nhappens(bring(waitress, order1, nicole), 3).\ninitiates(bring(waitress, order1, nicole), has(nicole, order1), 3).\nhappens(taste(nicole, order1), 4).\nproperty(order1, too_salty).\nhappens(ask_to_take_back(nicole, order1, waitress), 5).\nterminates(ask_to_take_back(nicole, order1, waitress), has(nicole, order1), 5).\nhappens(bring(waitress, order2, nicole), 6).\nproperty(order2, lentil_soup).\ninitiates(bring(waitress, order2, nicole), has(nicole, order2), 6).\nhappens(taste(nicole, order2), 7).\nproperty(order2, delicious)."
+    },
+    {
+        "Scenario Number": "40",
+        "Type": "Exception",
+        "Story": "Nicole went to a vegetarian restaurant. She ordered lentil soup. The  waitress brought her the soup. Nicole tasted it and found it too salty.  She asked the waitress to take it back. The waitress brought her a new  bowl of soup. Nicole tasted the new soup and found it too salty as well.  She decided to leave without paying.",
+        "Logic Form": "happens(go_to(nicole, restaurant), 1).\nproperty(restaurant, vegetarian).\nhappens(order(nicole, order1), 2).\nproperty(order1, lentil_soup).\nhappens(bring(waitress, order1, nicole), 3).\ninitiates(bring(waitress, order1, nicole), has(nicole, order1), 3).\nhappens(taste(nicole, order1), 4).\nproperty(order1, too_salty).\nhappens(ask_to_take_back(nicole, order1, waitress), 5).\nterminates(ask_to_take_back(nicole, order1, waitress), has(nicole, order1), 5).\nhappens(bring(waitress, order2, nicole), 6).\nproperty(order2, lentil_soup).\ninitiates(bring(waitress, order2, nicole), has(nicole, order2), 6).\nhappens(taste(nicole, order2), 7).\nproperty(order2, too_salty).\nhappens(decide_to_leave_without_paying(nicole), 8).\nhappens(leave(nicole), 9)."
+    }
+   ]
+}
